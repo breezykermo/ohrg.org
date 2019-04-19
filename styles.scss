@@ -1,0 +1,20 @@
+$main: #BDE6E9;
+$main-highlight: blue;
+$bg: rgb(245, 248, 254);
+
+body {
+    background-color: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 400px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.faded {
+    color: $main;
+}
