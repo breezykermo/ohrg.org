@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
   "devDependencies": {
     "node-sass": "^4.11.0"
   }
