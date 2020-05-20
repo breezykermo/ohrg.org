@@ -4,5 +4,9 @@ subtitle: Notes et al.
 layout: layouts/base.njk
 ---
 
-## This site is a starting point
+# {{ title }}
+{%- if subtitle %}
+<p class="subtitle">{{ subtitle | safe }}</p>
+{% endif %}
+
 

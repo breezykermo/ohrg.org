@@ -1,0 +1,5 @@
+{
+  "layout" : "layouts/parent.md",
+  "tags" : "parents",
+  "templateEngineOverride": "njk,md"
+}
