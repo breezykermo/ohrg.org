@@ -1,5 +1,0 @@
-{
-  "layout" : "layouts/note.md",
-  "tags" : "marx",
-  "templateEngineOverride": "njk,md"
-}

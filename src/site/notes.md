@@ -3,13 +3,5 @@ title: All
 layout: layouts/base.njk
 ---
 
-<ul class="listing">
-{%- for page in collections.parents -%}
-    <li>
-        <a href="{{ page.url }}">{{ page.data.title }}</a> -
-        <time datetime="{{ page.data }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
-    </li>
-{%- endfor -%}
-</ul>
-
+At some point, some notes.
 
