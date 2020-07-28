@@ -1,9 +1,6 @@
-
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-
 module.exports = function(config) {
-
   // A useful way to reference the context we are runing eleventy in
   let env = process.env.ELEVENTY_ENV;
 
@@ -35,6 +32,7 @@ module.exports = function(config) {
 
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
+  config.addPassthroughCopy("./src/site/exts")
 
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;
@@ -49,5 +47,4 @@ module.exports = function(config) {
     markdownTemplateEngine : "njk",
     passthroughFileCopy: true
   };
-
 };
