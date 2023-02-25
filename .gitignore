@@ -18,3 +18,5 @@
 tags
 tags.lock
 tags.temp
+
+.parcel-cache/
