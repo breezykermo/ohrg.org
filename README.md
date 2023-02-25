@@ -1,7 +1,7 @@
 # development
 Run:
 ```
-npx parcel src/index.html
+npx parcel
 ```
 
 To deploy:

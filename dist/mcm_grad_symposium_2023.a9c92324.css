@@ -1,5 +1,5 @@
 :root {
-  --accent: #FD8DFF;
+  --accent: #fd8dff;
   --body-font-size: 1rem;
   --body-line-height: 1.3rem;
   --header-height: 15rem;
@@ -24,34 +24,36 @@ a, a:visited {
 }
 
 body {
-  color: black;
+  color: #000;
   padding: none;
-  background-color: white;
-  grid-template-columns: max(20%, 9rem) auto;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-size: var(--body-font-size);
+  background-color: #fff;
+  grid-template-columns: max(20%, 9rem) auto;
 }
+
 body > header {
   background-color: var(--accent);
 }
+
 body > main {
   margin: 0;
   padding: 0;
 }
 
 .left-col {
-  grid-column: 1 / 1;
-  background-color: #0f0f0f;
   min-height: 100vh;
+  background-color: #0f0f0f;
+  grid-column: 1 / 1;
 }
 
 body > footer {
-  border-top: none;
-  color: black;
-  position: fixed;
-  bottom: 0;
+  color: #000;
   width: 100vw;
   background-color: var(--accent);
+  border-top: none;
+  position: fixed;
+  bottom: 0;
 }
 
 .top {
@@ -60,10 +62,10 @@ body > footer {
 }
 
 .header {
-  flex: 1;
   background-color: var(--accent);
-  font-size: 2rem;
+  flex: 1;
   padding: 2rem;
+  font-size: 2rem;
   line-height: 2.3rem;
 }
 
@@ -77,23 +79,23 @@ body > footer {
 }
 
 .date {
-  color: white;
-  padding: 2rem;
-  font-weight: bold;
+  color: #fff;
   text-align: right;
   justify-content: flex-end;
+  padding: 2rem;
+  font-weight: bold;
 }
 
 .rows {
-  display: flex;
   margin: var(--row-padding) 0;
   flex-direction: column;
+  display: flex;
 }
 
 .white {
-  color: white;
-  justify-content: right;
+  color: #fff;
   text-align: right;
+  justify-content: right;
 }
 
 .rows > div {
@@ -102,13 +104,18 @@ body > footer {
   line-height: var(--body-line-height);
   padding: 0 var(--row-padding);
 }
+
 .rows > .b {
   font-weight: bold;
 }
+
 .rows > .key {
   background-color: var(--accent);
-  color: black;
+  color: #000;
 }
+
 .rows:last-child {
   margin-bottom: 0;
 }
+
+/*# sourceMappingURL=mcm_grad_symposium_2023.a9c92324.css.map */
