@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-01-25 Thu 04:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>24 01 25</title>
+<meta name="author" content="Lachlan Kermode" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">24 01 25</h1>
+<p>
+As the new year has now turned around, I am (once again) promising myself that I will write something more regularly.
+I am entering the latter half of my third year as a PhD student at Brown University in the department on Modern Culture and Media&#x2013; a department that, unless you happen to be invested in the landscape of a particular kind of institutionalized humanities in the U.S., requires some context.
+</p>
+
+<p>
+The department is generally described, and generally describes itself, as a &ldquo;media studies&rdquo; program.
+The discipline of media studies approaches the question of so-called &rsquo;media&rsquo; from a wide berth of lenses.
+Rather than working in a specifically productivist manner towards improving existing media or imagining new forms of media, media studies is a disciplinarily polygot designation in which scholars research and theorize the effects of media in society.
+</p>
+
+<p>
+Some media studies programs branch off or out from English departments, in that they treat more modern forms of media critically in much the same way a literary theorist or commentator might treat a text.
+Though departments and scholars will stretch themselves to stress that they work on &rsquo;many&rsquo; or even &rsquo;all&rsquo; forms of media, the moniker &rsquo;media studies&rsquo; is usually a not-so-veiled reference to film.
+Film studies emerged in the late 20th century, as the medium was popularised and academicized: but as the recognition that it is possible to read more than just film as &rsquo;texts&rsquo;, many programs sought to rebrand from &rsquo;film studies&rsquo; to &rsquo;media studies&rsquo;.
+</p>
+
+<p>
+Though &rsquo;media&rsquo; originally referred specifically to technological, man-made media (as this was the arguably narrow-sighted focus of the first &rsquo;media studies&rsquo; scholars, i.e. <a href="https://en.wikipedia.org/wiki/Marshall_McLuhan">McLuhan</a> and <a href="https://en.wikipedia.org/wiki/Friedrich_Kittler">Kittler</a>), in recent years the berth of media&rsquo;s lane has become broader.
+At least since John Durham Peters&rsquo; 2015 book <i><a href="https://press.uchicago.edu/ucp/books/book/chicago/M/bo20069392.html">The Marvelous Clouds</a></i>, it has come to be acknowledged that we can sensibly talk about almost anything, material or immaterial, as media: the clouds: the Earth, the Internet, animals, architecture, and so on.
+This opening from media-as-technology to media-as-everything is not dissimilar to the shift from departments of film studies to departments of media studies: while the former designated a relatively limited field of study, the latter presumes to sidestep those strictures and open out into a more collaborative, more inclusive sense of itself.
+</p>
+
+<p>
+This rebranding has opened up a pandora&rsquo;s box of opportunity in media studies departments.
+Freed from the constraints of any particular methodological or disciplinary backbone, &rsquo;media&rsquo; is now invertebrate term stretched every which way.
+Do you write books that interpret TV shows through a Marxist lens?
+That&rsquo;s media studies.
+Do you study the political effects of radio broadcasts between U-boats in World War II?
+That&rsquo;s media studies.
+Are you trying to document the proportion of female actors in contemporary Hollywood films that gross more than 10 million?
+That&rsquo;s media studies.
+</p>
+
+<p>
+Though these &rsquo;opening outs&rsquo; almost certainly originate in a motion on the part of many scholars towards a more inclusive academy, they fall somewhat sweetly into the pockets of an administrative desire to collateralize humanities departments under one big roof.
+The &ldquo;humanities&rdquo; are increasingly imagined as one, big department, rather than a collection of atomised disciplinary inquiries.
+In other words, the utopian rhetoric of the &rsquo;collaborative humanities&rsquo; often effects the defunding and deterioration of humanistic pursuit under the guise of modernizing (and even sometimes &rsquo;decolonizing&rsquo;) the academy.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+Departments were once conceived as shelters from the storms of executive profiteering, from the need to find immediate &rsquo;cash value&rsquo; (i.e. quantifiable according to the wayward metrics of the neoclassical economic imagination) in certain forms of literary, philosophical, or scientific study.
+</p>
+
+<p>
+In 1991, a graduate of the Semiotics program at Brown made a significant gift to that program.
+The Semiotics program was an undergraduate specialization formed in the English department in 1974 in response to student interest.<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
+As such, Semiotics combined with the program of Modern Literature and Society to became the department of Modern Culture and Media, then and now committed specifically to &ldquo;projects designed to promote and contribute to scholarship and production dealing with theories, practices and histories of modes of representation as they engage mass mediated culture.&rdquo;<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>
+</p>
+
+<p>
+So Modern Culture and Media&#x2013; or MCM, as it is colloquially known&#x2013; is something of a typical media studies department in that it originated in the theory of language and literature in an English department; but now encompasses a range of scholarly pursuits related to media of many forms.
+</p>
+
+<p>
+I heard about the department as an undergraduate through the work of one its previous faculty members, <a href="https://en.wikipedia.org/wiki/Wendy_Hui_Kyong_Chun">Wendy Chun</a>, who was a Professor in MCM until 2020.
+Chun works with the training of a literary theorist (her Ph.D. from the Princeton English department) to theorise and critique <span class="underline">digital</span> media.
+I studied Computer Science in my undergrad (alongside a smattering of seminars in German, where the media philosophy was being taught at my institution), and had come to really enjoy coding and learning about software as an intellectual pursuit.
+Because Chun was at Brown, MCM had a reputation for literary and philosophical studies about computing in general and software in particular.
+(Though Chun is no longer at Brown, many current graduate students and faculty still work in the orbit of computing as media in some form.)
+</p>
+
+<p>
+I started a PhD program in MCM at Brown in September 2021, and am currently working towards my field examinations; which I will sit in September 2024.
+Next up: a primer on my fields and current course of study.
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+In parts of both the U.S. and Europe, at least.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://www.brown.edu/Administration/News_Bureau/Databases/Encyclopedia/search.php?serial=C0230">https://www.brown.edu/Administration/News_Bureau/Databases/Encyclopedia/search.php?serial=C0230</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://mcm.brown.edu/about">https://mcm.brown.edu/about</a>
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Lachlan Kermode</p>
+<p class="date">Created: 2024-01-25 Thu 04:42</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+rm -f *.html
+rm -f *.css
+cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/*.html .
+cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/*.css .
+
