@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>24 02 05</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">24 02 05</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4ed0b74">1. Bibliography</a></li>
+</ul>
+</div>
+</div>
+<p>
+It&rsquo;s been a few days since I logged; so a couple of thoughts are due today.
+The first is regarding Zizek&rsquo;s 1989 book <a href="https://en.wikipedia.org/wiki/The_Sublime_Object_of_Ideology">The Sublime Object of Ideology</a>, which is one of the &ldquo;first&rdquo; in my list on science and psychoanalysis.
+This book is absolutely essential for a number of reasons.
+Among the most important is that it represents some of the foundational work in relating Lacan&rsquo;s thought to Hegel, Marx, and Kant.
+The radical line of argumentation that Lacan&rsquo;s thought represents for Zizek (against postmodernism, historicism, Habermas&rsquo; &ldquo;post-structuralism&rdquo;) is integral to a thoughtful understanding of science.
+</p>
+
+<p>
+By &ldquo;thoughtful&rdquo; here, I mean to take issue with two colloquial and common understandings of science: the first too idealist, and the second too materialist.
+</p>
+
+<p>
+The too-idealist understanding of science posits it as a system of thought that ultimately represents a <i>true</i> approximation of the world.
+Some version of this view is, I would think, the operational view of many scientists and &rsquo;scientifically minded&rsquo; associates.
+Science is a system of laws, in other words, that resides in thought (epistemology) in such a way that it can fundamentally map onto that which resides in the world (ontology).
+Epistemology, in this view, is nothing but a lossless compression of ontology.
+While (some of) science&rsquo;s methods might be flawed or approximate, the collective constellation of mind (ideology) that results from them is plausibly flawless.
+Because thought&rsquo;s representation of the world has no ontological instability, scientific laws come to be considered essentially <i>objective</i>: they exist independently (&rsquo;materially&rsquo;) from minds that apprehend them.
+</p>
+
+<p>
+The too-materialist view is preponderant in the history of science, humanities, and other disciplines that exclude themselves from scientific requirement (and cachet).
+It similarly sees the methods of science as approximations of what&rsquo;s at work in the world; but in contradistinction to the too-idealists, it does not recognise epistemology as plausibly lossless to ontological reality.
+In this view, thought is necessarily an approximation of the world&rsquo;s chaos.
+It is not the <i>transcription</i> of objective laws, but the <i>translation</i> of them.
+Indeed, whether such laws exist at all objectively is not up for debate, as thought and language themselves are not thought to be capable of accurately representing them in any case.
+The too-materialists tend to emphasize the necessary contingency of all knowledge, and react forcefully to all kinds of generalization of thought beyond its situation in a (suitably small) worldly context.
+Thought here is impotent to apprehend the world.
+(In extreme cases, the too-materialist malady leads to frightfully confusing arguments that we must let world do more to apprehend itself.)
+</p>
+
+<p>
+Zizek takes up the task of &ldquo;rehabilitating psychoanalysis in its philosophical core&rdquo; (<a href="#citeproc_bib_item_2">Zizek 2009</a>) to avoid the indefatigable spells of both the too-idealist and the too-materialist.
+To do so, he argues that we must re-read Hegel through Lacan, to develop a properly <b>dialectical</b> approach to epistemology and ontology.
+Hegelian, Marxian, and Lacanian dialectics&#x2013; all of which Zizek sees as sharing a certain quality of thinking&#x2013; represent such an attempt to break of the spell of an un-dialectical subject-object relation in philosophy.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+In the book&rsquo;s preface, he develops (in what is now recognised as typically Zizekian fashion) a scatological understanding of Hegelian <i>Aufhebung</i> with respect to the Lacanian notion of non-All.
+To jump to the case of connecting Lacan&rsquo;s and Hegel&rsquo;s thought (and to tastefully avoid all the other &rsquo;shit&rsquo; in this rather complex beginning):
+</p>
+
+<blockquote>
+<p>
+the externality of Nature with regard to the Idea is not that of the Idea&rsquo;s constitutive exception: it is not that Nature is set free as the exception that guarantees the Wholeness of the Idea&rsquo;s self-mediation.
+It is not the case that, once this mediation is complete (that is, after the Idea&rsquo;s dialectical progress can no longer be propelled by the Idea&rsquo;s own incompleteness - its failure to correspond to its own notion), the completed Idea needs an external Other (Nature) to sustain the complete and closed circle of its self-mediation.
+Nature is, rather, the mark of the non-All of the Idea&rsquo;s totality. (<a href="#citeproc_bib_item_2">Zizek 2009</a>)
+</p>
+</blockquote>
+
+<p>
+Incompleteness is the essential element of Hegel&rsquo;s/Zizek&rsquo;s thought that mediates between the too-idealist and too-materialist extremes of scientific conception.
+If one takes &rsquo;Nature&rsquo; in this quotation to represent the the too-materialist, and &rsquo;Idea&rsquo; the too-idealist, the relevancy of Hegel&rsquo;s thought to the &rsquo;problem&rsquo; of (thoughtful) science becomes clear.
+Dialectic is the name given to the quality of method that retains the insights of <i>both</i> materialism and idealism, without subsuming one in favour of the other.<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
+More difficultly, the relationship between Idea and Nature is understood as a <b>mutual incompleteness</b>: &ldquo;Nature is, rather, the mark of the non-All of the Idea&rsquo;s totality.&rdquo;
+Epistemology is not sufficient in itself, for there immanently resides an &ldquo;constitutive exception&rdquo; in it; i.e. a moment that cannot be (rationally) grasped in its own &rsquo;native&rsquo; terms.
+This exception <i>is</i> what we call ontology, and the fact of this exception is what makes Idea&rsquo;s totality &ldquo;non-All&rdquo;.
+</p>
+
+<p>
+Identically, (and this I still find harder to grasp), <i>the Idea is only and always the constitutive exception of Nature</i>.
+Thought appears as a &ldquo;non-natural&rdquo; thing in this formulation, but a <i>necessary</i> non-natural thing.
+One cannot avoid this non-naturalness of thought by returning it to the land, by giving Nature a greater space in thought, because the two are dialectically entangled and co-constitutive.
+</p>
+
+<p>
+Zizek posits psychoanalysis as the philosophical tradition that works against both materialist and idealist essentialism to establish a dialectical logic of the Idea and Nature.
+The Freudian notion of the <b>death drive</b> (infamously posited, then redeveloped and revised several times throughout Freud&rsquo;s career) is an example of psychoanalysis&rsquo; dialectical approach, in that it frames the human as &ldquo;an animal extorted by an insatiable parasite (reason, <i>logos</i>, language)&rdquo; (<a href="#citeproc_bib_item_2">Zizek 2009</a>); an insolvable paradox of nature and nurture.
+</p>
+
+<p>
+Zizek&rsquo;s brilliance in this book is to extend the re-reading of Hegel through Lacan to the problem of <b>democracy</b>.
+This is evidenced in its title: <i>The Sublime Object of Ideology</i>.
+Ideology, a term readily associated with Althusser and Habermas, is colloquially understood as a false consciousness that, once identified and recognized, ought to disappear as if mist cleared on a windy day.
+Viewed dialectically, however, ideology is the (necessary) product of the incompleteness that bridges subjectivity and objectivity, the &ldquo;Sublime&rdquo; (a term with Kantian undertones) to the &ldquo;Object&rdquo; (a word which in its placement here echoes the Lacanian &ldquo;objet petit a&rdquo; or object cause of desire).
+This position is a redemption of Hegel, a philosopher who is often dismissed too chauvinistically idealist, and his philosophy of the Subject/Substance relation:
+</p>
+
+<blockquote>
+<p>
+far from being a story of its progressive overcoming, dialectics is for Hegel a systematic notation of the failure of all such attempts - &rsquo;absolute knowledge&rsquo; denotes a subjective position which finally accepts &rsquo;contradiction&rsquo; as an internal condition of every identity.
+In other words, Hegelian &rsquo;reconciliation&rsquo; is not a &rsquo;panlogicist&rsquo; sublation of all reality in the Concept but a final consent to the fact that the Concept itself is &rsquo;not-all&rsquo; (to use this Lacanian term). (<a href="#citeproc_bib_item_2">Zizek 2009</a>)
+</p>
+</blockquote>
+
+<p>
+It is striking how relevant this argument remains today in an academic landscape seemingly rife with the &ldquo;&lsquo;post-modernist&rsquo; traps&rdquo; (<a href="#citeproc_bib_item_2">Zizek 2009</a>) that Hegel/Lacan/Zizek strive to avoid.
+Moreover, it was slightly surprising to me how much of Marx there is in this book: as it is through Marx that Zizek develops a robust connection between Kant-Hegel (on one side of &ldquo;history&rdquo;) and Freud-Lacan (on the &ldquo;other&rdquo;).
+(I will develop a better sense of this statement in a forthcoming post regarding the first chapter of <i>Sublime Object</i>, &ldquo;How Did Marx Invent the Symptom?&rdquo;)
+Though Zizek doesn&rsquo;t directly deal with Science, the arguments in this masterful work of philosophy are essential for bridging from my list on dialectics in history (Marx) to this list on science in psychoanalysis (Lacan).<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>
+</p>
+
+<div id="outline-container-org4ed0b74" class="outline-2">
+<h2 id="org4ed0b74"><span class="section-number-2">1.</span> Bibliography</h2>
+<div class="outline-text-2" id="text-1">
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Ruda, Frank. 2015. <i>For Badiou: Idealism without Idealism</i>. Northwestern University Press. <a href="https://books.google.com/books?hl=en&lr=&id=rmDNDAAAQBAJ&oi=fnd&pg=PT16&dq=for+badiou&ots=icucaRdzj7&sig=DbLnpsxf954GBZXWDYLXuNo_fLQ">https://books.google.com/books?hl=en&#38;lr=&#38;id=rmDNDAAAQBAJ&#38;oi=fnd&#38;pg=PT16&#38;dq=for+badiou&#38;ots=icucaRdzj7&#38;sig=DbLnpsxf954GBZXWDYLXuNo_fLQ</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Zizek, Slavoj. 2009. <i>The Sublime Object of Ideology</i>. Second Edition. London New York: Verso.</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Hegel properly articulates this problem for Zizek: &ldquo;when we observe a thing, we see <i>too much</i> in it, we fall under the spell of the wealth of empirical detail which prevents us from clearly perceiving the notional determination which forms the core of the thing.&rdquo; (<a href="#citeproc_bib_item_2">Zizek 2009</a>) Zizek will go on to develop this with respect to both Lacan&rsquo;s notion of the <i>objet a</i> and Heidegger&rsquo;s <i>das Ding</i>, among other key concepts in Western philosophy.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+A great articulation of a similar point can be found in the introduction to Frank Ruda&rsquo;s synthesis of Badiou&rsquo;s thought, <i>For Badiou: Idealism without Idealism</i> (<a href="#citeproc_bib_item_1">Ruda 2015</a>).
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+For more about these lists, see <a href="24-01-26.html">24-01-26</a>.
+</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>
