@@ -1,5 +1,5 @@
 #+title: Writing Setup
-#+options: toc:nil author:nil date:nil timestamp:nil
+#+options: toc:nil author:nil timestamp:nil
 #+bibliography: /home/lox/Dropbox (Brown)/lyt/references/master.bib
 #+cite_export: csl
 #+LaTeX_HEADER: \usepackage{fancyhdr}
