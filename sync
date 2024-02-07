@@ -5,3 +5,6 @@ cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/*.html .
 cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/*.css .
 cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/*.pdf .
 
+rm -rf img/
+mkdir -p img
+cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/img/* ./img/
