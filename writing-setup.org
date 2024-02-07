@@ -9,6 +9,7 @@
 #+LaTeX_HEADER: \renewcommand{\footrulewidth}{0.2pt}
 #+LaTeX_HEADER: \fancyfoot{}%
 #+LATEX: \setlength\parindent{0pt}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
 
 
 * Introduction
