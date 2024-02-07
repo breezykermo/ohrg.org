@@ -1,10 +1,17 @@
 #!/usr/bin/env fish
+
+# general
 rm -f *.html
 rm -f *.css
+rm -f *.org
 cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/*.html .
 cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/*.css .
 cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/*.pdf .
 
+# images
 rm -rf img/
 mkdir -p img
 cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/img/* ./img/
+
+# raw files
+cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/notes.ohrg.org/writing-setup.org .

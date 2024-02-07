@@ -1,0 +1,131 @@
+#+title: Writing Setup
+#+options: toc:nil author:nil date:nil timestamp:nil
+#+bibliography: /home/lox/Dropbox (Brown)/lyt/references/master.bib
+#+cite_export: csl
+#+LaTeX_HEADER: \usepackage{fancyhdr}
+#+LaTeX_HEADER: \pagestyle{fancy}
+#+LaTeX_HEADER: \rhead{Writing Setup}
+#+LaTeX_HEADER: \renewcommand{\headrulewidth}{0.2pt}
+#+LaTeX_HEADER: \renewcommand{\footrulewidth}{0.2pt}
+#+LaTeX_HEADER: \fancyfoot{}%
+#+LATEX: \setlength\parindent{0pt}
+
+
+* Introduction
+A slight digression from my regular train of thought to put to paper the environment in which I write [[file:index.org][these logs]]; which is also the environment in which I have written academic papers for the past year or so.
+
+I write entirely within a terminal-emulated version of [[https://github.com/doomemacs/doomemacs][Doom Emacs]], exporting to either PDF or HTML documents as is necessary.
+This environment supports /all/ of my writing - papers (single or double column), abstracts, syllabi, blogs, wikis, meeting notes, etc.
+I even write my slides in Emacs, which I can export as [[https://github.com/hakimel/reveal.js][reveal.js]] presentations[fn:0].
+The markup language I use (for all of these tasks) is [[https://orgmode.org/][Org Mode]]; a format that is actually the main reason I started taking notes in Emacs (being a long-time [[https://en.wikipedia.org/wiki/Vim_(text_editor)][vim]] user for coding tasks) in the first place.
+
+Org is a plain-text markup language like Markdown, but has extensive capacity in its syntax for things like jotting down "todo" bullets (with dates, deadlines, notes included), and as such works basically as a way to powerfully organize a whole system of notes written in it.
+Markdown is great as a plain-text markup language for single documents, such as READMEs, but it isn't purpose-built for organizing a whole collection of documents in the way that Org is.
+Apps like [[https://obsidian.md/][obsidian]], [[https://roamresearch.com/][roam]], and [[https://www.markdownguide.org/tools/notion/][notion]] have done a great job popularising the idea of note 'vaults' as the best way to organise thought in writing.[fn:1]
+These apps/systems strive to serve as good interfaces for a common plain-text markup format such as Markdown; but they inevitably all have their own quirks and costs, financial or in terms of platform support, interoperability, etc.
+(Not to mention that [[https://en.wikipedia.org/wiki/Markdown][Markdown itself has many variants]] that are not always compatible with each other.)
+
+It is true that obsidian has a much lower learning curve that Emacs/Org Mode, as many who want a vault-like note-taking experience are familiar with Markdown (or find it easier to learn if they are not yet familiar with a markup language); but Org Mode in Emacs is a fundamentally more flexible, powerful, and more reliably free[fn:2] way to keep notes.
+Plus - and this is an important point for me - it works seamlessly in a terminal (rather than as an independent GUI or web app) via ~emacs -nw~.
+And though Org Mode is tightly coupled with Emacs in some ways (it was originally developed as an Emacs extension by Carsten Dominik in 2003, and has been included as a major mode in every Emacs release since 2006[fn:3]), there is nothing in principle to stop me moving to another way of interfacing with my vault of files if a better option appears or something happens to Emacs.[fn:4]
+
+* Flexible, powerful, distraction-free
+My main editing environment, as I have already noted, is Doom Emacs running in a terminal.
+Not only is this a distraction-free environment (I have a shortcut to turn off all notifications when I'm in a terminal) over which I have essentially full control in terms of colours, styling, etc; it also requires no context switching to bring up shell to run some [[https://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/][basic text analysis commands]] such as word count, pattern finding, systematic replacement, etc.
+Both Doom Emacs and [[https://github.com/tmux/tmux/wiki][tmux]] - my preferred terminal multiplexer - have tiling window systems that allow me to easily view other notes, shells, or terminal applications for reference while writing.
+
+#+ATTR_HTML: :alt A terminal multiplex screenshot :align center
+[[./img/multiplex-example.png]]
+
+This is certainly not the right setup for everyone.
+But for those of us who know and love the terminal, and who have already invested the time in basic proficiency in the shell-as-workstation - why use a specialized GUI app (or browser tab) for note-taking?
+
+One essential feature of Org that I use extensively is its outlining and folding capabilities.
+Every line starting with one or more ~*~ characters becomes part of a tree structure that can easily be expanded and contracted life a shelf.
+As an example, here is one the "index" (entrypoint) documents I use for my life as a graduate student, first fully 'folded', and then partially expanded:
+
+#+ATTR_HTML: :alt An Org file with shelves closed :align center
+[[./img/org-closed-example.png]]
+
+#+ATTR_HTML: :alt An Org file with some shelves open :align center
+[[./img/org-open-example.png]]
+
+This folding capability means that I can keep single documents that contain enormous lists (of running meeting notes, for example), yet still fluidly navigate to the section of the document relevant at any given time.
+I have a general shelving structure for classes, for example, that contains top-level headings such as ~details~, ~seminar~, ~reading~, ~assignments~.
+Each Org document is a continual work-in-progress that is frequently edited, updated, and re-organised.
+
+* Cross-platform editing
+It's also a massive boon that all of my notes, for everything, are readable plain text.
+Even if I am viewing them on an editor or viewer that doesn't support Org Mode, they are still fundamentally understandable, and also effectively editable.
+The thought occurs to me that I should rephrase the opening sentence of a paper when I'm out for a walk?
+Bring it up with any basic editor on my phone, retype it out.
+(I would normally do this in [[https://orgro.org/][Orgro]], a reader/editor that does support Org.
+But any app that supports viewing and editing plain-text files would work almost as well.)
+
+I use Dropbox to synchronize my vault across devices, so while each device has its own local copy of every note - which also gives me distributed backups - changes are propagated to all other machines so long as the Dropbox daemon is running on it.
+Conflicts across devices are never really an issue for me, as I am only ever working on one device at a time, and no-one else is editing my note vault.[fn:5]
+In the rare case that some device has fallen behind and Dropbox presents a conflicted version, I just take the version of the note from the device that most recently edited it.
+For example, I just stepped away from writing this post on my desk computer (running [[https://nixos.wiki/][NixOS]]) to my portable laptop (running [[https://archlinux.org/][Arch Linux]]) to write this section elsewhere; and am now seamlessly picking it up back on my desk.
+
+* Multi-format export
+This section is the real reason that my system works for all my writing needs.
+Extensive tooling has been developed over the years that allows one to export Org documents to a range of other formats.
+The important ones for me are *PDF* and *HTML*, though I also occcasionally use ODT (to get writing into a Google doc) and Markdown (for a README, say).
+
+I can export any Org document as a PDF directly from Doom Emacs with a simple shortcut.
+The text goes to an intermediary LaTeX document, and then uses that technology to create the final PDF.
+Because of this intermediary LaTeX, I can use any LaTeX feature or package to format writing exported this way.
+Org has all of its basics built-in to the exporter - hyperlinks, bold/italics/underline, images, even its [[https://orgmode.org/worg/org-tutorials/tables.html][plain-text tables]] will end up beautiful by way of the LaTeX ecosystem.
+
+The absolutely critical feature for my [[https://www.ohrg.org/24-01-25][life as an aspiring academic]] is the support I have configured for citations.
+I manage all of my citations with [[https://www.zotero.org/][Zotero]], clipping books and articles from Google Scholar with its [[https://www.zotero.org/download/connectors][browser extension]] and then editing entries if needed in the Zotero app itself.
+(I don't yet manage my Zotero library with a [[https://en.wikipedia.org/wiki/Text-based_user_interface][TUI]]; as I haven't yet found one that works effectively.
+If you know of one that works well, [[mailto:hello@ohrg.org][please let me know]]!)
+I have the [[https://github.com/retorquere/zotero-better-bibtex][Better BibTeX]] extension for Zotero installed, which synchronises whatever I do in the app to a [[https://en.wikipedia.org/wiki/BibTeX][BibTeX]] file (similarly stored in Dropbox) that represents my library of possible citations when writing.
+
+With all this in place, the magic of Doom Emacs (with the [[https://github.com/breezykermo/.doom.d/blob/master/init.el#L90][biblio module enabled]]) is ready to do its work.
+Perhaps I want to cite the following passage from Joan Copjec's first book, /Read My Desire: Lacan against the Historicists/, in which she criticizes the misinterpretation of the psychoanalytic notion of 'the gaze' in much of late 20th century film theory:
+
+#+begin_quote
+The gaze is conceived as a point constructed by the textual system of the film from which the subject is obliged to look; it is the condition of the possibility of the viewer's vision. The gaze acts as a kind of key hold, the only opening into the visual pleasure the film affords.
+#+end_quote
+
+Once I've typed or copied out the quote and noted the page number, I have a shortcut that brings up a shelf at the bottom of Emacs that presents me with all of my Zotero citations, and a fuzzy search bar.
+Once I've filtered/selected one, I get something like this in the plain-text of my Org document: =[cite:@copjecCutting2015]=.
+I then insert the page number so it becomes =[cite:@copjecCutting2015 p.41]=.
+
+When the PDF exporter comes across syntax like this in my Org note, it becomes this: [cite:@copjecCutting2015 p.41].
+If I add the line: \\
+
+=#+print_bibliography=
+#+latex: \newline
+
+anywhere in the document (as I have down the bottom of this one), the full listing of this citation will displayed, properly linked to the reference above, deduplicated (if there are multiple references to the same citation), and alphabetically ordered, etc.[fn:6]
+
+My system is configured to interpolate the appropriate bibliographic data for many kinds of export, most notably PDF and HTML.
+This allows me to seamlessly transfer source text between papers, blogs, notes, slides, and any other kind of document I have in Org.
+Here's [[file:writing-setup.pdf][this post as a PDF]], generated from exactly the same source text as the document you're reading.
+(All the bells and whistles of how exactly the PDF looks, how images are formatted, etc are configured using commands similar to =#+print_bibliography= in Org.
+Here's [[https://ohrg.org/writing-setup][the Org plain-text of this post]], if you're interested in seeing a full example.)
+
+* Conclusion
+As you can see from this post's sections, I also make use of Org's sectioning capabilities when writing.
+This is super handy for compartmentalising writing tasks and organising longer pieces, a method I use that is deeply inspired by [[https://www.newyorker.com/magazine/2013/01/14/structure][John McPhee's plain-text writing method in Kedit]].
+
+To see some examples of what I've produced recently using this system, check out some of the entries in my [[file:index.org][grad log]].
+An example of a PDF product is [[file:conference.marx-and-philosophy2024.pdf][this abstract]] that I recently submitted to a conference.
+
+If you're interested to know more about exactly how I set this up, refer to my Doom Emacs configuration.
+Though I don't actively maintain this any longer (as I now mostly manage my configuration in Nix), it should give a workable example of how to get something similar on your computer, provided you already have Emacs installed.
+Don't hesitate to [[mailto:me@ohrg.org][reach out to me]] if you're looking for some pointers.
+
+* Bibliography
+#+print_bibliography:
+
+[fn:0] This is easy to set up by enabling the ~+present~ option in Doom Emacs' [[https://docs.doomemacs.org/latest/modules/lang/org/][Org module]]. See [[https://github.com/breezykermo/.doom.d/blob/master/init.el#L152][here]] for an example configuration file.
+[fn:1] Diving deep on the philosophy of note-taking is not my interest here; but many of these apps are based on the [[https://en.wikipedia.org/wiki/Zettelkasten][Zettelkasten]] approach. The [[https://forum.obsidian.md/][obsidian forum]] is a great place to get lost reading opinions about all the best ways to record thought and organize a system of notes, if this kind of thing does interest you.
+[fn:2] Emacs is [[https://en.wikipedia.org/wiki/GNU_Emacs][one of the original Linux/Unix softwares]], as well as one of the original [[https://en.wikipedia.org/wiki/GNU_General_Public_License][GPL]] licensed softwares. Emacs runs on all major operating systems; but it has an exceptional experience on Linux, which runs on (almost) all of the computers I regularly use. (My Android phone is the primary exception.)
+[fn:3] https://en.wikipedia.org/wiki/Org-mode
+[fn:4] I have periodically tinkered with obsidian with [[https://github.com/ryanpcmcquen/obsidian-org-mode][Org Mode plugins]], or obsidian-like apps that support Org such as [[https://logseq.com/][Logseq]]: but nothing so far matches the (terminal-based) experience of Org in Emacs itself.
+[fn:5] If it were a collaborative note vault, I would need to institute a version control system like [[https://en.wikipedia.org/wiki/Git][git]] if I wanted editing to remain distributed. But this is a different scope of problem. So collaborative editing in notion, roam, or obsidian cloud has always seemed like an unimportant - and potentially self-sabotaging - feature.
+[fn:6] All these organisational schema for the bibliography can be customized according to different bibliographic standards, i.e. Chicago, MLA, etc.
