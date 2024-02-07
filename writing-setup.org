@@ -35,7 +35,7 @@ My main editing environment, as I have already noted, is Doom Emacs running in a
 Not only is this a distraction-free environment (I have a shortcut to turn off all notifications when I'm in a terminal) over which I have essentially full control in terms of colours, styling, etc; it also requires no context switching to bring up shell to run some [[https://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/][basic text analysis commands]] such as word count, pattern finding, systematic replacement, etc.
 Both Doom Emacs and [[https://github.com/tmux/tmux/wiki][tmux]] - my preferred terminal multiplexer - have tiling window systems that allow me to easily view other notes, shells, or terminal applications for reference while writing.
 
-#+ATTR_HTML: :alt A terminal multiplex screenshot :align center
+#+ATTR_HTML: :alt A terminal multiplex screenshot :align left
 [[./img/multiplex-example.png]]
 
 This is certainly not the right setup for everyone.
@@ -45,10 +45,10 @@ One essential feature of Org that I use extensively is its outlining and folding
 Every line starting with one or more ~*~ characters becomes part of a tree structure that can easily be expanded and contracted life a shelf.
 As an example, here is one the "index" (entrypoint) documents I use for my life as a graduate student, first fully 'folded', and then partially expanded:
 
-#+ATTR_HTML: :alt An Org file with shelves closed :align center
+#+ATTR_HTML: :alt An Org file with shelves closed :align left
 [[./img/org-closed-example.png]]
 
-#+ATTR_HTML: :alt An Org file with some shelves open :align center
+#+ATTR_HTML: :alt An Org file with some shelves open :align left
 [[./img/org-open-example.png]]
 
 This folding capability means that I can keep single documents that contain enormous lists (of running meeting notes, for example), yet still fluidly navigate to the section of the document relevant at any given time.
