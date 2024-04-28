@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>24-04-24</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">24-04-24</h1>
+<p>
+I have been at the institute (the <a href="https://www.iwm.at/">IWM</a>) for nearly a month now, the first month of three.
+It is the first time that I have had something close to my own office (I share a room with one other fellow), and the first time that I have had the space and time of mind to attend specifically to the task of my dissertation proper.
+As a PhD student in Providence, there is a bustle of daily university life - lectures, seminars, meetings - that makes it more difficult to properly think.
+Perhaps this is because it is the aim of a PhD to find a unique space of thought, and such a pocket (carved out against the majority of opinion, if it is to have any academic value) is necessarily solitary.
+The PhD project is to design such a space, to educate oneself in how it reflects and refracts existing projects (of existing academics), and to come to some confident enough conclusion in it that one appears salable on the job market.
+</p>
+
+<p>
+In the past few weeks I have tracked four contemporary projects that relate to the space I am trying to carve for myself at the <a href="24-01-26.html">intersection of mathematics, Marx, and Lacan</a>.
+I&rsquo;ll introduce two of them here (Amanda Holmes&rsquo; and Adrian Johnston&rsquo;s), and defer two of them (Svitlana Matviyenko&rsquo;s and Sarah Pourcieau&rsquo;s) to a later log.
+</p>
+
+<div id="outline-container-org37aee1f" class="outline-2">
+<h2 id="org37aee1f"><span class="section-number-2">1.</span> <a href="https://www.dieangewandte.at/jart/prj3/angewandte-2016/main.jart?rel=en&amp;reserve-mode=active&amp;content-id=1458930944469&amp;Pe-Id=8332">Amanda Holmes</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Completing her PhD in <a href="https://www1.villanova.edu/university/liberal-arts-sciences/programs/philosophy.html">philosophy at Villanova</a> in 2020, Holmes was advised by <a href="https://philpeople.org/profiles/walter-brogan">Walter Brogan</a>, <a href="https://en.wikipedia.org/wiki/Gabriel_Rockhill">Gabriel Rockhill</a>, and <a href="https://en.wikipedia.org/wiki/Alenka_Zupan%C4%8Di%C4%8D">Alenka Zupančič</a>.
+Her dissertation was titled <i>Erotology: The Logos of Eros in Lacan&rsquo;s Return to Freud</i>, and its structure is refreshingly un-American in its singular focus on tracking what Holmes calls &rsquo;erotology&rsquo; in Lacan&rsquo;s thought.
+Erotology is &ldquo;the logos of eros, the study of desire, the disciplined examination of those gaps in the universe around which desire gathers&#x2026;. the discipline of identifying and elaborating the philosophical implications of
+psychoanalysis&rdquo; (Holmes 2020, 7).
+Erotology is the fourth term that psychoanalysis, as an inflection point in and critique of the Western (European) philosophical tradition, introduces to the reigning triumvirate of ontology (the science of being), epistemology (the science of thinking), and phenomenology (the science of feeling).
+Lacan&rsquo;s return to Freud, a project that takes psychoanalysis seriously as a philosophical invention and intervention, is erotological because it is &ldquo;a discourse that takes desire as its central focus&rdquo; (Holmes 2020, 8).
+</p>
+
+<p>
+Holmes&rsquo; dissertation does what good dissertations should do, I think: it synthesizes the state of a discursive space, offering the seeds of a &rsquo;new&rsquo; argument only by first demonstrating erudition and pedagogical generosity as a writer.
+There is an overwhelming sense (in America) that one&rsquo;s dissertation is supposed to operate as a &rsquo;scientific&rsquo; breakthrough, exposing some connection heretofore unseen and unconceptualized.
+This contributes to the reigning paradigm of paranoiac collaboration and publication, whereby there is an idea that one&rsquo;s academic space or niche can be stolen, as if intellectual specialization were a patented technology that needs regulatory mechanisms to protect its strategic advantage.
+This framing is not to downplay the very real and common occurrence of more senior scholars taking advantage of younger ones as a fungible labor force, manipulating the cult of authorial singularity in the humanities through their positions of relative power so as to significantly disadvantage and dispossess more junior persons of their due credit and/or acclaim.
+But it is to suggest that we should consider the limitations of the conceptual treatment of academic ideas as intellectual property, i.e. as salable commodities that should circulate in such a way that the benefit gained thereof warrants a financial or reputational &rsquo;interest&rsquo; that accrues to their authors.
+Some will say that the commodified condition of the market of ideas is just the way it is, the realpolitik of (American) academia within which one must operate to have any relevance, and/or to feed oneself and one&rsquo;s &ldquo;family&rdquo;.
+Perhaps this is the case.
+But shouldn&rsquo;t we still do our best to imagine it otherwise, and implement this imagination as much as we can, as much as we are allowed to?
+</p>
+
+<p>
+It is rich, perhaps the same some will say, to suggest that the dedicated study of an infamously cryptic and white French man&rsquo;s seminars from the 60s and 70s represents a progressive (i.e. less commodified) kind of scholarship.
+And it is probably true that Lacanians have failed to convincingly articulate why such a thing could really (as I am coming to believe it to be) the case.
+But I really do digress, here, as the point that I set out to make is that Holmes&rsquo; dissertation on Lacan is a valuable addition to the available other introductions to the Lacanian ethos of desire (i.e. <a href="https://en.wikipedia.org/wiki/The_Sublime_Object_of_Ideology">Zizek</a>&rsquo;s, <a href="https://www.sas.upenn.edu/~cavitch/pdf-library/Gallop_Reading_Lacan.pdf">Gallop</a>&rsquo;s, to name a few that I have discussed on this site), and perhaps one that is the most up-to-date regarding more recent Lacan scholarship, such as Zupančič&rsquo;s <i><a href="https://mitpress.mit.edu/9780262534130/what-is-sex/">What Is Sex?</a></i>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org41b33e6" class="outline-2">
+<h2 id="org41b33e6"><span class="section-number-2">2.</span> <a href="https://en.wikipedia.org/wiki/Adrian_Johnston_(philosopher)">Adrian Johnston</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I intend to discuss Johnston&rsquo;s most recent book <i><a href="https://cup.columbia.edu/book/infinite-greed/9780231214735">Infinite Greed</a></i> at more length in future logs on this site, as it is one of the most erudite studies of the relationship between Lacan&rsquo;s and Marx&rsquo;s thought available.
+In recent weeks I have read a <a href="https://ir.canterbury.ac.nz/items/35ce4f03-fba6-465d-8862-b44a2d9bc5d7">2017 essay</a> that prefigures the argument in that book, and I am now working through a manuscript of the book itself.
+</p>
+
+<p>
+The core argument (of both the essay and the book, as I understand them) is that Marx&rsquo;s critique of political economy in <i>Capital</i> prefigures some of the core psychoanalytic insights, the discourse of which Johnston suggestively refers to as <b>libidinal economy</b>.
+There are &ldquo;temporal dialectical dynamics between past and present (as well as future)&rdquo; (Johnston 2017, 277) that Marx&rsquo;s and the psychoanalytic accounts share, and in articulating this common understanding one can marry metapsychology (psychoanalysis) and historical materialism (Marx).
+The terminological lodestone of this effort is <i>Trieb</i> [drive], a word used by Freud, Lacan, and Marx alike.
+</p>
+
+<p>
+Drive in the Lacano-Freudian sense of the term can be understood through Freud&rsquo;s enigmatic and polarizing suggestion that the human is characterized by her/his <b>death drive</b>.
+The final chapter of Alenka Zupančič&rsquo;s book <i>What Is Sex?</i> (Zupančič 2017) is a sublime rumination on and interpretation of the death drive as it should be understood: as the name for the object-less affect that emerges from the unknowable contradiction in consciousness called &rsquo;sex&rsquo;.
+At once aimed at reproduction, as a crude Darwinian imaginary would have it, and paradoxically also at a self-annihilating end in &rsquo;death&rsquo;, the death drive is what differentiates a speaking being from an animal in Lacanian thought.
+Speaking being is characterized by a contradiction in its telos (purpose), whereby there is an element of indetermination in its (life) trajectory that gives rise to a special kind of under-determined drive called <b>desire</b>.
+Desire has no overdetermined object: it is a subject that strives not for something in particular, but for something &rsquo;abstract&rsquo;.
+Thus Lacan refers to the object of desire as the <b>objet petit a</b>; for it is not an object in particular, but an absent and negative object that must be &rsquo;filled in&rsquo; in order for the striving to make sense in a causal register.
+We do not desire because desire can be achieved, fully satisfied and sated.
+We rather continue to desire exactly because the object of desire (<i>objet petit a</i>) cannot ever properly concretize as something positive (a person, an amount of money); and so once we achieve what we thought we wanted, what it is we want has moved on.
+</p>
+
+<p>
+Johnston&rsquo;s project is to put this Lacanian register of desire, understood as <i>the</i> contradiction in the multitude of drives a subject suffers, in touch with the way that Marx talks about <i>Trieb</i> in his theory and system of capital.
+He sees drive as a commonality between these registers, in that in both &ldquo;drives are mediated productions instead of immediate givens&rdquo;- and in that &rsquo;drive&rsquo; is the constitutive terms for the subject in society as such: &ldquo;The (drive-)object fabricates the subject (of drive)&rdquo; (Johnston 2017, 280).
+</p>
+
+<p>
+For subjects dominated by capital&rsquo;s abstract forms, the range of possible materializations of desire&rsquo;s covering over are reduced to two specific kinds of drive: <b>capitalist drive</b> ( <code>M-C-M'</code> ) and <b>consumerist drive</b> ( <code>C-M-C'</code> ).
+The capitalist is one who feeds money ( <code>M</code> ) into the economy with the hope and intention of generating a greater quantity of money ( <code>M'</code> ).
+The consumerist, on the other hand, is one who continues to take their commodities to market ( <code>C</code> ) in order to procure more and more different kinds of commodity ( <code>C'</code> ) in a fashion that is &rsquo;plastically&rsquo; related to their direct, reproductive need for them.
+</p>
+
+<p>
+Johnston is careful to distinguish between these two subject positions Marx&rsquo;s theory of capital&rsquo;s contortion of desire, and he is also careful the specific structure of the relationship that he sees as giving rise to a compatibility between metapsychology and historical materialism:
+</p>
+
+<blockquote>
+<p>
+plastic drive structure, as theorized within a metapsychological <i>qua</i> philosophical/psychoanalytic anthropology, is a necessary condition for capitalism&rsquo;s peculiar libidinal economics as per historical materialism. It becomes a sufficient condition [for one to call it &rsquo;capitalism&rsquo;] when capitalist production, spurred by the pursuit of surplus value, begins exploiting this plasticity for its gains. (Johnston 2017, 283)
+</p>
+</blockquote>
+
+<p>
+Psychoanalysis, in other words, theorizes a &ldquo;plastic drive structure&rdquo; in the speaking being (human) <i>in general</i>, i.e. independent of capitalism as a specific configuration of the condition of value&rsquo;s production in society.
+Historical materialism, complementarily but with a different scope, theorizes the contortion of desire - as reduced to only two dialects of drive - by way of an historically specific mode of production (movement of value) called capital.
+Johnston&rsquo;s analysis exegetically focuses on the German word for drive that both Marx and Freud use, <i>Trieb</i>, as Marx names the affect resulting from capital&rsquo;s structure <i>eine besondre Form des Triebs</i> [a particular form of the drive].
+Capital&rsquo;s particular drive, Johnston suggests in his book, can be understood as <b>infinite greed</b>: as the drive is always towards the possession of some surplus amount, whether it is more money or something more in a different kind of commodity ( <code>M'</code> or <code>C'</code> ).
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
