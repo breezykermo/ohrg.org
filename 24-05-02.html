@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>24 05 02</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">24 05 02</h1>
+<p>
+Today&rsquo;s log discusses two projects, Svitlana Matviyenko&rsquo;s and Sarah Pourciau&rsquo;s, as a follow on from <a href="24-04-24.html">the last log</a>.
+</p>
+
+<div id="outline-container-org456089d" class="outline-2">
+<h2 id="org456089d"><span class="section-number-2">1.</span> Svitlana Matviyenko</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I came to Matviyenko&rsquo;s work through <a href="https://www.iwm.at/event/garrison-colony-and-soviet-atomgrad">an event here at the IWM</a>, which took place this past Friday.
+She is currently an <a href="https://www.sfu.ca/communication/people/faculty/svitlana-matviyenko.html">associate professor at Simon Fraser University</a> (SFU) in the School of Communication, and she was previously (I seem to remember, although I cannot now find the Internet proof of this) an assistant professor in NYU&rsquo;s department of <a href="https://steinhardt.nyu.edu/departments/media-culture-and-communication">Media, Culture and Communication</a>.
+Both of these departments/institutes are at the forefront of a particular kind of media theoretical critique in the American academy; though like many American things it has something of a European and global reach.
+<a href="https://www.sfu.ca/communication/people/faculty/wendy-chun.html">Wendy Chun</a>, who used to be a professor in <a href="24-01-25.html">my department</a>, received a big grant to kick-start SFU&rsquo;s <a href="https://digitaldemocracies.org/">Digital Democracy Institute</a> circa 2020, and ever since has surely played some kind of instrumenetal role in bringing together an impressive range of up-and-coming names in critical accounts of computing (<a href="https://www.sfu.ca/communication/people/faculty/stephanie-dick.html">Steph Dick</a>, for example&#x2013; <a href="https://www.sfu.ca/humanities-institute/about/profiles/a-toscano.html">Alberto Toscano</a> is also currently visiting faculty there).
+</p>
+
+<p>
+Matviyenko did her dissertation with <a href="https://en.wikipedia.org/wiki/Nick_Dyer-Witheford">Nick Dyer-Witheford</a>, a scholar who is best known for his first book, published in 1999, <i>Cyber Marx: Cycles and Circuits of Struggle in High-technology Capitalism</i> (<a href="#citeproc_bib_item_2">Dyer-Witheford 1999</a>).
+Matviyenko&rsquo;s dissertation is titled <i>Lacan&rsquo;s Cybernetics</i> (<a href="#citeproc_bib_item_4">Matviyenko 2015</a>), and attempts to track the relationship between Lacan&rsquo;s presentation of psychoanalysis across his seminars (which took place annually between 1953 and 1981) and cybernetics, an intellectual movement/field of thought whose first wave is typically traced to circa 1948, the year in which Norbert Wiener published <i>Cybernetics: or Control and Communication in the Animal and the Machine</i> (<a href="#citeproc_bib_item_6">Wiener 2019</a>), and which is generally understood to have had a second (1960s), third (1990s), and sometimes even a fourth wave (2010s?) in the ensuing years.
+</p>
+
+<p>
+There is no doubt that Lacan knew about cybernetics: he first treats the subject explicitly in his second seminar (1954-55).
+Though this seminar has come to be known as his cybernetic seminar, Matviyenko makes a convincing case that one there is development of the ideas in seminar II, in at least seminars III, XI, and XX.
+Matviyenko&rsquo;s contextualization of Lacan&rsquo;s position on cybernetics is extremely useful, even if the specificity of an argument beyond contextualization is at times hard to make out.
+Her dissertation&rsquo;s general task is to &ldquo;contextualize Lacan&rsquo;s work in the variety of debates on cybernetics&rdquo; (<a href="#citeproc_bib_item_4">Matviyenko 2015, 27</a>), and to situate &ldquo;the cybernetic episteme&rdquo; as an influential discourse in and on Lacan&rsquo;s thought.
+This argument consists of what I find a confusing kind of historicism, i.e. through a set of claims that pose cybernetics as a Foucauldian episteme which &ldquo;serves as the framing for knowledge upon which psychoanalysis operates&rdquo; (<a href="#citeproc_bib_item_4">Matviyenko 2015, 43</a>).
+</p>
+
+<p>
+I find this confusing as a methodological stipulation in relation to Lacan&rsquo;s seminars because the figure of the Foucauldian episteme seems to me very much in tension with a &rsquo;Lacanian&rsquo; notion of &rsquo;discourse&rsquo;, of tracing cause and effect in the language of Lacan&rsquo;s seminars.
+For example, Matviyenko&rsquo;s summary of her method in chapter 1 is as follows:
+</p>
+<blockquote>
+<p>
+To summarize: the cybernetic episteme organizes the subject of science&rsquo;s relation to knowledge as the mechanism of blackboxing maintained by the institutional power formed within certain conditions of mediality. (<a href="#citeproc_bib_item_4">Matviyenko 2015, 43</a>)
+</p>
+</blockquote>
+
+<p>
+To start, there are a number of terms in this summary that need elucidation.
+This sentence comes after a section that present the basic context of terms such as communication, control, and homeostasis in their cybernetic formulations, and in the section preceding this summary the Lacanian notion of the &ldquo;agency of the letter&rdquo; (<a href="#citeproc_bib_item_4">Matviyenko 2015, 41</a>) has been mapped.
+I understand Matviyenko&rsquo;s claim to be meaning to say something to the effect of: cybernetics&rsquo; presentation of the world as nothing but traceable cause and effect, i.e. its behaviorist and scientistic basis, is an intellectual basis upon which Lacan&rsquo;s idea of the agency of the letter, as well as his related presentation of the notions of &rsquo;repetition automatism&rsquo; and &rsquo;the subject of science&rsquo;, can be developed.
+Yet Matviyenko confuses this point in the quotation above by introducing an idea of &rsquo;blackboxing&rsquo; (a term not properly developed at this stage, nor later in the dissertation) and by suggesting a hazy relation to &rsquo;institutional power&rsquo;.
+</p>
+
+<p>
+In other words, Matviyenko&rsquo;s attempt to chart the relationship between cybernetics and psychoanalysis by way of Foucauldian &rsquo;archaeology&rsquo; results in a mystification of the specificity of her historical claim, preferring instead to lean on Latourian/Foucauldian language of mediality and power in a way that I find obscuring rather than enlightening.
+Throughout the dissertation, she wants to suggest that there is something Lacan&rsquo;s thought shares with/inherits from cybernetics&#x2013; an unproblematic claim in its generality, given the aforementioned direct treatment Lacan gives to cybernetics&#x2013; but I have a hard time making out what exactly the substance and consequence of this relationship is in Matviyenko&rsquo;s view.
+Though ample context is provided about Lacan&rsquo;s views on automatism and cybernetic notions of the subject, the strongest kind of claim Matviyenko herself makes is so generally media-theoretical that it seems barely to be a claim at all: i.e. &ldquo;psychoanalysis reflects contemporary conditions of mediality&rdquo; (<a href="#citeproc_bib_item_4">Matviyenko 2015, 54</a>), or &ldquo;[Lacan&rsquo;s] thought seems to be caught in the changing condition of mediality&rdquo; (<a href="#citeproc_bib_item_4">Matviyenko 2015, 55</a>).
+</p>
+
+<p>
+Whatever one can critique in the historicist flattening of argumentation, though, it is undeniably still very rich on context.
+The dissertation&rsquo;s second chapter, &ldquo;The Subject of Science&rdquo;, is particularly useful for me in this regard, as it lays out the connections from Norbert Wiener&rsquo;s thought to Leibniz and Pascal, as well as Dutch mathematician and astronomer Christiaan Huygens (working and writing in the 1650s), and putting these references in relation to Lacan&rsquo;s conception of modern science (via Alexandre Koyre) and automatism (via Descartes).
+Matviyenko convincingly posits both cybernetics and psychoanalysis as taking up the challenge of &ldquo;the model of the body as a system-coupled-with-the-environment that transcends Cartesian mind-body dualism&rdquo; (<a href="#citeproc_bib_item_4">Matviyenko 2015, 78</a>): that is, the problem of the subject in science, of the material/ideal dialectic, of thought&rsquo;s relationship to the world at large (read: ontology, epistemology, phenomenology).
+It seems clear to me that psychoanalysis should be seen as a <i>critique</i> of cybernetics (rather than, as Matviyenko seems to see it, as a complementary or comparable system of thought, similar in the sense of similarly deficient and perspectival)
+</p>
+
+<p>
+Chapter three, &ldquo;Freud&rsquo;s circuitry&rdquo;, is similarly rich in its presentation of determinism and thermodynamics as influences on Freud&rsquo;s thought.
+Lacan&rsquo;s notion of <b>structure</b> is then traced as the sublimation (to use Freudian vocabulary, rather than Matviyenko&rsquo;s) of Freud&rsquo;s reckoning, and the apparent allusions to Claude Shannon&rsquo;s concept of error in Lacanian repetition automatism.
+The relevance of these 19th century discoveries on psychoanalysis is clear and undeniable, and again my main quibble of the dissertation&rsquo;s method would be in that Matviyenko doesn&rsquo;t do much argumentatively with this context other than provide it.
+Though perhaps I should not be so quick to judge such an argumentative lack, as the text is certainly immensely valuable as a reference for further study (which is perhaps all one should ask of a dissertation).
+</p>
+
+<p>
+A slightly more substantive claim is reached by the end of the text; namely that &ldquo;both psychoanalysis and cybernetics belong to the epoch of <i>graphocentrism</i>, which began in the nineteenth century and extends to the present moment&rdquo; (<a href="#citeproc_bib_item_4">Matviyenko 2015, 193</a>).
+In making this claim, Matviyenko gestures to the ongoing relevance of cybernetics and psychoanalysis to contemporary ideologies and epistemologies of science and the subject, and I certainly agree on this point.
+Chapters 5 and 6 offer an intriguing tour of more recent theorizations (Kittler, Latour, Foucault, Didi-Huberman, Florian Cramer, Alex Galloway) in an attempt to link graphocentrism with what is seen as its current instantiation as <b>interpassivity</b>.
+There are many names and theorists in these two chapters (as there are in the earlier ones too, I suppose), and I again find myself somewhat confused by the blur of terms: a &ldquo;dialectic relation between the modalities of extension and prosthesis&rdquo; (<a href="#citeproc_bib_item_4">Matviyenko 2015, 172</a>), &ldquo;parasitic passivity&rdquo; (with reference to Michel Serres), and the ultimate argumentation that today&rsquo;s interpassive subject has &ldquo;lost meanings and practices of solitude, of sensations of mild joy&rdquo; (<a href="#citeproc_bib_item_4">Matviyenko 2015, 190</a>).
+</p>
+
+<p>
+I don&rsquo;t necessarily dispute these claims, but I am suspicious of the idea that our &rsquo;digital condition&rsquo; is something distinctly different from some previous historical/social condition, when attention was more integral, and desire not quite so distorted.
+Or at least, I am yet to be properly convinced by an argument in this vein.
+Perhaps it is just my dormant computer utopianism, instilled in me by a formal education in computer science, which will not allow me to believe that computers render us necessarily more distracted, alienated, or less capable of freedom than what came before.
+But I still can&rsquo;t quite stomach this media-theoretical kind of thinking that slaps new terms on new conditions and figures it critical.
+Something I need to work through, I think.
+</p>
+
+<p>
+I had wanted to also briefly touch on Matviyenko&rsquo;s most recent book, co-authored with Nick Dyer-Witheford (<a href="#citeproc_bib_item_3">Dyer-Witheford and Matviyenko 2019</a>); but it will suffice to say at this point that I was similarly underwhelmed by the theoretical effects of this &rsquo;psychoanalytic&rsquo; and Marxist conception of cyberwar.
+I am not sure that I feel the stakes of the theorization&#x2013; not in material-political terms, as it is obviously evident that the term &rsquo;cyberwar&rsquo; denotes something perverted and violent going on at global scale&#x2013; but in the sense that I am not sure what more I understood about it through the reading of this book.
+Again: perhaps this is a function of a shallow kind of reading on my part, and it might benefit me to work through it again at a later stage.
+</p>
+</div>
+</div>
+<div id="outline-container-orge473e58" class="outline-2">
+<h2 id="orge473e58"><span class="section-number-2">2.</span> Sarah Pourciau</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I have not considered Pourciau&rsquo;s project as extensively as Matviyenko&rsquo;s, as I have only read one recent essay of hers in Critical Inquiry titled &ldquo;On the Digital Ocean&rdquo; (<a href="#citeproc_bib_item_5">Pourciau 2022</a>).
+This essay, in contrast to Matviyenko&rsquo;s writing, I found something of a revelation.
+It sees something problematic in the discourse on &rsquo;digitality&rsquo; in the comparison of data to the ocean, and marks this problem as one that stretches far beyond the historically &rsquo;computational&rsquo; per se into the reaches of philosophy that feminizes and passivizes matter, posing the mind as a master of the seas:
+</p>
+<blockquote>
+<p>
+From the book of Genesis through the twentieth century, the oceans of the past figure the feminine matrices of divine and human creation, the wombs and tombs of the earth, the fertile yet deadly milieu of the sirens and the mermaids. They are figures of endless flux and fecund formlessness, and thus of infinitude, in the oldest sense of <i>what cannot be fenced in or finished</i>. (<a href="#citeproc_bib_item_5">Pourciau 2022, 234</a>)
+</p>
+</blockquote>
+
+<p>
+The problem of the digital ocean, in other words, for Pourciau is an age-old problem of conceptualizing infinity.
+A certain computerized conception of the world wants to render it totally calculable, atomizably &ldquo;composed of distinct digits (0s and 1s), which is to say that it is remainderlessly divisible into discreet bits, which is to say that it is per se accessible to the logic of conceptual definition and analysis&rdquo; (<a href="#citeproc_bib_item_5">Pourciau 2022, 235</a>).
+One ideology of digitalization, in other words, is that it flattens ontology into epistemology.
+Everything is knowable &ldquo;as a digital sea of quantum bits&rdquo; (<a href="#citeproc_bib_item_5">Pourciau 2022, 235</a>), and thus there is no part of the world that is not conceptually, hypothetically, available to know. <sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+
+<p>
+Pourciau goes on to give, in the course of some thirty pages, an enormously erudite review of set theory&rsquo;s impact on the philosophical conception of infinitude, covering Cantor in the first section and Turing/Gödel in the second.
+The major consequence of this review is to call into question the ontologizing of a 20th-century mathematical conception of infinity:
+As the essay concludes:
+</p>
+<blockquote>
+<p>
+Turing&rsquo;s implicit thesis is that the countable set of computables is big enough&#x2013;as big as an ocean, even, albeit not an <i>apeiron</i>&#x2013;and the question we need to ask and answer in response is: Big enough for what? We will have a better chance of making headway on this problem, I think, if we stop calling on the remainder of Woman to do the work for us. (<a href="#citeproc_bib_item_5">Pourciau 2022, 261</a>)
+</p>
+</blockquote>
+
+<p>
+There is an explicit thread in this essay from these mathematical notions of infinity to Lacanian and post-Lacanian thought (&ldquo;the remainder of the Woman&rdquo;), and thus I believe Pourciau&rsquo;s project will be extremely relevant to mine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org82748f1" class="outline-2">
+<h2 id="org82748f1"><span class="section-number-2">3.</span> Bibliography</h2>
+<div class="outline-text-2" id="text-3">
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>“Devs.” 2020. Drama, Mystery, Sci-Fi. DNA Films, FX Productions, Scott Rudin Productions.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Dyer-Witheford, Nick. 1999. <i>Cyber-Marx: Cycles and Circuits of Struggle in High-Technology Capitalism</i>. University of Illinois Press.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Dyer-Witheford, Nick, and Svitlana Matviyenko. 2019. <i>Cyberwar and Revolution: Digital Subterfuge in Global Capitalism</i>. U of Minnesota Press. <a href="https://books.google.com/books?hl=en&lr=&id=v9KKDwAAQBAJ&oi=fnd&pg=PT5&dq=dyer-witheford+%22cyberwar+and+revolution%22&ots=sEZWBKJp9L&sig=cHteun0WqxBYKxqmg5d3wDlyoG0">https://books.google.com/books?hl=en&#38;lr=&#38;id=v9KKDwAAQBAJ&#38;oi=fnd&#38;pg=PT5&#38;dq=dyer-witheford+%22cyberwar+and+revolution%22&#38;ots=sEZWBKJp9L&#38;sig=cHteun0WqxBYKxqmg5d3wDlyoG0</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Matviyenko, Svitlana. 2015. “Lacan’s Cybernetics.” The University of Western Ontario (Canada). <a href="https://search.proquest.com/openview/4f0b6391a10bbf19e35e6f5617480b66/1?pq-origsite=gscholar&cbl=18750&diss=y">https://search.proquest.com/openview/4f0b6391a10bbf19e35e6f5617480b66/1?pq-origsite=gscholar&#38;cbl=18750&#38;diss=y</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>Pourciau, Sarah. 2022. “On the Digital Ocean.” <i>Critical Inquiry</i> 48 (2): 233–61. <a href="https://doi.org/10.1086/717319">https://doi.org/10.1086/717319</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>Wiener, Norbert. 2019. <i>Cybernetics or Control and Communication in the Animal and the Machine</i>. MIT press.</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I recently completed the 2020 miniseries &ldquo;Devs&rdquo; (<a href="#citeproc_bib_item_1">“Devs” 2020</a>) which dramatizes this point by way of a hypothetical quantum computer that can accurately simulate any point in space or time in both the past and the future. The series comes to a close on the point of free will&rsquo;s sanctity, whereby we cannot (the series seems to suggest) solely believe ourselves to be deterministic productions. I would not recommend the series, however: it makes for wince-worthy viewing.
+</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>
