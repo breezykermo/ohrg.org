@@ -1,0 +1,72 @@
+:root {
+    --r-main-font: "Inter";
+    --r-heading-font: "Inter";
+    /* --r-link-color: #fff703; */
+    /* --r-link-color: #f7c74f; */
+    /* --r-link-color: #1efc7e; */
+    /* --r-link-color: #c6915b; */
+    /* --r-link-color: #f95252; */
+    --r-link-color: #fcec0a;
+    --r-heading-color: #e6edf7;
+    --r-heading-text-transform: none;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.inter-100 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.hlt {
+    color: var(--r-link-color);
+}
+
+.reveal blockquote {
+    text-align: left;
+    font-size: 18pt;
+    padding: 0 1em;
+}
+
+.reveal table td, .reveal table {
+    border-color: transparent;
+}
+
+.reveal .controls-arrow { display: none; }
+
+p {
+    text-align: left;
+}
+
+.slide-number { display: none !important; }
+
+.reveal h2 {
+    font-size: var(--r-main-font-size);
+    color: #9a9a9a;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media (max-width:480px) {
+.reveal h2 {
+    display: none;
+}
+}
+
+.fragment.blur {
+    filter: blur(10px);
+}
+.fragment.blur.visible {
+    filter: none;
+}
+
+// table alignment
+.reveal table td.org-right, .reveal table th.org-right {
+    text-align: right;
+}
