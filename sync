@@ -7,6 +7,7 @@ rm -f *.org
 cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/ohrg.org/*.html .
 cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/ohrg.org/*.css .
 cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/ohrg.org/*.pdf .
+cp -r $HOME/Dropbox\ \(Brown\)/lyt/sites/ohrg.org/*.apkg .
 
 # images
 rm -rf img/
