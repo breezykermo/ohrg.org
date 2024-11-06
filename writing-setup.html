@@ -1,426 +1,477 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Writing Setup</title>
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Writing Setup</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<div id="content" class="content">
+<header id="title-block-header">
 <h1 class="title">Writing Setup</h1>
-
-
-<div id="outline-container-org44ad67e" class="outline-2">
-<h2 id="org44ad67e"><span class="section-number-2">1.</span> Introduction</h2>
-<div class="outline-text-2" id="text-1">
-<p>
-A slight digression from my regular train of thought to put to paper the environment in which I write <a href="index.html">these logs</a>; which is also the environment in which I have written academic papers for the past year or so.
-</p>
-
-<p>
-I write entirely within a terminal-emulated version of <a href="https://github.com/doomemacs/doomemacs">Doom Emacs</a>, exporting to either PDF or HTML documents as is necessary.
-This environment supports <i>all</i> of my writing - papers (single or double column), abstracts, syllabi, blogs, wikis, meeting notes, etc.
-I even write my slides in Emacs, which I can export as <a href="https://github.com/hakimel/reveal.js">reveal.js</a> presentations<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.
-The markup language I use (for all of these tasks) is <a href="https://orgmode.org/">Org Mode</a>; a format that is actually the main reason I started taking notes in Emacs (being a long-time <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a> user for coding tasks) in the first place.
-</p>
-
-<p>
-Org is a plain-text markup language like Markdown, but has extensive capacity in its syntax for things like jotting down &ldquo;todo&rdquo; bullets (with dates, deadlines, notes included), and as such works basically as a way to powerfully organize a whole system of notes written in it.
-Markdown is great as a plain-text markup language for single documents, such as READMEs, but it isn&rsquo;t purpose-built for organizing a whole collection of documents in the way that Org is.
-Apps like <a href="https://obsidian.md/">obsidian</a>, <a href="https://roamresearch.com/">roam</a>, and <a href="https://www.markdownguide.org/tools/notion/">notion</a> have done a great job popularising the idea of note &rsquo;vaults&rsquo; as the best way to organise thought in writing.<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
-These apps/systems strive to serve as good interfaces for a common plain-text markup format such as Markdown; but they inevitably all have their own quirks and costs, financial or in terms of platform support, interoperability, etc.
-(Not to mention that <a href="https://en.wikipedia.org/wiki/Markdown">Markdown itself has many variants</a> that are not always compatible with each other.)
-</p>
-
-<p>
-It is true that obsidian has a much lower learning curve that Emacs/Org Mode, as many who want a vault-like note-taking experience are familiar with Markdown (or find it easier to learn if they are not yet familiar with a markup language); but Org Mode in Emacs is a fundamentally more flexible, powerful, and more reliably free<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup> way to keep notes.
-Plus - and this is an important point for me - it works seamlessly in a terminal (rather than as an independent GUI or web app) via <code>emacs -nw</code>.
-And though Org Mode is tightly coupled with Emacs in some ways (it was originally developed as an Emacs extension by Carsten Dominik in 2003, and has been included as a major mode in every Emacs release since 2006<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup>), there is nothing in principle to stop me moving to another way of interfacing with my vault of files if a better option appears or something happens to Emacs.<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></sup>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orga43b0a3" class="outline-2">
-<h2 id="orga43b0a3"><span class="section-number-2">2.</span> Flexible, powerful, distraction-free</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-My main editing environment, as I have already noted, is Doom Emacs running in a terminal.
-Not only is this a distraction-free environment (I have a shortcut to turn off all notifications when I&rsquo;m in a terminal) over which I have essentially full control in terms of colours, styling, etc; it also requires no context switching to bring up shell to run some <a href="https://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/">basic text analysis commands</a> such as word count, pattern finding, systematic replacement, etc.
-Both Doom Emacs and <a href="https://github.com/tmux/tmux/wiki">tmux</a> - my preferred terminal multiplexer - have tiling window systems that allow me to easily view other notes, shells, or terminal applications for reference while writing.
-</p>
-
-
-<div id="orgc984d67" class="figure">
-<p><img src="./img/multiplex-example.png" alt="A terminal multiplex screenshot" align="left" />
-</p>
-</div>
-
-<p>
-This is certainly not the right setup for everyone.
-But for those of us who know and love the terminal, and who have already invested the time in basic proficiency in the shell-as-workstation - why use a specialized GUI app (or browser tab) for note-taking?
-</p>
-
-<p>
-One essential feature of Org that I use extensively is its outlining and folding capabilities.
-Every line starting with one or more <code>*</code> characters becomes part of a tree structure that can easily be expanded and contracted life a shelf.
-As an example, here is one the &ldquo;index&rdquo; (entrypoint) documents I use for my life as a graduate student, first fully &rsquo;folded&rsquo;, and then partially expanded:
-</p>
-
-
-<div id="org09955a0" class="figure">
-<p><img src="./img/org-open-example.png" alt="An Org file with some shelves closed" align="left" />
-</p>
-</div>
-
-
-<div id="orgdf43726" class="figure">
-<p><img src="./img/org-closed-example.png" alt="An Org file with shelves open" align="left" />
-</p>
-</div>
-
-<p>
-This folding capability means that I can keep single documents that contain enormous lists (of running meeting notes, for example), yet still fluidly navigate to the section of the document relevant at any given time.
-I have a general shelving structure for classes, for example, that contains top-level headings such as <code>details</code>, <code>seminar</code>, <code>reading</code>, <code>assignments</code>.
-Each Org document is a continual work-in-progress that is frequently edited, updated, and re-organised.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org99c85b8" class="outline-2">
-<h2 id="org99c85b8"><span class="section-number-2">3.</span> Cross-platform editing</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-It&rsquo;s also a massive boon that all of my notes, for everything, are readable plain text.
-Even if I am viewing them on an editor or viewer that doesn&rsquo;t support Org Mode, they are still fundamentally understandable, and also effectively editable.
-The thought occurs to me that I should rephrase the opening sentence of a paper when I&rsquo;m out for a walk?
-Bring it up with any basic editor on my phone, retype it out.
-(I would normally do this in <a href="https://orgro.org/">Orgro</a>, a reader/editor that does support Org.
-But any app that supports viewing and editing plain-text files would work almost as well.)
-</p>
-
-<p>
-I use Dropbox to synchronize my vault across devices, so while each device has its own local copy of every note - which also gives me distributed backups - changes are propagated to all other machines so long as the Dropbox daemon is running on it.
-Conflicts across devices are never really an issue for me, as I am only ever working on one device at a time, and no-one else is editing my note vault.<sup><a id="fnr.6" class="footref" href="#fn.6" role="doc-backlink">6</a></sup>
-In the rare case that some device has fallen behind and Dropbox presents a conflicted version, I just take the version of the note from the device that most recently edited it.
-For example, I just stepped away from writing this post on my desk computer (running <a href="https://nixos.wiki/">NixOS</a>) to my portable laptop (running <a href="https://archlinux.org/">Arch Linux</a>) to write this section elsewhere; and am now seamlessly picking it up back on my desk.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org6d4a771" class="outline-2">
-<h2 id="org6d4a771"><span class="section-number-2">4.</span> Multi-format export</h2>
-<div class="outline-text-2" id="text-4">
-<p>
-This section is the real reason that my system works for all my writing needs.
-Extensive tooling has been developed over the years that allows one to export Org documents to a range of other formats.
-The important ones for me are <b>PDF</b> and <b>HTML</b>, though I also occcasionally use ODT (to get writing into a Google doc) and Markdown (for a README, say).
-</p>
-
-<p>
-I can export any Org document as a PDF directly from Doom Emacs with a simple shortcut.
-The text goes to an intermediary LaTeX document, and then uses that technology to create the final PDF.
-Because of this intermediary LaTeX, I can use any LaTeX feature or package to format writing exported this way.
-Org has all of its basics built-in to the exporter - hyperlinks, bold/italics/underline, images, even its <a href="https://orgmode.org/worg/org-tutorials/tables.html">plain-text tables</a> will end up beautiful by way of the LaTeX ecosystem.
-</p>
-
-<p>
-The absolutely critical feature for my <a href="https://www.ohrg.org/24-01-25">life as an aspiring academic</a> is the support I have configured for citations.
-I manage all of my citations with <a href="https://www.zotero.org/">Zotero</a>, clipping books and articles from Google Scholar with its <a href="https://www.zotero.org/download/connectors">browser extension</a> and then editing entries if needed in the Zotero app itself.
-(I don&rsquo;t yet manage my Zotero library with a <a href="https://en.wikipedia.org/wiki/Text-based_user_interface">TUI</a>; as I haven&rsquo;t yet found one that works effectively.
-If you know of one that works well, <a href="mailto:hello@ohrg.org">please let me know</a>!)
-I have the <a href="https://github.com/retorquere/zotero-better-bibtex">Better BibTeX</a> extension for Zotero installed, which synchronises whatever I do in the app to a <a href="https://en.wikipedia.org/wiki/BibTeX">BibTeX</a> file (similarly stored in Dropbox) that represents my library of possible citations when writing.
-</p>
-
-<p>
-With all this in place, the magic of Doom Emacs (with the <a href="https://github.com/breezykermo/.doom.d/blob/master/init.el#L90">biblio module enabled</a>) is ready to do its work.
-Perhaps I want to cite the following passage from Joan Copjec&rsquo;s first book, <i>Read My Desire: Lacan against the Historicists</i>, in which she criticizes the misinterpretation of the psychoanalytic notion of &rsquo;the gaze&rsquo; in much of late 20th century film theory:
-</p>
-
+</header>
+<h1 id="introduction">Introduction</h1>
+<p>A slight digression from my regular train of thought to put to paper
+the environment in which I write <a href="index.html">these logs</a>;
+which is also the environment in which I have written academic papers
+for the past year or so.</p>
+<p>I write entirely within a terminal-emulated version of <a
+href="https://github.com/doomemacs/doomemacs">Doom Emacs</a>, exporting
+to either PDF or HTML documents as is necessary. This environment
+supports <em>all</em> of my writing - papers (single or double column),
+abstracts, syllabi, blogs, wikis, meeting notes, etc. I even write my
+slides in Emacs, which I can export as <a
+href="https://github.com/hakimel/reveal.js">reveal.js</a>
+presentations<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>. The markup language I use (for all
+of these tasks) is <a href="https://orgmode.org/">Org Mode</a>; a format
+that is actually the main reason I started taking notes in Emacs (being
+a long-time <a
+href="https://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a> user for
+coding tasks) in the first place.</p>
+<p>Org is a plain-text markup language like Markdown, but has extensive
+capacity in its syntax for things like jotting down "todo" bullets (with
+dates, deadlines, notes included), and as such works basically as a way
+to powerfully organize a whole system of notes written in it. Markdown
+is great as a plain-text markup language for single documents, such as
+READMEs, but it isn't purpose-built for organizing a whole collection of
+documents in the way that Org is. Apps like <a
+href="https://obsidian.md/">obsidian</a>, <a
+href="https://roamresearch.com/">roam</a>, and <a
+href="https://www.markdownguide.org/tools/notion/">notion</a> have done
+a great job popularising the idea of note 'vaults' as the best way to
+organise thought in writing.<a href="#fn2" class="footnote-ref"
+id="fnref2" role="doc-noteref"><sup>2</sup></a> These apps/systems
+strive to serve as good interfaces for a common plain-text markup format
+such as Markdown; but they inevitably all have their own quirks and
+costs, financial or in terms of platform support, interoperability, etc.
+(Not to mention that <a
+href="https://en.wikipedia.org/wiki/Markdown">Markdown itself has many
+variants</a> that are not always compatible with each other.)</p>
+<p>It is true that obsidian has a much lower learning curve that
+Emacs/Org Mode, as many who want a vault-like note-taking experience are
+familiar with Markdown (or find it easier to learn if they are not yet
+familiar with a markup language); but Org Mode in Emacs is a
+fundamentally more flexible, powerful, and more reliably free<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a> way to keep notes. Plus - and this
+is an important point for me - it works seamlessly in a terminal (rather
+than as an independent GUI or web app) via <code>emacs -nw</code>. And
+though Org Mode is tightly coupled with Emacs in some ways (it was
+originally developed as an Emacs extension by Carsten Dominik in 2003,
+and has been included as a major mode in every Emacs release since
+2006<a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>), there is nothing in principle to
+stop me moving to another way of interfacing with my vault of files if a
+better option appears or something happens to Emacs.<a href="#fn5"
+class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<h1 id="flexible-powerful-distraction-free">Flexible, powerful,
+distraction-free</h1>
+<p>My main editing environment, as I have already noted, is Doom Emacs
+running in a terminal. Not only is this a distraction-free environment
+(I have a shortcut to turn off all notifications when I'm in a terminal)
+over which I have essentially full control in terms of colours, styling,
+etc; it also requires no context switching to bring up shell to run some
+<a
+href="https://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/">basic
+text analysis commands</a> such as word count, pattern finding,
+systematic replacement, etc. Both Doom Emacs and <a
+href="https://github.com/tmux/tmux/wiki">tmux</a> - my preferred
+terminal multiplexer - have tiling window systems that allow me to
+easily view other notes, shells, or terminal applications for reference
+while writing.</p>
+<p><img src="./img/multiplex-example.png"
+alt="A terminal multiplex screenshot" data-align="left" /></p>
+<p>This is certainly not the right setup for everyone. But for those of
+us who know and love the terminal, and who have already invested the
+time in basic proficiency in the shell-as-workstation - why use a
+specialized GUI app (or browser tab) for note-taking?</p>
+<p>One essential feature of Org that I use extensively is its outlining
+and folding capabilities. Every line starting with one or more
+<code>*</code> characters becomes part of a tree structure that can
+easily be expanded and contracted life a shelf. As an example, here is
+one the "index" (entrypoint) documents I use for my life as a graduate
+student, first fully 'folded', and then partially expanded:</p>
+<p><img src="./img/org-open-example.png"
+alt="An Org file with some shelves closed" data-align="left" /></p>
+<p><img src="./img/org-closed-example.png"
+alt="An Org file with shelves open" data-align="left" /></p>
+<p>This folding capability means that I can keep single documents that
+contain enormous lists (of running meeting notes, for example), yet
+still fluidly navigate to the section of the document relevant at any
+given time. I have a general shelving structure for classes, for
+example, that contains top-level headings such as <code>details</code>,
+<code>seminar</code>, <code>reading</code>, <code>assignments</code>.
+Each Org document is a continual work-in-progress that is frequently
+edited, updated, and re-organised.</p>
+<h1 id="cross-platform-editing">Cross-platform editing</h1>
+<p>It's also a massive boon that all of my notes, for everything, are
+readable plain text. Even if I am viewing them on an editor or viewer
+that doesn't support Org Mode, they are still fundamentally
+understandable, and also effectively editable. The thought occurs to me
+that I should rephrase the opening sentence of a paper when I'm out for
+a walk? Bring it up with any basic editor on my phone, retype it out. (I
+would normally do this in <a href="https://orgro.org/">Orgro</a>, a
+reader/editor that does support Org. But any app that supports viewing
+and editing plain-text files would work almost as well.)</p>
+<p>I use Dropbox to synchronize my vault across devices, so while each
+device has its own local copy of every note - which also gives me
+distributed backups - changes are propagated to all other machines so
+long as the Dropbox daemon is running on it. Conflicts across devices
+are never really an issue for me, as I am only ever working on one
+device at a time, and no-one else is editing my note vault.<a
+href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"><sup>6</sup></a> In the rare case that some device
+has fallen behind and Dropbox presents a conflicted version, I just take
+the version of the note from the device that most recently edited it.
+For example, I just stepped away from writing this post on my desk
+computer (running <a href="https://nixos.wiki/">NixOS</a>) to my
+portable laptop (running <a href="https://archlinux.org/">Arch
+Linux</a>) to write this section elsewhere; and am now seamlessly
+picking it up back on my desk.</p>
+<h1 id="multi-format-export">Multi-format export</h1>
+<p>This section is the real reason that my system works for all my
+writing needs. Extensive tooling has been developed over the years that
+allows one to export Org documents to a range of other formats. The
+important ones for me are <strong>PDF</strong> and
+<strong>HTML</strong>, though I also occcasionally use ODT (to get
+writing into a Google doc) and Markdown (for a README, say).</p>
+<p>I can export any Org document as a PDF directly from Doom Emacs with
+a simple shortcut. The text goes to an intermediary LaTeX document, and
+then uses that technology to create the final PDF. Because of this
+intermediary LaTeX, I can use any LaTeX feature or package to format
+writing exported this way. Org has all of its basics built-in to the
+exporter - hyperlinks, bold/italics/underline, images, even its <a
+href="https://orgmode.org/worg/org-tutorials/tables.html">plain-text
+tables</a> will end up beautiful by way of the LaTeX ecosystem.</p>
+<p>The absolutely critical feature for my <a
+href="https://www.ohrg.org/24-01-25">life as an aspiring academic</a> is
+the support I have configured for citations. I manage all of my
+citations with <a href="https://www.zotero.org/">Zotero</a>, clipping
+books and articles from Google Scholar with its <a
+href="https://www.zotero.org/download/connectors">browser extension</a>
+and then editing entries if needed in the Zotero app itself. (I don't
+yet manage my Zotero library with a <a
+href="https://en.wikipedia.org/wiki/Text-based_user_interface">TUI</a>;
+as I haven't yet found one that works effectively. If you know of one
+that works well, <a href="mailto:hello@ohrg.html">please let me
+know</a>!) I have the <a
+href="https://github.com/retorquere/zotero-better-bibtex">Better
+BibTeX</a> extension for Zotero installed, which synchronises whatever I
+do in the app to a <a
+href="https://en.wikipedia.org/wiki/BibTeX">BibTeX</a> file (similarly
+stored in Dropbox) that represents my library of possible citations when
+writing.</p>
+<p>With all this in place, the magic of Doom Emacs (with the <a
+href="https://github.com/breezykermo/.doom.d/blob/master/init.el#L90">biblio
+module enabled</a>) is ready to do its work. Perhaps I want to cite the
+following passage from Joan Copjec's first book, <em>Read My Desire:
+Lacan against the Historicists</em>, in which she criticizes the
+misinterpretation of the psychoanalytic notion of 'the gaze' in much of
+late 20th century film theory:</p>
 <blockquote>
-<p>
-The gaze is conceived as a point constructed by the textual system of the film from which the subject is obliged to look; it is the condition of the possibility of the viewer&rsquo;s vision. The gaze acts as a kind of key hold, the only opening into the visual pleasure the film affords.
-</p>
+<p>The gaze is conceived as a point constructed by the textual system of
+the film from which the subject is obliged to look; it is the condition
+of the possibility of the viewer's vision. The gaze acts as a kind of
+key hold, the only opening into the visual pleasure the film
+affords.</p>
 </blockquote>
-
-<p>
-Once I&rsquo;ve typed or copied out the quote and noted the page number, I have a shortcut that brings up a shelf at the bottom of Emacs that presents me with all of my Zotero citations, and a fuzzy search bar.
-Once I&rsquo;ve filtered/selected one, I get something like this in the plain-text of my Org document: <code>[cite:@copjecCutting2015]</code>.
-I then insert the page number so it becomes <code>[cite:@copjecCutting2015 p.41]</code>.
-</p>
-
-<p>
-When the PDF exporter comes across syntax like this in my Org note, it becomes this: (<a href="#citeproc_bib_item_1">Copjec 2015, 41</a>).
-If I add the line: <br />
-</p>
-
-<p>
-<code>#+print_bibliography</code>
-</p>
-<p>
-anywhere in the document (as I have down the bottom of this one), the full listing of this citation will displayed, properly linked to the reference above, deduplicated (if there are multiple references to the same citation), and alphabetically ordered, etc.<sup><a id="fnr.7" class="footref" href="#fn.7" role="doc-backlink">7</a></sup>
-</p>
-
-<p>
-My system is configured to interpolate the appropriate bibliographic data for many kinds of export, most notably PDF and HTML.
-This allows me to seamlessly transfer source text between papers, blogs, notes, slides, and any other kind of document I have in Org.
-Here&rsquo;s <a href="writing-setup.pdf">this post as a PDF</a>, generated from exactly the same source text as the document you&rsquo;re reading.
-(All the bells and whistles of how exactly the PDF looks, how images are formatted, etc are configured using commands similar to <code>#+print_bibliography</code> in Org.
-Here&rsquo;s <a href="https://ohrg.org/writing-setup">the Org plain-text of this post</a>, if you&rsquo;re interested in seeing a full example.)
-</p>
+<p>Once I've typed or copied out the quote and noted the page number, I
+have a shortcut that brings up a shelf at the bottom of Emacs that
+presents me with all of my Zotero citations, and a fuzzy search bar.
+Once I've filtered/selected one, I get something like this in the
+plain-text of my Org document: <code
+class="verbatim">[cite:@copjecCutting2015]</code>. I then insert the
+page number so it becomes <code
+class="verbatim">[cite:@copjecCutting2015 p.41]</code>.</p>
+<p>When the PDF exporter comes across syntax like this in my Org note,
+it becomes this: <span class="citation"
+data-cites="copjecCutting2015">(Copjec 2015, 41)</span>. If I add the
+line:<br />
+<code class="verbatim">#+print_bibliography</code></p>
+<p>anywhere in the document (as I have down the bottom of this one), the
+full listing of this citation will displayed, properly linked to the
+reference above, deduplicated (if there are multiple references to the
+same citation), and alphabetically ordered, etc.<a href="#fn7"
+class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<p>My system is configured to interpolate the appropriate bibliographic
+data for many kinds of export, most notably PDF and HTML. This allows me
+to seamlessly transfer source text between papers, blogs, notes, slides,
+and any other kind of document I have in Org. Here's <a
+href="writing-setup.pdf">this post as a PDF</a>, generated from exactly
+the same source text as the document you're reading. (All the bells and
+whistles of how exactly the PDF looks, how images are formatted, etc are
+configured using commands similar to <code
+class="verbatim">#+print_bibliography</code> in Org. Here's <a
+href="https://ohrg.org/writing-setup">the Org plain-text of this
+post</a>, if you're interested in seeing a full example.)</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>As you can see from this post's sections, I also make use of Org's
+sectioning capabilities when writing. This is super handy for
+compartmentalising writing tasks and organising longer pieces, a method
+I use that is deeply inspired by <a
+href="https://www.newyorker.com/magazine/2013/01/14/structure">John
+McPhee's plain-text writing method in Kedit</a>.</p>
+<p>To see some examples of what I've produced recently using this
+system, check out some of the entries in my <a href="index.html">grad
+log</a>. An example of a PDF product is <a
+href="conference.marx-and-philosophy2024.pdf">this abstract</a> that I
+recently submitted to a conference.</p>
+<p>If you're interested to know more about exactly how I set this up,
+refer to my Doom Emacs configuration. Though I don't actively maintain
+this any longer (as I now mostly manage my configuration in Nix), it
+should give a workable example of how to get something similar on your
+computer, provided you already have Emacs installed. Don't hesitate to
+<a href="mailto:me@ohrg.html">reach out to me</a> if you're looking for
+some pointers.</p>
+<h1 id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-copjecCutting2015" class="csl-entry" role="listitem">
+Copjec, Joan. 2015. <span>“Cutting <span>Up</span>.”</span> In <em>Read
+My Desire: <span>Lacan</span> Against the Historicists</em>. Verso
+Books.
 </div>
 </div>
-
-<div id="outline-container-org5b0fa48" class="outline-2">
-<h2 id="org5b0fa48"><span class="section-number-2">5.</span> Conclusion</h2>
-<div class="outline-text-2" id="text-5">
-<p>
-As you can see from this post&rsquo;s sections, I also make use of Org&rsquo;s sectioning capabilities when writing.
-This is super handy for compartmentalising writing tasks and organising longer pieces, a method I use that is deeply inspired by <a href="https://www.newyorker.com/magazine/2013/01/14/structure">John McPhee&rsquo;s plain-text writing method in Kedit</a>.
-</p>
-
-<p>
-To see some examples of what I&rsquo;ve produced recently using this system, check out some of the entries in my <a href="index.html">grad log</a>.
-An example of a PDF product is <a href="conference.marx-and-philosophy2024.pdf">this abstract</a> that I recently submitted to a conference.
-</p>
-
-<p>
-If you&rsquo;re interested to know more about exactly how I set this up, refer to my Doom Emacs configuration.
-Though I don&rsquo;t actively maintain this any longer (as I now mostly manage my configuration in Nix), it should give a workable example of how to get something similar on your computer, provided you already have Emacs installed.
-Don&rsquo;t hesitate to <a href="mailto:me@ohrg.org">reach out to me</a> if you&rsquo;re looking for some pointers.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgf5b5a5c" class="outline-2">
-<h2 id="orgf5b5a5c"><span class="section-number-2">6.</span> Bibliography</h2>
-<div class="outline-text-2" id="text-6">
-<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Copjec, Joan. 2015. “Cutting Up.” In <i>Read My Desire: Lacan against the Historicists</i>. Verso Books.</div>
-</div>
-</div>
-</div>
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
-
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-This is easy to set up by enabling the <code>+present</code> option in Doom Emacs&rsquo; <a href="https://docs.doomemacs.org/latest/modules/lang/org/">Org module</a>. See <a href="https://github.com/breezykermo/.doom.d/blob/master/init.el#L152">here</a> for an example configuration file.
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-Diving deep on the philosophy of note-taking is not my interest here; but many of these apps are based on the <a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a> approach. The <a href="https://forum.obsidian.md/">obsidian forum</a> is a great place to get lost reading opinions about all the best ways to record thought and organize a system of notes, if this kind of thing does interest you.
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-Emacs is <a href="https://en.wikipedia.org/wiki/GNU_Emacs">one of the original Linux/Unix softwares</a>, as well as one of the original <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License">GPL</a> licensed softwares. Emacs runs on all major operating systems; but it has an exceptional experience on Linux, which runs on (almost) all of the computers I regularly use. (My Android phone is the primary exception.)
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-<a href="https://en.wikipedia.org/wiki/Org-mode">https://en.wikipedia.org/wiki/Org-mode</a>
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-I have periodically tinkered with obsidian with <a href="https://github.com/ryanpcmcquen/obsidian-org-mode">Org Mode plugins</a>, or obsidian-like apps that support Org such as <a href="https://logseq.com/">Logseq</a>: but nothing so far matches the (terminal-based) experience of Org in Emacs itself.
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-If it were a collaborative note vault, I would need to institute a version control system like <a href="https://en.wikipedia.org/wiki/Git">git</a> if I wanted editing to remain distributed. But this is a different scope of problem. So collaborative editing in notion, roam, or obsidian cloud has always seemed like an unimportant - and potentially self-sabotaging - feature.
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7" role="doc-backlink">7</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-All these organisational schema for the bibliography can be customized according to different bibliographic standards, i.e. Chicago, MLA, etc.
-</p></div></div>
-
-
-</div>
-</div></div>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This is easy to set up by enabling the
+<code>+present</code> option in Doom Emacs' <a
+href="https://docs.doomemacs.org/latest/modules/lang/org/">Org
+module</a>. See <a
+href="https://github.com/breezykermo/.doom.d/blob/master/init.el#L152">here</a>
+for an example configuration file.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Diving deep on the philosophy of note-taking is not my
+interest here; but many of these apps are based on the <a
+href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a>
+approach. The <a href="https://forum.obsidian.md/">obsidian forum</a> is
+a great place to get lost reading opinions about all the best ways to
+record thought and organize a system of notes, if this kind of thing
+does interest you.<a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Emacs is <a
+href="https://en.wikipedia.org/wiki/GNU_Emacs">one of the original
+Linux/Unix softwares</a>, as well as one of the original <a
+href="https://en.wikipedia.org/wiki/GNU_General_Public_License">GPL</a>
+licensed softwares. Emacs runs on all major operating systems; but it
+has an exceptional experience on Linux, which runs on (almost) all of
+the computers I regularly use. (My Android phone is the primary
+exception.)<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><a
+href="https://en.wikipedia.org/wiki/Org-mode">https://en.wikipedia.org/wiki/Org-mode</a><a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>I have periodically tinkered with obsidian with <a
+href="https://github.com/ryanpcmcquen/obsidian-org-mode">Org Mode
+plugins</a>, or obsidian-like apps that support Org such as <a
+href="https://logseq.com/">Logseq</a>: but nothing so far matches the
+(terminal-based) experience of Org in Emacs itself.<a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>If it were a collaborative note vault, I would need to
+institute a version control system like <a
+href="https://en.wikipedia.org/wiki/Git">git</a> if I wanted editing to
+remain distributed. But this is a different scope of problem. So
+collaborative editing in notion, roam, or obsidian cloud has always
+seemed like an unimportant - and potentially self-sabotaging -
+feature.<a href="#fnref6" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>All these organisational schema for the bibliography can
+be customized according to different bibliographic standards, i.e.
+Chicago, MLA, etc.<a href="#fnref7" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 </body>
 </html>

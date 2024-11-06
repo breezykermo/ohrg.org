@@ -1,297 +1,372 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>24 02 29</title>
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>24 02 29</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<div id="content" class="content">
+<header id="title-block-header">
 <h1 class="title">24 02 29</h1>
-<p>
-Today I&rsquo;ll report on Mladen Dolar&rsquo;s 2014 essay &ldquo;<a href="https://www.aksioma.org/pdf/Mladen-Dolar_Whats-in-a-Name.pdf">What&rsquo;s in a Name?</a>&rdquo; (<a href="#citeproc_bib_item_2">Dolar 2014</a>).
-I read this essay recently in preparation for a session in a series on the subject of naming.
-Earlier in this series, we read the chapter &ldquo;Che Vuoi?&rdquo; from Zizek&rsquo;s <i>Sublime Object of Ideology</i> (<a href="#citeproc_bib_item_5">Zizek 2009</a>); Dolar&rsquo;s essay responds to and develops Zizek&rsquo;s chapter (which I will look to address in a future log), 25 years later.
-</p>
-
-<p>
-After the misquoted opening frontispiece of Shakespeare&rsquo;s Juliet, professing from her hypothetical balcony, to one &ldquo;Janša&rdquo; rather than the expected &ldquo;Romeo&rdquo;, the essay opens with a commonplace idea in philosophy: &ldquo;It all began with Plato&rdquo; (<a href="#citeproc_bib_item_2">Dolar 2014, 6</a>).
-Yet Dolar&rsquo;s Plato is not read principally through his <i><a href="https://plato.stanford.edu/entries/plato-ethics-politics/">Republic</a></i>, but rather a relatively obscure dialogue called the <i><a href="https://plato.stanford.edu/entries/plato-cratylus/">Cratylus</a></i>.
-As the SEP entry on the latter notes, this lesser known dialogue is vexing in part because &ldquo;[i]t is not clear how its main topic - the correctness of names - is connected with Plato&rsquo;s other philosophical concerns&rdquo; (<a href="#citeproc_bib_item_4">Meißner 2023</a>).
-</p>
-
-<p>
-So for Dolar Plato is the beginning (perhaps predictably) of the philosophical question of names - but Dolar&rsquo;s Plato is heterodox, as principally the enigmatic author of the <i>Cratylus</i>, rather than the orthodox investigator of ethics and politics as author of the <i>Republic</i>.
-Moreover, in Plato there is &ldquo;[t]he specter of Juliet on the balcony&rdquo; (<a href="#citeproc_bib_item_2">Dolar 2014, 7</a>); a stroke painted with a broad brush in that a the shadow of a connection across several thousands of years, between Plato and Shakespeare, is tauntingly proposed through the mutual concern for the status of a name (&ldquo;rose&rdquo;) in relation to the thing, a rose in the flesh.
-</p>
-
-<p>
-As it turns out, Dolar&rsquo;s theory of names will propose that there is a necessary shadow of a thing introduced by a name, &ldquo;an x, which is an ineffable being without properties, a nothing which nevertheless appears as something&rdquo; (<a href="#citeproc_bib_item_2">Dolar 2014, 31–32</a>).
-Such a necessary shadow complicates a theory often misassociated with the orthodox Plato, namely the allegory of the cave.
-(This is in fact a theory espoused by Socrates in the <i>Republic</i>; Plato is simply playing the stenographer.)
-In this allegory, Socrates presents the role of the philosopher as one who perceives the higher reality of the objects that motivate the shadows on the wall, shadows that prisoners in the cave do not even necessarily know are shadows.
-As per <a href="https://en.wikipedia.org/wiki/Allegory_of_the_cave">Wikipedia</a>: &ldquo;The shadows represent the fragment of reality that we can normally perceive through our senses, while the objects under the sun represent the true forms of objects that we can only perceive through reason.&rdquo;
-For the Socrates in this conception, reason is capable of attaining to the forms of things, essentially subtracting the mirage of shadows (our senses) from their indexical source to ultimately apprehend the &rsquo;real&rsquo; reality behind them.
-</p>
-
-<p>
-Dolar&rsquo;s approaches the issue with this conception of the philosopher without addressing it directly, through the problem of the origin of names that is thematised in Plato&rsquo;s <i>Cratylus</i>.
-If there are to be names that we consider &rsquo;more true&rsquo; than others:
-</p>
-
+</header>
+<p>Today I'll report on Mladen Dolar's 2014 essay "<a
+href="https://www.aksioma.org/pdf/Mladen-Dolar_Whats-in-a-Name.pdf">What's
+in a Name?</a>" <span class="citation"
+data-cites="dolarWhatName2014">(Dolar 2014)</span>. I read this essay
+recently in preparation for a session in a series on the subject of
+naming. Earlier in this series, we read the chapter "Che Vuoi?" from
+Zizek's <em>Sublime Object of Ideology</em> <span class="citation"
+data-cites="zizekCheVuoi2009">(Zizek 2009)</span>; Dolar's essay
+responds to and develops Zizek's chapter (which I will look to address
+in a future log), 25 years later.</p>
+<p>After the misquoted opening frontispiece of Shakespeare's Juliet,
+professing from her hypothetical balcony, to one "Janša" rather than the
+expected "Romeo", the essay opens with a commonplace idea in philosophy:
+"It all began with Plato" <span class="citation"
+data-cites="dolarWhatName2014">(Dolar 2014, 6)</span>. Yet Dolar's Plato
+is not read principally through his <em><a
+href="https://plato.stanford.edu/entries/plato-ethics-politics/">Republic</a></em>,
+but rather a relatively obscure dialogue called the <em><a
+href="https://plato.stanford.edu/entries/plato-cratylus/">Cratylus</a></em>.
+As the SEP entry on the latter notes, this lesser known dialogue is
+vexing in part because "[i]t is not clear how its main topic - the
+correctness of names - is connected with Plato's other philosophical
+concerns" <span class="citation"
+data-cites="meissnerPlatoCratylus2023">(Meißner 2023)</span>.</p>
+<p>So for Dolar Plato is the beginning (perhaps predictably) of the
+philosophical question of names - but Dolar's Plato is heterodox, as
+principally the enigmatic author of the <em>Cratylus</em>, rather than
+the orthodox investigator of ethics and politics as author of the
+<em>Republic</em>. Moreover, in Plato there is "[t]he specter of Juliet
+on the balcony" <span class="citation"
+data-cites="dolarWhatName2014">(Dolar 2014, 7)</span>; a stroke painted
+with a broad brush in that a the shadow of a connection across several
+thousands of years, between Plato and Shakespeare, is tauntingly
+proposed through the mutual concern for the status of a name ("rose") in
+relation to the thing, a rose in the flesh.</p>
+<p>As it turns out, Dolar's theory of names will propose that there is a
+necessary shadow of a thing introduced by a name, "an x, which is an
+ineffable being without properties, a nothing which nevertheless appears
+as something" <span class="citation"
+data-cites="dolarWhatName2014">(Dolar 2014, 31–32)</span>. Such a
+necessary shadow complicates a theory often misassociated with the
+orthodox Plato, namely the allegory of the cave. (This is in fact a
+theory espoused by Socrates in the <em>Republic</em>; Plato is simply
+playing the stenographer.) In this allegory, Socrates presents the role
+of the philosopher as one who perceives the higher reality of the
+objects that motivate the shadows on the wall, shadows that prisoners in
+the cave do not even necessarily know are shadows. As per <a
+href="https://en.wikipedia.org/wiki/Allegory_of_the_cave">Wikipedia</a>:
+"The shadows represent the fragment of reality that we can normally
+perceive through our senses, while the objects under the sun represent
+the true forms of objects that we can only perceive through reason." For
+the Socrates in this conception, reason is capable of attaining to the
+forms of things, essentially subtracting the mirage of shadows (our
+senses) from their indexical source to ultimately apprehend the 'real'
+reality behind them.</p>
+<p>Dolar's approaches the issue with this conception of the philosopher
+without addressing it directly, through the problem of the origin of
+names that is thematised in Plato's <em>Cratylus</em>. If there are to
+be names that we consider 'more true' than others:</p>
 <blockquote>
-<p>
-there must be an essence which the names must spell out&#x2026;. Names are like tools that we need to get to this essence, and there can be tools that are more or less appropriate, and hence have a varying degree of truth or falsity. But these tools are not quite freely ours to choose, or to select better ones from, for the names are always given by some Other, the rule-setter, the law-giver, the name-maker. (<a href="#citeproc_bib_item_2">Dolar 2014, 8</a>)
-</p>
+<p>there must be an essence which the names must spell out…. Names are
+like tools that we need to get to this essence, and there can be tools
+that are more or less appropriate, and hence have a varying degree of
+truth or falsity. But these tools are not quite freely ours to choose,
+or to select better ones from, for the names are always given by some
+Other, the rule-setter, the law-giver, the name-maker. <span
+class="citation" data-cites="dolarWhatName2014">(Dolar 2014,
+8)</span></p>
 </blockquote>
-
-<p>
-This problem, of course, could be analogised to the shadows in Socrates&rsquo; cave.
-Which shadows (appearances, names) are more proximate to the essence than others?
-How do we, as prisoners of language and our senses, adjudicate the truth and falsity of each?
-</p>
-
-<p>
-If there is to be an essence, argues Dolar, there must be some substance &rsquo;beyond&rsquo; language, an actual &rsquo;value&rsquo; that lies beneath the referential index of the shadow-games of names.
-In this setup, as Dolar notes in the quote above, one has to chase this value, through index after index, back to some original law-giver, an original Other.
-The reference to an &ldquo;Other&rdquo; here is, of course, an invocation of that term in Lacanian thought, whereby it represents the necessary exception to thought that points to something existing outside it, within it - what Lacan also refers to as its <b>extimate</b> quality.
-(For an introduction of sorts to the idea of thought&rsquo;s necessary incompleteness in the Lacanian tradition, see <a href="24-02-05.html">24-02-05</a> on Zizek.)
-This originary law-giver also evokes Freud&rsquo;s myth of the <b>primal father</b> in <i>Totem and Taboo</i> (<a href="#citeproc_bib_item_3">Freud 2001</a>) - a myth that Lacan reinterprets as a structural detail in the logical composition of language as such.
-See <a href="https://www.nosubject.com/Father">this entry</a> on nosubject.com for an entrypoint into the Father and related Lacanese.
-</p>
-
-<p>
-Though I cannot dive deep into the details of this myth and Lacan&rsquo;s presentation of it here, suffice it to say that Dolar&rsquo;s account here of the problem in names evokes a constellation of Lacanian ideas about the structure of language and its relation to the subject as a position within it.
-(There is, of course, also the section later in Dolar&rsquo;s essay regarding Freud&rsquo;s naming strategy as a father, further evidence of the crypto-Lacanian sense at work here.)
-Joan Copjec has detailed the way that this problem relates to the Lacanian theory of the subject magnificently in the chapter titled &ldquo;Cutting Up&rdquo; in her 1994 book, <i>Read My Desire: Lacan Against the Historicists</i> (<a href="#citeproc_bib_item_1">Copjec 2015</a>).
-Copjec shows how Lacan and psychoanalysis offer an answer to a paradox not unrelated to Dolar&rsquo;s problem of a name&rsquo;s first nomination: namely Zeno&rsquo;s paradox of Achilles and the Tortoise.
-(Zeno&rsquo;s paradox is a problem preserved, much like Socrates&rsquo; problem of the cave, through a prominent Greek philosopher - thought in this case that philosopher is Aristotle rather than Plato.)
-From the <a href="https://en.wikipedia.org/wiki/Atlas_(mythology)">Atlas</a>sian <a href="https://en.wikipedia.org/wiki/Zeno%27s_paradoxes">Wikipedia</a>:
-</p>
-
+<p>This problem, of course, could be analogised to the shadows in
+Socrates' cave. Which shadows (appearances, names) are more proximate to
+the essence than others? How do we, as prisoners of language and our
+senses, adjudicate the truth and falsity of each?</p>
+<p>If there is to be an essence, argues Dolar, there must be some
+substance 'beyond' language, an actual 'value' that lies beneath the
+referential index of the shadow-games of names. In this setup, as Dolar
+notes in the quote above, one has to chase this value, through index
+after index, back to some original law-giver, an original Other. The
+reference to an "Other" here is, of course, an invocation of that term
+in Lacanian thought, whereby it represents the necessary exception to
+thought that points to something existing outside it, within it - what
+Lacan also refers to as its <strong>extimate</strong> quality. (For an
+introduction of sorts to the idea of thought's necessary incompleteness
+in the Lacanian tradition, see <a href="24-02-05.html">24-02-05</a> on
+Zizek.) This originary law-giver also evokes Freud's myth of the
+<strong>primal father</strong> in <em>Totem and Taboo</em> <span
+class="citation" data-cites="freudTotemTaboo2001">(Freud 2001)</span> -
+a myth that Lacan reinterprets as a structural detail in the logical
+composition of language as such. See <a
+href="https://www.nosubject.com/Father">this entry</a> on nosubject.com
+for an entrypoint into the Father and related Lacanese.</p>
+<p>Though I cannot dive deep into the details of this myth and Lacan's
+presentation of it here, suffice it to say that Dolar's account here of
+the problem in names evokes a constellation of Lacanian ideas about the
+structure of language and its relation to the subject as a position
+within it. (There is, of course, also the section later in Dolar's essay
+regarding Freud's naming strategy as a father, further evidence of the
+crypto-Lacanian sense at work here.) Joan Copjec has detailed the way
+that this problem relates to the Lacanian theory of the subject
+magnificently in the chapter titled "Cutting Up" in her 1994 book,
+<em>Read My Desire: Lacan Against the Historicists</em> <span
+class="citation" data-cites="copjecCutting2015">(Copjec 2015)</span>.
+Copjec shows how Lacan and psychoanalysis offer an answer to a paradox
+not unrelated to Dolar's problem of a name's first nomination: namely
+Zeno's paradox of Achilles and the Tortoise. (Zeno's paradox is a
+problem preserved, much like Socrates' problem of the cave, through a
+prominent Greek philosopher - thought in this case that philosopher is
+Aristotle rather than Plato.) From the <a
+href="https://en.wikipedia.org/wiki/Atlas_(mythology)">Atlas</a>sian <a
+href="https://en.wikipedia.org/wiki/Zeno%27s_paradoxes">Wikipedia</a>:</p>
 <blockquote>
-<p>
-In the paradox of Achilles and the tortoise, Achilles is in a footrace with the tortoise. Achilles allows the tortoise a head start of 100 meters, for example. Suppose that each racer starts running at some constant speed, one faster than the other. After some finite time, Achilles will have run 100 meters, bringing him to the tortoise&rsquo;s starting point. During this time, the tortoise has run a much shorter distance, say 2 meters. It will then take Achilles some further time to run that distance, by which time the tortoise will have advanced farther; and then more time still to reach this third point, while the tortoise moves ahead. Thus, whenever Achilles arrives somewhere the tortoise has been, he still has some distance to go before he can even reach the tortoise.
-</p>
+<p>In the paradox of Achilles and the tortoise, Achilles is in a
+footrace with the tortoise. Achilles allows the tortoise a head start of
+100 meters, for example. Suppose that each racer starts running at some
+constant speed, one faster than the other. After some finite time,
+Achilles will have run 100 meters, bringing him to the tortoise's
+starting point. During this time, the tortoise has run a much shorter
+distance, say 2 meters. It will then take Achilles some further time to
+run that distance, by which time the tortoise will have advanced
+farther; and then more time still to reach this third point, while the
+tortoise moves ahead. Thus, whenever Achilles arrives somewhere the
+tortoise has been, he still has some distance to go before he can even
+reach the tortoise.</p>
 </blockquote>
-
-<p>
-The answer that Copjec finds in Lacan to this paradox is ultimately the same answer that Dolar proposes in the infinite regression of name-givers: the perspective on the problem, the &ldquo;I&rdquo; in the picture, must produce an <code>x</code>, ineffable and irredicible to any summarisation of properties, a negativity which carves and cuts up the problem&rsquo;s sensibility as straightforward; a contradiction that marks thought&rsquo;s and language&rsquo;s <i>necessary incompleteness</i>.
-As Copjec argues, it is this &ldquo;cutting off of the subject from a part of itself&#x2026; [that] accounts for the cutting up of the subject&rsquo;s movements&rdquo; in Zeno&rsquo;s paradox (<a href="#citeproc_bib_item_1">Copjec 2015</a>).
-There is always a <b>doubt</b> that is produced by language, for it can never be completely sure of itself, and it is the absence of this surety (not a positive something) that <b>desire</b> perpetually seeks.
-Dolar&rsquo;s term for this absence that produces desire is <b>ghost</b>, or specter:
-</p>
-
+<p>The answer that Copjec finds in Lacan to this paradox is ultimately
+the same answer that Dolar proposes in the infinite regression of
+name-givers: the perspective on the problem, the "I" in the picture,
+must produce an <code>x</code>, ineffable and irredicible to any
+summarisation of properties, a negativity which carves and cuts up the
+problem's sensibility as straightforward; a contradiction that marks
+thought's and language's <em>necessary incompleteness</em>. As Copjec
+argues, it is this "cutting off of the subject from a part of itself…
+[that] accounts for the cutting up of the subject's movements" in Zeno's
+paradox <span class="citation" data-cites="copjecCutting2015">(Copjec
+2015 p.??)</span>. There is always a <strong>doubt</strong> that is
+produced by language, for it can never be completely sure of itself, and
+it is the absence of this surety (not a positive something) that
+<strong>desire</strong> perpetually seeks. Dolar's term for this absence
+that produces desire is <strong>ghost</strong>, or specter:</p>
 <blockquote>
-<p>
-It is thus with every name. No name without a specter. Naming is evoking a phantom, conjuring a ghost.
-</p>
+<p>It is thus with every name. No name without a specter. Naming is
+evoking a phantom, conjuring a ghost.</p>
 </blockquote>
-
-<p>
-The specter of this essay, as I noted at the top, is Juliet on the balcony, reflecting on her predicament as a Capulet fallen in love with a Montague.
-What better name for desire than this scene, the substance of a rose&rsquo;s value in question?
-</p>
-
-<div id="outline-container-org7806325" class="outline-2">
-<h2 id="org7806325"><span class="section-number-2">1.</span> Bibliography</h2>
-<div class="outline-text-2" id="text-1">
-<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Copjec, Joan. 2015. “Cutting Up.” In <i>Read My Desire: Lacan against the Historicists</i>. Verso Books.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Dolar, Mladen. 2014. <i>What’s in a Name?</i> Aksioma - Institute for Contemporary Art.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Freud, Sigmund. 2001. “Totem and Taboo.” <i>Routledge, London</i>.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Meißner, David. 2023. “Plato’s Cratylus.” In <i>The Stanford Encyclopedia of Philosophy</i>, edited by Edward N. Zalta and Uri Nodelman, Summer 2023. Metaphysics Research Lab, Stanford University. <a href="https://plato.stanford.edu/archives/sum2023/entries/plato-cratylus/">https://plato.stanford.edu/archives/sum2023/entries/plato-cratylus/</a>.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>Zizek, Slavoj. 2009. “Che Vuoi?” In <i>The Sublime Object of Ideology</i>, Second Edition, 95–144. London New York: Verso.</div>
+<p>The specter of this essay, as I noted at the top, is Juliet on the
+balcony, reflecting on her predicament as a Capulet fallen in love with
+a Montague. What better name for desire than this scene, the substance
+of a rose's value in question?</p>
+<h1 id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-copjecCutting2015" class="csl-entry" role="listitem">
+Copjec, Joan. 2015. <span>“Cutting <span>Up</span>.”</span> In <em>Read
+My Desire: <span>Lacan</span> Against the Historicists</em>. Verso
+Books.
 </div>
+<div id="ref-dolarWhatName2014" class="csl-entry" role="listitem">
+Dolar, Mladen. 2014. <em>What’s in a <span>Name</span>?</em> Aksioma -
+Institute for Contemporary Art.
 </div>
+<div id="ref-freudTotemTaboo2001" class="csl-entry" role="listitem">
+Freud, Sigmund. 2001. <span>“Totem and <span>Taboo</span>.”</span>
+<em>Routledge, London</em>.
+</div>
+<div id="ref-meissnerPlatoCratylus2023" class="csl-entry"
+role="listitem">
+Meißner, David. 2023. <span>“Plato’s <span>Cratylus</span>.”</span> In
+<em>The <span>Stanford Encyclopedia</span> of
+<span>Philosophy</span></em>, edited by Edward N. Zalta and Uri
+Nodelman, Summer 2023. Metaphysics Research Lab, Stanford University.
+</div>
+<div id="ref-zizekCheVuoi2009" class="csl-entry" role="listitem">
+Zizek, Slavoj. 2009. <span>“Che <span>Vuoi</span>?”</span> In <em>The
+<span>Sublime Object</span> of <span>Ideology</span></em>, Second
+Edition, 95–144. London New York: Verso.
 </div>
 </div>
 </body>

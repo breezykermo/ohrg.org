@@ -1,314 +1,422 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>24 01 27</title>
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>24 01 27</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
 </head>
 <body>
-<div id="content" class="content">
+<header id="title-block-header">
 <h1 class="title">24 01 27</h1>
-<p>
-Into the deep end: today I prepared a chapter of Rebecca Carson&rsquo;s <i><a href="https://brill.com/display/title/63249?language=en">Immanent Externalities: The Reproduction of Life in Capital</a></i>.
-This book emerged through her dissertation work with Etienne Balibar, and it is a work of incredible precision apprehending and extending the conceptual system in Marx&rsquo;s <i>Capital</i>.
-</p>
-
-<p>
-One way to understand the book&rsquo;s project is to see it as a response to <b>post-Marxism</b>, a school of thought that posits Marx&rsquo;s critique of political economy in <i>Capital</i> as in need of some kind of fundamental update so as to be relevant to 20th and 21st century social life.
-Post-Marxism holds that some event (or set of events) has taken place since Marx wrote <i>Capital</i> that jeopardise one or more of the core principles in his system.
-Financialist post-Marxists, for instance, see the <a href="https://en.wikipedia.org/wiki/Gold_standard">demise of Bretton Woods</a> as a historical moment that effectively uprooted capitalism in some way; and there are doubtless &rsquo;crypto post-Marxists&rsquo; who see/saw the invention of Bitcoin as a similarly disruptive moment.
-Technological post-Marxists argue that capitalism has transformed into something else (something worse, usually) through a technological &rsquo;revolution&rsquo; of some kind.
-(This position is nowhere better summed up in the title of Mckenzie Wark&rsquo;s 2019 book <i><a href="https://www.versobooks.com/en-gb/products/887-capital-is-dead">Capital is Dead: Is This Something Worse?</a></i>.
-This is a book I have not yet read: but <a href="https://homintern.soy/issues/3-22-20/capdead.html">these</a> <a href="https://cosmonaut.blog/2020/10/12/worse-than-dead-a-critical-response-to-mckenzie-wark/">two</a> [scathing] reviews in partnership with the very expressive title make it hard to imagine that Wark&rsquo;s position is anything other than the picture of technological post-Marxism.)
-</p>
-
-<p>
-The post-Marxist position in technology studies is, I would argue, much more mainstream than value-theoretical approaches.
-This is perhaps an ontological hazard of the disciplinary orientation of &rsquo;technology studies&rsquo; as such, in that &rsquo;technology&rsquo; is assumed to represent a fundamentally distinct consistency in the world (that can be uniquely studied).
-The assumption that technology &rsquo;today&rsquo; consists of something fundamentally &rsquo;modern&rsquo;, i.e. distinct and evolved with respect to its pre-modern counterpart, is commonplace; perhaps because of the widespread belief the electronic computer effected a critical shift in the logic of societal composition at some point in the mid-20th century.
-The phrase &rsquo;information revolution&rsquo; is not only corporate pamphleteering for senseless restructuring and redistribution of wealth: it also denotes the tacit assumption at work in much &rsquo;technology studies&rsquo; scholarship that the stuff of computers is <i>not</i> the stuff of other things we call technology (such as hand tools, steam-powered machines, etc).
-Computational sociality is something for which Marx could not have accounted, the common, post-Marxist wisdom asserts: for he was not writing <i>Capital</i> at a keyboard; was not writing Engels email; was not editing his writing with generative language models; and so on.
-</p>
-
-<p>
-Carson&rsquo;s book is much more addressed to the financialist post-Marxists, however, than their technological <i>mon frères</i>.
-Her overall thesis is that <b>fictitious capital</b> (a term she takes from the French post-Marxist critical economist <a href="https://www.versobooks.com/en-gb/products/320-fictitious-capital">Cédric Durand</a> to refer to the appearance of surplus value that emerges in financialised flows of money traded for other money) is <i>immanent</i> to the production component&#x2013; that is, his value-theoretical argument&#x2013; in Marx&rsquo;s <i>Capital</i>.
-More precisely and poetically, for Carson <i>fictitious capital fills in the gap of dead times in the production process</i>.
-Unlike the post-Marxist position, which sees in financialised capital a premise for sunsetting Marx&rsquo;s value-theoretical approach, Carson&rsquo;s re-reading and re-theorisation of Marx seeks to systematically link the proliferation of financialised flows to the movement of value that &rsquo;originates&rsquo; in the production process, i.e. in the production of commodities by way of the wage relation between capitalist and worker.
-</p>
-
-<p>
-Though I have read sections of the book before (chapter 2, &ldquo;Money Form&rdquo;, in particular, which I used for a term paper in early 2023 to recognise <a href="http://matteopasquinelli.com/">Matteo Pasquinelli</a> as technological post-Marxist by way of Carson&rsquo;s critique of the Italian Operaismo approach to the gold standard), today&rsquo;s focus was chapter 3, &ldquo;Fetish Character&rdquo;.
-Like the rest of the book, this chapter is dense, precise, and difficult.
-(That this book was essentially Carson&rsquo;s dissertation is humbling and intimidating.)
-The first section, 2.1, argues that the movement of value in Marx should be understood with reference to its Hegelian foundations, and that &ldquo;interest-bearing capital&rdquo; (money breeding money, financialised flows) constitutes a particular value form in capital that is intimately related to the other value forms, namely wage (surplus value from the worker-capitalist relation) and rent (surplus value from land ownership).
-The second section, 2.2, goes on to clarify (and critique) Marx&rsquo;s use of the terminology &rsquo;person&rsquo;, and to recognise a fundamental relationship between capital&rsquo;s <b>impersonal</b> forms of domination (such as the commodity) and its <b>personal</b> forms (such as the contract).
-Essential to Carson&rsquo;s argument is that while impersonal forms are historically specific to capital(ism), its <i>personal forms of domination are not necessarily</i>, and as such can occur in other modes of production such as feudalism.
-Seeing personal forms of domination as immanent to their impersonal mirrors is a cornerstone of Carson&rsquo;s argumentation throughout the book, and represents her chief rejoinder to the post-Marxist complaint that &rsquo;capital is dead&rsquo;.
-</p>
-
-<p>
-In re-reading this chapter, my project became to draw out the development of three related yet distinct characterisations of capital, all of which figure in <a href="24-01-26.html">my attempt to chart the computer-capital relation</a>.
-</p>
-
-<ol class="org-ol">
-<li>Capital as <b>abstract</b> subject</li>
-<li>Capital as <b>autonomous</b> subject</li>
-<li>Capital as <b>automatic</b> subject</li>
+</header>
+<p>Into the deep end: today I prepared a chapter of Rebecca Carson's
+<em><a href="https://brill.com/display/title/63249?language=en">Immanent
+Externalities: The Reproduction of Life in Capital</a></em>. This book
+emerged through her dissertation work with Etienne Balibar, and it is a
+work of incredible precision apprehending and extending the conceptual
+system in Marx's <em>Capital</em>.</p>
+<p>One way to understand the book's project is to see it as a response
+to <strong>post-Marxism</strong>, a school of thought that posits Marx's
+critique of political economy in <em>Capital</em> as in need of some
+kind of fundamental update so as to be relevant to 20th and 21st century
+social life. Post-Marxism holds that some event (or set of events) has
+taken place since Marx wrote <em>Capital</em> that jeopardise one or
+more of the core principles in his system. Financialist post-Marxists,
+for instance, see the <a
+href="https://en.wikipedia.org/wiki/Gold_standard">demise of Bretton
+Woods</a> as a historical moment that effectively uprooted capitalism in
+some way; and there are doubtless 'crypto post-Marxists' who see/saw the
+invention of Bitcoin as a similarly disruptive moment. Technological
+post-Marxists argue that capitalism has transformed into something else
+(something worse, usually) through a technological 'revolution' of some
+kind. (This position is nowhere better summed up in the title of
+Mckenzie Wark's 2019 book <em><a
+href="https://www.versobooks.com/en-gb/products/887-capital-is-dead">Capital
+is Dead: Is This Something Worse?</a></em>. This is a book I have not
+yet read: but <a
+href="https://homintern.soy/issues/3-22-20/capdead.html">these</a> <a
+href="https://cosmonaut.blog/2020/10/12/worse-than-dead-a-critical-response-to-mckenzie-wark/">two</a>
+[scathing] reviews in partnership with the very expressive title make it
+hard to imagine that Wark's position is anything other than the picture
+of technological post-Marxism.)</p>
+<p>The post-Marxist position in technology studies is, I would argue,
+much more mainstream than value-theoretical approaches. This is perhaps
+an ontological hazard of the disciplinary orientation of 'technology
+studies' as such, in that 'technology' is assumed to represent a
+fundamentally distinct consistency in the world (that can be uniquely
+studied). The assumption that technology 'today' consists of something
+fundamentally 'modern', i.e. distinct and evolved with respect to its
+pre-modern counterpart, is commonplace; perhaps because of the
+widespread belief the electronic computer effected a critical shift in
+the logic of societal composition at some point in the mid-20th century.
+The phrase 'information revolution' is not only corporate pamphleteering
+for senseless restructuring and redistribution of wealth: it also
+denotes the tacit assumption at work in much 'technology studies'
+scholarship that the stuff of computers is <em>not</em> the stuff of
+other things we call technology (such as hand tools, steam-powered
+machines, etc). Computational sociality is something for which Marx
+could not have accounted, the common, post-Marxist wisdom asserts: for
+he was not writing <em>Capital</em> at a keyboard; was not writing
+Engels email; was not editing his writing with generative language
+models; and so on.</p>
+<p>Carson's book is much more addressed to the financialist
+post-Marxists, however, than their technological <em>mon frères</em>.
+Her overall thesis is that <strong>fictitious capital</strong> (a term
+she takes from the French post-Marxist critical economist <a
+href="https://www.versobooks.com/en-gb/products/320-fictitious-capital">Cédric
+Durand</a> to refer to the appearance of surplus value that emerges in
+financialised flows of money traded for other money) is
+<em>immanent</em> to the production component– that is, his
+value-theoretical argument– in Marx's <em>Capital</em>. More precisely
+and poetically, for Carson <em>fictitious capital fills in the gap of
+dead times in the production process</em>. Unlike the post-Marxist
+position, which sees in financialised capital a premise for sunsetting
+Marx's value-theoretical approach, Carson's re-reading and
+re-theorisation of Marx seeks to systematically link the proliferation
+of financialised flows to the movement of value that 'originates' in the
+production process, i.e. in the production of commodities by way of the
+wage relation between capitalist and worker.</p>
+<p>Though I have read sections of the book before (chapter 2, "Money
+Form", in particular, which I used for a term paper in early 2023 to
+recognise <a href="http://matteopasquinelli.com/">Matteo Pasquinelli</a>
+as technological post-Marxist by way of Carson's critique of the Italian
+Operaismo approach to the gold standard), today's focus was chapter 3,
+"Fetish Character". Like the rest of the book, this chapter is dense,
+precise, and difficult. (That this book was essentially Carson's
+dissertation is humbling and intimidating.) The first section, 2.1,
+argues that the movement of value in Marx should be understood with
+reference to its Hegelian foundations, and that "interest-bearing
+capital" (money breeding money, financialised flows) constitutes a
+particular value form in capital that is intimately related to the other
+value forms, namely wage (surplus value from the worker-capitalist
+relation) and rent (surplus value from land ownership). The second
+section, 2.2, goes on to clarify (and critique) Marx's use of the
+terminology 'person', and to recognise a fundamental relationship
+between capital's <strong>impersonal</strong> forms of domination (such
+as the commodity) and its <strong>personal</strong> forms (such as the
+contract). Essential to Carson's argument is that while impersonal forms
+are historically specific to capital(ism), its <em>personal forms of
+domination are not necessarily</em>, and as such can occur in other
+modes of production such as feudalism. Seeing personal forms of
+domination as immanent to their impersonal mirrors is a cornerstone of
+Carson's argumentation throughout the book, and represents her chief
+rejoinder to the post-Marxist complaint that 'capital is dead'.</p>
+<p>In re-reading this chapter, my project became to draw out the
+development of three related yet distinct characterisations of capital,
+all of which figure in <a href="24-01-26.html">my attempt to chart the
+computer-capital relation</a>.</p>
+<ol>
+<li>Capital as <strong>abstract</strong> subject</li>
+<li>Capital as <strong>autonomous</strong> subject</li>
+<li>Capital as <strong>automatic</strong> subject</li>
 </ol>
-
-<p>
-These characterisations represent waypoints in Carson&rsquo;s development of her (Hegelian) understanding of the movement of value, as well as her insistence on reading out of Marx a <b>monetary theory of value</b>.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
-Capital operates as an abstract subject because it is independent (&rsquo;abstract&rsquo;) from the will of those engaged in exchange.
-It is not a concrete, sensuous object, nor is it an evanescent, fictive ideology in the minds of exchangers.<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
-The status of capital as an abstract subject can be understood with respect to the essential Marxian theory of <b>abstract labour</b>.
-Abstract labour is a notion that represents the measurement of some kind of concrete, particular labour by way of socially necessary labor time.<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>
-It is because the commodity is valued by way of abstract labour that is a sensuous-nonsensuous thing; a &rsquo;notion&rsquo; that &ldquo;exists neither at the level of being, nor at the level of immediate objectivity&rdquo; (<a href="#citeproc_bib_item_1">Carson 2023, 78</a>).
-Carson argues that value moves abstractly, i.e. in this reflected/refracted realm of neither objectivity nor subjectivity.
-The Marxian economist Alfred Sohn-Rethel famously referred to this kind of notion as a <b>real abstraction</b>&#x2013; and I recommend (<a href="#citeproc_bib_item_5">Toscano 2008</a>) for a good introduction to the philosophical stakes of this term.
-</p>
-
-<p>
-It is value&rsquo;s abstraction in this sense that makes capital also an <i>autonomous</i> subject.
-As Carson puts it: &ldquo;Value is a social relation that is &lsquo;autonomous and dominant&rsquo;&rdquo; (<a href="#citeproc_bib_item_1">Carson 2023, 79</a>).
-(Abstract) value moves by itself.
-Not for the sake of the human subject involved in its exchanges, but for its own sake as subject.
-When capital is dominant, &ldquo;accumulation and the reproduction of value are the driving force of the process&rdquo; (<a href="#citeproc_bib_item_1">Carson 2023, 80</a>).
-Human life is nothing but an object instrumentalised to service the life (reproduction) of capital&rsquo;s forms.
-The movement of its things (commodities) takes place autonomously, on its own, without the (conscious) control of individuals (humans).
-Capital as autonomous subject, in other words, services its own needs&#x2013; the accumulation and reproduction of value&#x2013; not the needs of the humans that happen to be its constituents.<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup>
-</p>
-
-<p>
-Capital is an automatic subject in a slightly different sense still.
-Carson has an <a href="https://www.animateassembly.org/capital/">entry in the Animate Assembly project</a> which goes into the meaning of this term specifically: but the basic idea is hopefully already clear from the previous characterisations.
-Capital automates out the place of the (human) subject, replacing it with the inhuman drive (greed) for surplus value.
-Moreover, its autonomous movement takes place &rsquo;automatically&rsquo;; that is, <i>without the trace of its genesis in the measurement of abstract human labour in the sphere of production</i>, exclusively at the apparent level of circulation.
-It is here that capital&rsquo;s status as automatic subject sheds light on Carson&rsquo;s sophistication of the post-Marxist account: capital <i>wants</i> to appear as no-longer-just capital, as financial flows untethered from its productive underbelly, as this mystification is at the heart of its autonomy and abstraction.
-</p>
-
-<div id="outline-container-org2b4c420" class="outline-2">
-<h2 id="org2b4c420"><span class="section-number-2">1.</span> Bibliography</h2>
-<div class="outline-text-2" id="text-1">
-<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Carson, Rebecca. 2023. <i>Immanent Externalities: The Reproduction of Life in Capital</i>. Brill.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Heinrich, Michael. 2012. <i>An Introduction to the Three Volumes of Karl Marx’s Capital</i>. NYU Press.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Johnston, Adrian. 2023. <i>Infinite Greed: Money, Marxism, Psychoanalysis</i>.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Johnston, Adrian, Boštjan Nedoh, and Alenka Zupančič, eds. 2022. <i>Objective Fictions: Philosophy, Psychoanalysis, Marxism</i>.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>Toscano, Alberto. 2008. “The Open Secret of Real Abstraction.” <i>Rethinking Marxism</i> 20 (2): 273–87.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>Zizek, Slavoj. 2009. <i>The Sublime Object of Ideology</i>. Second Edition. London New York: Verso.</div>
+<p>These characterisations represent waypoints in Carson's development
+of her (Hegelian) understanding of the movement of value, as well as her
+insistence on reading out of Marx a <strong>monetary theory of
+value</strong>.<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> Capital operates as an abstract
+subject because it is independent ('abstract') from the will of those
+engaged in exchange. It is not a concrete, sensuous object, nor is it an
+evanescent, fictive ideology in the minds of exchangers.<a href="#fn2"
+class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> The
+status of capital as an abstract subject can be understood with respect
+to the essential Marxian theory of <strong>abstract labour</strong>.
+Abstract labour is a notion that represents the measurement of some kind
+of concrete, particular labour by way of socially necessary labor
+time.<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a> It is because the commodity is
+valued by way of abstract labour that is a sensuous-nonsensuous thing; a
+'notion' that "exists neither at the level of being, nor at the level of
+immediate objectivity" <span class="citation"
+data-cites="carsonImmanentExternalitiesReproduction2023">(Carson 2023,
+78)</span>. Carson argues that value moves abstractly, i.e. in this
+reflected/refracted realm of neither objectivity nor subjectivity. The
+Marxian economist Alfred Sohn-Rethel famously referred to this kind of
+notion as a <strong>real abstraction</strong>– and I recommend <span
+class="citation" data-cites="toscanoOpenSecretReal2008">(Toscano
+2008)</span> for a good introduction to the philosophical stakes of this
+term.</p>
+<p>It is value's abstraction in this sense that makes capital also an
+<em>autonomous</em> subject. As Carson puts it: "Value is a social
+relation that is 'autonomous and dominant'"<span class="citation"
+data-cites="carsonImmanentExternalitiesReproduction2023">(Carson 2023,
+79)</span>. (Abstract) value moves by itself. Not for the sake of the
+human subject involved in its exchanges, but for its own sake as
+subject. When capital is dominant, "accumulation and the reproduction of
+value are the driving force of the process"<span class="citation"
+data-cites="carsonImmanentExternalitiesReproduction2023">(Carson 2023,
+80)</span>. Human life is nothing but an object instrumentalised to
+service the life (reproduction) of capital's forms. The movement of its
+things (commodities) takes place autonomously, on its own, without the
+(conscious) control of individuals (humans). Capital as autonomous
+subject, in other words, services its own needs– the accumulation and
+reproduction of value– not the needs of the humans that happen to be its
+constituents.<a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a></p>
+<p>Capital is an automatic subject in a slightly different sense still.
+Carson has an <a href="https://www.animateassembly.org/capital/">entry
+in the Animate Assembly project</a> which goes into the meaning of this
+term specifically: but the basic idea is hopefully already clear from
+the previous characterisations. Capital automates out the place of the
+(human) subject, replacing it with the inhuman drive (greed) for surplus
+value. Moreover, its autonomous movement takes place 'automatically';
+that is, <em>without the trace of its genesis in the measurement of
+abstract human labour in the sphere of production</em>, exclusively at
+the apparent level of circulation. It is here that capital's status as
+automatic subject sheds light on Carson's sophistication of the
+post-Marxist account: capital <em>wants</em> to appear as no-longer-just
+capital, as financial flows untethered from its productive underbelly,
+as this mystification is at the heart of its autonomy and
+abstraction.</p>
+<h1 id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-carsonImmanentExternalitiesReproduction2023"
+class="csl-entry" role="listitem">
+Carson, Rebecca. 2023. <em>Immanent <span>Externalities</span>:
+<span>The Reproduction</span> of <span>Life</span> in
+<span>Capital</span></em>. Brill.
+</div>
+<div id="ref-heinrichIntroductionThreeVolumes2012" class="csl-entry"
+role="listitem">
+Heinrich, Michael. 2012. <em>An <span>Introduction</span> to the
+<span>Three Volumes</span> of <span>Karl Marx</span>’s
+<span>Capital</span></em>. NYU Press.
+</div>
+<div id="ref-johnstonInfiniteGreedMoney2023" class="csl-entry"
+role="listitem">
+Johnston, Adrian. 2023. <em>Infinite <span>Greed</span>:
+<span>Money</span>, <span>Marxism</span>,
+<span>Psychoanalysis</span></em>.
+</div>
+<div id="ref-johnstonObjectiveFictionsPhilosophy2022" class="csl-entry"
+role="listitem">
+Johnston, Adrian, Boštjan Nedoh, and Alenka Zupančič, eds. 2022.
+<em>Objective <span>Fictions</span>: <span>Philosophy</span>,
+<span>Psychoanalysis</span>, <span>Marxism</span></em>.
+</div>
+<div id="ref-toscanoOpenSecretReal2008" class="csl-entry"
+role="listitem">
+Toscano, Alberto. 2008. <span>“The Open Secret of Real
+Abstraction.”</span> <em>Rethinking Marxism</em> 20 (2): 273–87.
+</div>
+<div id="ref-zizekSublimeObjectIdeology2009" class="csl-entry"
+role="listitem">
+Zizek, Slavoj. 2009. <em>The <span>Sublime Object</span> of
+<span>Ideology</span></em>. Second Edition. London New York: Verso.
 </div>
 </div>
-</div>
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
-
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-I will not review these details here, but point the interested reader to the book itself (<a href="#citeproc_bib_item_1">Carson 2023</a>).
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-Two book-length projects attempting to expound the details of this kind of dialectical status are (<a href="#citeproc_bib_item_6">Zizek 2009</a>) and (<a href="#citeproc_bib_item_4">Johnston, Nedoh, and Zupančič 2022</a>).
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-This sentence is a review of Marx&rsquo;s theory of abstract labour in the opening chapters of <i>Capital</i>, volume I. For an incisive and essential introduction to Marx&rsquo;s value-theory here and in the rest of <i>Capital</i>, see (<a href="#citeproc_bib_item_2">Heinrich 2012</a>).
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-An interesting project that I have not yet read in detail on this note is (<a href="#citeproc_bib_item_3">Johnston 2023</a>).
-</p></div></div>
-
-
-</div>
-</div></div>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>I will not review these details here, but point the
+interested reader to the book itself <span class="citation"
+data-cites="carsonImmanentExternalitiesReproduction2023">(Carson
+2023)</span>.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Two book-length projects attempting to expound the
+details of this kind of dialectical status are <span class="citation"
+data-cites="zizekSublimeObjectIdeology2009">(Zizek 2009)</span> and
+<span class="citation"
+data-cites="johnstonObjectiveFictionsPhilosophy2022">(Johnston, Nedoh,
+and Zupančič 2022)</span>.<a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>This sentence is a review of Marx's theory of abstract
+labour in the opening chapters of <em>Capital</em>, volume I. For an
+incisive and essential introduction to Marx's value-theory here and in
+the rest of <em>Capital</em>, see <span class="citation"
+data-cites="heinrichIntroductionThreeVolumes2012">(Heinrich
+2012)</span>.<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>An interesting project that I have not yet read in
+detail on this note is <span class="citation"
+data-cites="johnstonInfiniteGreedMoney2023">(Johnston 2023)</span>.<a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 </body>
 </html>

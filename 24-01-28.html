@@ -1,273 +1,336 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>24 01 28</title>
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>24 01 28</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
 </head>
 <body>
-<div id="content" class="content">
+<header id="title-block-header">
 <h1 class="title">24 01 28</h1>
-<p>
-Today&rsquo;s project was completing Jacques Le Goff&rsquo;s 1990 <i><a href="https://press.princeton.edu/books/paperback/9780942299151/your-money-or-your-life">Your Money or Your Life: Economy and Religion in the Middle Ages</a></i>.
-This book offers a prehistory of capitalism in the medieval figure of the <b>usurer</b>.
-The usurer is a person who lends money at interest in order to collect that interest at some point in the future and make a profit.
-From the 10th through 13th century, the usurer was &ldquo;a necessary but detested man, powerful but also vulnerable&rdquo; (Le Goff 1988, 10).
-</p>
-
-<p>
-Le Goff sees the prefiguration of capitalism in the (Christian) moralisation of the usurer as a sinner.
-He also sees &ldquo;the beginnings of psychological modernity&rdquo; (Le Goff 1988, 12) in the manner in which usurers, amongst other sinners, were able to perform confession and/or contrition for their sins, often at their deathbed, to escape damnation in Hell or Purgatory.
-The plausibility of the usurer&rsquo;s escape from damnation despite the Church&rsquo;s condemnation of usury in general as one of the worst kinds of sins is what gives this book its title:
-</p>
+</header>
+<p>Today's project was completing Jacques Le Goff's 1990 <em><a
+href="https://press.princeton.edu/books/paperback/9780942299151/your-money-or-your-life">Your
+Money or Your Life: Economy and Religion in the Middle Ages</a></em>.
+This book offers a prehistory of capitalism in the medieval figure of
+the <strong>usurer</strong>. The usurer is a person who lends money at
+interest in order to collect that interest at some point in the future
+and make a profit. From the 10th through 13th century, the usurer was "a
+necessary but detested man, powerful but also vulnerable"<span
+class="citation" data-cites="legoffYourMoneyYour1988">(Le Goff 1988,
+10)</span>.</p>
+<p>Le Goff sees the prefiguration of capitalism in the (Christian)
+moralisation of the usurer as a sinner. He also sees "the beginnings of
+psychological modernity"<span class="citation"
+data-cites="legoffYourMoneyYour1988">(Le Goff 1988, 12)</span> in the
+manner in which usurers, amongst other sinners, were able to perform
+confession and/or contrition for their sins, often at their deathbed, to
+escape damnation in Hell or Purgatory. The plausibility of the usurer's
+escape from damnation despite the Church's condemnation of usury in
+general as one of the worst kinds of sins is what gives this book its
+title:</p>
 <blockquote>
-<p>
-To save himself, must [the usurer] forsake his pouch? Or will he find &#x2013; or will someone find for him &#x2013; a way to hang onto both his money and his life, his eternal life? This is the usurer&rsquo;s great struggle, a struggle between wealth and Heaven, between Money and Hell. (Le Goff 1988, 15)
-</p>
+<p>To save himself, must [the usurer] forsake his pouch? Or will he find
+– or will someone find for him – a way to hang onto both his money and
+his life, his eternal life? This is the usurer's great struggle, a
+struggle between wealth and Heaven, between Money and Hell. <span
+class="citation" data-cites="legoffYourMoneyYour1988">(Le Goff 1988,
+15)</span></p>
 </blockquote>
-
-<p>
-This book is on my list because it paints an important picture of the usurer in medieval (pre-capitalist, feudal) imagination.
-It avoids economic analysis for the most part, besides remarking in the first chapter that the ecclesiastical status of money is the source of the usurer&rsquo;s fundamental characterisation as a sinner (Le Goff 1988, 18–20), preferring to attempt to understand the Church&rsquo;s condemnation of usury on its own terms.
-The figure of the usurer is closely linked the the figure of the Jew during the Middle Ages, Le Goff argues, as while the bible more or less unequivocally condemns usury among one&rsquo;s own &rsquo;countrymen&rsquo;, lending money to foreigners is permitted as a sort of necessary evil for the functioning of society.
-Thus the Jew, in its consideration the exhaust of Christian society &#x2013; not part of its &rsquo;whole&rsquo; but rather its ghostly excess (it is compared with the figure of the mistress, illicitly sought after yet consciously repressed) &#x2013; is the only societal role for which usury is &rsquo;permitted&rsquo;.
-This point is important, I think, for understanding Marx&rsquo;s argument in his early essay &ldquo;On The Jewish Question&rdquo; (Marx 2014).<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
-</p>
-
-<p>
-The status of usury in medieval thought contributes to a prehistory of capitalism in that, in (the transition to) capital, usury is elevated from sinful to almost saintly.
-Capital&rsquo;s objective is to accumulate value and reproduce itself, and usury (interest-bearing capital) is one way in which it does this.<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
-In the Middle Ages, however: &ldquo;Usury is the unlawful surplus, the illegitimate excess&#x2026;. [U]sury is more than a crime, it is a sin&#x2026;. first and foremost a theft&rdquo; (Le Goff 1988, 26–27).
-</p>
-
-<p>
-The mechanics of usury&rsquo;s condemnation are effectively inverted by capital&rsquo;s emergence as autonomous subject.
-Whereas in feudalism, &ldquo;it is against nature for money to be loaned to give birth to more money&rdquo; (Le Goff 1988, 29), in capitalism the movement of financialised value is fundamentally <i>naturalised</i>.
-The Church condemns usury because it unceasingly works, offending God by being endless and automatic.
-Capital, on the other hand, adores it for this very same reason; it displaces the human as subject (and renders God effectively dead, a la Nietzsche).
-</p>
-
-<p>
-In further resonance with the role it will play in capitalism, usury is accursed under feudalism because <i>it is a theft of time</i>.
-(Chapter 3 is titled &ldquo;The Thief of Time&rdquo;.)
-Usury does not produce surplus (interest) through any kind of production, i.e. through vegetables sprouting in the land or value added in combining materials.
-Rather, the cause of its surplus is only the (synthetic) production of time: &ldquo;the time that elapses between the moment [the usurer] lends the money and the moment he is repaid&rdquo; (Le Goff 1988, 39).
-What is the problem here, for the Christian imagination?
-Le Goff reports:
-</p>
+<p>This book is on my list because it paints an important picture of the
+usurer in medieval (pre-capitalist, feudal) imagination. It avoids
+economic analysis for the most part, besides remarking in the first
+chapter that the ecclesiastical status of money is the source of the
+usurer's fundamental characterisation as a sinner <span class="citation"
+data-cites="legoffYourMoneyYour1988">(Le Goff 1988, 18–20)</span>,
+preferring to attempt to understand the Church's condemnation of usury
+on its own terms. The figure of the usurer is closely linked the the
+figure of the Jew during the Middle Ages, Le Goff argues, as while the
+bible more or less unequivocally condemns usury among one's own
+'countrymen', lending money to foreigners is permitted as a sort of
+necessary evil for the functioning of society. Thus the Jew, in its
+consideration the exhaust of Christian society – not part of its 'whole'
+but rather its ghostly excess (it is compared with the figure of the
+mistress, illicitly sought after yet consciously repressed) – is the
+only societal role for which usury is 'permitted'. This point is
+important, I think, for understanding Marx's argument in his early essay
+"On The Jewish Question" <span class="citation"
+data-cites="marxJewishQuestion2014">(Marx 2014)</span>.<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The status of usury in medieval thought contributes to a prehistory
+of capitalism in that, in (the transition to) capital, usury is elevated
+from sinful to almost saintly. Capital's objective is to accumulate
+value and reproduce itself, and usury (interest-bearing capital) is one
+way in which it does this.<a href="#fn2" class="footnote-ref"
+id="fnref2" role="doc-noteref"><sup>2</sup></a> In the Middle Ages,
+however: "Usury is the unlawful surplus, the illegitimate excess….
+[U]sury is more than a crime, it is a sin…. first and foremost a theft"
+<span class="citation" data-cites="legoffYourMoneyYour1988">(Le Goff
+1988, 26–27)</span>.</p>
+<p>The mechanics of usury's condemnation are effectively inverted by
+capital's emergence as autonomous subject. Whereas in feudalism, "it is
+against nature for money to be loaned to give birth to more money" <span
+class="citation" data-cites="legoffYourMoneyYour1988">(Le Goff 1988,
+29)</span>, in capitalism the movement of financialised value is
+fundamentally <em>naturalised</em>. The Church condemns usury because it
+unceasingly works, offending God by being endless and automatic.
+Capital, on the other hand, adores it for this very same reason; it
+displaces the human as subject (and renders God effectively dead, a la
+Nietzsche).</p>
+<p>In further resonance with the role it will play in capitalism, usury
+is accursed under feudalism because <em>it is a theft of time</em>.
+(Chapter 3 is titled "The Thief of Time".) Usury does not produce
+surplus (interest) through any kind of production, i.e. through
+vegetables sprouting in the land or value added in combining materials.
+Rather, the cause of its surplus is only the (synthetic) production of
+time: "the time that elapses between the moment [the usurer] lends the
+money and the moment he is repaid" <span class="citation"
+data-cites="legoffYourMoneyYour1988">(Le Goff 1988, 39)</span>. What is
+the problem here, for the Christian imagination? Le Goff reports:</p>
 <blockquote>
-<p>
-Time, of course, belongs solely to God. As a thief of time, the usurer steals God&rsquo;s patrimony. (Le Goff 1988, 39)
-</p>
+<p>Time, of course, belongs solely to God. As a thief of time, the
+usurer steals God's patrimony. <span class="citation"
+data-cites="legoffYourMoneyYour1988">(Le Goff 1988, 39)</span></p>
 </blockquote>
-
-<p>
-It would be interesting to think further regarding which qualities of the usurer have carried from the Middle Ages to modernity (its ruling silently from the shadows (Le Goff 1988, 51), for example); and which have been re-moralised as &rsquo;saintly&rsquo;, or otherwise un-sinful.
-Has the shame associated with the money-lender become an artificial pride?
-The secular nature of capitalism certainly no longer has the guts to denounce working all day and night, instead striving to reproduce this zombie-like existence in its human vassals.
-More on this secular automatism in future logs.
-</p>
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
-
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-Treating Marx&rsquo;s consideration of &rsquo;the Jew&rsquo; in this essay with reference to this figure of the Jew, as opposed to claiming that Marx speaks of it in an identitarian and chauvinist manner, is a viewpoint that Michael Heinrich develops in his recently translated biography of Marx (Heinrich 2019).
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-For more thinking on this point, see <a href="24-01-26.html">yesterday&rsquo;s log entry</a> on Rebecca Carson&rsquo;s book, <i>Immanent Externalities</i> (Carson 2023).
-</p></div></div>
-
-
+<p>It would be interesting to think further regarding which qualities of
+the usurer have carried from the Middle Ages to modernity (its ruling
+silently from the shadows <span class="citation"
+data-cites="legoffYourMoneyYour1988">(Le Goff 1988, 51)</span>, for
+example); and which have been re-moralised as 'saintly', or otherwise
+un-sinful. Has the shame associated with the money-lender become an
+artificial pride? The secular nature of capitalism certainly no longer
+has the guts to denounce working all day and night, instead striving to
+reproduce this zombie-like existence in its human vassals. More on this
+secular automatism in future logs.</p>
+<h1 id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-carsonImmanentExternalitiesReproduction2023"
+class="csl-entry" role="listitem">
+Carson, Rebecca. 2023. <em>Immanent <span>Externalities</span>:
+<span>The Reproduction</span> of <span>Life</span> in
+<span>Capital</span></em>. Brill.
 </div>
-</div></div>
+<div id="ref-heinrichKarlMarxBirth2019" class="csl-entry"
+role="listitem">
+Heinrich, Michael. 2019. <em>Karl <span>Marx</span> and the
+<span>Birth</span> of <span>Modern Society</span>: <span>The Life</span>
+of <span>Marx</span> and the <span>Development</span> of <span>His
+Work</span></em>. Translated by Alex Locascio. New York: Monthly Review
+Press.
+</div>
+<div id="ref-legoffYourMoneyYour1988" class="csl-entry" role="listitem">
+Le Goff, Jacques. 1988. <span>“Your Money or Your Life:
+<span>Economy</span> and Religion in the <span>Middle
+Ages</span>.”</span>
+</div>
+<div id="ref-marxJewishQuestion2014" class="csl-entry" role="listitem">
+Marx, Karl. 2014. <span>“On the <span>Jewish</span> Question.”</span> In
+<em>Nonsense <span>Upon Stilts</span> (<span>Routledge
+Revivals</span>)</em>, 137–50. Routledge.
+</div>
+</div>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Treating Marx's consideration of 'the Jew' in this essay
+with reference to this figure of the Jew, as opposed to claiming that
+Marx speaks of it in an identitarian and chauvinist manner, is a
+viewpoint that Michael Heinrich develops in his recently translated
+biography of Marx <span class="citation"
+data-cites="heinrichKarlMarxBirth2019">(Heinrich 2019)</span>.<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>For more thinking on this point, see <a
+href="24-01-26.html">yesterday's log entry</a> on Rebecca Carson's book,
+<em>Immanent Externalities</em> <span class="citation"
+data-cites="carsonImmanentExternalitiesReproduction2023">(Carson
+2023)</span>.<a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 </body>
 </html>

@@ -1,290 +1,331 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>24 02 07</title>
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>24 02 07</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
 </head>
 <body>
-<div id="content" class="content">
+<header id="title-block-header">
 <h1 class="title">24 02 07</h1>
-<p>
-This post continues thinking regarding Zizek&rsquo;s 1989 book <a href="https://en.wikipedia.org/wiki/The_Sublime_Object_of_Ideology">The Sublime Object of Ideology</a>.
-For some thinking on the preface and introduction (in the 2nd edition published by Verso), see <a href="24-02-05.html">24.02.05</a>.
-</p>
-
-<p>
-Here, I want to unfold the thinking in the book&rsquo;s first chapter, titled &ldquo;How Did Marx Invent the Symptom?&rdquo;.
-This chapter sets up a constellation of thinkers and theories in connection with each other, the basis of which can be summarised in a diagram as follows:
-</p>
-
-
-<div id="org5b85b45" class="figure">
-<p><img src="./img/zizek1989-chap1-diagram.png" alt="A diagram depicting the relationship between Kant, Marx, Lacan etc in Zizek's work" align="left" />
-</p>
-</div>
-
-<p>
-<br />
-As shown here, Marx&rsquo;s thought serves as the connecting tissue for Zizek between Kant and Hegel on the one side (of history), and Freud and Lacan on the other.
-The key term missing from this diagram (but which should be considered to effectively bracket it) is the chapter&rsquo;s titular one, <b>symptom</b>.
-Zizek&rsquo;s question is essentially this: what understanding of this term, symptom, can be unfolded to make sense of Lacan&rsquo;s statement that Marx invented the idea of it, an unfolding that bridges the apparent gap between Marxian and psychoanalytic thought?
-</p>
-
-<p>
-The philosophical stakes of this unfolding are relatively high.
-Marx is understood to be a thinker first of foremost of capital, of social and political struggle, of the possibilities of collective undertaking.
-Freud, to the contrary, is a thinker of the individual, the &rsquo;self&rsquo;, of psychoses and sexuality.
-While Lacan is obviously and avowedly a reader of Freud, he is not obviously a reader of Marx.
-The non-obviousness of his thought&rsquo;s relation to Marx is one of the reasons (among <i>many</i> - including his controversial <a href="https://inthesetimes.com/article/the-ambiguous-legacy-of-68">reaction to the May &rsquo;68 student protests</a>, and his controversial invention of the &rsquo;<a href="https://www.lacanonline.com/2010/07/the-short-session/">short session</a>&rsquo; in clinical work) that Lacan is sometimes regarded as being &rsquo;not political enough&rsquo; for the Left (at best), or even as distinctly conservative (at worst).
-Zizek is perhaps most famous for introducing his readers and viewers to a Lacan of the Left, pace those who dismiss him as yet another complacent and over-intelligent white man who calls himself a philosopher.
-</p>
-
-<p>
-To see the project of (Lacanian) psychoanalysis as bearing a distinct relation to the Marxian critique of political economy is to throw it into relief as a potential philosophy for and of (leftist) liberation, rather than to disregard it as a blimpish ideology that masks and justifies the sexual deprivation of the rich and powerful.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
-Zizek&rsquo;s first task, therefore, is to lay out the &ldquo;fundamental homology between the interpretive procedure of Marx and Freud - [and] more precisely between their analysis of <b>commodity</b> and of <b>dreams</b>&rdquo; (<a href="#citeproc_bib_item_2">Zizek 2009, 3</a>).
-What Marx sees/theorises in the commodity, Freud does too in dreams.
-</p>
-
-<p>
-Freud&rsquo;s work in the interpretation of dreams, Zizek argues, is not to decrypt the hidden content of the unconscious that is masked by their form.
-The vast majority of people - including me, before I started this PhD - if they have heard about Freudian psychoanalysis at all, will understand its method of interpretation to be exactly this: the gun in my dream that I shot at a duck is <i>actually</i> a penis; and the duck is <i>actually</i> a &rsquo;mother hen&rsquo;, which is in fact my mother; and thus the <i>real</i> meaning of the dream is that I have a desire to sleep with my mother that I cannot represent to myself consciously.
-Freud&rsquo;s method of interpreting dreams, Zizek says, is vastly more sophisticated than this.
-The dream is not simply a mask (the <b>form</b>) for some body of meaning (of <b>content</b>) that <i>actually</i> resides in the unconscious that is struggling to get out, to express itself.
-To put it differently, the dream&rsquo;s content cannot be excised (as if it were a tumor) in a singular, scientific, authoritative rationalisation of its form.
-For Freud, rather, to interpret a dream is to try to understand why the stuff of the unconscious was made to surface as a dream in the first place - and not what this &rsquo;stuff&rsquo; <i>actually</i> is, however juicy those details might seem.
-The &rsquo;secret&rsquo; of both the commodity and the dream is not revealed by unveiling the content of value or of desire respectively, but rather exists in the way that &rsquo;content&rsquo; is structured through the form itself.
-</p>
-
-<p>
-This chapter does the enlightening work of detailing this difficult conception of the interpretation of dreams as a necessary &ldquo;working through&rdquo; - and not a functional process of inputs and outputs that could in principle be automated - with respect to Marx&rsquo;s conception of the commodity and its (determinate) relationship with <b>value</b> in his system.
-This work/connection is enlightening to me precisely because of the &rsquo;monetary theory of value&rsquo; that Rebecca Carson expounds in her 2023 book <i>Immanent Externalities</i> (<a href="#citeproc_bib_item_1">Carson 2023</a>) (about which I wrote in part in <a href="24-01-27.html">24-01-27</a>).
-As implied in the explanation above, as the commodity is to value, the dream is to <b>desire</b>.
-Both forms - the commodity and the dream - represent a sensuous-nonsensuous thing that bespeaks an entire and hidden system of captivation and capture, of mystification (something appearing formally where it is not), and of fetishism (the subject-object conflation).
-</p>
-
-<p>
-The <b>symptom</b>, then, is the name that Zizek gives to the commonality of interpretative method that Freud and Marx share in their (dialectical) treatments of their respective objects of concern.
-Against Habermas&rsquo; idea of &ldquo;inter-subjective communication&rdquo;, there is always a <b>structure</b> at work in the mediation of value/desire:
-</p>
-
+</header>
+<p>This post continues thinking regarding Zizek's 1989 book <a
+href="https://en.wikipedia.org/wiki/The_Sublime_Object_of_Ideology">The
+Sublime Object of Ideology</a>. For some thinking on the preface and
+introduction (in the 2nd edition published by Verso), see <a
+href="24-02-05.html">24.02.05</a>.</p>
+<p>Here, I want to unfold the thinking in the book's first chapter,
+titled "How Did Marx Invent the Symptom?". This chapter sets up a
+constellation of thinkers and theories in connection with each other,
+the basis of which can be summarised in a diagram as follows:</p>
+<p><img src="./img/zizek1989-chap1-diagram.png"
+alt="A diagram depicting the relationship between Kant, Marx, Lacan etc in Zizek&#39;s work"
+data-align="left" /></p>
+<p><br />
+As shown here, Marx's thought serves as the connecting tissue for Zizek
+between Kant and Hegel on the one side (of history), and Freud and Lacan
+on the other. The key term missing from this diagram (but which should
+be considered to effectively bracket it) is the chapter's titular one,
+<strong>symptom</strong>. Zizek's question is essentially this: what
+understanding of this term, symptom, can be unfolded to make sense of
+Lacan's statement that Marx invented the idea of it, an unfolding that
+bridges the apparent gap between Marxian and psychoanalytic thought?</p>
+<p>The philosophical stakes of this unfolding are relatively high. Marx
+is understood to be a thinker first of foremost of capital, of social
+and political struggle, of the possibilities of collective undertaking.
+Freud, to the contrary, is a thinker of the individual, the 'self', of
+psychoses and sexuality. While Lacan is obviously and avowedly a reader
+of Freud, he is not obviously a reader of Marx. The non-obviousness of
+his thought's relation to Marx is one of the reasons (among
+<em>many</em> - including his controversial <a
+href="https://inthesetimes.com/article/the-ambiguous-legacy-of-68">reaction
+to the May '68 student protests</a>, and his controversial invention of
+the '<a
+href="https://www.lacanonline.com/2010/07/the-short-session/">short
+session</a>' in clinical work) that Lacan is sometimes regarded as being
+'not political enough' for the Left (at best), or even as distinctly
+conservative (at worst). Zizek is perhaps most famous for introducing
+his readers and viewers to a Lacan of the Left, pace those who dismiss
+him as yet another complacent and over-intelligent white man who calls
+himself a philosopher.</p>
+<p>To see the project of (Lacanian) psychoanalysis as bearing a distinct
+relation to the Marxian critique of political economy is to throw it
+into relief as a potential philosophy for and of (leftist) liberation,
+rather than to disregard it as a blimpish ideology that masks and
+justifies the sexual deprivation of the rich and powerful.<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+Zizek's first task, therefore, is to lay out the "fundamental homology
+between the interpretive procedure of Marx and Freud - [and] more
+precisely between their analysis of <strong>commodity</strong> and of
+<strong>dreams</strong>" <span class="citation"
+data-cites="zizekSublimeObjectIdeology2009">(Zizek 2009, 3)</span>. What
+Marx sees/theorises in the commodity, Freud does too in dreams.</p>
+<p>Freud's work in the interpretation of dreams, Zizek argues, is not to
+decrypt the hidden content of the unconscious that is masked by their
+form. The vast majority of people - including me, before I started this
+PhD - if they have heard about Freudian psychoanalysis at all, will
+understand its method of interpretation to be exactly this: the gun in
+my dream that I shot at a duck is <em>actually</em> a penis; and the
+duck is <em>actually</em> a 'mother hen', which is in fact my mother;
+and thus the <em>real</em> meaning of the dream is that I have a desire
+to sleep with my mother that I cannot represent to myself consciously.
+Freud's method of interpreting dreams, Zizek says, is vastly more
+sophisticated than this. The dream is not simply a mask (the
+<strong>form</strong>) for some body of meaning (of
+<strong>content</strong>) that <em>actually</em> resides in the
+unconscious that is struggling to get out, to express itself. To put it
+differently, the dream's content cannot be excised (as if it were a
+tumor) in a singular, scientific, authoritative rationalisation of its
+form. For Freud, rather, to interpret a dream is to try to understand
+why the stuff of the unconscious was made to surface as a dream in the
+first place - and not what this 'stuff' <em>actually</em> is, however
+juicy those details might seem. The 'secret' of both the commodity and
+the dream is not revealed by unveiling the content of value or of desire
+respectively, but rather exists in the way that 'content' is structured
+through the form itself.</p>
+<p>This chapter does the enlightening work of detailing this difficult
+conception of the interpretation of dreams as a necessary "working
+through" - and not a functional process of inputs and outputs that could
+in principle be automated - with respect to Marx's conception of the
+commodity and its (determinate) relationship with <strong>value</strong>
+in his system. This work/connection is enlightening to me precisely
+because of the 'monetary theory of value' that Rebecca Carson expounds
+in her 2023 book <em>Immanent Externalities</em> <span class="citation"
+data-cites="carsonImmanentExternalitiesReproduction2023">(Carson
+2023)</span> (about which I wrote in part in <a
+href="24-01-27.html">24-01-27</a>). As implied in the explanation above,
+as the commodity is to value, the dream is to <strong>desire</strong>.
+Both forms - the commodity and the dream - represent a
+sensuous-nonsensuous thing that bespeaks an entire and hidden system of
+captivation and capture, of mystification (something appearing formally
+where it is not), and of fetishism (the subject-object conflation).</p>
+<p>The <strong>symptom</strong>, then, is the name that Zizek gives to
+the commonality of interpretative method that Freud and Marx share in
+their (dialectical) treatments of their respective objects of concern.
+Against Habermas' idea of "inter-subjective communication", there is
+always a <strong>structure</strong> at work in the mediation of
+value/desire:</p>
 <blockquote>
-<p>
-The structure is always triple; there are always three elements at work: the <i>manifest dream-text</i> [form], the <i>latent dream-content</i> or thought [content], and the <i>unconscious desire</i> articulated in a dream [structure]. (<a href="#citeproc_bib_item_2">Zizek 2009, 6</a>)
-</p>
+<p>The structure is always triple; there are always three elements at
+work: the <em>manifest dream-text</em> [form], the <em>latent
+dream-content</em> or thought [content], and the <em>unconscious
+desire</em> articulated in a dream [structure]. <span class="citation"
+data-cites="zizekSublimeObjectIdeology2009">(Zizek 2009, 6)</span></p>
 </blockquote>
-
-<p>
-This structure (unconscious desire, or value) is neither strictly objective nor strictly subjective, but rather consists in the impossibility to strictly divide those two domains.
-It is structure that determines &ldquo;the real subject matter&rdquo; (<a href="#citeproc_bib_item_2">Zizek 2009, 6</a>) of the movement.
-</p>
-
-<div id="outline-container-org9991320" class="outline-2">
-<h2 id="org9991320"><span class="section-number-2">1.</span> Bibliography</h2>
-<div class="outline-text-2" id="text-1">
-<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Carson, Rebecca. 2023. <i>Immanent Externalities: The Reproduction of Life in Capital</i>. Brill.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Zizek, Slavoj. 2009. <i>The Sublime Object of Ideology</i>. Second Edition. London New York: Verso.</div>
+<p>This structure (unconscious desire, or value) is neither strictly
+objective nor strictly subjective, but rather consists in the
+impossibility to strictly divide those two domains. It is structure that
+determines "the real subject matter" <span class="citation"
+data-cites="zizekSublimeObjectIdeology2009">(Zizek 2009, 6)</span> of
+the movement.</p>
+<h1 id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-carsonImmanentExternalitiesReproduction2023"
+class="csl-entry" role="listitem">
+Carson, Rebecca. 2023. <em>Immanent <span>Externalities</span>:
+<span>The Reproduction</span> of <span>Life</span> in
+<span>Capital</span></em>. Brill.
+</div>
+<div id="ref-zizekSublimeObjectIdeology2009" class="csl-entry"
+role="listitem">
+Zizek, Slavoj. 2009. <em>The <span>Sublime Object</span> of
+<span>Ideology</span></em>. Second Edition. London New York: Verso.
 </div>
 </div>
-</div>
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
-
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-This is not to overlook that many things that go by the name &rsquo;psychoanalysis&rsquo; may, of course, fall into that latter category. <a href="https://en.wikipedia.org/wiki/Carl_Jung">Carl Jung</a>&rsquo;s philosophy of psychoanalysis, for example, is arguably one such thing.
-</p></div></div>
-
-
-</div>
-</div></div>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This is not to overlook that many things that go by the
+name 'psychoanalysis' may, of course, fall into that latter category. <a
+href="https://en.wikipedia.org/wiki/Carl_Jung">Carl Jung</a>'s
+philosophy of psychoanalysis, for example, is arguably one such thing.<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 </body>
 </html>

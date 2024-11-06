@@ -1,279 +1,356 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>24 01 31</title>
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>24 01 31</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
 </head>
 <body>
-<div id="content" class="content">
+<header id="title-block-header">
 <h1 class="title">24 01 31</h1>
-<p>
-Today: finally, I completed Matteo Pasquinelli&rsquo;s new book published in 2023, <i><a href="https://www.versobooks.com/en-gb/products/735-the-eye-of-the-master">The Eye of the Master: A Social History of Artificial Intelligence</a></i>.
-I&rsquo;ve been partway through this book for a month or more, as I could never quite bring myself to finish it off.
-I have fair investment in Pasquinelli, as I wrote a term paper last year addressing the majority of the essays he published before this book (which I have mentioned in a previous log).
-This book reworks some of his arguments from those essays, and attempts to bring them together in the agenda of a &rsquo;social history of artificial intelligence&rsquo;.
-</p>
-
-<p>
-Pasquinelli is at once a curious and symptomatic scholar.
-He is part of the new wave of critical A.I. studies, and certainly traffics in distilling citations from there and the history of science into a kind of Foucauldian theoreticism that champions itself as an &rsquo;alternative history&rsquo;.
-The basis for which we need an alternative here is, one assumes, the whiggish narrative of proliferating industry, total automation, and inevitable progress that is often associated with A.I. in popular media.
-In addition to this Foucauldian inflection in his partial background as a historian of science, he is distinctly influenced by an <a href="https://en.wikipedia.org/wiki/Workerism">operaismo</a>, <a href="24-01-27.html">post-Marxist</a> theoretical tradition when it comes to his understanding of technology.
-This tradition is sure that the take on technology in Marx&rsquo;s <i>Grundrisse</i> &#x2013; a set of notebooks written before <i>Capital</i> and not circulated in any language other than German until the 1960s &#x2013; is more promising as a theory of praxis and political struggle than what Marx lays out in the later and better-known work.
-</p>
-
-<p>
-<i>The Eye of the Master</i> (Pasquinelli&rsquo;s first book-length project) reads as half a post-Marxist proposal (Part I), and half a contribution of fragmented episodes in the history of science-qua-A.I. (Part II).
-There are a wealth of cameo references to contemporary scholarship, footnotes to further reading, and generous citation of other arguments throughout the book: so much so that, at times, I struggled to make the particularity of Pasquinelli&rsquo;s argument in among it all.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
-Pasquinelli is talented as a historian in the sense that he has found a collection of historical scenarios that, while not obviously interconnected at face value, coalesce together as a cabinet of curiosity-piquing moments that all certainly have some bearing on what we refer to today when we say &ldquo;A.I.&rdquo;
-It would also be hard to deny that he is well-read/well-networked.
-The citation-rich text seems almost as though it was written through a series of pseudo-academic call-and-response all-too-familiar to anyone who has been to a lecture in the theory-leaning humanities &#x2013; Call: &ldquo;Your talk made me think about author X or book Y, what do you think?&rdquo; &#x2013; Response: &ldquo;Let me read that and get back to you.&rdquo;
-</p>
-
-<p>
-The over-arching premise of the book is undeniably correct: the development of A.I. is a &rsquo;social&rsquo; enterprise pace the techno-determinist (&ldquo;A.I. was invented, and then the world changed&rdquo;) and techno-fatalist (&ldquo;A.I. was always going to be invented&rdquo;) positions.
-In Pasquinelli&rsquo;s words: &ldquo;this book aims at rediscovering the social centrality of the social intelligence that informs and empowers A.I.&rdquo; (Pasquinelli 2023, 12)
-The attempted drilling down on this &ldquo;social intelligence&rdquo; as such through a post-Marxist understanding of labour and a Foucauldian understanding of history, however, is what misses the mark for me.
-</p>
-
-<p>
-Take Pasquinelli&rsquo;s explication of his method as <b>historical epistemology</b>:
-</p>
+</header>
+<p>Today: finally, I completed Matteo Pasquinelli's new book published
+in 2023, <em><a
+href="https://www.versobooks.com/en-gb/products/735-the-eye-of-the-master">The
+Eye of the Master: A Social History of Artificial Intelligence</a></em>.
+I've been partway through this book for a month or more, as I could
+never quite bring myself to finish it off. I have fair investment in
+Pasquinelli, as I wrote a term paper last year addressing the majority
+of the essays he published before this book (which I have mentioned in a
+previous log). This book reworks some of his arguments from those
+essays, and attempts to bring them together in the agenda of a 'social
+history of artificial intelligence'.</p>
+<p>Pasquinelli is at once a curious and symptomatic scholar. He is part
+of the new wave of critical A.I. studies, and certainly traffics in
+distilling citations from there and the history of science into a kind
+of Foucauldian theoreticism that champions itself as an 'alternative
+history'. The basis for which we need an alternative here is, one
+assumes, the whiggish narrative of proliferating industry, total
+automation, and inevitable progress that is often associated with A.I.
+in popular media. In addition to this Foucauldian inflection in his
+partial background as a historian of science, he is distinctly
+influenced by an <a
+href="https://en.wikipedia.org/wiki/Workerism">operaismo</a>, <a
+href="24-01-27.html">post-Marxist</a> theoretical tradition when it comes
+to his understanding of technology. This tradition is sure that the take
+on technology in Marx's <em>Grundrisse</em> – a set of notebooks written
+before <em>Capital</em> and not circulated in any language other than
+German until the 1960s – is more promising as a theory of praxis and
+political struggle than what Marx lays out in the later and better-known
+work.</p>
+<p><em>The Eye of the Master</em> (Pasquinelli's first book-length
+project) reads as half a post-Marxist proposal (Part I), and half a
+contribution of fragmented episodes in the history of science-qua-A.I.
+(Part II). There are a wealth of cameo references to contemporary
+scholarship, footnotes to further reading, and generous citation of
+other arguments throughout the book: so much so that, at times, I
+struggled to make the particularity of Pasquinelli's argument in among
+it all.<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> Pasquinelli is talented as a
+historian in the sense that he has found a collection of historical
+scenarios that, while not obviously interconnected at face value,
+coalesce together as a cabinet of curiosity-piquing moments that all
+certainly have some bearing on what we refer to today when we say "A.I."
+It would also be hard to deny that he is well-read/well-networked. The
+citation-rich text seems almost as though it was written through a
+series of pseudo-academic call-and-response all-too-familiar to anyone
+who has been to a lecture in the theory-leaning humanities – Call: "Your
+talk made me think about author X or book Y, what do you think?" –
+Response: "Let me read that and get back to you."</p>
+<p>The over-arching premise of the book is undeniably correct: the
+development of A.I. is a 'social' enterprise pace the techno-determinist
+("A.I. was invented, and then the world changed") and techno-fatalist
+("A.I. was always going to be invented") positions. In Pasquinelli's
+words: "this book aims at rediscovering the social centrality of the
+social intelligence that informs and empowers A.I." <span
+class="citation" data-cites="pasquinelliEyeMaster2023">(Pasquinelli
+2023, 12)</span> The attempted drilling down on this "social
+intelligence" as such through a post-Marxist understanding of labour and
+a Foucauldian understanding of history, however, is what misses the mark
+for me.</p>
+<p>Take Pasquinelli's explication of his method as <strong>historical
+epistemology</strong>:</p>
 <blockquote>
-<p>
-Where social constructivism generically emphasises the influence of external factors on science and technology, historical epistemology is concerned with the dialectical unfolding of social praxis, instruments of labour, and scientific abstractions within a global economic dynamics.
-This book attempts to study AI and <i>algorithmic thinking</i> in a similar way that historical and political epistemology has studied, in the modern age, the rise of mechanical thinking and scientific abstractions in relation to socio-economic developments. (Pasquinelli 2023, 13)
-</p>
+<p>Where social constructivism generically emphasises the influence of
+external factors on science and technology, historical epistemology is
+concerned with the dialectical unfolding of social praxis, instruments
+of labour, and scientific abstractions within a global economic
+dynamics. This book attempts to study AI and <em>algorithmic
+thinking</em> in a similar way that historical and political
+epistemology has studied, in the modern age, the rise of mechanical
+thinking and scientific abstractions in relation to socio-economic
+developments. <span class="citation"
+data-cites="pasquinelliEyeMaster2023">(Pasquinelli 2023, 13)</span></p>
 </blockquote>
-
-<p>
-Here (and throughout the book), Pasquinelli draws out a distinction between <i>algorithmic</i> operations on the one hand, and <i>mechanical</i> machines on the other.
-This distinction is further developed in Part II, which narrates the invention of Rosenblatt&rsquo;s perception and the growing practice of computationally understanding images as statistical distributions as a fundamental shift away from Turing&rsquo;s &ldquo;linear&rdquo; conception of the computer as a discretely modifiable strip of tape, towards a &ldquo;spatial&rdquo; (i.e. multi-dimensional) understanding of data.
-While Pasquinelli is critical of the cybernetic vantage point in its collapse of any conceptual border between the human and the computer (indeed, this collapse can be considered the heart of the cybernetic project as such), his outlook is fundamentally historicist: he cannot but see the birth of information and the computer as a fundamental development in the structure of capital that requires new eyes, new theories.
-</p>
-
-<p>
-The ethics of this cybernetic historicism is deeply ensnared in Pasquinelli&rsquo;s post-Marxist proclivities.
-Part I of the book amounts to a revisionist understanding of Marxian labour under the aegis of a cybernetic philosophy of the human/machine relation.
-Pasquinelli&rsquo;s quibble is over the primacy of <b>labour</b> in Marx&rsquo;s thought, a term which he seems to think is too rooted in its &rsquo;manual&rsquo; materialisations, and thus to which he offers <b>knowledge</b> as an alternative.
-This positing of knowledge as the primate concept in a system of political economy is, in my view, a succumbing to the cybernetic (and capitalist) insistence that surplus value is not solely generated from the figure of the human, but rather can be transferred to and/or additionally cultivated in the machine (or computer).<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
-</p>
-
-<p>
-To do away with the idea that surplus value comes solely and specifically from the mystification of the worth of human labour by way of its quantification in/as abstract human labour (that fundamental concept in Marx) is to do away with Marx&rsquo;s understanding of how the human (condition) is alienated despite being formally &rsquo;free&rsquo; in capital.
-Pasquinelli seems to miss what is at stake, in other words, in Marx&rsquo;s critique of the labour theory of value: namely the capacity to distinguish human life from the life of capital, and the ability as a result to consciously value the former in social arrangements of production and circulation.
-By flattening labour into knowledge, we deliver our thought directly to the fetishism of subject/object misapprehension that capital <i>wants</i>.
-A social relation between people is confused and projected into the objective quality of a thing &#x2013; in Pasquinelli&rsquo;s case, the computer &#x2013; and we remain unable to think the possibility of (human) freedom, as the subject/object dialectic has been collapsed.
-</p>
-
-<p>
-If A.I. has &ldquo;always operated on the side of capital together with a hidden agenda to foster human stupidity&rdquo; (Pasquinelli 2023, 111) as Pasquinelli suggests, we do ourselves a disservice to disregard Marx&rsquo;s precise philosophical formulation of the structure at work in it by presuming that A.I. is necessarily a phenomenon historically distinct.
-My fundamental question is: is there really anything about A.I. that distinguishes it from other forms of computing, and is there anything about the computer that distinguishes it from what Marx refers to as the machine?
-Pasquinelli&rsquo;s book coins a collection of attractive-sounding theoretical terms, but (given the non-starter of substituting labour for knowledge) neglects to tell us much about how we can actually better think about AI, labour, and the relationship between computational automation and the social.
-It is, however, a great tour of recent scholarship in the space and moments in the history of technology (Von Neumann&rsquo;s critique of cybernetics, Hayek&rsquo;s relationship to connectionism, Babbage&rsquo;s involvement in Marx&rsquo;s thinking) that deserve closer attention.
-</p>
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
-
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-Pasquinelli also sometimes cites contesting arguments in his footnotes (&ldquo;For an opposing view, see&#x2026;&rdquo;). I do appreciate that the footnotes are actually footnotes, and not endnotes.
-</p></div></div>
-
-<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-Pasquinelli has expressed this view regarding the reconfiguration of surplus value more directly in positing the idea of <a href="http://matteopasquinelli.com/code-surplus-value/">code surplus value</a> elsewhere.
-</p></div></div>
-
-
+<p>Here (and throughout the book), Pasquinelli draws out a distinction
+between <em>algorithmic</em> operations on the one hand, and
+<em>mechanical</em> machines on the other. This distinction is further
+developed in Part II, which narrates the invention of Rosenblatt's
+perception and the growing practice of computationally understanding
+images as statistical distributions as a fundamental shift away from
+Turing's "linear" conception of the computer as a discretely modifiable
+strip of tape, towards a "spatial" (i.e. multi-dimensional)
+understanding of data. While Pasquinelli is critical of the cybernetic
+vantage point in its collapse of any conceptual border between the human
+and the computer (indeed, this collapse can be considered the heart of
+the cybernetic project as such), his outlook is fundamentally
+historicist: he cannot but see the birth of information and the computer
+as a fundamental development in the structure of capital that requires
+new eyes, new theories.</p>
+<p>The ethics of this cybernetic historicism is deeply ensnared in
+Pasquinelli's post-Marxist proclivities. Part I of the book amounts to a
+revisionist understanding of Marxian labour under the aegis of a
+cybernetic philosophy of the human/machine relation. Pasquinelli's
+quibble is over the primacy of <strong>labour</strong> in Marx's
+thought, a term which he seems to think is too rooted in its 'manual'
+materialisations, and thus to which he offers <strong>knowledge</strong>
+as an alternative. This positing of knowledge as the primate concept in
+a system of political economy is, in my view, a succumbing to the
+cybernetic (and capitalist) insistence that surplus value is not solely
+generated from the figure of the human, but rather can be transferred to
+and/or additionally cultivated in the machine (or computer).<a
+href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></p>
+<p>To do away with the idea that surplus value comes solely and
+specifically from the mystification of the worth of human labour by way
+of its quantification in/as abstract human labour (that fundamental
+concept in Marx) is to do away with Marx's understanding of how the
+human (condition) is alienated despite being formally 'free' in capital.
+Pasquinelli seems to miss what is at stake, in other words, in Marx's
+critique of the labour theory of value: namely the capacity to
+distinguish human life from the life of capital, and the ability as a
+result to consciously value the former in social arrangements of
+production and circulation. By flattening labour into knowledge, we
+deliver our thought directly to the fetishism of subject/object
+misapprehension that capital <em>wants</em>. A social relation between
+people is confused and projected into the objective quality of a thing –
+in Pasquinelli's case, the computer – and we remain unable to think the
+possibility of (human) freedom, as the subject/object dialectic has been
+collapsed.</p>
+<p>If A.I. has "always operated on the side of capital together with a
+hidden agenda to foster human stupidity" <span class="citation"
+data-cites="pasquinelliEyeMaster2023">(Pasquinelli 2023, 111)</span> as
+Pasquinelli suggests, we do ourselves a disservice to disregard Marx's
+precise philosophical formulation of the structure at work in it by
+presuming that A.I. is necessarily a phenomenon historically distinct.
+My fundamental question is: is there really anything about A.I. that
+distinguishes it from other forms of computing, and is there anything
+about the computer that distinguishes it from what Marx refers to as the
+machine? Pasquinelli's book coins a collection of attractive-sounding
+theoretical terms, but (given the non-starter of substituting labour for
+knowledge) neglects to tell us much about how we can actually better
+think about AI, labour, and the relationship between computational
+automation and the social. It is, however, a great tour of recent
+scholarship in the space and moments in the history of technology (Von
+Neumann's critique of cybernetics, Hayek's relationship to
+connectionism, Babbage's involvement in Marx's thinking) that deserve
+closer attention.</p>
+<h1 id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-pasquinelliEyeMaster2023" class="csl-entry"
+role="listitem">
+Pasquinelli, Matteo. 2023. <em>The <span>Eye</span> of the
+<span>Master</span></em>. Verso Books.
 </div>
-</div></div>
+</div>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Pasquinelli also sometimes cites contesting arguments in
+his footnotes ("For an opposing view, see…"). I do appreciate that the
+footnotes are actually footnotes, and not endnotes.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Pasquinelli has expressed this view regarding the
+reconfiguration of surplus value more directly in positing the idea of
+<a href="http://matteopasquinelli.com/code-surplus-value/">code surplus
+value</a> elsewhere.<a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 </body>
 </html>

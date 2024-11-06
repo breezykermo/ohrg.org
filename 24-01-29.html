@@ -1,237 +1,249 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>24 01 29</title>
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>24 01 29</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
 </head>
 <body>
-<div id="content" class="content">
+<header id="title-block-header">
 <h1 class="title">24 01 29</h1>
-<p>
-Today&rsquo;s work doesn&rsquo;t fit on one of my three tracks, as it consisted of grading papers from a course for which I was a TA (Teaching Assistant) in the Fall semester, <i>MCM 0150: Introduction to Modern Culture and Media</i>.
-I submitted final grades for these papers for the students in my section in late December, but I had (until today) neglected to return students their final papers, annotated with comments.
-Though returning these papers is not something that the course&rsquo;s professors nor the University would strictly enforce, as from their perspective a final grade is all that needs to be formally booked, it feels churlish to not do so.
-As best I can, I am trying to avoid the commonplace duplicity of suggestion in academic life, in which professors consciously or otherwise suggest that they are &ldquo;always&rdquo; happy and available to review work, but then rarely actually get back to students when they recieve it.
-I recognize that this attitude is produced by the increasingly neoliberal labour politics of the academy, in which the boundary between work and life is supposed to exist only for those who are not intellectually or emotionally equipped to deal with their collateralising.
-As an aspiring academic, in other words, one feels one <i>must</i> be open to be intellectually or pedagogically available to all opportunities, especially those that are not obligatory and/or are unpaid.
-To refuse these would be, to use a phrase from my duologic life as a software engineer, to signal oneself as a bad &rsquo;cultural fit&rsquo; for the academy.
-</p>
-
-<p>
-I am against comporting oneself to such suggestions for their own sake, or for the sake of &rsquo;staying with the trouble&rsquo;.
-But giving time to students is an undertaking that deserves a different category, not least because it can often entail a rejection of the strictures and norms of the academy&rsquo;s labour expectations, rather than succumbing to them.
-My interest in properly attending to papers students send to me is really more a reflection of the experience that I have had as an undergraduate student, as a working person, and also as a graduate student of struggling to find friends or fellows who will <i>actually</i> read and discuss academic work.
-There is a lot of posturing regarding interest in reading groups, extensions of seminar, and so on; but very few who want to make good on the promise that they will read something together, or offer comments on a work in progress.
-</p>
-
-<p>
-There is of course an element of comfortability and community at play here, and I am not suggesting that everyone ought to be comfortable reading everything with everyone, or that anyone in particular should be comfortable reading any particular text with me, of all people.
-But it is somewhat surprising that in a graduate body of nearly 3000, at least a third of which are notionally committed to some form of close reading as an occupational hazard, it is not straightforward to find others who want to make time to work through texts.
-As an undergraduate at Princeton, I felt much the same.
-(I effectively failed to start an extracurricular book club within a group of people who had &rsquo;literary&rsquo; inclinations.)
-During a stint working in Silicon Valley, I somewhat hilariously proposed to read Lampedusa&rsquo;s novel <i>Il Gattopardo</i> (in the English translation of course) with aspiring tech aesthetes in an entity titled &rsquo;Club Book&rsquo;.
-After the first session (7pm after work on a Monday), it was clear that most attendants&rsquo; idea of a book club was substantiated much more by alcohol consumption than it was reading or discussion.
-As a researcher working at a human rights research group in London, I semi-successfully initiated an after-work reading group called <a href="https://argnotes.club/">A.R.G</a> which ran more than 20 sessions; but even here there were really only one or two other regularly committed attendees.
-</p>
-
-<p>
-The aesthetic of humanities at universities like Brown tells us that reading, writing, and thinking critically is important; yet the apparatus of attention around those activities (especially when they are not directly legitimised by institutions with names, or professors with titles) is often quite alienating.
-Perhaps this is a luxury unique to the Ivy Leagues, which are admittedly the only schools at which I have formally pursued courses of study.
-Indeed, many of my best experiences within these institutions have been with professors or students who have spent significant time at public institutions, in the U.S. or elsewhere.
-</p>
-
-<p>
-So I spent three or four hours today annotated papers the grades for which I have already submitted.
-The only other progress made was to submit <a href="conference.marx-and-philosophy2024.pdf">an abstract</a> for an upcoming conference at the Marx and Philosophy Society in London (<a href="https://philevents.org/event/show/118089">call for papers here</a>).
-</p>
-</div>
+</header>
+<p>Today's work doesn't fit on one of my three tracks, as it consisted
+of grading papers from a course for which I was a TA (Teaching
+Assistant) in the Fall semester, <em>MCM 0150: Introduction to Modern
+Culture and Media</em>. I submitted final grades for these papers for
+the students in my section in late December, but I had (until today)
+neglected to return students their final papers, annotated with
+comments. Though returning these papers is not something that the
+course's professors nor the University would strictly enforce, as from
+their perspective a final grade is all that needs to be formally booked,
+it feels churlish to not do so. As best I can, I am trying to avoid the
+commonplace duplicity of suggestion in academic life, in which
+professors consciously or otherwise suggest that they are "always" happy
+and available to review work, but then rarely actually get back to
+students when they recieve it. I recognize that this attitude is
+produced by the increasingly neoliberal labour politics of the academy,
+in which the boundary between work and life is supposed to exist only
+for those who are not intellectually or emotionally equipped to deal
+with their collateralising. As an aspiring academic, in other words, one
+feels one <em>must</em> be open to be intellectually or pedagogically
+available to all opportunities, especially those that are not obligatory
+and/or are unpaid. To refuse these would be, to use a phrase from my
+duologic life as a software engineer, to signal oneself as a bad
+'cultural fit' for the academy.</p>
+<p>I am against comporting oneself to such suggestions for their own
+sake, or for the sake of 'staying with the trouble'. But giving time to
+students is an undertaking that deserves a different category, not least
+because it can often entail a rejection of the strictures and norms of
+the academy's labour expectations, rather than succumbing to them. My
+interest in properly attending to papers students send to me is really
+more a reflection of the experience that I have had as an undergraduate
+student, as a working person, and also as a graduate student of
+struggling to find friends or fellows who will <em>actually</em> read
+and discuss academic work. There is a lot of posturing regarding
+interest in reading groups, extensions of seminar, and so on; but very
+few who want to make good on the promise that they will read something
+together, or offer comments on a work in progress.</p>
+<p>There is of course an element of comfortability and community at play
+here, and I am not suggesting that everyone ought to be comfortable
+reading everything with everyone, or that anyone in particular should be
+comfortable reading any particular text with me, of all people. But it
+is somewhat surprising that in a graduate body of nearly 3000, at least
+a third of which are notionally committed to some form of close reading
+as an occupational hazard, it is not straightforward to find others who
+want to make time to work through texts. As an undergraduate at
+Princeton, I felt much the same. (I effectively failed to start an
+extracurricular book club within a group of people who had 'literary'
+inclinations.) During a stint working in Silicon Valley, I somewhat
+hilariously proposed to read Lampedusa's novel <em>Il Gattopardo</em>
+(in the English translation of course) with aspiring tech aesthetes in
+an entity titled 'Club Book'. After the first session (7pm after work on
+a Monday), it was clear that most attendants' idea of a book club was
+substantiated much more by alcohol consumption than it was reading or
+discussion. As a researcher working at a human rights research group in
+London, I semi-successfully initiated an after-work reading group called
+<a href="https://argnotes.club/">A.R.G</a> which ran more than 20
+sessions; but even here there were really only one or two other
+regularly committed attendees.</p>
+<p>The aesthetic of humanities at universities like Brown tells us that
+reading, writing, and thinking critically is important; yet the
+apparatus of attention around those activities (especially when they are
+not directly legitimised by institutions with names, or professors with
+titles) is often quite alienating. Perhaps this is a luxury unique to
+the Ivy Leagues, which are admittedly the only schools at which I have
+formally pursued courses of study. Indeed, many of my best experiences
+within these institutions have been with professors or students who have
+spent significant time at public institutions, in the U.S. or
+elsewhere.</p>
+<p>So I spent three or four hours today annotated papers the grades for
+which I have already submitted. The only other progress made was to
+submit <a href="conference.marx-and-philosophy2024.pdf">an abstract</a>
+for an upcoming conference at the Marx and Philosophy Society in London
+(<a href="https://philevents.org/event/show/118089">call for papers
+here</a>).</p>
 </body>
 </html>

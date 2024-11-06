@@ -1,268 +1,296 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>24 05 05</title>
-<meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>24 05 05</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<div id="content" class="content">
+<header id="title-block-header">
 <h1 class="title">24 05 05</h1>
-<p>
-Re: <a href="https://mackbooks.co.uk/products/uneasy-listening-notes-on-hearing-and-being-heard">Uneasy Listening: Notes on Hearing and Being Heard</a>:
-</p>
-
-
-<p>
-This book is a captivating and succinct introduction to what I find important and interesting about psychoanalysis, and maybe Lacanian psychoanalysis in particular.
-Grose&rsquo;s generous explanations/ruminations of/on the psychoanalytic endeavor are jarring in contrast to Brewer Young&rsquo;s type-written, &ldquo;laconic&rdquo;, and abstract sections.
-In the final dialogue, I could &rsquo;feel Grose&rsquo;s self-consciousness regarding her too-assumed role as analyst in her words, in the fractured attempt of this collaborative masterpiece.
-</p>
-
-<p>
-The figure of a technically &rsquo;correct&rsquo;, scientific listening seems the substance of the strange desire Gore expresses to write this book in its beginning (for it would be hard to deny that, however collaborative a book might be, we can&rsquo;t but conceptualise its authorial beginning somewhere singular: and it is appropriately - laconically - the woman who inevitably bears this burden.
-But yeah - what a masterclass in the art of conversation.
-I was peeved at the beginning upon reading in that Grose &ldquo;wrote him [Brewer Young] a letter asking if he would like to work on a very small book&rdquo; (<a href="#citeproc_bib_item_1">Grose and Young 2022, 8</a>), as I thought: &ldquo;she surely only wrote him an email.&rdquo;
-Having read the book now, and having learned how Brewer Young inexplicably (laconically) wrote his sections on a type-writer, I am willing to revise the force of my &ldquo;surely&rdquo;.
-It seems the kind of retroaction in which this pair of writers might indeed actually engage.
-</p>
-
-<p>
-I was also initially annoyed by the flirtatious finish to his [Brewer Young&rsquo;s] short starting letter; &ldquo;the Lacanian likes of you, Anouchka, I felt, even more than felt, that your toolbox contained things that are acute, raise, and gentle&rdquo; (<a href="#citeproc_bib_item_1">Grose and Young 2022, 9</a>).
-I bet she&rsquo;s pretty, this Anouchka, and young.
-Did Robert say yes to the project through some projection of desire, wanting to be nice and agreeable (&ldquo;collaborative&rdquo;), but secretly harbored some purposive hope to linger on her mind?
-This was a cruel and suspicious thought, I think now, even if it is or was partially true.
-</p>
-
-<p>
-And then Anouchka&rsquo;s flirty response on October 17th!
-&ldquo;I&rsquo;m not sure how cut out I am to be a vampire. Vampires don&rsquo;t seem particularly interested in reciprocity and consent. I&rsquo;ve invited Robert&#x2026;&rdquo; (<a href="#citeproc_bib_item_1">Grose and Young 2022, 41</a>).
-I surely can&rsquo;t be the only one who reads this as a thinly veiled reference to <i>Twilight</i>.
-Which would mean that Anouchka is flirting with the idea that she might not be cut out to be Bella?!
-Or maybe I am: and so the thorough embarrassment I feel in coming to this Jacobian-reading is really a suspicious madness; and I should find someone (or something) to treat it.
-I won&rsquo;t be able to stop myself looking up these people later today (once I have Internet), and checking in on the current status of their relationship to each other.
-Lovers?
-Friends?
-Something disastrously in between?
-You don&rsquo;t close a collaborative book project with a walk in a graveyard unless something sexual is going on, surely.
-</p>
-
-<p>
-On a more academic note, I was surprised and charmed to read in Grose&rsquo;s first letter &ldquo;A Short History of Psychoanalytic Listening&rdquo; an account of Weizenbaum&rsquo;s <i>ELIZA</i> and the spectre of machine-automated therapy.
-Locating the analyst&rsquo;s listening as somewhere between the &ldquo;too-much&rdquo; of giving into counter-transference/instinctively recoiling from it (Josef Breuer and Anna O) and the &ldquo;too-little&rdquo; of the non-existent interlocutor (<i>ELIZA</i>, and now mindfulness apps) seems a beautiful way to frame the precarious problem of subjectivity.
-</p>
-
-<p>
-I learned some, too, about what it looks like to be a clinical Lacanian.
-That you don&rsquo;t believe in bringing a patient around to some constitutional reality (which makes sense, knowing in what I do of the impasse of the Lacanian Real); that you work in some shared art of fantasy to manufacture this surreal place of free association.
-That in practice most analysts flout Freud&rsquo;s suggested mandates regarding the analysand&rsquo;s appropriate level of education, &ldquo;fair reliable character&rdquo; (<a href="#citeproc_bib_item_1">Grose and Young 2022, 66</a>), not being in states of confusion, and not being too old.
-(Although Grose doesn&rsquo;t explicitly repudiate this last one.
-Maybe she does tend toward younger patients.)
-</p>
-
-<p>
-I also agree with Katherine Angel&rsquo;s assessment on the back cover of the book that it is often funny, as it made me laugh on several occasions.
-For example, the &ldquo;Conscious and Unconscious Bias&rdquo; section (Grose&rsquo;s, little surprise): &ldquo;When public figures rush off to get their unconscious racism sorted we probably all know what it&rsquo;s like to smirk a little.&rdquo; (<a href="#citeproc_bib_item_1">Grose and Young 2022, 24</a>);
-&ldquo;This is why strangers sometimes run away from analysts at parties; they think you&rsquo;ll be some smart alec who can see immediately, and will tell them, that they want to fuck their mum or kill their sister.&rdquo; (<a href="#citeproc_bib_item_1">Grose and Young 2022, 25</a>); or: &ldquo;In a paper called &rdquo;Analysing, Not Psychoanalysing&ldquo;: he [Bernard Apfelbaum] writes about how to interpret without being a jerk. In this sense it a very important paper&rdquo; (<a href="#citeproc_bib_item_1">Grose and Young 2022, 28</a>).
-Brewer Young is less funny, I would say.
-Though I did find it funny how unfunny he is in contrast to Grose, which is not necessarily something I think he wouldn&rsquo;t recognise.
-</p>
-
-<div id="outline-container-org1f37c87" class="outline-2">
-<h2 id="org1f37c87"><span class="section-number-2">1.</span> Bibliography</h2>
-<div class="outline-text-2" id="text-1">
-<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
-  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Grose, Anouchka, and Robert Brewer Young. 2022. <i>Uneasy Listening: Notes on Hearing and Being Heard</i>. 1st edition. MACK BOOKS.</div>
-</div>
-</div>
+</header>
+<p>Re: <a
+href="https://mackbooks.co.uk/products/uneasy-listening-notes-on-hearing-and-being-heard">Uneasy
+Listening: Notes on Hearing and Being Heard</a>:</p>
+<p>This book is a captivating and succinct introduction to what I find
+important and interesting about psychoanalysis, and maybe Lacanian
+psychoanalysis in particular. Grose's generous explanations/ruminations
+of/on the psychoanalytic endeavor are jarring in contrast to Brewer
+Young's type-written, "laconic", and abstract sections. In the final
+dialogue, I could 'feel Grose's self-consciousness regarding her
+too-assumed role as analyst in her words, in the fractured attempt of
+this collaborative masterpiece.</p>
+<p>The figure of a technically 'correct', scientific listening seems the
+substance of the strange desire Gore expresses to write this book in its
+beginning (for it would be hard to deny that, however collaborative a
+book might be, we can't but conceptualise its authorial beginning
+somewhere singular: and it is appropriately - laconically - the woman
+who inevitably bears this burden. But yeah - what a masterclass in the
+art of conversation. I was peeved at the beginning upon reading in that
+Grose "wrote him [Brewer Young] a letter asking if he would like to work
+on a very small book" <span class="citation"
+data-cites="groseUneasyListeningNotes2022">(Grose and Young 2022,
+8)</span>, as I thought: "she surely only wrote him an email." Having
+read the book now, and having learned how Brewer Young inexplicably
+(laconically) wrote his sections on a type-writer, I am willing to
+revise the force of my "surely". It seems the kind of retroaction in
+which this pair of writers might indeed actually engage.</p>
+<p>I was also initially annoyed by the flirtatious finish to his [Brewer
+Young's] short starting letter; "the Lacanian likes of you, Anouchka, I
+felt, even more than felt, that your toolbox contained things that are
+acute, raise, and gentle" <span class="citation"
+data-cites="groseUneasyListeningNotes2022">(Grose and Young 2022,
+9)</span>. I bet she's pretty, this Anouchka, and young. Did Robert say
+yes to the project through some projection of desire, wanting to be nice
+and agreeable ("collaborative"), but secretly harbored some purposive
+hope to linger on her mind? This was a cruel and suspicious thought, I
+think now, even if it is or was partially true.</p>
+<p>And then Anouchka's flirty response on October 17th! "I'm not sure
+how cut out I am to be a vampire. Vampires don't seem particularly
+interested in reciprocity and consent. I've invited Robert…"<span
+class="citation" data-cites="groseUneasyListeningNotes2022">(Grose and
+Young 2022, 41)</span>. I surely can't be the only one who reads this as
+a thinly veiled reference to <em>Twilight</em>. Which would mean that
+Anouchka is flirting with the idea that she might not be cut out to be
+Bella?! Or maybe I am: and so the thorough embarrassment I feel in
+coming to this Jacobian-reading is really a suspicious madness; and I
+should find someone (or something) to treat it. I won't be able to stop
+myself looking up these people later today (once I have Internet), and
+checking in on the current status of their relationship to each other.
+Lovers? Friends? Something disastrously in between? You don't close a
+collaborative book project with a walk in a graveyard unless something
+sexual is going on, surely.</p>
+<p>On a more academic note, I was surprised and charmed to read in
+Grose's first letter "A Short History of Psychoanalytic Listening" an
+account of Weizenbaum's <em>ELIZA</em> and the spectre of
+machine-automated therapy. Locating the analyst's listening as somewhere
+between the "too-much" of giving into counter-transference/instinctively
+recoiling from it (Josef Breuer and Anna O) and the "too-little" of the
+non-existent interlocutor (<em>ELIZA</em>, and now mindfulness apps)
+seems a beautiful way to frame the precarious problem of
+subjectivity.</p>
+<p>I learned some, too, about what it looks like to be a clinical
+Lacanian. That you don't believe in bringing a patient around to some
+constitutional reality (which makes sense, knowing in what I do of the
+impasse of the Lacanian Real); that you work in some shared art of
+fantasy to manufacture this surreal place of free association. That in
+practice most analysts flout Freud's suggested mandates regarding the
+analysand's appropriate level of education, "fair reliable character"
+<span class="citation" data-cites="groseUneasyListeningNotes2022">(Grose
+and Young 2022, 66)</span>, not being in states of confusion, and not
+being too old. (Although Grose doesn't explicitly repudiate this last
+one. Maybe she does tend toward younger patients.)</p>
+<p>I also agree with Katherine Angel's assessment on the back cover of
+the book that it is often funny, as it made me laugh on several
+occasions. For example, the "Conscious and Unconscious Bias" section
+(Grose's, little surprise): "When public figures rush off to get their
+unconscious racism sorted we probably all know what it's like to smirk a
+little." <span class="citation"
+data-cites="groseUneasyListeningNotes2022">(Grose and Young 2022,
+24)</span>; "This is why strangers sometimes run away from analysts at
+parties; they think you'll be some smart alec who can see immediately,
+and will tell them, that they want to fuck their mum or kill their
+sister." <span class="citation"
+data-cites="groseUneasyListeningNotes2022">(Grose and Young 2022,
+25)</span>; or: "In a paper called "Analysing, Not Psychoanalysing": he
+[Bernard Apfelbaum] writes about how to interpret without being a jerk.
+In this sense it a very important paper" <span class="citation"
+data-cites="groseUneasyListeningNotes2022">(Grose and Young 2022,
+28)</span>. Brewer Young is less funny, I would say. Though I did find
+it funny how unfunny he is in contrast to Grose, which is not
+necessarily something I think he wouldn't recognise.</p>
+<h1 id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-groseUneasyListeningNotes2022" class="csl-entry"
+role="listitem">
+Grose, Anouchka, and Robert Brewer Young. 2022. <em>Uneasy
+<span>Listening</span>: <span>Notes</span> on <span>Hearing</span> and
+<span>Being Heard</span></em>. 1st edition. MACK BOOKS.
 </div>
 </div>
 </body>
