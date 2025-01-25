@@ -1,18 +1,24 @@
 #!/usr/bin/env fish
 
+# NOTE: Dropbox folder name is different on Framework
+set DROPBOX Dropbox
+#set DROPBOX Brown\ Dropbox
+
 # general
 rm -f *.html
 rm -f *.css
 rm -f *.org
-cp -r $HOME/Brown\ Dropbox/Lachlan\ Kermode/lyt/sites/ohrg.org/*.html .
-cp -r $HOME/Brown\ Dropbox/Lachlan\ Kermode/lyt/sites/ohrg.org/*.css .
-cp -r $HOME/Brown\ Dropbox/Lachlan\ Kermode/lyt/sites/ohrg.org/*.pdf .
-cp -r $HOME/Brown\ Dropbox/Lachlan\ Kermode/lyt/sites/ohrg.org/*.apkg .
+echo "cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/*.html .
+"
+cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/*.html .
+cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/*.css .
+cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/*.pdf .
+cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/*.apkg .
 
 # images
 rm -rf img/
 mkdir -p img
-cp -r $HOME/Brown\ Dropbox/Lachlan\ Kermode/lyt/sites/ohrg.org/img/* ./img/
+cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/img/* ./img/
 
 # raw files
-cp -r $HOME/Brown\ Dropbox/Lachlan\ Kermode/lyt/sites/ohrg.org/writing-setup.org .
+cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/writing-setup.org .
