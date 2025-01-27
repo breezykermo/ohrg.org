@@ -334,20 +334,17 @@ href="https://fishshell.com/docs/current/language.html#configuration-files">conf
 file</a> (<code>interactiveShellInit</code>) and a list of <a
 href="https://arnesonium.com/2022/09/some-great-fish-shell-plugins/">plugins</a>
 that will be installed alongside the shell itself.</p>
-<p>On one level, this is great: all my configuration is in one place. As
-noted, however, it adds a level of abstraction between fish itself and
-my declaration of its configuration. Home manager has an <a
+<p>On one level, this is great: all my configuration is in one place.
+Home manager has an <a
 href="https://home-manager-options.extranix.com/?query=fish&amp;release=release-24.05">option
 search</a> where one can check whether a package exists, and what
 options it provides. In theory, if the documentation of options isn't
 clear, one can go to the <a
 href="https://github.com/nix-community/home-manager/blob/release-24.05/modules/programs/fish.nix">module
 declaration</a> to try to reverse engineer which option will result in
-the desired outcome. In practice, though, I've found it cumbersome to
-try to work out this mapping (of NixOS module option to actual result in
-config on the system), especially if I'm new to the software in question
-and don't have an intimate understanding of its configuration
-options.</p>
+the desired outcome. In practice, though, I've found it cumbersome to do
+this effectively, especially if I'm new to the software in question and
+don't have an intimate understanding of its configuration options.</p>
 <p>The main issue is that raw NixOS doesn't provide an obvious way to
 manage dotfiles. Home manager fills that void by providing a level of
 abstraction on top of Nixpkgs that incorporates a sense of the current
@@ -357,11 +354,13 @@ not always clear how to map 'configuring new software X based on its
 documentation' to 'configuring new software X declaratively in Home
 manager'. (This is not even to mention the more complicated case in
 which new software X is not supported by Home manager, in which case one
-would have to add the new module to NixOS oneself.)</p>
-<p>In summary, though Home manager is (I think) still useful for me, it
-rendered me confused in my immature configurations, as I didn't always
-have a clear notion of whether something I was doing was courtesy of
-NixOS or of Home manager.</p>
+would have to add the new module to Home manager upstream, or work out a
+workaround.)</p>
+<p>In summary, though Home manager is still useful for me due to its
+dotfile management utilities, it confused me early on, as I didn't
+always have a clear notion of whether I was installing modules via
+Nixpkgs or via Home Manager, and whether a configuration option was
+provided by Home Manager or by NixOS.</p>
 <p><u>Note to past self</u>: When installing new software, work first
 with a basic installation from Nixpkgs before trying to find an
 appropriate module in Home manager.</p>
