@@ -273,7 +273,8 @@ complexity that I was trying to scale was inherent to Nix, or whether it
 was embedded in additional tooling that I had unknowingly chose to
 adopt. Let me count (a few of) the ways that I feel my NixOS journey was
 made difficult.</p>
-<h1 id="nixos">NixOS</h1>
+<h1 id="nixos"><a
+href="https://nixos.org/manual/nixos/stable/#sec-installation">NixOS</a></h1>
 <p>The first fundamental confusion for me was the boundary between Nix,
 the language and package management ecosystem, and NixOS, the Linux
 distribution that is configured by way of Nix. It was the idea of NixOS
@@ -288,7 +289,9 @@ modularized NixOS configuration become a lot easier to understand if one
 has a clear mental model of how NixOS builds upon Nix.</p>
 <p><u>Note to past self</u>: build a good mental model of pure Nix
 before hacking together your first NixOS configuration.</p>
-<h1 id="home-manager">Home Manager</h1>
+<h1 id="home-manager"><a
+href="https://nix-community.github.io/home-manager/index.xhtml#ch-introduction">Home
+Manager</a></h1>
 <p>As I built my NixOS configuration by referencing an active
 installation of Arch Linux, I made the relatively unconscious decision
 early on that I should install softwares at a user level, rather than at
@@ -296,15 +299,14 @@ system level. Relatively unconscious, because I am not sure why exactly
 I made this decision, and had I thought it through a little more
 carefully, I would have realised that this decision also brought an
 unnecessary amount of complexity into the picture.</p>
-<p><a href="https://nix-community.github.io/home-manager/">Home
-manager</a> is a community package<a href="#fn2" class="footnote-ref"
-id="fnref2" role="doc-noteref"><sup>2</sup></a> for NixOS that makes it
-possible to install software in a configuration on a per-user basis. It
-also exposes a different and higher level of abstraction through which
-to install software than the 'standard' approach when working in the Nix
-ecosystem, which is to reference packages in a repository with Nix-built
-artifacts, the primary one being <a
-href="https://search.nixos.org/packages">Nixpkgs</a>. As an example,
+<p>Home manager is a community package<a href="#fn2"
+class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> for
+NixOS that makes it possible to install software in a configuration on a
+per-user basis. It also exposes a different and higher level of
+abstraction through which to install software than the 'standard'
+approach when working in the Nix ecosystem, which is to reference
+packages in a repository with Nix-built artifacts, the primary one being
+<a href="https://search.nixos.org/packages">Nixpkgs</a>. As an example,
 with Home manager one can install the <a
 href="https://fishshell.com/">fish shell</a> as follows:</p>
 <div class="sourceCode" id="cb1"><pre
