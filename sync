@@ -8,8 +8,7 @@ set DROPBOX Dropbox
 rm -f *.html
 rm -f *.css
 rm -f *.org
-echo "cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/*.html .
-"
+
 cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/*.html .
 cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/*.css .
 cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/*.pdf .
