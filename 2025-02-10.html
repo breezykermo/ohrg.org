@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>25 02 10</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">25 02 10</h1>
+</header>
+<p>Last week I read the first two chapters of a book recommended to me
+quite some time ago by a friend: <a
+href="https://www.aup.nl/en/book/9789089647702/sacred-channels">Sacred
+Channels: The Archaic Illusion of Communication</a> by Erich Hörl. The
+book was published in English in 2018, but was defended as a
+dissertation in 2003, and published in German in 2005. Friedrich Kittler
+was the dissertation's second reader, and we learn from the introduction
+that the manuscript was also read by Bernhard Siegert and André Gorz,
+among others. Some pretty heavy philosophical and media-theoretical
+hitters in the German-speaking context, in other words.</p>
+<p>I am opening this book at last to begin working my way through the
+history and philosophy of mathematics that is relevant to my
+dissertation. The lineaments of this relevance are, broadly speaking,
+those that trace the emergence of set theory around the turn of the 20th
+century, and its culmination in the crisis of foundations orchestrated
+by the young Kurt Gödel when he published <em>Über formal
+unentscheidbare Sätze der Principia Mathematica und verwandter
+Systeme</em> - 'On Formally Undecidable Propositions of Principia
+Mathematica and Related Systems'. This curious and relatively obscure
+turn of events in the history of mathematics has been heralded by some,
+the author under consideration in this b/log– Erich Hörl– included, as
+the climactic moments in an epistemological transition in philosophy and
+thought at large which might be called the coming of modernity.</p>
+<h1 id="thinking-and-so-being">Thinking and so being</h1>
+<p>What does set theory and formalist mathematics have to do with
+philosophical modernity? Hörl's claim is that, from as early as the
+1830s, a ``purely symbolic thinking clearly began to take shape in the
+sciences" <span class="citation"
+data-cites="horlSacredChannelsArchaic2018">(Hörl 2018, 33)</span>
+Symbolic thinking is marked in distinction to its precursor, intuitive
+thinking, which is construed as the reigning and preceding paradigm in
+mathematical thought writ large.</p>
+<p>For Hörl, the ``great transformation from the intuitive to the
+symbolic" <span class="citation"
+data-cites="horlSacredChannelsArchaic2018">(Hörl 2018, 47)</span> is a
+shift in the relationship between Thinking and Being. I capitalise these
+two terms here to indicate that they designate presumed universal
+notions, rather than simply historically contingent activities of
+thinking and being.</p>
+<p>Thinking (with a capital T) is the realm of appearances, the full
+breadth of what is sensible to the subject. The subject, here, is a
+<em>human</em> one in the sense that human is the word given to all
+those entities capable of social life by dint of their capability for
+language. Language, here, too, is not 'English' or 'Spanish'
+exclusively, but a more holistic category that gets at the curious
+phenomenon we often now call communication. Language is not language in
+the strict linguistic sense of having a grammar, nouns, and verbs, but
+is rather something more curious and not so easily locatable as a set of
+articulate rules. Language is the name for the many syntaxes of
+sociality, the protocol(s) through which subjects cooperate, live
+together, and are insufficient to be themselves alone. Thinking is the
+domain of what is cognisable and apparent in and as language, the full
+sensibility of the world as it can be Thought.</p>
+<p>Being, on the other hand, is what the world actually is, what
+actually exists. It is the tree that falls in the forest without anyone
+around to hear or think it. It is more durable and persistent than what
+can be Thought, to some minds, as what <em>exists</em> in the world is
+not necessarily coincident with what <em>appears</em> to those of us
+subjects that are thinking within it.</p>
+<p>If the distinction between Thinking and Being seems finicky, you are
+not alone in this complaint. Whether or how Thinking and Being overlap
+is a core question in philosophy. <u>Ontology</u> is the investigations
+of what exists, to delimiting the domain of Being. <u>Epistemology</u>
+is the complementary investigation of what can appear transparently to
+subjects in the world, of the borders of the domain of Thinking. The
+articulation of the latter usually (always?) imples the former.
+Epistemology can really only be defined by nominating whether or not
+there is anything that exceeds it. The exceptions in Thinking, things
+which exist but which cannot be Thought, are the stuff of ontology.</p>
+<h1 id="intuition-is-the-key-to-everything">Intuition is the key to
+everything</h1>
+<p>For Hörl, the ascendance of symbolic reasoning in mathematics in the
+early 19th century is a feature of a shift in the tectonics of Thinking
+and Being. Hörl is a media theorist and not an historian, and he does
+not clearly delimit the spatial parameters of what he sees as the age of
+symbolic reason. (Is it only or primarily in Europe? Is it as intense in
+France as it is in Germany? Does it suffuse the intellectual scene in
+Kenya or Kyoto in any way?) But the general idea is that before this
+age, the cutting edge of ontological proposition was secured through an
+appeal to <u>intuition</u>.</p>
+<p>Intuition is a term laden with Kantian suggestion, as it <a
+href="https://philosophy.stackexchange.com/questions/41579/what-is-intuition-for-kant">played
+a complicated role</a> in Kant's philosophical system. The sum of it as
+relevant to Hörl's argument is as follows. Kant was adamant that there
+were some aspects of Thinking that we could take to be universal, that
+is, that we could take to exist not just in particular instantiations,
+but as general truths for all subjects. The echelon of Thinking that
+Kant reckons universal is specifically that of Reason, and it is the
+task of philosophy to shore up the boundaries of Reason so that its
+factions do not contradict themselves; ``to expose the illusions of a
+reason that forgets its limits, and by sufficiently clarifying our
+concepts to recall it from its presumptuous speculative pursuits to
+<em>modest but thorough self-knowledge</em>" <span class="citation"
+data-cites="ewaldKantHilbertVolume1999">(Ewald and Ewald 1999,
+1:147)</span>. Whatever the specific cartography of this universal
+Reason's shores, Kant was sure that Thinking could eventually map them.
+There are some kinds of Thinking, in other words, of which we can be
+sure. The surety of Reason's forms appear to us through
+<em>intuition</em>, a capability (of sorts) that allows subjects to make
+out the shape of structures that undergird the many specific
+sensualities that appear in the world. Intuition, in other words, is
+what ensures that the hypothetical play of structures and patterns in
+logic (Thinking) have something to do with what is actually out there in
+the world (Being). For Kant there is a necessary overlap between
+Thinking and Being, albeit probably a 'modest' one, about which
+'thorough' thinking is fundamentally able to reason.</p>
+<p>As Hörl is working in a media-theoretical paradigm that follows
+Kittler, he periodises and defines this (Kantian) era in the
+relationship between Thinking and Being as an ``optical-medial paradigm
+of consciousness" <span class="citation"
+data-cites="horlSacredChannelsArchaic2018">(Hörl 2018, 51)</span>.
+Structures and associations appear in the mind of subject as apparitions
+of sensual particularities in the world <em>through the lens of
+intuition</em>, much like the shadows playing on the wall of Plato's
+cave. Intuition is what secures that there is <em>some</em> reality that
+can be disambiguated from fantasy in the observance of such shadows.
+Good, philosophical thinking in Kant's cave is the diligent picking-out
+of objective patterns, forming a structure in the mind that extracts
+only what is objectively there in the world, and as such will not be
+contradicting by any particular play of shadows.</p>
+<h1 id="leibniz-leading-the-blind">Leibniz leading the blind</h1>
+<p>The first chapter of Hörl's book wrestles with how one should think
+about the crisis of intuition and its giving way to a notion of <u>the
+symbolic</u> that was not secured by the same kind of intuition, or at
+least not in the same way. He evocatively refers to this new paradigm as
+<strong>blind thinking</strong>. The media-theoretical avoidance of any
+requirement that time be stratified as linear, and thus a period given a
+specific date to inaugurate it, is clear from the chapter's title;
+'Blind thinking <em>around</em> 1`900' (emphasis mine). Symbolic
+thinking is blind because Leibniz labeled it as such (<em>cogitatio
+caece</em>) in his aspiration to designate structures of association
+that exist in the world without any contingency in Thought:</p>
+<blockquote>
+<p>Leibniz had been working on an autonomous symbolic freed from the
+fetters of the representation of objects and had philosophically
+conceptualized the formal use of symbols in algorithmic mathematics in
+terms of a purely symbolic knowledge…. As the ``pioneer of the
+<em>idea</em> of calculus"– that is of a purely formal manipulation of
+signs free of all interpretation– he kept to the
+<strong>blindness</strong> of using symbols despite all the evidence of
+immediate, instantaneous viewing…. Because it proceeded nonintuitively
+and was not founded on the evidence of an insight, Leibniz called
+symbolic knowledge ``blind" (<em>caeca</em>). <span class="citation"
+data-cites="horlSacredChannelsArchaic2018">(Hörl 2018, 58–60)</span></p>
+</blockquote>
+<p>Leibniz's project of calculus is nominated as a decisive break from
+Kant's '20/20' vision of philosophical reason. In the symbolic paradigm
+of Thinking and Being, there was no essential security that structures
+of Thought had any bearing on entities in the world. One can search for
+consistency in symbols in thought and in theory (this enterprise has
+come to be known as pure mathematics), but there was no guarantee that
+such Thinking had anything to do with Being. Thinking after Leibniz,
+Hörl contends, is fundamentally detached from Being, as there is no
+longer much Kantian faith in an intuition that binds them together.</p>
+<p>It is interesting to me that Leibniz's calculus becomes an
+``autonomous symbolic", as I have written elsewhere about the status of
+capital as an autonomous subject in Marx. How is it that the symbolic is
+'autonomous'? The domain of the symbolic is no longer bound to the
+particularities and peculiarities of subjectivity; it is no longer a
+domain that exists only 'interiorly' as shadows in the mind. The
+symbolic now exists for itself, autonomously. We as subjects are simply
+capable of observing it. No longer shackled as shadows in the cavernous
+minds of stuck subjects, the symbolic now shares the status of real
+objects out there in the world. It has been freed, made autonomous, just
+as Socrates had always hoped might be possible for subjects were we all
+to become philosophers (such that we might no longer stare only at
+shadows on the wall).</p>
+<h1 id="kittler-in-the-kitchen">Kittler in the kitchen</h1>
+<p>In reading these first few chapters, it seems that Hörl is making use
+of the Lacanian terms symbolic, imaginary, and the real in a Kittlerian
+manner. What does it mean to use these terms in a Kittlerian manner,
+exactly? I admit that I need to return to Kittler's work in order to
+properly reason through this question, in particular his 1986 book <a
+href="https://www.sup.org/books/media-studies/gramophone-film-typewriter">Gramophone,
+Film, Typewriter</a> (translated to English in 1999), as I last looked
+at his work as an undergraduate (with very different scholarly eyes).
+This book is a definitional text in German-American media theory, as it
+makes out three epistemological paradigms in the 20th century– that of
+the gramophone, of film, and of the typewriter– arguing that each medium
+represents the conditions of Thinking in its respective historical
+specificity. Kittler does this using the Lacanian triumvirate, as is
+summarized by this excerpt from <a
+href="https://labyrinthine-works.fandom.com/wiki/Gramophone,_Film,_Typewriter">this
+(curious) wiki</a>:</p>
+<blockquote>
+<p>The gramophone appeals to the real, functions as an analog
+representation of the voice, and maintains the voice of the dead (the
+scream of the dying over radio). Film functions as the imaginary,
+capturing not light waves but the effect of light waves, and reproducing
+our illusory doppleganger before our eyes at a speed too fast to capture
+difference. The typewriter corresponds to the symbolic, a symbolic order
+now stripped of its inherent relationship to male thought as thousands
+of women enter into the typing fields.</p>
+</blockquote>
+<p>So:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Gramophone</td>
+<td>the Real</td>
+</tr>
+<tr class="even">
+<td>Film</td>
+<td>the Imaginary</td>
+</tr>
+<tr class="odd">
+<td>Typewriter</td>
+<td>the Symbolic</td>
+</tr>
+</tbody>
+</table>
+<p>I don't know of work that directly criticizes Kittler for this
+schematic, though I imagine that there must be some, as (by my very
+nascent understanding) it seems strange to figure each of Lacan's terms
+as more active in a particular historical period, at the very least.
+There is something suspiciously Foucauldian about the attempt, which is
+not surprising, given that I believe that Kittler explicitly invokes
+Foucault (and Derrida) in <em>Gramophone</em> as intellectual
+inspiration. It figures the terms as a set of equivalent intensities in
+relation to each other, rather than as aspects of the same topological
+structure. To be sure, I am no expert in either Lacan or Foucault, and
+so perhaps there is a way hold both conceptions effectively in mind at
+the same time. This problem inspires me to read Kittler's
+<em>Gramophone</em> in the coming days, a trial that I may report on
+here in one form or another.</p>
+<p>The reason I will return to Kittler is that I find Hörl's
+mobilisation of the Lacanian triumvirate compelling; but I am as yet
+uncertain as to whether it is helpful to frame the history of Thought in
+such belletristic terms. For Hörl, the Symbolic (Lacanian or otherwise)
+is evidently associated with the formal-mathematical symbolic of Boole,
+of imaginary numbers (both discussed in chapter 2), and of the symbolic
+'turn' in the history of mathematics. The Imaginary, in contrast, is
+affiliated with the intuitionist mapping of mathematical structure to
+the 'real world', as Hörl argues was the case with geometry before its
+non-Euclidean awakenings (the invasion of the sanctity of Kantian
+intuition as mathematics' epistemological foundation by the formal
+modernity of Leibnizian and Boolean symbolic operationalism). The
+Symbolic, on this view, is constituted by the paradigm of
+<em>non-contradiction</em>, whereas the Imaginary is is an apparent
+fortress of philosophical reality constructed on the sense that there is
+some fundamental channel between what one thinks (or can imagine) and
+what is actually out there in the world, a channel called intuition.</p>
+<p>The ascendancy of the symbolic from 1830 through 1850, and whose
+monarchy of names such as Russell and Hilbert was overthrown by the
+popular demagogue of reason that goes by Gödel, seems to be Hörl's
+Kittlerian periodizing of the slow takeover of modernity. Perhaps Hörl
+is simply tracing the Kittlerian thesis in <em>Gramophone</em> by way of
+different historical roots?</p>
+<h1 class="unnumbered" id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-ewaldKantHilbertVolume1999" class="csl-entry"
+role="listitem">
+Ewald, William Bragg, and William Ewald, eds. 1999. <em>From
+<span>Kant</span> to <span>Hilbert Volume</span> 1: <span>A</span>
+Source Book in the Foundations of Mathematics</em>. Vol. 1. OUP Oxford.
+</div>
+<div id="ref-horlSacredChannelsArchaic2018" class="csl-entry"
+role="listitem">
+Hörl, Erich. 2018. <span>“Sacred <span>Channels</span>: <span>The
+Archaic Illusion</span> of <span>Communication</span>.”</span>
+<em>Sacred Channels</em>, 1–342.
+</div>
+</div>
+</body>
+</html>
