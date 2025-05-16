@@ -166,13 +166,229 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+    body {
+      padding-bottom: 0;
+    }
+
+    /* Header styles */
+    .site-header {
+      padding: 1.1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .site-title a:hover {
+      color: #0066cc;
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      width: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .footer-links a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Filter button styles */
+    .filter-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .filter-btn {
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem 0.5rem 0;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .filter-btn.active {
+      background-color: #0066cc;
+      color: white;
+      border-color: #0055aa;
+    }
+
+    /* Post list styles */
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .post-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      transition: all 0.3s;
+    }
+
+    .post-item.hidden {
+      display: none;
+    }
+
+    .post-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s;
+    }
+
+    .post-link:hover {
+      background-color: #f0f0f0;
+      border-color: #ddd;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .tag-DiH {
+      background-color: #ffeecc;
+      color: #996600;
+    }
+
+    .tag-SiP {
+      background-color: #e6f3ff;
+      color: #0066cc;
+    }
+
+    .tag-MiT {
+      background-color: #eeffee;
+      color: #006600;
+    }
   </style>
+  <!-- Style for index filter -->
+  <style>
+  /* Filter button styles */
+  .filter-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .filter-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .filter-btn.active {
+    background-color: #0066cc;
+    color: white;
+    border-color: #0055aa;
+  }
+
+  .post-item {
+    transition: opacity 0.3s;
+  }
+
+  .post-item.hidden {
+    display: none;
+  }
+
+  .tag-label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tag-DiH {
+    background-color: #ffeecc;
+    color: #996600;
+  }
+
+  .tag-SiP {
+    background-color: #e6f3ff;
+    color: #0066cc;
+  }
+
+  .tag-MiT {
+    background-color: #eeffee;
+    color: #006600;
+  }
+</style>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <style>.title { display: none; }</style>
 </head>
 <body>
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Lachlan's Musings</a></h1>
+</header>
+
 <header id="title-block-header">
 <h1 class="title">Grad Log</h1>
 </header>
+<div class="main-content">
+<!-- Filter buttons will be inserted here for index.html -->
 <p>This <del>daily</del> log has three streams. For more on what each of
 these streams represent, see <a href="24-01-26.html">2024.01.26</a>. For
 more about these posts' author, see <a
@@ -194,35 +410,316 @@ href="https://lachlankermode.com">my website</a>.</p>
 </tr>
 </tbody>
 </table>
-<ul>
-<li><a href="./25-05-16.html">2025.05.16</a> - <code>DiH</code></li>
-<li><a href="./25-04-10.html">2025.04.10</a> - <code>SiP</code></li>
-<li><a href="./25-03-07.html">2025.03.07</a> - <code>DiH</code></li>
-<li><a href="./2025-02-10.html">2025.02.10</a> - <code>MiT</code></li>
-<li><a href="./2025-02-05.html">2025.02.05</a> - <code>DiH</code></li>
-<li><a href="./using-nixos.html">Using NixOS</a></li>
-<li><a href="24-12-27.html">2024.12.27</a></li>
-<li><a href="writing-academic-essays.html">Writing academic
-essays</a></li>
-<li><a href="cycling-typing.html">Cycling typing</a></li>
-<li><a href="using-two-remarkables.html">Using two reMarkables</a></li>
-<li><a href="24-05-02.html">2024.05.02</a> - <code>SiP</code> /
-<code>MiT</code></li>
-<li><a href="24-04-24.html">2024.04.24</a> - <code>SiP</code> /
-<code>DiH</code></li>
-<li><a href="24-04-09.html">2024.04.09</a> - <code>SiP</code></li>
-<li><a href="24-03-03.html">2024.03.03</a> - <code>SiP</code></li>
-<li><a href="24-02-29.html">2024.02.29</a> - <code>SiP</code></li>
-<li><a href="24-02-28.html">2024.02.28</a> - <code>DiH</code></li>
-<li><a href="24-02-07.html">2024.02.07</a> - <code>SiP</code></li>
-<li><a href="writing-setup.html">Writing setup</a></li>
-<li><a href="24-02-05.html">2024.02.05</a> - <code>SiP</code></li>
-<li><a href="24-01-31.html">2024.01.31</a> - <code>DiH</code></li>
-<li><a href="24-01-29.html">2024.01.29</a></li>
-<li><a href="24-01-28.html">2024.01.28</a> - <code>DiH</code></li>
-<li><a href="24-01-27.html">2024.01.27</a> - <code>DiH</code></li>
-<li><a href="24-01-26.html">2024.01.26</a></li>
-<li><a href="24-01-25.html">2024.01.25</a></li>
+<div class="filter-container">
+  <button class="filter-btn" style="display:none;" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="DiH">DiH</button>
+  <button class="filter-btn" data-filter="SiP">SiP</button>
+  <button class="filter-btn" data-filter="MiT">MiT</button>
+  <button class="filter-btn" data-filter="other">Other</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all filter buttons
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  // Get all post items
+  const postItems = document.querySelectorAll('.post-item');
+  // Get the "All" filter button
+  const allFilterButton = document.querySelector('[data-filter="all"]');
+
+  // Get all available filter values (excluding "all")
+  const allFilters = Array.from(filterButtons)
+    .map(btn => btn.getAttribute('data-filter'))
+    .filter(filter => filter !== 'all');
+
+  // Set active filters (start with all active)
+  let activeFilters = ['all'];
+
+  // Add click event to each filter button
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+
+      // Toggle active state for this button
+      this.classList.toggle('active');
+
+      // Update active filters
+      if (filter === 'all') {
+        // If "All" is clicked, toggle all other filters off
+        if (this.classList.contains('active')) {
+          filterButtons.forEach(btn => {
+            if (btn.getAttribute('data-filter') !== 'all') {
+              btn.classList.remove('active');
+            }
+          });
+          activeFilters = ['all'];
+        } else {
+          // If "All" is deactivated, activate all other filters
+          filterButtons.forEach(btn => {
+            if (btn.getAttribute('data-filter') !== 'all') {
+              btn.classList.add('active');
+            }
+          });
+          activeFilters = [...allFilters];
+        }
+      } else {
+        // If a specific filter is clicked
+        if (this.classList.contains('active')) {
+          // Add this filter to active filters
+          activeFilters.push(filter);
+          // Remove "All" from active filters
+          activeFilters = activeFilters.filter(f => f !== 'all');
+          allFilterButton.classList.remove('active');
+        } else {
+          // Remove this filter from active filters
+          activeFilters = activeFilters.filter(f => f !== filter);
+
+          // If no filters are active or all specific filters are active, activate "All"
+          if (activeFilters.length === 0 || 
+              (activeFilters.length === allFilters.length && 
+               allFilters.every(f => activeFilters.includes(f)))) {
+            activeFilters = ['all'];
+            allFilterButton.classList.add('active');
+            filterButtons.forEach(btn => {
+              if (btn.getAttribute('data-filter') !== 'all') {
+                btn.classList.remove('active');
+              }
+            });
+          }
+        }
+      }
+
+      // Apply filtering
+      filterPosts();
+    });
+  });
+
+  // Function to filter posts based on active filters
+  function filterPosts() {
+    postItems.forEach(item => {
+      if (activeFilters.includes('all')) {
+        item.classList.remove('hidden');
+      } else {
+        const tags = item.getAttribute('data-tags').split(' ');
+        const hasMatchingTag = tags.some(tag => activeFilters.includes(tag));
+
+        if (hasMatchingTag) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      }
+    });
+  }
+});
+</script>
+
+<ul class="post-list">
+  <li class="post-item" data-tags="DiH">
+    <a href="./25-05-16.html" class="post-link">
+      <span class="post-title">2025.05.16</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="./25-04-10.html" class="post-link">
+      <span class="post-title">2025.04.10</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="./25-03-07.html" class="post-link">
+      <span class="post-title">2025.03.07</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="MiT">
+    <a href="./2025-02-10.html" class="post-link">
+      <span class="post-title">2025.02.10</span>
+      <span class="post-tags">
+        <span class="tag-label tag-MiT">MiT</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="./2025-02-05.html" class="post-link">
+      <span class="post-title">2025.02.05</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="other">
+    <a href="./using-nixos.html" class="post-link">
+      <span class="post-title">Using NixOS</span>
+      <span class="post-tags">
+        <span class="tag-label tag-other">Other</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="">
+    <a href="24-12-27.html" class="post-link">
+      <span class="post-title">2024.12.27</span>
+      <span class="post-tags"></span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="other">
+    <a href="writing-academic-essays.html" class="post-link">
+      <span class="post-title">Writing academic essays</span>
+      <span class="post-tags">
+        <span class="tag-label tag-other">Other</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="other">
+    <a href="cycling-typing.html" class="post-link">
+      <span class="post-title">Cycling typing</span>
+      <span class="post-tags">
+        <span class="tag-label tag-other">Other</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="other">
+    <a href="using-two-remarkables.html" class="post-link">
+      <span class="post-title">Using two reMarkables</span>
+      <span class="post-tags">
+        <span class="tag-label tag-other">Other</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP MiT">
+    <a href="24-05-02.html" class="post-link">
+      <span class="post-title">2024.05.02</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+        <span class="tag-label tag-MiT">MiT</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP DiH">
+    <a href="24-04-24.html" class="post-link">
+      <span class="post-title">2024.04.24</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="24-04-09.html" class="post-link">
+      <span class="post-title">2024.04.09</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="24-03-03.html" class="post-link">
+      <span class="post-title">2024.03.03</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="24-02-29.html" class="post-link">
+      <span class="post-title">2024.02.29</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="24-02-28.html" class="post-link">
+      <span class="post-title">2024.02.28</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="24-02-07.html" class="post-link">
+      <span class="post-title">2024.02.07</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="other">
+    <a href="writing-setup.html" class="post-link">
+      <span class="post-title">Writing setup</span>
+      <span class="post-tags">
+        <span class="tag-label tag-other">Other</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="24-02-05.html" class="post-link">
+      <span class="post-title">2024.02.05</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="24-01-31.html" class="post-link">
+      <span class="post-title">2024.01.31</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="">
+    <a href="24-01-29.html" class="post-link">
+      <span class="post-title">2024.01.29</span>
+      <span class="post-tags"></span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="24-01-28.html" class="post-link">
+      <span class="post-title">2024.01.28</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="24-01-27.html" class="post-link">
+      <span class="post-title">2024.01.27</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="">
+    <a href="24-01-26.html" class="post-link">
+      <span class="post-title">2024.01.26</span>
+      <span class="post-tags"></span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="">
+    <a href="24-01-25.html" class="post-link">
+      <span class="post-title">2024.01.25</span>
+      <span class="post-tags"></span>
+    </a>
+  </li>
 </ul>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a href="./">Read other musings</a></li>
+      <li><a href="https://lachlankermode.com">About the author</a></li>
+    </ul>
+  </div>
+</footer>
 </body>
 </html>

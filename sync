@@ -21,3 +21,5 @@ cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/img/* ./img/
 
 # raw files
 cp -r $HOME/$DROPBOX/Lachlan\ Kermode/lyt/sites/ohrg.org/writing-setup.org .
+
+rm template.html
