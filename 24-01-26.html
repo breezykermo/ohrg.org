@@ -230,33 +230,41 @@
       text-decoration: underline;
     }
 
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
     /* Filter button styles */
-    .filter-container {
-      margin: 2rem 0;
-      text-align: center;
-    }
-
-    .filter-btn {
-      background-color: #f0f0f0;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem 0.5rem 0;
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      transition: all 0.2s;
-    }
-
-    .filter-btn:hover {
-      background-color: #e0e0e0;
-    }
-
-    .filter-btn.active {
-      background-color: #0066cc;
-      color: white;
-      border-color: #0055aa;
-    }
-
     /* Post list styles */
     .post-list {
       list-style: none;
@@ -300,6 +308,7 @@
       display: flex;
       gap: 0.5rem;
     }
+
     .tag-DiH {
       background-color: #ffeecc;
       color: #996600;
@@ -332,6 +341,7 @@
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     transition: all 0.2s;
+    border-width: 4px;
   }
 
   .filter-btn:hover {
@@ -339,8 +349,6 @@
   }
 
   .filter-btn.active {
-    background-color: #0066cc;
-    color: white;
     border-color: #0055aa;
   }
 
@@ -387,7 +395,33 @@
 </header>
 <div class="main-content">
 <!-- Filter buttons will be inserted here for index.html -->
-<p>As a third-year graduate student in MCM at Brown (see <a
+<p>The posts on this website have one or more of the following tags:</p>
+<table>
+<tbody>
+<tr>
+<td><code>WiG</code></td>
+<td>writing in general</td>
+</tr>
+<tr>
+<td><code>DiH</code></td>
+<td>the question of dialectics in history</td>
+</tr>
+<tr>
+<td><code>SiP</code></td>
+<td>the question of science in psychoanalysis</td>
+</tr>
+<tr>
+<td><code>MiT</code></td>
+<td>the question of mathematics in the twentieth century</td>
+</tr>
+</tbody>
+</table>
+<p>The first of these is the most generic. 'Writing in general' is how I
+refer to musings that don't expect any particular interest or
+specialization of the reader. They are designed to be broadly readable
+and digestible to anyone.</p>
+<p>The remaining tags or 'streams' require a bit more explanation. As a
+third-year graduate student in MCM at Brown (see <a
 href="24-01-25.html">here</a> for more context), I have composed and am
 reading three separate lists of books and articles. Each of these lists
 represents a field of thought in which I want to participate, giving

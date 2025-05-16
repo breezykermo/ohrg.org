@@ -264,34 +264,7 @@
       font-family: monospace;
     }
 
-
     /* Filter button styles */
-    .filter-container {
-      margin: 2rem 0;
-      text-align: center;
-    }
-
-    .filter-btn {
-      background-color: #f0f0f0;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem 0.5rem 0;
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      transition: all 0.2s;
-    }
-
-    .filter-btn:hover {
-      background-color: #e0e0e0;
-    }
-
-    .filter-btn.active {
-      background-color: #0066cc;
-      color: white;
-      border-color: #0055aa;
-    }
-
     /* Post list styles */
     .post-list {
       list-style: none;
@@ -335,6 +308,7 @@
       display: flex;
       gap: 0.5rem;
     }
+
     .tag-DiH {
       background-color: #ffeecc;
       color: #996600;
@@ -367,6 +341,7 @@
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     transition: all 0.2s;
+    border-width: 4px;
   }
 
   .filter-btn:hover {
@@ -374,8 +349,6 @@
   }
 
   .filter-btn.active {
-    background-color: #0066cc;
-    color: white;
     border-color: #0055aa;
   }
 
@@ -430,32 +403,12 @@ represent, see <a href="24-01-26.html">Streams of thought in my
 dissertation</a>. For more about these posts' author, see <a
 href="24-01-25.html">What <em>is</em> 'modern culture and media'?</a> and
 <a href="https://lachlankermode.com">my personal website</a>.</p>
-<table>
-<tbody>
-<tr>
-<td><code>WiG</code></td>
-<td>writing in general</td>
-</tr>
-<tr>
-<td><code>DiH</code></td>
-<td>the question of dialectics in history</td>
-</tr>
-<tr>
-<td><code>SiP</code></td>
-<td>the question of science in psychoanalysis</td>
-</tr>
-<tr>
-<td><code>MiT</code></td>
-<td>the question of mathematics in the twentieth century</td>
-</tr>
-</tbody>
-</table>
 <div class="filter-container">
   <button class="filter-btn" style="display:none;" data-filter="all">All</button>
   <button class="filter-btn" data-filter="WiG">WiG</button>
-  <button class="filter-btn" data-filter="DiH">DiH</button>
-  <button class="filter-btn" data-filter="SiP">SiP</button>
-  <button class="filter-btn" data-filter="MiT">MiT</button>
+  <button class="filter-btn tag-DiH" data-filter="DiH">DiH</button>
+  <button class="filter-btn tag-SiP" data-filter="SiP">SiP</button>
+  <button class="filter-btn tag-MiT" data-filter="MiT">MiT</button>
 </div>
 
 <script>
@@ -606,8 +559,10 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="">
     <a href="24-12-27.html" class="post-link">
-      <span class="post-title">2024.12.27</span>
-      <span class="post-tags"></span>
+      <span class="post-title">Fall semester 2024 update</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
     </a>
   </li>
   <li class="post-item" data-tags="WiG">
@@ -763,7 +718,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <footer class="site-footer">
   <div class="footer-content">
     <ul class="footer-links">
-      <li><a href="./">Read other musings</a></li>
+      <li><a href="./">See all musings</a></li>
       <li><a href="https://lachlankermode.com">About the author</a></li>
     </ul>
   </div>
