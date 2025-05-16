@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>24 02 29</title>
+  <title>Mladen Dolar: &quot;What's in a Name?&quot;</title>
   <style>
     html {
       color: #1a1a1a;
@@ -186,17 +186,267 @@
     }
     div.csl-indent {
       margin-left: 2em;
-    }  </style>
+    }
+    body {
+      padding-bottom: 0;
+    }
+
+    /* Header styles */
+    .site-header {
+      padding: 1.1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .site-title a:hover {
+      color: #0066cc;
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      width: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .footer-links a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+
+    /* Filter button styles */
+    .filter-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .filter-btn {
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem 0.5rem 0;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .filter-btn.active {
+      background-color: #0066cc;
+      color: white;
+      border-color: #0055aa;
+    }
+
+    /* Post list styles */
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .post-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      transition: all 0.3s;
+    }
+
+    .post-item.hidden {
+      display: none;
+    }
+
+    .post-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s;
+    }
+
+    .post-link:hover {
+      background-color: #f0f0f0;
+      border-color: #ddd;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .tag-DiH {
+      background-color: #ffeecc;
+      color: #996600;
+    }
+
+    .tag-SiP {
+      background-color: #e6f3ff;
+      color: #0066cc;
+    }
+
+    .tag-MiT {
+      background-color: #eeffee;
+      color: #006600;
+    }
+  </style>
+  <!-- Style for index filter -->
+  <style>
+  /* Filter button styles */
+  .filter-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .filter-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .filter-btn.active {
+    background-color: #0066cc;
+    color: white;
+    border-color: #0055aa;
+  }
+
+  .post-item {
+    transition: opacity 0.3s;
+  }
+
+  .post-item.hidden {
+    display: none;
+  }
+
+  .tag-label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tag-DiH {
+    background-color: #ffeecc;
+    color: #996600;
+  }
+
+  .tag-SiP {
+    background-color: #e6f3ff;
+    color: #0066cc;
+  }
+
+  .tag-MiT {
+    background-color: #eeffee;
+    color: #006600;
+  }
+</style>
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">24 02 29</h1>
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Lachlan's Musings</a></h1>
 </header>
+
+<header id="title-block-header">
+<h1 class="title">Mladen Dolar: "What's in a Name?"</h1>
+</header>
+<div class="main-content">
+<!-- Filter buttons will be inserted here for index.html -->
 <p>Today I'll report on Mladen Dolar's 2014 essay "<a
 href="https://www.aksioma.org/pdf/Mladen-Dolar_Whats-in-a-Name.pdf">What's
 in a Name?</a>" <span class="citation"
-data-cites="dolarWhatName2014">(Dolar 2014)</span>. I read this essay
+data-cites="dolarWhatsName2014">(Dolar 2014)</span>. I read this essay
 recently in preparation for a session in a series on the subject of
 naming. Earlier in this series, we read the chapter "Che Vuoi?" from
 Zizek's <em>Sublime Object of Ideology</em> <span class="citation"
@@ -207,8 +457,8 @@ in a future log), 25 years later.</p>
 professing from her hypothetical balcony, to one "Janša" rather than the
 expected "Romeo", the essay opens with a commonplace idea in philosophy:
 "It all began with Plato" <span class="citation"
-data-cites="dolarWhatName2014">(Dolar 2014, 6)</span>. Yet Dolar's Plato
-is not read principally through his <em><a
+data-cites="dolarWhatsName2014">(Dolar 2014, 6)</span>. Yet Dolar's
+Plato is not read principally through his <em><a
 href="https://plato.stanford.edu/entries/plato-ethics-politics/">Republic</a></em>,
 but rather a relatively obscure dialogue called the <em><a
 href="https://plato.stanford.edu/entries/plato-cratylus/">Cratylus</a></em>.
@@ -216,14 +466,14 @@ As the SEP entry on the latter notes, this lesser known dialogue is
 vexing in part because "[i]t is not clear how its main topic - the
 correctness of names - is connected with Plato's other philosophical
 concerns" <span class="citation"
-data-cites="meissnerPlatoCratylus2023">(Meißner 2023)</span>.</p>
+data-cites="meissnerPlatosCratylus2023">(Meißner 2023)</span>.</p>
 <p>So for Dolar Plato is the beginning (perhaps predictably) of the
 philosophical question of names - but Dolar's Plato is heterodox, as
 principally the enigmatic author of the <em>Cratylus</em>, rather than
 the orthodox investigator of ethics and politics as author of the
 <em>Republic</em>. Moreover, in Plato there is "[t]he specter of Juliet
 on the balcony" <span class="citation"
-data-cites="dolarWhatName2014">(Dolar 2014, 7)</span>; a stroke painted
+data-cites="dolarWhatsName2014">(Dolar 2014, 7)</span>; a stroke painted
 with a broad brush in that a the shadow of a connection across several
 thousands of years, between Plato and Shakespeare, is tauntingly
 proposed through the mutual concern for the status of a name ("rose") in
@@ -232,7 +482,7 @@ relation to the thing, a rose in the flesh.</p>
 necessary shadow of a thing introduced by a name, "an x, which is an
 ineffable being without properties, a nothing which nevertheless appears
 as something" <span class="citation"
-data-cites="dolarWhatName2014">(Dolar 2014, 31–32)</span>. Such a
+data-cites="dolarWhatsName2014">(Dolar 2014, 31–32)</span>. Such a
 necessary shadow complicates a theory often misassociated with the
 orthodox Plato, namely the allegory of the cave. (This is in fact a
 theory espoused by Socrates in the <em>Republic</em>; Plato is simply
@@ -259,7 +509,7 @@ that are more or less appropriate, and hence have a varying degree of
 truth or falsity. But these tools are not quite freely ours to choose,
 or to select better ones from, for the names are always given by some
 Other, the rule-setter, the law-giver, the name-maker. <span
-class="citation" data-cites="dolarWhatName2014">(Dolar 2014,
+class="citation" data-cites="dolarWhatsName2014">(Dolar 2014,
 8)</span></p>
 </blockquote>
 <p>This problem, of course, could be analogised to the shadows in
@@ -348,7 +598,7 @@ Copjec, Joan. 2015. <span>“Cutting <span>Up</span>.”</span> In <em>Read
 My Desire: <span>Lacan</span> Against the Historicists</em>. Verso
 Books.
 </div>
-<div id="ref-dolarWhatName2014" class="csl-entry" role="listitem">
+<div id="ref-dolarWhatsName2014" class="csl-entry" role="listitem">
 Dolar, Mladen. 2014. <em>What’s in a <span>Name</span>?</em> Aksioma -
 Institute for Contemporary Art.
 </div>
@@ -356,7 +606,7 @@ Institute for Contemporary Art.
 Freud, Sigmund. 2001. <span>“Totem and <span>Taboo</span>.”</span>
 <em>Routledge, London</em>.
 </div>
-<div id="ref-meissnerPlatoCratylus2023" class="csl-entry"
+<div id="ref-meissnerPlatosCratylus2023" class="csl-entry"
 role="listitem">
 Meißner, David. 2023. <span>“Plato’s <span>Cratylus</span>.”</span> In
 <em>The <span>Stanford Encyclopedia</span> of
@@ -369,5 +619,16 @@ Zizek, Slavoj. 2009. <span>“Che <span>Vuoi</span>?”</span> In <em>The
 Edition, 95–144. London New York: Verso.
 </div>
 </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a href="./">Read other musings</a></li>
+      <li><a href="https://lachlankermode.com">About the author</a></li>
+    </ul>
+  </div>
+</footer>
 </body>
 </html>

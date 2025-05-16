@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>24 05 02</title>
+  <title>Svitlana Matviyenko and Sarah Pourciau</title>
   <style>
     html {
       color: #1a1a1a;
@@ -186,13 +186,263 @@
     }
     div.csl-indent {
       margin-left: 2em;
-    }  </style>
+    }
+    body {
+      padding-bottom: 0;
+    }
+
+    /* Header styles */
+    .site-header {
+      padding: 1.1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .site-title a:hover {
+      color: #0066cc;
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      width: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .footer-links a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+
+    /* Filter button styles */
+    .filter-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .filter-btn {
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem 0.5rem 0;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .filter-btn.active {
+      background-color: #0066cc;
+      color: white;
+      border-color: #0055aa;
+    }
+
+    /* Post list styles */
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .post-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      transition: all 0.3s;
+    }
+
+    .post-item.hidden {
+      display: none;
+    }
+
+    .post-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s;
+    }
+
+    .post-link:hover {
+      background-color: #f0f0f0;
+      border-color: #ddd;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .tag-DiH {
+      background-color: #ffeecc;
+      color: #996600;
+    }
+
+    .tag-SiP {
+      background-color: #e6f3ff;
+      color: #0066cc;
+    }
+
+    .tag-MiT {
+      background-color: #eeffee;
+      color: #006600;
+    }
+  </style>
+  <!-- Style for index filter -->
+  <style>
+  /* Filter button styles */
+  .filter-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .filter-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .filter-btn.active {
+    background-color: #0066cc;
+    color: white;
+    border-color: #0055aa;
+  }
+
+  .post-item {
+    transition: opacity 0.3s;
+  }
+
+  .post-item.hidden {
+    display: none;
+  }
+
+  .tag-label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tag-DiH {
+    background-color: #ffeecc;
+    color: #996600;
+  }
+
+  .tag-SiP {
+    background-color: #e6f3ff;
+    color: #0066cc;
+  }
+
+  .tag-MiT {
+    background-color: #eeffee;
+    color: #006600;
+  }
+</style>
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">24 05 02</h1>
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Lachlan's Musings</a></h1>
 </header>
+
+<header id="title-block-header">
+<h1 class="title">Svitlana Matviyenko and Sarah Pourciau</h1>
+</header>
+<div class="main-content">
+<!-- Filter buttons will be inserted here for index.html -->
 <p>Today's log discusses two projects, Svitlana Matviyenko's and Sarah
 Pourciau's, as a follow on from <a href="24-04-24.html">the last
 log</a>.</p>
@@ -230,7 +480,7 @@ High-technology Capitalism</em> <span class="citation"
 data-cites="dyer-withefordCyberMarxCyclesCircuits1999">(Dyer-Witheford
 1999)</span>. Matviyenko's dissertation is titled <em>Lacan's
 Cybernetics</em> <span class="citation"
-data-cites="matviyenkoLacanCybernetics2015">(Matviyenko 2015)</span>,
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015)</span>,
 and attempts to track the relationship between Lacan's presentation of
 psychoanalysis across his seminars (which took place annually between
 1953 and 1981) and cybernetics, an intellectual movement/field of
@@ -250,13 +500,13 @@ of Lacan's position on cybernetics is extremely useful, even if the
 specificity of an argument beyond contextualization is at times hard to
 make out. Her dissertation's general task is to "contextualize Lacan's
 work in the variety of debates on cybernetics" <span class="citation"
-data-cites="matviyenkoLacanCybernetics2015">(Matviyenko 2015,
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015,
 27)</span>, and to situate "the cybernetic episteme" as an influential
 discourse in and on Lacan's thought. This argument consists of what I
 find a confusing kind of historicism, i.e. through a set of claims that
 pose cybernetics as a Foucauldian episteme which "serves as the framing
 for knowledge upon which psychoanalysis operates" <span class="citation"
-data-cites="matviyenkoLacanCybernetics2015">(Matviyenko 2015,
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015,
 43)</span>.</p>
 <p>I find this confusing as a methodological stipulation in relation to
 Lacan's seminars because the figure of the Foucauldian episteme seems to
@@ -269,7 +519,7 @@ follows:</p>
 science's relation to knowledge as the mechanism of blackboxing
 maintained by the institutional power formed within certain conditions
 of mediality. <span class="citation"
-data-cites="matviyenkoLacanCybernetics2015">(Matviyenko 2015,
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015,
 43)</span></p>
 </blockquote>
 <p>To start, there are a number of terms in this summary that need
@@ -277,17 +527,17 @@ elucidation. This sentence comes after a section that present the basic
 context of terms such as communication, control, and homeostasis in
 their cybernetic formulations, and in the section preceding this summary
 the Lacanian notion of the "agency of the letter" <span class="citation"
-data-cites="matviyenkoLacanCybernetics2015">(Matviyenko 2015, 41)</span>
-has been mapped. I understand Matviyenko's claim to be meaning to say
-something to the effect of: cybernetics' presentation of the world as
-nothing but traceable cause and effect, i.e. its behaviorist and
-scientistic basis, is an intellectual basis upon which Lacan's idea of
-the agency of the letter, as well as his related presentation of the
-notions of 'repetition automatism' and 'the subject of science', can be
-developed. Yet Matviyenko confuses this point in the quotation above by
-introducing an idea of 'blackboxing' (a term not properly developed at
-this stage, nor later in the dissertation) and by suggesting a hazy
-relation to 'institutional power'.</p>
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015,
+41)</span> has been mapped. I understand Matviyenko's claim to be
+meaning to say something to the effect of: cybernetics' presentation of
+the world as nothing but traceable cause and effect, i.e. its
+behaviorist and scientistic basis, is an intellectual basis upon which
+Lacan's idea of the agency of the letter, as well as his related
+presentation of the notions of 'repetition automatism' and 'the subject
+of science', can be developed. Yet Matviyenko confuses this point in the
+quotation above by introducing an idea of 'blackboxing' (a term not
+properly developed at this stage, nor later in the dissertation) and by
+suggesting a hazy relation to 'institutional power'.</p>
 <p>In other words, Matviyenko's attempt to chart the relationship
 between cybernetics and psychoanalysis by way of Foucauldian
 'archaeology' results in a mystification of the specificity of her
@@ -303,10 +553,11 @@ about Lacan's views on automatism and cybernetic notions of the subject,
 the strongest kind of claim Matviyenko herself makes is so generally
 media-theoretical that it seems barely to be a claim at all: i.e.
 "psychoanalysis reflects contemporary conditions of mediality" <span
-class="citation" data-cites="matviyenkoLacanCybernetics2015">(Matviyenko
-2015, 54)</span>, or "[Lacan's] thought seems to be caught in the
-changing condition of mediality" <span class="citation"
-data-cites="matviyenkoLacanCybernetics2015">(Matviyenko 2015,
+class="citation"
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015,
+54)</span>, or "[Lacan's] thought seems to be caught in the changing
+condition of mediality" <span class="citation"
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015,
 55)</span>.</p>
 <p>Whatever one can critique in the historicist flattening of
 argumentation, though, it is undeniably still very rich on context. The
@@ -320,7 +571,7 @@ Descartes). Matviyenko convincingly posits both cybernetics and
 psychoanalysis as taking up the challenge of "the model of the body as a
 system-coupled-with-the-environment that transcends Cartesian mind-body
 dualism" <span class="citation"
-data-cites="matviyenkoLacanCybernetics2015">(Matviyenko 2015,
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015,
 78)</span>: that is, the problem of the subject in science, of the
 material/ideal dialectic, of thought's relationship to the world at
 large (read: ontology, epistemology, phenomenology). It seems clear to
@@ -345,7 +596,7 @@ a dissertation).</p>
 namely that "both psychoanalysis and cybernetics belong to the epoch of
 <em>graphocentrism</em>, which began in the nineteenth century and
 extends to the present moment" <span class="citation"
-data-cites="matviyenkoLacanCybernetics2015">(Matviyenko 2015,
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015,
 193)</span>. In making this claim, Matviyenko gestures to the ongoing
 relevance of cybernetics and psychoanalysis to contemporary ideologies
 and epistemologies of science and the subject, and I certainly agree on
@@ -357,12 +608,12 @@ many names and theorists in these two chapters (as there are in the
 earlier ones too, I suppose), and I again find myself somewhat confused
 by the blur of terms: a "dialectic relation between the modalities of
 extension and prosthesis" <span class="citation"
-data-cites="matviyenkoLacanCybernetics2015">(Matviyenko 2015,
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015,
 172)</span>, "parasitic passivity" (with reference to Michel Serres),
 and the ultimate argumentation that today's interpassive subject has
 "lost meanings and practices of solitude, of sensations of mild joy"
 <span class="citation"
-data-cites="matviyenkoLacanCybernetics2015">(Matviyenko 2015,
+data-cites="matviyenkoLacansCybernetics2015">(Matviyenko 2015,
 190)</span>.</p>
 <p>I don't necessarily dispute these claims, but I am suspicious of the
 idea that our 'digital condition' is something distinctly different from
@@ -462,7 +713,7 @@ Dyer-Witheford, Nick, and Svitlana Matviyenko. 2019. <em>Cyberwar and
 Revolution: <span>Digital</span> Subterfuge in Global Capitalism</em>.
 University of Minnesota Press.
 </div>
-<div id="ref-matviyenkoLacanCybernetics2015" class="csl-entry"
+<div id="ref-matviyenkoLacansCybernetics2015" class="csl-entry"
 role="listitem">
 Matviyenko, Svitlana. 2015. <span>“Lacan’s Cybernetics.”</span> PhD
 thesis, The University of Western Ontario (Canada).
@@ -497,5 +748,16 @@ viewing.<a href="#fnref1" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a href="./">Read other musings</a></li>
+      <li><a href="https://lachlankermode.com">About the author</a></li>
+    </ul>
+  </div>
+</footer>
 </body>
 </html>

@@ -230,6 +230,41 @@
       text-decoration: underline;
     }
 
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+
     /* Filter button styles */
     .filter-container {
       margin: 2rem 0;
@@ -389,13 +424,18 @@
 </header>
 <div class="main-content">
 <!-- Filter buttons will be inserted here for index.html -->
-<p>This <del>daily</del> log has three streams. For more on what each of
-these streams represent, see <a href="24-01-26.html">2024.01.26</a>. For
-more about these posts' author, see <a
-href="24-01-25.html">2024.01.25</a> and/or <a
-href="https://lachlankermode.com">my website</a>.</p>
+<p>The musings below have a few streams. Use the buttons below to filter
+for those that interest you. For more on what each of these streams
+represent, see <a href="24-01-26.html">Streams of thought in my
+dissertation</a>. For more about these posts' author, see <a
+href="24-01-25.html">What <em>is</em> 'modern culture and media'?</a> and
+<a href="https://lachlankermode.com">my personal website</a>.</p>
 <table>
 <tbody>
+<tr>
+<td><code>WiG</code></td>
+<td>writing in general</td>
+</tr>
 <tr>
 <td><code>DiH</code></td>
 <td>the question of dialectics in history</td>
@@ -412,10 +452,10 @@ href="https://lachlankermode.com">my website</a>.</p>
 </table>
 <div class="filter-container">
   <button class="filter-btn" style="display:none;" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="WiG">WiG</button>
   <button class="filter-btn" data-filter="DiH">DiH</button>
   <button class="filter-btn" data-filter="SiP">SiP</button>
   <button class="filter-btn" data-filter="MiT">MiT</button>
-  <button class="filter-btn" data-filter="other">Other</button>
 </div>
 
 <script>
@@ -517,7 +557,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul class="post-list">
   <li class="post-item" data-tags="DiH">
     <a href="./25-05-16.html" class="post-link">
-      <span class="post-title">2025.05.16</span>
+      <span class="post-title">Karl Marx: <em>Capital, Volume 1</em> (chapter 22)</span>
       <span class="post-tags">
         <span class="tag-label tag-DiH">DiH</span>
       </span>
@@ -525,15 +565,16 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="SiP">
     <a href="./25-04-10.html" class="post-link">
-      <span class="post-title">2025.04.10</span>
+      <span class="post-title">Is psychoanalysis a Science?</span>
       <span class="post-tags">
         <span class="tag-label tag-SiP">SiP</span>
+        <span class="tag-label tag-WiG">WiG</span>
       </span>
     </a>
   </li>
   <li class="post-item" data-tags="DiH">
     <a href="./25-03-07.html" class="post-link">
-      <span class="post-title">2025.03.07</span>
+      <span class="post-title">Karl Marx: <em>Capital, Volume 1</em> (chapter 21)</span>
       <span class="post-tags">
         <span class="tag-label tag-DiH">DiH</span>
       </span>
@@ -541,7 +582,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="MiT">
     <a href="./2025-02-10.html" class="post-link">
-      <span class="post-title">2025.02.10</span>
+      <span class="post-title">Erich Hörl: <em>Sacred Channels: The Archaic Illusion of Communication</em> (chapters 1 and 2)</span>
       <span class="post-tags">
         <span class="tag-label tag-MiT">MiT</span>
       </span>
@@ -549,17 +590,17 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="DiH">
     <a href="./2025-02-05.html" class="post-link">
-      <span class="post-title">2025.02.05</span>
+      <span class="post-title">Terry Eagleton: <em>Why Marx Was Right</em></span>
       <span class="post-tags">
         <span class="tag-label tag-DiH">DiH</span>
       </span>
     </a>
   </li>
-  <li class="post-item" data-tags="other">
+  <li class="post-item" data-tags="WiG">
     <a href="./using-nixos.html" class="post-link">
       <span class="post-title">Using NixOS</span>
       <span class="post-tags">
-        <span class="tag-label tag-other">Other</span>
+        <span class="tag-label tag-WiG">WiG</span>
       </span>
     </a>
   </li>
@@ -569,33 +610,33 @@ document.addEventListener('DOMContentLoaded', function() {
       <span class="post-tags"></span>
     </a>
   </li>
-  <li class="post-item" data-tags="other">
+  <li class="post-item" data-tags="WiG">
     <a href="writing-academic-essays.html" class="post-link">
       <span class="post-title">Writing academic essays</span>
       <span class="post-tags">
-        <span class="tag-label tag-other">Other</span>
+        <span class="tag-label tag-WiG">WiG</span>
       </span>
     </a>
   </li>
-  <li class="post-item" data-tags="other">
+  <li class="post-item" data-tags="WiG">
     <a href="cycling-typing.html" class="post-link">
       <span class="post-title">Cycling typing</span>
       <span class="post-tags">
-        <span class="tag-label tag-other">Other</span>
+        <span class="tag-label tag-WiG">WiG</span>
       </span>
     </a>
   </li>
-  <li class="post-item" data-tags="other">
+  <li class="post-item" data-tags="WiG">
     <a href="using-two-remarkables.html" class="post-link">
       <span class="post-title">Using two reMarkables</span>
       <span class="post-tags">
-        <span class="tag-label tag-other">Other</span>
+        <span class="tag-label tag-WiG">WiG</span>
       </span>
     </a>
   </li>
   <li class="post-item" data-tags="SiP MiT">
     <a href="24-05-02.html" class="post-link">
-      <span class="post-title">2024.05.02</span>
+      <span class="post-title">Svitlana Matviyenko and Sarah Pourciau</span>
       <span class="post-tags">
         <span class="tag-label tag-SiP">SiP</span>
         <span class="tag-label tag-MiT">MiT</span>
@@ -604,7 +645,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="SiP DiH">
     <a href="24-04-24.html" class="post-link">
-      <span class="post-title">2024.04.24</span>
+      <span class="post-title">Amanda Holmes and Adrian Johnston</span>
       <span class="post-tags">
         <span class="tag-label tag-SiP">SiP</span>
         <span class="tag-label tag-DiH">DiH</span>
@@ -613,7 +654,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="SiP">
     <a href="24-04-09.html" class="post-link">
-      <span class="post-title">2024.04.09</span>
+      <span class="post-title">Jane Gallop: <em>Reading Lacan</em></span>
       <span class="post-tags">
         <span class="tag-label tag-SiP">SiP</span>
       </span>
@@ -621,7 +662,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="SiP">
     <a href="24-03-03.html" class="post-link">
-      <span class="post-title">2024.03.03</span>
+      <span class="post-title">Slavoj Žižek: <em>The Sublime Object of Ideology</em> (chapter 1, part 2)</span>
       <span class="post-tags">
         <span class="tag-label tag-SiP">SiP</span>
       </span>
@@ -629,7 +670,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="SiP">
     <a href="24-02-29.html" class="post-link">
-      <span class="post-title">2024.02.29</span>
+      <span class="post-title">Mladen Dolar: "What's in a Name?"</span>
       <span class="post-tags">
         <span class="tag-label tag-SiP">SiP</span>
       </span>
@@ -637,7 +678,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="DiH">
     <a href="24-02-28.html" class="post-link">
-      <span class="post-title">2024.02.28</span>
+      <span class="post-title">Jensen Suther: "Novel, Organism, Form: Bio-Aesthetics in Hegel and Thomas Mann"</span>
       <span class="post-tags">
         <span class="tag-label tag-DiH">DiH</span>
       </span>
@@ -645,23 +686,23 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="SiP">
     <a href="24-02-07.html" class="post-link">
-      <span class="post-title">2024.02.07</span>
+      <span class="post-title">Slavoj Žižek: <em>The Sublime Object of Ideology</em> (chapter 1, part 1)</span>
       <span class="post-tags">
         <span class="tag-label tag-SiP">SiP</span>
       </span>
     </a>
   </li>
-  <li class="post-item" data-tags="other">
+  <li class="post-item" data-tags="WiG">
     <a href="writing-setup.html" class="post-link">
       <span class="post-title">Writing setup</span>
       <span class="post-tags">
-        <span class="tag-label tag-other">Other</span>
+        <span class="tag-label tag-WiG">WiG</span>
       </span>
     </a>
   </li>
   <li class="post-item" data-tags="SiP">
     <a href="24-02-05.html" class="post-link">
-      <span class="post-title">2024.02.05</span>
+      <span class="post-title">Slavoj Žižek: <em>The Sublime Object of Ideology</em> (introduction)</span>
       <span class="post-tags">
         <span class="tag-label tag-SiP">SiP</span>
       </span>
@@ -669,21 +710,23 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="DiH">
     <a href="24-01-31.html" class="post-link">
-      <span class="post-title">2024.01.31</span>
+      <span class="post-title">Matteo Pasquinelli: <em>Eye of the Master</em></span>
       <span class="post-tags">
         <span class="tag-label tag-DiH">DiH</span>
       </span>
     </a>
   </li>
-  <li class="post-item" data-tags="">
+  <li class="post-item" data-tags="WiG">
     <a href="24-01-29.html" class="post-link">
-      <span class="post-title">2024.01.29</span>
-      <span class="post-tags"></span>
+      <span class="post-title">Why we should give feedback to students</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
     </a>
   </li>
   <li class="post-item" data-tags="DiH">
     <a href="24-01-28.html" class="post-link">
-      <span class="post-title">2024.01.28</span>
+      <span class="post-title">Jacques Le Goff: <em>Your Money or Your Life</em></span>
       <span class="post-tags">
         <span class="tag-label tag-DiH">DiH</span>
       </span>
@@ -691,22 +734,26 @@ document.addEventListener('DOMContentLoaded', function() {
   </li>
   <li class="post-item" data-tags="DiH">
     <a href="24-01-27.html" class="post-link">
-      <span class="post-title">2024.01.27</span>
+      <span class="post-title">Rebecca Carson: <em>Immanent Exernalities</em> (chapter 2)</span>
       <span class="post-tags">
         <span class="tag-label tag-DiH">DiH</span>
       </span>
     </a>
   </li>
-  <li class="post-item" data-tags="">
+  <li class="post-item" data-tags="WiG">
     <a href="24-01-26.html" class="post-link">
-      <span class="post-title">2024.01.26</span>
-      <span class="post-tags"></span>
+      <span class="post-title">Streams of thought in my dissertation</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
     </a>
   </li>
-  <li class="post-item" data-tags="">
+  <li class="post-item" data-tags="WiG">
     <a href="24-01-25.html" class="post-link">
-      <span class="post-title">2024.01.25</span>
-      <span class="post-tags"></span>
+      <span class="post-title">What <em>is</em> 'modern culture and media'?</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
     </a>
   </li>
 </ul>
