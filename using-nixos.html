@@ -167,8 +167,9 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -179,7 +180,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -230,13 +231,228 @@
     code span.va { color: #19177c; } /* Variable */
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+    body {
+      padding-bottom: 0;
+    }
+
+    /* Header styles */
+    .site-header {
+      padding: 1.1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .site-title a:hover {
+      color: #0066cc;
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      width: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .footer-links a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    /* Filter button styles */
+    /* Post list styles */
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .post-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      transition: all 0.3s;
+    }
+
+    .post-item.hidden {
+      display: none;
+    }
+
+    .post-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s;
+    }
+
+    .post-link:hover {
+      background-color: #f0f0f0;
+      border-color: #ddd;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+
   </style>
+  <!-- Style for index filter -->
+  <style>
+  /* Filter button styles */
+  .filter-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    border-width: 4px;
+  }
+
+  .filter-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .filter-btn.active {
+    border-color: #0055aa;
+  }
+
+  .post-item {
+    transition: opacity 0.3s;
+  }
+
+  .post-item.hidden {
+    display: none;
+  }
+
+  .tag-label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tag-BgS{
+    background-color: #fda657;
+    color: #3e2815;
+  }
+
+
+  .tag-DiH {
+    background-color: #ffeecc;
+    color: #996600;
+  }
+
+  .tag-SiP {
+    background-color: #e6f3ff;
+    color: #0066cc;
+  }
+
+  .tag-MiT {
+    background-color: #eeffee;
+    color: #006600;
+  }
+</style>
 </head>
 <body>
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Lachlan's Musings</a></h1>
+</header>
+
 <header id="title-block-header">
 <h1 class="title">Using NixOS</h1>
 <p class="date">27thh January 2025</p>
 </header>
+<div class="main-content">
+<!-- Filter buttons will be inserted here for index.html -->
 <ul>
 <li><a href="https://github.com/breezykermo/nixos">My NixOS
 configuration</a></li>
@@ -310,13 +526,13 @@ packages in a repository with Nix-built artifacts, the primary one being
 with Home manager one can install the <a
 href="https://fishshell.com/">fish shell</a> as follows:</p>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode nix"><code class="sourceCode nix"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>programs.fish = <span class="op">{</span></span>
+class="sourceCode nix"><code class="sourceCode nix"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>programs<span class="op">.</span>fish = <span class="op">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">enable</span> <span class="op">=</span> <span class="cn">true</span><span class="op">;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">interactiveShellInit</span> <span class="op">=</span> <span class="st">&#39;&#39;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">    set fish_greeting # disable greeting</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">  &#39;&#39;</span><span class="op">;</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="va">plugins</span> <span class="op">=</span> <span class="op">[</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span> <span class="va">name</span> <span class="op">=</span> <span class="st">&quot;bass&quot;</span><span class="op">;</span> <span class="va">src</span> <span class="op">=</span> pkgs.fishPlugins.bass.src<span class="op">;</span> <span class="op">}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span> <span class="va">name</span> <span class="op">=</span> <span class="st">&quot;bass&quot;</span><span class="op">;</span> <span class="va">src</span> <span class="op">=</span> pkgs<span class="op">.</span>fishPlugins<span class="op">.</span>bass<span class="op">.</span>src<span class="op">;</span> <span class="op">}</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">];</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span>;</span></code></pre></div>
 <p>In addition to the <code>enable</code> option, programs installed
@@ -325,7 +541,7 @@ Home Manager through which one can customize the installation.</p>
 <p>One could also, however, install the fish shell directly from Nixpkgs
 (in a <code>configuration.nix</code> file) as follows:</p>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode nix"><code class="sourceCode nix"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>environment.systemPackages = <span class="op">[</span></span>
+class="sourceCode nix"><code class="sourceCode nix"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>environment<span class="op">.</span>systemPackages = <span class="op">[</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  fish</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">]</span>;</span></code></pre></div>
 <p>The benefit of Home manager's approach here is the configuration
@@ -417,5 +633,17 @@ bundles</a> on <a href="https://nixos.wiki/wiki/Nixpkgs">Nixpkgs</a>.<a
 href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>Found a typo? Have thoughts? <a href="mailto:lachie@ohrg.html">Email me!</a></p>
+    <ul class="footer-links">
+      <li><a href="./">See all musings</a></li>
+      <li><a href="https://lachlankermode.com">About the author</a></li>
+    </ul>
+  </div>
+</footer>
 </body>
 </html>

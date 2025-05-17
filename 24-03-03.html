@@ -284,34 +284,7 @@
       font-family: monospace;
     }
 
-
     /* Filter button styles */
-    .filter-container {
-      margin: 2rem 0;
-      text-align: center;
-    }
-
-    .filter-btn {
-      background-color: #f0f0f0;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem 0.5rem 0;
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      transition: all 0.2s;
-    }
-
-    .filter-btn:hover {
-      background-color: #e0e0e0;
-    }
-
-    .filter-btn.active {
-      background-color: #0066cc;
-      color: white;
-      border-color: #0055aa;
-    }
-
     /* Post list styles */
     .post-list {
       list-style: none;
@@ -355,20 +328,7 @@
       display: flex;
       gap: 0.5rem;
     }
-    .tag-DiH {
-      background-color: #ffeecc;
-      color: #996600;
-    }
 
-    .tag-SiP {
-      background-color: #e6f3ff;
-      color: #0066cc;
-    }
-
-    .tag-MiT {
-      background-color: #eeffee;
-      color: #006600;
-    }
   </style>
   <!-- Style for index filter -->
   <style>
@@ -387,6 +347,7 @@
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     transition: all 0.2s;
+    border-width: 4px;
   }
 
   .filter-btn:hover {
@@ -394,8 +355,6 @@
   }
 
   .filter-btn.active {
-    background-color: #0066cc;
-    color: white;
     border-color: #0055aa;
   }
 
@@ -415,6 +374,12 @@
     font-weight: bold;
     white-space: nowrap;
   }
+
+  .tag-BgS{
+    background-color: #fda657;
+    color: #3e2815;
+  }
+
 
   .tag-DiH {
     background-color: #ffeecc;
@@ -685,8 +650,9 @@ href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 
 <footer class="site-footer">
   <div class="footer-content">
+    <p>Found a typo? Have thoughts? <a href="mailto:lachie@ohrg.html">Email me!</a></p>
     <ul class="footer-links">
-      <li><a href="./">Read other musings</a></li>
+      <li><a href="./">See all musings</a></li>
       <li><a href="https://lachlankermode.com">About the author</a></li>
     </ul>
   </div>
