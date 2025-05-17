@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Lachlan Kermode" />
+  <title>The Towpath to React and Redux</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+    body {
+      padding-bottom: 0;
+    }
+
+    /* Header styles */
+    .site-header {
+      padding: 1.1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .site-title a:hover {
+      color: #0066cc;
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      width: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .footer-links a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    /* Filter button styles */
+    /* Post list styles */
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .post-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      transition: all 0.3s;
+    }
+
+    .post-item.hidden {
+      display: none;
+    }
+
+    .post-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s;
+    }
+
+    .post-link:hover {
+      background-color: #f0f0f0;
+      border-color: #ddd;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .tag-DiH {
+      background-color: #ffeecc;
+      color: #996600;
+    }
+
+    .tag-SiP {
+      background-color: #e6f3ff;
+      color: #0066cc;
+    }
+
+    .tag-MiT {
+      background-color: #eeffee;
+      color: #006600;
+    }
+  </style>
+  <!-- Style for index filter -->
+  <style>
+  /* Filter button styles */
+  .filter-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    border-width: 4px;
+  }
+
+  .filter-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .filter-btn.active {
+    border-color: #0055aa;
+  }
+
+  .post-item {
+    transition: opacity 0.3s;
+  }
+
+  .post-item.hidden {
+    display: none;
+  }
+
+  .tag-label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tag-DiH {
+    background-color: #ffeecc;
+    color: #996600;
+  }
+
+  .tag-SiP {
+    background-color: #e6f3ff;
+    color: #0066cc;
+  }
+
+  .tag-MiT {
+    background-color: #eeffee;
+    color: #006600;
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Lachlan's Musings</a></h1>
+</header>
+
+<header id="title-block-header">
+<h1 class="title">The Towpath to React and Redux</h1>
+<p class="author">Lachlan Kermode</p>
+<p class="date">28th July 2016</p>
+</header>
+<div class="main-content">
+<!-- Filter buttons will be inserted here for index.html -->
+<p>When you visit a URL, you are redirected through the internet to a server somewhere in the world, and code is triggered on that server, prompted by your request. Sometimes that code makes requests elsewhere, retrieving other resources from a database or elsewhere before returning files to your browser, which we can call the <em>client</em>, that made the request. This is how the Facebook page that you see when you visit facebook.com is different from your friends'. Even though you could both be at the same URL; the page is customized at the server-side before it is returned to your browser through the login parameters that you sent.</p>
+<p>In simpler sites, such as <a href="http://lachlankermode.com/">lachlankermode.com</a><sup id="fnref-1"><a href="#fn-1" class="footnote-ref">1</a></sup>, when there are no required exterior resources and no customization, the server simply directly returns HTML, CSS and Javascript files to your browser. Browsers have been programmed to interpret these filetypes. They know how to render in color and glory the wonderful web pages that we can browse on the internet. This was really the paradigm in which the web was originally designed; it was built as a forum for the retrieval and consequent display of HTML documents.</p>
+<p>However, we have come to expect much more of the web in 2016. Sites ought to be dynamic, viewable and beautiful from many different shapes and sizes of device, and they should interactively update based on where I click, swipe and hover. Back in 1994, <a href="http://speakingjs.com/es5/ch04.html">Brendan Eich created Javascript</a> at Netscape. Javascript was conceived to run in the browser on the client side to make the experience of the web more dynamic: through Javascript, the browser could partially update and modify HTML documents in response to events, such as clicks and hovers. Event handlers in Javascript could also asynschronously request resources across the web, read and write to the user's local file system, among many other capabilities.</p>
+<p>Javascript's relationship with the original conception web of documents is really the core of how the web works today. It enables the dynamic experience of data and documents that we expect and encounter every time we open a browser. The web is more than just an organically organized global file cabinet; it is an enormous network of theatrical data exhibitions that personally interact with each visitor, exhibitions that communicate with each other in non-trivial ways.</p>
+<p>The web's origin and history are inscribed in its practice today. The exhibitions we call websites are built on top of original document structure of the web, and the friction between what the web was and what it has become is keenly felt by those of us who develop on its platform. Programming for browsers, which we can more technically call the <em>Document Object Model</em> (or the <em>DOM</em>), is a matter of negotiating many minute updates to an HTML document in response to a range of events, all computed against the dimension of time<sup id="fnref-3"><a href="#fn-3" class="footnote-ref">3</a></sup>.</p>
+<p>Libraries like <a href="https://jquery.com/">jQuery</a> emerged to provide ways of managing these updates and manipulations, and they were soon followed by frameworks like <a href="https://angularjs.org/">AngularJS</a> and <a href="http://backbonejs.org/">Backbone</a>, which offer extensive suites replete with solutions to the common and immediate complexities of developing with the DOM in Javascript. Equipped with these tools, developers were able to build softer, warmer single-page-application flesh around the web's document bones. The experience of HTML in the DOM grew into the performative and interactive showcase we know and adore day-to-day in our quotidian rituals.</p>
+<p>But as applications like Facebook became larger and larger, and increasingly complex, developers discovered that it was very hard to keep track of everything that was being updated on each event. Developers found that in attempting to change one thing, often something that seemed simple and straightforward, they would routinely break some other part of the system. In more complex applications, it was difficult to know which events were being triggered where, or how exactly data was being fed into the DOM.</p>
+<p>In this era of complexity, unidirectional data flow was born, pomaded by a sexy midwife, <a href="https://facebook.github.io/react/index.html">React</a>. The basic idea of unidirectional data flow is explicitly simple: data should flow in one direction conceptually for the developer, so that it is easy to keep track of. Updates to the DOM ought to be administed one at a time, in a traceable way, and preferably from one single source of truth, so that the range of updates and insertions are transparent to the developer. Parts of the DOM should not be able to reach out to a distant cousin of the DOM and change it without telling anything else. <a href="https://facebook.github.io/react/index.html">React</a> is a very popular library that breaks up the view layer of an application into citizens that listens for changes from some authority, and it calls these citizens components.</p>
+<p>A React component is rendered with a set of input values which are called <em>props</em>. Each time the props for a component changes, the entire component re-renders. In other words, a React component is a UI expression of the data that is passed into it. When the input data changes, the function is called again with the new data. React components can call functions that make or request changes to an external store, from which they then in turn receive their props. Data flows in one direction, and can always be intercepted and explicitly monitored in the application state<sup id="fnref-4"><a href="#fn-4" class="footnote-ref">4</a></sup>.</p>
+<p><img src="/static/react1.png" alt="One Way Data Flow"></p>
+<p>React's conceptual simplicity is made performant through some very clever way of hacking the DOM's core architecture. Because the DOM was designed to render entire documents, it is not really very good at making incremental changes to those documents, and therefore as developers we want to limit DOM updates to those that are necessary; we don't want to overwrite parts of the DOM with nodes to refresh entire components in the DOM when only a small part of the UI has changed.</p>
+<p>React affords developers the conceptual benefit of full component re-rendering, but also only makes necessary changes to the DOM by using a <em>virtual DOM</em>. When a component's props change, the virtual DOM handles the component re-render in a less computationally expensive virtual arena, and then uses a <a href="https://facebook.github.io/react/docs/reconciliation.html">clever diffing algorithm</a> to determine which specific updates need to be made in the real DOM. This wonderful abstraction mediates between the developer's experience of application development and the DOM's anatomical requirements.</p>
+<p>A core contributor to React's popularity in the web development community is the canon of state management solutions that is conceived alongside React itself; architectures for the external store to which React components subscribe and from which they receive their props. The most popular of these at the moment is <a href="https://github.com/reactjs/redux">Redux</a>, a library written by <a href="https://github.com/gaearon">Dan Abramov</a> inspired by techniques in Elm and other functional programming languages. Redux offers a very robust architecture for managing the external store in React applications.</p>
+<p><img src="/static/react2.png" alt="Redux Architecture"></p>
+<p>Redux popularity skyrocketed after Dan Abramov <a href="https://www.youtube.com/watch?v=xsSnOQynTHs">demonstrated what was possible</a> in the way of developer tools--explicit changelogs, hot reloading, and even time travel. Redux became the most popular <a href="https://facebook.github.io/flux/">Flux</a> implementation, Facebook's suggested solution for managing state in React applications. One of the keys to Redux's popularity is its extensibility. It is an architecture for state management, not an already constructed building you have to drop into your application. Managing updates to the store from asynchronous data sources, for example, is not a prebuilt capability in Redux, it rather has <a href="https://github.com/gaearon/redux-thunk">several</a> possible <a href="https://github.com/yelouafi/redux-saga">solutions</a>.</p>
+<p>React's ethos of hacking existing anatomy to ease cognitive burden for the developer is unsurprisingly popular in the developer community, as it makes programming applications easier and, more importantly, more fun. This ethos has found its way to mobile development as well, in <a href="https://facebook.github.io/react-native/">React Native</a>. React Native allows you to write native mobile applications for iOS and Android in Javascript using React, by running a Javascript thread alongside the native language (Objective C for iOS and Java for Android). These threads communicate with each other through a bridge, over which data and event notifications are passed. This allows React Native to leverage the perfomance of native UI views and code for computationally expensive operations, and to program less expensive application logic on the Javascript thread through React. <a href="https://www.smashingmagazine.com/2016/04/consider-react-native-mobile-app/">There are potential benefits here</a> for developer cognitive burden and experience, just as in React for the web.</p>
+<p>React and its contingent libraries are most interesting to me not as ways to improve iteration or application stabilty in industry software development (the standard evangelizations of React), but as a robust and elegant philosophy for dealing with complexity. If there is anything I can believe in, any concept of 'productivity' that seems worth striving for, it is simplifying complexity. This is one of the reasons I like programming; programming is the practice of using abstraction to manage complex anatomies, often otherwise unassailable. This is possibly the imperative of all thought we inscribe as meaningful--science, philosophy, political science, literature, music--it all looks to 'explain': to rethink complex anatomies via 'simpler' abstractions, thought configurations that are more sympathetic with the current river of our consciousness<sup id="fnref-5"><a href="#fn-5" class="footnote-ref">5</a></sup>.</p>
+<div class="footnotes">
+<hr>
+<ol>
+<li id="fn-1">
+<p>Shameless plug; this is my website after all.</p>
+<a href="#fnref-1" class="footnote-backref">↩</a>
+</li>
+<li id="fn-3">
+<p>Programming languages have lots of interesting ways of abstracting time (or asynchronous operation) for the developer, and Javascript is no exception. The language's most recent specification, <a href="http://www.ecma-international.org/ecma-262/6.0/">ES2015</a>, includes callbacks, promises and generators, to name a few.</p>
+<a href="#fnref-3" class="footnote-backref">↩</a>
+</li>
+<li id="fn-4">
+<p>Note that React also provides a solution for storing and redistributing data, the <code>state</code> of a React component. React components can hold state and modify parts of the DOM within their own assigned territory; but the core philosophy of React wants to defer most authority to a higher truth. React component <code>state</code> is a capability that allows distribution of authority within reasonable constraint. It's overwrought and possibly melodramatic to defer <em>every little update</em> to a centralized control station.</p>
+<a href="#fnref-4" class="footnote-backref">↩</a>
+</li>
+<li id="fn-5">
+<p>Thanks to Daniel, Karina and Kevin for reviewing this article and providing feedback.</p>
+<a href="#fnref-5" class="footnote-backref">↩</a>
+</li>
+</ol>
+</div>
+</div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a href="./">See all musings</a></li>
+      <li><a href="https://lachlankermode.com">About the author</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

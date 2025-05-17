@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Lachlan Kermode" />
+  <meta name="dcterms.date" content="2020-02-29" />
+  <title>Associative Archiving with DEVONThink (Part II)</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+    body {
+      padding-bottom: 0;
+    }
+
+    /* Header styles */
+    .site-header {
+      padding: 1.1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .site-title a:hover {
+      color: #0066cc;
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      width: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .footer-links a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    /* Filter button styles */
+    /* Post list styles */
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .post-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      transition: all 0.3s;
+    }
+
+    .post-item.hidden {
+      display: none;
+    }
+
+    .post-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s;
+    }
+
+    .post-link:hover {
+      background-color: #f0f0f0;
+      border-color: #ddd;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .tag-DiH {
+      background-color: #ffeecc;
+      color: #996600;
+    }
+
+    .tag-SiP {
+      background-color: #e6f3ff;
+      color: #0066cc;
+    }
+
+    .tag-MiT {
+      background-color: #eeffee;
+      color: #006600;
+    }
+  </style>
+  <!-- Style for index filter -->
+  <style>
+  /* Filter button styles */
+  .filter-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    border-width: 4px;
+  }
+
+  .filter-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .filter-btn.active {
+    border-color: #0055aa;
+  }
+
+  .post-item {
+    transition: opacity 0.3s;
+  }
+
+  .post-item.hidden {
+    display: none;
+  }
+
+  .tag-label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tag-DiH {
+    background-color: #ffeecc;
+    color: #996600;
+  }
+
+  .tag-SiP {
+    background-color: #e6f3ff;
+    color: #0066cc;
+  }
+
+  .tag-MiT {
+    background-color: #eeffee;
+    color: #006600;
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Lachlan's Musings</a></h1>
+</header>
+
+<header id="title-block-header">
+<h1 class="title">Associative Archiving with DEVONThink (Part II)</h1>
+<p class="author">Lachlan Kermode</p>
+<p class="date">29 February 2020</p>
+</header>
+<div class="main-content">
+<!-- Filter buttons will be inserted here for index.html -->
+<p>Following on from <a
+href="https://lachlankermode.com/associative-archiving-with-devonthink-1">Part
+I</a>, here I'll unpack how I archive in practice using <a
+href="https://www.devontechnologies.com/de/apps/devonthink">DEVONthink</a>
+(DT) as a driver. As I noted in part I, DT is a Mac-only application,
+and so in order to replicate my setup, you unfortunately need to have an
+Apple device. I'm actively looking for linux software that can simulate
+or replicate DT's functionality, as my primary workstation is <a
+href="https://github.com/breezykermo/dotfiles">Artix on a modified
+LARBS</a>, but I currently know of nothing that compares. In fact, it is
+pretty much solely DT's capabilities as archiving software that ties me
+to still using a Mac for some kinds of work.</p>
+<p>Alongside documents in DT, I also keep a personal database of notes
+in plain markdown, which I view and edit in a range of ways (<a
+href="https://obsidian.md/">Obsidian</a>, <a
+href="https://github.com/breezykermo/.vim">vim</a> or <a
+href="https://github.com/breezykermo/.doom.d">emacs</a> in desktop
+environments, and <a
+href="https://apps.apple.com/us/app/1writer-markdown-text-editor/id680469088">iWriter</a>
+on iPad). I call this database my "PKB", which is a shorthand for
+"personal knowledge base" I picked up somewhere online. My PKB loosely
+follows Nick Milo's <a
+href="https://forum.obsidian.md/t/lyt-kit-now-downloadable/390">LYT
+method</a> for note-taking, and contains notes that range from handy
+bash commands, to lecture notes, to article drafts.</p>
+<img src="/static/obsidian-graph.png" width="100%">
+
+<blockquote>
+<p>My Obsidian graph. Edges between notes represent lateral links.</p>
+</blockquote>
+<p>I'll unpack my PKB in more detail in a future post. I mention it here
+because it structures the way that I use DT. DT is where I read and seed
+ideas; my PKB is where I grow them as research. In other words, my DT
+archive exists largely to service the development of my PKB.</p>
+<p>An associative archive in DT (or another application) can supplement
+any research output process, whether it takes the form of a PKB like
+mine, whether it's a Roam Research database, folders in Evernote, or
+whether it's just a good old blank Word document.</p>
+<p>My DT setup involves several customisations. Some of these are
+straightforward, and I'll do my best to detail those here in such a way
+that they can be easily reproduced on any DT installation. Others
+involve custom Python scripts and external services like Dropbox. If
+you're interested in the detail of these, or have any questions or
+comments in general, please do feel free to <a
+href="mailto:lachiekermode@gmail.com">email me</a>. If you've taken the
+time to read this, I'd love to hear from you! :)</p>
+<h1 id="devonthink-in-a-nutshell">DEVONthink in a nutshell</h1>
+<p>DT is ultimately a file manager, comparable to Finder in Mac, File
+Manager in Windows, or Nautilus or PCManFM in Linux. To get started, you
+create a database, in which you can then store files of various kinds.
+With DT, you can then effectively browse and modify the contents of your
+databases.</p>
+<img src="/static/dt-base-view.png" width="100%">
+
+<p>DT is superior to a traditional file manager in a range of ways.
+Firstly, it is conceived as a way both to find files, <em>and to view
+them</em>. The left side of the screenshot above looks much like Finder;
+the right side looks like Preview, or some other PDF viewer. DT's PDF
+viewing and editing is slim and straightforward, and much more effective
+than Finder's 'preview' functionality for basic viewing. I've found it
+capable of everything I want to do regularly with PDFs, including
+highlighting, adding notes, and jumping to page numbers. If there's ever
+anything lacking, you can double-click and open the document in another
+application, just as you would in Finder.</p>
+<p>DT doesn't only support viewing and editing PDFs; it provides similar
+capabilities for most file types that you can imagine: images, CSVs,
+markdown, and many more. Crucially for my archiving, it supports both
+.webloc files (which are basically bookmarks for webpages) and
+webarchives (offline webpages). This support means that I can view
+webpages <em>alongside</em> PDFs in the same view, treating them as
+analagous, rather than having to employ a different storage system (such
+as browser bookmarks) and set of viewing applications for each distinct
+file type.</p>
+<p>DT also offers fluid conversion between document formats. I can
+right-click to save a .webloc as a webarchive, or to convert a webpage
+to a PDF. (Webarchives in particular are a revelatory format: because
+it's HTML saved locally, you can edit it and add in your own highlights,
+hyperlinks that point locally to other DT documents, and styles as you
+might with a PDF document.) DT offers a huge range of useful operations:
+making a new PDF by excising a range of pages from a larger PDF,
+wordcounts over documents of various kinds, and many others.</p>
+<p>Like Finder, you can toggle through a range of different views on the
+list of files on the left-hand side. You can even modify its orientation
+with respect to the document viewing panel (which can sit on the right
+as pictured above, below the file list, or be hidden).</p>
+<h1 id="organisational-concepts-in-dt">Organisational concepts in
+DT</h1>
+<p>There are two primary organisational concepts in DT:
+<strong>groups</strong> and tags*. Groups are essentially folders: nodes
+that exist as the parent to a collection of children documents. Tags are
+more flexible, and less hierarchical. They are distinct tokens that can
+be associated with any document, and subsequently used as composable
+filters to view associated documents.</p>
+<p>If you've read <a
+href="https://lachlankermode.com/associative-archiving-with-devonthink-1">part
+I</a>, you won't be surprised to hear that I almost never use groups,
+and use tags extensively. DT's tagging system is what makes it so
+effective as an engine for associative archiving. You can filter for
+documents associated with one or more tags in any database:</p>
+<img src="/static/filtered-by-tag.png" width="100%">
+
+<p>In addition to basic filters, i.e. for documents that are associated
+with a particular tag, you can compose arbitrarily sophisticated filters
+over a database to retrieve matching documents. These filters can make
+use of document tags; but also all of their other metadata, such as date
+created, date modified, document kind, to name just a few:</p>
+<img src="/static/with-metadata.png" width="100%">
+
+<p>In addition to this metadata query language, DT provides impressively
+effective full text search. This operates over documents of all kinds:
+PDFs and webarchives alike, any document that has text that DT's
+indexing engine can pick up on. (Certain versions of DT also provide
+support for OCR-ing PDFs that don't explicitly contain textual data.)
+Combining this with tags, I can query for documents in DT using
+arbitrarily complex directives, such as "Give me all PDF documents
+authored by Jodi Dean that contain the word 'manifesto' that have more
+than 10000 words". Results are ranked using a scoring algorithm, so that
+must relevant results come to this top. Searches can be done either
+succinctly via DT's query language in the search bar, or visually using
+the provided GUI.</p>
+<img src="/static/gui-search.png" width="100%">
+
+<h1 id="associative-archiving-in-devonthink">Associative archiving in
+DEVONthink</h1>
+<p>The three primitives of associative archiving as I outlined them in
+part I are: projects, associative tagging and an inbox. Here's how I
+implement each of these using DT.</p>
+<h2 id="projects">Projects</h2>
+<p>For each new project in DT, I simply add a new tag, and start
+attributing it to documents that exist in that project. Seeing all the
+documents in a project is then as easy as filtering for a tag.</p>
+<p>In addition to working as a filter, tags exist as distinct entities
+in DT. This means that they can be searched for, added in groups, and so
+on. One shelf that DT offers in its global sidebar (on the leftmost of
+the screen below) is a list of 'Favorites', to which you can add any
+kind of entity. By adding a project tag such as 'computing history' to
+my Favorites, I create a distinct workspace for that project, which will
+dynamically show me all documents within that project. From this
+workspace, I can then further search and filter over tags, metadata, or
+contents.</p>
+<img src="/static/tag-as-project.png" width="100%">
+
+<h2 id="associative-tagging">Associative tagging</h2>
+<p>I have a few special categories of tags in order to keep my archive
+clear and usable. The architecture of my archive's tags is an eternal
+project: I'm endlessly creating, renaming and consolidating tags
+together in order to make them more effective as filters and search
+concepts for my research. This dynamic change is possible in DT, because
+tags are more flexible than folders: deleting or renaming one won't
+remove associated documents or break other connections, it will just
+remove that tag.</p>
+<p>Project tags* - correspond to a project as described in the section
+above.</p>
+<p>Author tags* - a tag for the author of a document. This is a bit more
+robust than relying on DT inferring the appropriate metadata, I've
+found, as PDFs and webpages sometimes don't contain the information
+appropriately for DT to pick up. Author tags exist in my archive in the
+format "lastname, firstname", e.g. "dean, jodi". Any tag that includes a
+comma I treat as an author tag.</p>
+<p>Kind tags* - a tag that marks some quality of a document that I want
+to track(i.e. it's 'kind'). This ranges from my own interpretations of
+the document ('interesting', 'difficult'), to its genre ('literature',
+'journalism'), to its medium ('podcast', 'video'), to some parenthetical
+note or impending course of action ('toread', 'reading', 'unread').</p>
+<p>Journal tags* - the journal or publication source of documents ('duke
+university press', 'jacobin', 'verso'). As in the case of author tags,
+this is more resilient than relying on metadata inference.</p>
+<p>Field tags* - disciplinary or otherwise structuring fields in which
+documents exist. I mainly use these as ways of capturing pockets of
+technical literature in computer science, i.e. 'databases',
+'decentralised', 'p2p'.</p>
+<p>Course tags* - tags for seminars that I take or teach. All of the
+readings are tagged with the course tag ('MCM 2500 2020'). I used to use
+tags for particular weeks of content as well, but this gets complicated
+if certain documents are read in multiple courses (as they may be read
+in week 1 of one course, and week 4 of another). Instead I now rely on
+the course's syllabus (which can be found using the type tag 'syllabus')
+to preserve the course's progression.</p>
+<p>The basic guiding principle here is that my tag architecture should
+reflect the way that I conceptually order documents, so that retrieval
+from the archive is as simple as composing a few tag/concepts together.
+Search is not the only application though; wandering through my tag
+architecture can also lead to serendipitous discovery of links between
+different kinds of content. Keeping the archive 'flat' by default
+encourages this latter kind of discovery, and keeps categorisation from
+ossifying and stymieing creativity rather than supporting and
+structuring it.</p>
+<h2 id="the-inbox">The inbox</h2>
+<p>The final component of the associative archive is an inbox for
+incoming documents, which are either to be read or simply shelved for
+later. DT comes natively with the idea of a 'Global Inbox' that
+represents a holding shelf for documents before they go into whichever
+database.</p>
+<p>It is easy to drag-and-drop files such as PDFs if they're local into
+the inbox, and DT also provides <a
+href="https://www.devontechnologies.com/blog/20191022-safari-13">extensions</a>
+for Safari, Chrome and Firefox to easily 'clip' webpages into the
+inbox.</p>
+<p>I use DT's inbox as my primary way of keeping track of links and
+documents to read. Because it exists separately from the rest of my
+database, I can sync it with the mobile version of DT, <a
+href="https://apps.apple.com/us/app/devonthink-to-go/id395722470">DEVONthink
+To Go</a>, without having to worry about taking up all the space on my
+tablet with all my PDF documents (which can be stored on the Cloud and
+synced on demand if you prefer). My DT inbox becomes a 'Read Later'
+space for everything incoming from either the web or that folks have
+sent me as PDF.</p>
+<p>If I didn't have an e-reader, I would probably read PDFs on my ipad
+via DT To Go as well: but because I start at a glowing blue screen so
+much in any case, I make a point of reading everything I can on my e-ink
+<a href="https://remarkable.com/">Remarkable tablet</a>. PDFs basically
+sit in my DT inbox for as long as I'm reading them, as a kind of
+reminder that I need to, and then once I have finished with them on
+Remarkable, I export them and replace the placeholder documents in DT
+with the annotated versions.</p>
+<h1 id="to-be-continued">To be continued…</h1>
+<p>I only intended to have two parts, but in <a
+href="./devonthink-part-iii.html">Part III</a> I'll explain how I manage
+annotations on documents in DT. As I'll explain in more depth there,
+this is slightly beyond the scope of DT as an 'archive' per se, as it
+gets into how I use my DT archive to write and produce my own
+research.</p>
+<p>There might also be a part IV, in which I'll go into more detail
+about my PKB and writing process. Both my annotation system and my PKB
+are more freshly minted than my DT archive, and as such they're still
+developing and are subject to change and improvement. They work pretty
+well for me at the moment, though, so I'll write up their processes in
+the hope they're useful/interesting to some.</p>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a href="./">See all musings</a></li>
+      <li><a href="https://lachlankermode.com">About the author</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

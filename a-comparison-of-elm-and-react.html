@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2017-01-22" />
+  <title>A comparison of Elm and React (in code)</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+    body {
+      padding-bottom: 0;
+    }
+
+    /* Header styles */
+    .site-header {
+      padding: 1.1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .site-title a:hover {
+      color: #0066cc;
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      width: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .footer-links a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    /* Filter button styles */
+    /* Post list styles */
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .post-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      transition: all 0.3s;
+    }
+
+    .post-item.hidden {
+      display: none;
+    }
+
+    .post-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s;
+    }
+
+    .post-link:hover {
+      background-color: #f0f0f0;
+      border-color: #ddd;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .tag-DiH {
+      background-color: #ffeecc;
+      color: #996600;
+    }
+
+    .tag-SiP {
+      background-color: #e6f3ff;
+      color: #0066cc;
+    }
+
+    .tag-MiT {
+      background-color: #eeffee;
+      color: #006600;
+    }
+  </style>
+  <!-- Style for index filter -->
+  <style>
+  /* Filter button styles */
+  .filter-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    border-width: 4px;
+  }
+
+  .filter-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .filter-btn.active {
+    border-color: #0055aa;
+  }
+
+  .post-item {
+    transition: opacity 0.3s;
+  }
+
+  .post-item.hidden {
+    display: none;
+  }
+
+  .tag-label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tag-DiH {
+    background-color: #ffeecc;
+    color: #996600;
+  }
+
+  .tag-SiP {
+    background-color: #e6f3ff;
+    color: #0066cc;
+  }
+
+  .tag-MiT {
+    background-color: #eeffee;
+    color: #006600;
+  }
+</style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Lachlan's Musings</a></h1>
+</header>
+
+<header id="title-block-header">
+<h1 class="title">A comparison of Elm and React (in code)</h1>
+<p class="date">22 January 2017</p>
+</header>
+<div class="main-content">
+<!-- Filter buttons will be inserted here for index.html -->
+<p>Since React’s open source release in 2013, techniques inspired by functional programming have become an integral part of what many consider ‘best practice’ in front-end application development on the web. Functional programming as a concept has been around since the lambda calculus was invented to study computation in the 30s, and it became practicable through Lisp in 1958, and then further through ML in the 70s. Only now, however, is it finding its way into the mainstream. This post investigates functional techniques in contemporary ‘best practice’ front-end development by comparing an application in Elm to its equivalent in React.</p>
+<p>Disclaimer: <em>I think Elm is a lot more expressive and robust than the React equivalent.</em> </p>
+<p>What follows is a ‘translation’ of Elm’s syntax to its React equivalent, demonstrating what abstractions are shared between the programming dialects. By contextualizing the approach of each framework within the web’s history and the JS ecosystem, I argue that Elm offers a more concise and expressive syntax for than the ‘best practice’ React application, as both frameworks are intended to be used through the same architectural primitives. In addition, I also provide brief reviews of JS frameworks that employ a similar architecture (which I’ll simply refer to as the ‘Elm architecture’ from this point on), comparing them to Elm and pointing at how Elm is more concise and expressive in comparison, in the same way that it is for React. </p>
+<p>In order to clearly compare React and Elm, I’ve made a very simple ‘books’ front-end interface that makes an HTTP request, and visualises the returned JSON data (which represents some of the books I’ve read in the last couple of months). The code for these applications, as well as instructions to run them, are available in the folders elm-books and react-books in the following repo:</p>
+<p style="text-align:center;"><a href="https://github.com/breezykermo/elm-react-books">github.com/breezykermo/react-elm-books</a></p>
+<p>When referencing code in the following post, I’ll refer to a set of line numbers and the file in which the code can be found, implying the appropriate directory through the filetype. For example, the reference  <a href="https://github.com/breezykermo/elm-react-books/blob/master/elm-books/src/Main.elm#L1">[1-12 Main.elm]</a> refers to lines 1 through 12 in file the file elm-books/src. Alternatively, <a href="https://github.com/breezykermo/elm-react-books/blob/master/react-books/src/App.js#L2">[2,6-8 App.js]</a> refers to line 2 and lines 6 through 8 in the file react-books/src. Links to the relevant code in Github will be provided as they are here.</p>
+<h2>Background: React</h2>
+<p>The composition of components in a tree is an intuitive architecture for view interfaces, and some variation of it is implemented on almost every modern application platform that supports a UI. The browser, for example, constructs its view through a tree of HTML nodes. The iPhone and Android platforms use tree-based abstractions such as Views and View Managers to handle the pixels they render on-screen. The application as a whole is usually composed as one large ‘layout’ component that nests several child components (e.g. header, body, footer), each of which in turn may nest their own child components, and so on.</p>
+<p>In the browser's case, the tree of HTML nodes is represented as a data structure in the JS runtime. This structure is called the Document Object Model, more commonly referred to by its acronym, the DOM. The HTML view can be adjusted by modifying the DOM in the JS runtime, and these DOM updates are then transmitted to the actual HTML component tree. Modifying the HTML through the DOM is relatively computationally expensive, as the web was built on the premise of serving static documents, with JS and the DOM (i.e., the browsers utilities that allow dynamic updates) only added later. It is much less taxing on the browser to run JS that does not access or modify the DOM.</p>
+<p>We have come to expect much more of the web than static documents in 2017. In the popular imagination, many complex websites are conceived as analogues of native application platforms such as iOS and Android, and are expected to provide the same quality of interactivity and interface. This type of interactive web page is now known as a single-page application (SPA). There is an enormous collection of JS libraries that provide developers with utilities to manage DOM updates at higher levels of abstraction, and more intuitively. The most widely used of these is jQuery, which is a flexible collection of functions that access and update DOM nodes with an arguably more intutive syntax than the base DOM API. In many cases, a library will provide both a strongly opinionated toolkit (collection of functions and classes) for managing the DOM, and also one or more practicable development strategies which promote particular abstractions for managing complexity. We may call these strategic libraries frameworks.</p>
+<p>A successful framework insulates the developer from the DOM’s technicalities, and allows her to architect an application on higher level primitives than those that the DOM provides. For example, Angular 1.x, maybe the most popular full-bodied framework of the last 5 or 6 years, provides abstractions such as controllers and two-way data binding, along with many others, to allow the developer a Model-View-Controller (MVC) architecture for her applications. Controllers manage a certain scope of DOM nodes and their updates, and two-way data binding facilitates connecting one state of the screen to another state, for example the value of an input node to the text in an h3 tag.</p>
+<p>There has recently been a revision in the philosophy of DOM access used by many JS frameworks in the ecosystem. In 2013, Facebook open-sourced a JS framework called React, which was being used internally at Facebook. React has since enjoyed widespread adoption as a front-end framework in the tech industry. This crusade is led by its extensive use at well-respected companies like Facebook and Airbnb.</p>
+<p>React’s core design principle is stated on its website: “the key feature of React is the composition of components.” While frameworks like Angular 1.x were pitched as a holistic framework for the browser, where almost every conceivable part of the application--view declaration, state management, routing, dependency injection, and much more--is handled in some way by the framework, React declares itself only as a way to “build encapsulated components that manage their own state, then compose them to make complex UIs.” It does not strictly opinionated other essential aspects of the SPA, and this flexibility is one of the reasons for its popularity. As I will make clear in later sections, however, despite its interoperability with many types of development, React is designed with an a particular ‘holistic’ SPA architecture in mind.</p>
+<p>The primary way in which React differs from frameworks like Angular 1.x is in the way that it registers and performs updates to the DOM. The SPA is constantly updating different parts of the DOM, handling side effects such as user input and asynchronously delivered data. In a typical SPA, there are thousands of nodes in the DOM tree. When we recall that the DOM is really optimised for one-time render of documents, not an application of changing frames that updates constantly, it is evidently important that a framework for the browser be economical in the way that it performs DOM updates.</p>
+<p>As the complexity of applications on the web like Facebook increased, they discovered that “in our sufficiently large codebase, in our sufficiently large company, MVC [gets] really complicated, really quickly [for developers].” The cause of this complexity was the free, decentralised way in which updates to the DOM were being made, and the fact that the application state was distributed across the app in various different sections. As there were a lot of developers working on the codebase, it was very difficult for an individual developer understand exactly what was going on in the part of the application they were working on, because:</p>
+<ol>
+<li>The section was able to be modified by other parts of the application.</li>
+<li>It was very difficult to identify these modifications statically in the code, and even when they were happening in real time it was not always easy to trace which code or event had triggered the change.</li>
+</ol>
+<p>Facebook’s solutions to these problems were:</p>
+<ol>
+<li>Enforcing a single direction in which data can conceptually ‘flow’ through components for updates: down through the tree of nodes from the top.</li>
+<li>A central location where all actions relevant to a section of the application are registered, so that all events are traceable.</li>
+</ol>
+<p>However, unidirectional data flow (Facebook’s first solution) in a browser SPA is not an immediate solution. In unidirectional data flow, all updates exclusively enter from the top node of the DOM tree, and propagate down through child components. By this method, the <em>entire application</em> needs to re-render on every change. Given that it is computationally expensive to access the DOM via JS, this kind of complete re-render is super expensive.</p>
+<p>Through what is essentially a very clever hack, React provides developers with the abstraction of unidirectional data <em>and</em> keeps updates performant through the use of a <em>virtual DOM</em>. The virtual DOM is a virtual representation of the actual DOM that is much less expensive to modify, as it does not actually re-render the HTML nodes. With a virtual DOM, React only has to perform its re-render virtually, which is a relatively inexpensive operation. Using a clever diffing algorithm, React then calculates the necessary changes in the real DOM, and then performs those changes without having to re-render the entire real DOM. React’s diffing algorithm is, as it notes in its documentation, “an implementation detail. React could re-render the whole app on every action; the end result would be the same.” React's performant diffing algorithm is this crucial optimization that allows React to compete in performance with frameworks that directly manipulate the DOM, while mantaining the beneficial abstraction of unidirectional data for the developer's peace of mind.</p>
+<p>At the same time that Facebook released React, they also released Flux, an “application architecture for building user interfaces.” Flux provides state management abstractions that operate well in tandem with React components, as the library is also built around the virtues of functional programming, more specifically immutable data and unidirectional data flow. As John Reppy calls the JS event loop “a poor man’s concurrency” in his book “Concurrent ML”, the Flux architecture might be considered a poor man’s <a href="https://wiki.haskell.org/All_About_Monads#What_is_a_monad.3F">monad</a>. Flux uses stores to represent application state, and flushes this state through a view tree hierarchy (e.g., a network of React components). Modifications to the stores may be made through a set of pre-defined actions, and the stores then emit a change event, to which views (i.e. React components) may subscribe. A library called Redux has become a popular alternative to Flux, as it essentially provided the same beneficial architecture through more powerful functional abstractions. Most notably, it reduces the burden on the developer of managing store subscriptions (a complexity that the developer has to deal with in Flux). In Redux, changes to a store trigger an automatic refresh of the view tree, and the refresh is made efficient by use of the virtual DOM in React.</p>
+<p>The creator of Redux, Dan Abramov, was explicitly taking cues from the Elm architecture in order to reduce the conceptual complexity of Flux. I will be using Redux alongside React to express the Elm architecture, as React does not provide sufficient abstractions on its own. I will also be using some additional libraries with React and Redux to more expressively mirror the Elm architecture. Immutable.js allows the creation and management of ‘immutable’ objects in JS, which we will use in order to keep ‘immutable’ state in the Redux store. This allows for a more performant update of a large store. Redux-thunk is a library authored by Dan Abramov himself, which allows controlled dispatch of asynchronous actions to the Redux store. I will explain more about how these libraries work as they are used in the examples below.</p>
+<h2>Foreground: Elm</h2>
+<p>Though Facebook popularised the notion of unidirectional data flow in the browser through React, they by no means invented it. Nor were they necessarily the first to apply it to web’s domain through the virtual DOM. The idea of unidirectional data as an effective paradigm for state management is, in fact, an idea taken from the functional programming community. In purely functional programs, unidirectional data flow is implicit. There is no conception of ‘two-way’ data as there is in object-oriented programming; programs declaratively produce a result from a given input. In other words, purely functional programs are nothing more than simply referentially transparent functions that take an input and produce a value deterministically. Reducers, the mechanisms that manage updates in the Redux paradigm, are referentially transparent functions that take an input and produce a value deterministically.</p>
+<p>Elm is a functional language written by Evan Czaplicki for his senior thesis at Harvard in 2012 that was designed as a more robust way of developing GUIs for the browser. Programs are written in its own syntax, and the Elm compiler then produces browser-ready HTML, CSS and JS. As Czaplicki explains in his thesis, “the core language of Elm combines a basic functional language with a small set of reactive primitives”, where “reactive primitives” come from the domain of programming known as functional reactive programming (FRP). Inspired by techniques in functional concurrent languages such as CML, Elm provides the programmer with view abstractions directly comparable with those in React (it also uses a virtual DOM), as well as an elegant and robust approach to management in synchronous updates, data validation, and asynchronous requests. Elm has been actively maintained and developed by Czaplicki since 2012, initially at Prezi from 2013, and now at NoRedInk. Both of these companies actively use Elm in production.</p>
+<h3>Component Tree</h3>
+<p>As I have noted, both React and Elm make use of a virtual DOM in order to allow the conceptual re-render of the entire application at each change, while remaining performant in the update context of the DOM. One way in which both frameworks do this is by avoiding the re-computation of pure functions with unchanged inputs. Elm’s concurrent runtime system uses memoization to do exactly thiss. React’s ‘reconciliation’ algorithm—the algorithm React uses to diff the virtual DOM with the DOM—employs a similar technique. This is possible because the functions are deterministic: given an input, they always produce the same output. Though the virtual DOM/DOM diff is conceptually the same in both frameworks, Czaplicki demonstrates Elm’s superior performance and ease of optimisation in the elm-lang blog post, “<a href="http://elm-lang.org/blog/blazing-fast-html-round-two">Blazing Fast Html Round Two</a>.”</p>
+<p>In terms of their use, ‘components’ in Elm and React are very similar. It is worth nothing that React has three types of components: legacy components, ES6 components, and stateless functional components. The last of these demonstrate the way in which React components can be considered simply as functions <a href="https://github.com/breezykermo/elm-react-books/blob/master/react-books/src/components/Desk.js#L6">[6-17 components / Desk.js]</a>. The most conspicuous difference between Elm and React components is the different syntaxes of HTML markup. React, by convention, uses JSX, a syntactic sugar that allows components to read like HTML elements. Elm, on the other hand, uses a collection of functions, isomorphically named to suit the full set of HTML tags available. Each of these functions takes in two lists as arguments; the first is a list of attributes to be applied to the node, and the second is a list of its nested children. These functions are provided by the elm-lang / html library that ships with Elm. This library also provides similar functions for the relevant attributes that can be applied to each HTML DOM node, such as 'class'. Both provide a functional map utility for lists of components <a href="https://github.com/breezykermo/elm-react-books/blob/master/elm-books/src/Main.elm#L30">[30,62 Main.elm]</a><a href="https://github.com/breezykermo/elm-react-books/blob/master/react-books/src/components/Desk.js#L22">[22 components/Desk.js]</a>, though React requires an added key attribute that is unique from other keys in the containing list, as a marker for its reconciliation algorithm.</p>
+<p>Perhaps the most notable difference in component specification is the way in which view data is validated. React allows the optional specification of propTypes <a href="https://github.com/breezykermo/elm-react-books/blob/master/react-books/src/components/Shelf.js#L14">[14-16, 25-27 components/Shelf.js]</a>, which will be performed as runtime checks on data that is passed into the components, and which will throw a non-blocking error in the console if the checks fail.</p>
+<p>Let me quickly digress to talk about data validation in JS generally; responsible manipulation of data in vanilla JS is largely up to the developer. There are various JS utilities that address this concern in JS, such as Flow and TypeScript. Flow is an optional static type checker that can be inserted incrementally into a codebase, and TypeScript is a Java-like superset of JS that is strongly typed. However, it is difficult to use either of this tools fluidly with Immutable.js objects, as both are designed to type check regular JS types, rather than Immutable’s transformed ones. Certain Immutable types, such as Records, provide partial type checking, in that Records can restrict fields to a certain shape. However they do not enforce strict types for the values contained within the shape.</p>
+<p>In order to synthesise complete type checking in React, I am using a combination of Immutable’s shape enforcement, React’s runtime propType checking, and Flow’s static type checking for functions. When data is in the Redux store, it is validated through Immutable’s incomplete type assertions. When it reaches React, it is converted to JS (a relatively expensive operation, it is important to note, especially for large stores), and then validated in React components through PropTypes, and in functions through Flow. Note also that type definitions need to be repeated across Flow and React’s PropTypes API, which violates the ‘Do not Repeat Yourself’ principle of best practice development. If this sounds complicated, it is because it is--type validation is no simply feat in React.</p>
+<p>Elm, on the other hand, validates data entirely through its type system. As a strongly typed language, Elm will complain at compile time if the wrong arguments are passed to a function, or if data is used irresponsibly in components or elsewhere. Note that the type alias Book is used in function signatures <a href="https://github.com/breezykermo/elm-react-books/blob/master/elm-books/src/Components/Pure.elm#L29">[29,42,62 Components/Pure.elm]</a>. Type aliases allow the programmer to define their own custom records for elegant function types such as, <code>shelfDisplay : Book -&gt; Html msg</code>. This solution is noticeably both more robust and more elegant than the partial runtime type-checking I have synthesised in React.</p>
+<h3>Synchronous Updates</h3>
+<p>In both Elm and Redux, synchronous updates in the view occur reactively. Data expressing the application state is kept in an immutable structure separate from the view tree. Each time the structure is reproduced, the view tree re-renders through a virtual DOM diff. In Elm the structure is called the <em>model</em>, and in Redux it is called the <em>store</em>. </p>
+<p>Elm’s update function works by restructuring a Msg that possibly contains data, and produces a new model by addressing the previous model from this Msg <a href="https://github.com/breezykermo/elm-react-books/blob/master/elm-books/src/Main.elm#L37">[37-43 Main.elm]</a>. Redux sends actions to the store, which are generated by action creator functions <a href="https://github.com/breezykermo/elm-react-books/blob/master/react-books/src/reducers.js#L21">[21-25, 27-31 reducers.js]</a>. A delivered action reproduces the store’s structure through a reducer function <a href="https://github.com/breezykermo/elm-react-books/blob/master/react-books/src/reducers.js#L33">[33 reducers.js]</a>, which combines the action and its associated data and with the previous state, generating a new structure. Note that in Redux’s reducer, immutable data is not enforced by default, only strongly recommended, though I enforce it by only storing data in the store the Immutable library <a href="https://github.com/breezykermo/elm-react-books/blob/master/react-books/src/reducers.js#L38">[38,39 reducers.js]</a> . I have chosen to use regular JS objects outside the store, for the reason explained above of using Flow to statically type check function arguments.</p>
+<h3>Async</h3>
+<p>Elm’s update function also returns an optional <code>cmd</code> <a href="https://github.com/breezykermo/elm-react-books/blob/master/elm-books/src/Main.elm#L34">[34-52 Main.elm]</a> . A <code>cmd</code> allows Elm to perform side effects in its otherwise purely functional environment. Side effects include generating random numbers, and making server requests. When creating the model through the <code>init</code> function <a href="https://github.com/breezykermo/elm-react-books/blob/master/elm-books/src/Main.elm#L15">[15 Main.elm]</a> , Elm allows an initial <code>cmd</code> to be executed <a href="https://github.com/breezykermo/elm-react-books/blob/master/elm-books/src/Main.elm#L22">[22 Main.elm]</a> . <code>Cmd</code>s can then send <code>Msg</code>s to the update function after completing a side effect, for example a <code>NewShelf msg</code> after making an HTTPS request. The <code>cmd</code> is not executed when it is created <a href="https://github.com/breezykermo/elm-react-books/blob/master/elm-books/src/Main.elm#L66">[66-68, Main.elm]</a>, it is only executed when it is passed through the <code>update</code> function <a href="https://github.com/breezykermo/elm-react-books/blob/master/elm-books/src/Main.elm#L34">[34 Main.elm]</a>.</p>
+<p>Redux-thunk enriches Redux with an analogue of Elm’s <code>cmd</code>s, which it calls ‘thunks’. Thunks are action creators that return a curried function (rather than a JS object), which is then applied at the threshold of the store by middleware <a href="https://github.com/breezykermo/elm-react-books/blob/master/react-books/src/index.js#L11">[11 index.js]</a>. The middleware passes the function a dispatch function, so that the thunk can send its own actions to the store, and a getState function, which returns the store’s state at a given time.</p>
+<h3>Validating JSON</h3>
+<p>Because Elm is strongly typed, values that arrive in JSON cannot be used directly. Elm provides a validation library called <a href="http://package.elm-lang.org/packages/elm-lang/core/5.1.1/Json-Decode">Json.Decode,</a> and Czaplicki’s current company, <a href="https://www.noredink.com/">NoRedInk</a>, provides syntactic sugar in a library called <a href="https://github.com/NoRedInk/elm-decode-pipeline">elm-decode-pipeline</a>. Though this explicit decoding may seem laborious to developers who are used to using JSON directly in JS, it provides a data robustness that JS cannot achieve by itself. Many runtime errors that occur in web applications are the result of dud or mistyped data that the application has received from elsewhere, and thus data validation at its entry point makes for a generally more robust application. The Elm type system requires explicit handling of error scenarios, which results in virtually no runtime errors that are the fault of the front-end. (NoRedInk has been running Elm in production for more than a year, and are yet to find a runtime error that traces back to Elm code.)</p>
+<p>Creating a comparable validation mechanism in JS is possible, though it is laborious to make the checking rigorous, and there is an added layer of conceptual complexity. The developer has to handle the possibility of null values, a complexity that Elm’s decode libraries abstract through the <code>Result</code> type. The formulation is decidedly less elegant in JS <a href="https://github.com/breezykermo/elm-react-books/blob/master/react-books/src/decoders.js">[decoder.js]</a> <a href="https://github.com/breezykermo/elm-react-books/blob/master/elm-books/src/Decoders.elm">[Decoders.elm]</a> . (Note: there is possibly a more robust JS data validation library of this sort out there, please let me know if you know of one!)</p>
+<h3>Extra Comments</h3>
+<p>Elm also provides reactive subscriptions to values that vary over time, which are similar to streams in functional programming. These are a very useful higher level abstraction in Elm, and make it easy to create interfaces such as Kris Jenkins’ ‘<a href="https://github.com/krisajenkins/elm-rays">Rays</a>’. I have not implemented subscriptions in JS, though it would be possible to do so through a library such as RxJS, or Ractive.js. <a href="https://github.com/joshburgess/redux-most">This</a> is an interesting project that I haven’t looked at in depth.</p>
+<h3>Other Libraries</h3>
+<p>React is largely responsible for popularizing a component architecture with unidirectional data flow, as Facebook’s standing as a prestigious company encouraged many developers to practice web development with the framework (myself included). There are now a range of different libraries that employ this architecture in the JS ecosystem, each of which offers a slightly different angle on the Elm architecture. In this section, I review some of the more interesting libraries in this ecosystem, briefly comparing them to Elm.</p>
+<h5>Choo</h5>
+<p>Choo is a framework that provides the Elm architecture in a syntax that much more closely resembles vanilla JS. Choo’s API is almost completely isomorphic with Elm’s. Choo notes its point of difference in its readme: “contrary to elm, choo doesn’t introduce a completely new language to build web applications.” It uses a virtual DOM to perform updates, and employs a component architecture in templated HTML strings, rather than through a custom library (Elm) or JSX (React). It does not provide JSON decoding support.</p>
+<h5>Vue</h5>
+<p>Vue provides components to create a view interface, and its own library for unidirectional data flow called Vuex. This is very similar to Redux, though it places a greater emphasis on reactivity. However, Vue does not restrict the developer to this unidirectional data architecture, and it also provides many Angular 1.x features, such as two-way data binding. It provides support for TypeScript, though there are some types that this integration cannot infer. Vue suggests using HTML templates for its view syntax, which look like normal HTML with some extra Vue attributes on certain elements. It also supports JSX. It does not provide JSON decoding support.</p>
+<h5>Angular 2</h5>
+<p>Angular 2 is a remake of Angular 1.x using components as the core abstraction. Its API is very similar to React, though it is modelled as an all-purpose framework for creating front-ends, rather than only providing the view, and is a lot bulkier. Angular 2 does not opinionate your state management, much like React. It is possible to implement an application with Elm architecture through ngrx’s ‘store’ library, which is inspired by Redux. Angular 2 enforces use of TypeScript, and as a result is strongly typed. It does provide JSON decoding support, but it is not strictly typed on all values, as Elm is.</p>
+<h3>Elm as React/Redux generator</h3>
+<p>I was interested to see if it would be possible to automatically generate a React-Redux application from Elm code, to provide a general solution for creating a React-Redux analogue from an Elm program. This was always going to be mostly an intellectual exercise, as this generator would have dubious utility. As I have shown, Elm applications are more concise, generally more expressive, and more performant than React-Redux applications. Elm enables interop with JS through a language feature called ports, which allow the developer to use external JS libraries by sending necessary values directly to the Elm runtime. Because Elm is interopable with JS, there is no argument for React on the grounds that it has access to a better ecosystem in JS (an argument that often kills web application frameworks that are not written in JS). For me, Elm is an almost categorically better conceptual toolkit for creating robust front-end applications.</p>
+<p>An Elm generator would only be usable if your developers already knew Elm, and if that were the case there would be no reason why you wouldn’t just use Elm’s compiled output in production. The only practical way a generator might be useful would be in the context of pedagogy. As more developers are familiar with React and Redux than Elm, a systematic way of mapping between Elm and React-Redux programs might provide a valuable learning resource for developers looking to learn Elm from React-Redux (or vice-versa). </p>
+<p>The <a href="https://github.com/elm-lang/elm-compiler">Elm compiler</a> and most of its associated tooling is written in Haskell, and is available publicly on Github. The compiler operates through the command line tool called <a href="https://github.com/elm-lang/elm-make">elm-make</a>, which takes an Elm file and generates browser-ready JavaScript. Although I was came to understand a lot about the elm-compiler and elm-make codebases, I found it very difficult working efficiently with Haskell’s package and build manager, <a href="https://www.haskell.org/cabal/">cabal</a>. Simple modifications to the codebase can take minutes to build, and as Haskell is strongly typed, I found myself running into type errors simply trying to print values and find my bearing. For these reasons, I was not able to successfully modify the compiler to produce a React-Redux application from an Elm source. However, in the following section, I offer what insights and tools I produced through my investigation of Elm’s source code.</p>
+<h4>Elm Env</h4>
+<p>In order to get the elm compiler running from source on my computer, I ran the appropriate installations in a Docker container. Docker is a containerisation platform that provides a system of containers, which can be thought of as light-weight virtual machines. Containers are built from images, which are snapshots of a container’s starting state. I have created a public Docker image for a container in which you may develop and build new versions of the Elm source code. See the following repository for details:</p>
+<div style="text-align:center;"><a href="https://github.com/breezykermo/elm-env">github.com/breezykermo/elm-env</a></div>
+<h4>Elm Compiler Docs</h4>
+<p>Though I was not able to produce a custom generator for the elm-make interface, I learned a lot about the elm-make and elm-compiler codebases, in particular the means by which it generates JS from an Elm program. I have submitted much of what I learned as a pull request to the <a href="https://github.com/elm-community/elm-compiler-docs">elm-compiler-docs</a> repository, a resource for the Elm community that aspires to document the Elm compiler, independent of its creator and maintainer. This is useful for future contributors, as wrapping one’s head around a large codebase is a considerate barrier to entry. It is also useful reference for those looking to create a compiler in Haskell, as the Elm code provides a very good example of how Haskell can be used effectively. The PR can be found at the following repo:</p>
+<div style="text-align:center;"><a href="https://github.com/elm-community/elm-compiler-docs/pull/3">github.com/elm-community/elm-compiler-docs</a></div>
+<h4>Elm Make Generators</h4>
+<p>In addition to the above documentation, I have also created a separate repository with preliminary information on how to generate a custom ‘elm-make’ generator. The elm-compiler and elm-make codebases are wonderful resources for learning about Elm and compilers, as they provide a robust demonstration of how one language might compile to another. Further work here might involve coding generators for a range of different JS frameworks that use the Elm architecture—though I suggest this with the same disclaimer as I did the React-Redux generator; its primary use-case would most probably be as a learning resource.</p>
+<div style="text-align:center;"><a href="https://github.com/breezykermo/elm-make-generator">github.com/breezykermo/elm-make-generator</a></div>
+<h3>Works Cited</h3>
+<p>Reply, John H. Concurrent Programming in ML. Cambridge: Cambridge U Press, 1999. Print.</p>
+<p>Czaplicki, Evan. Elm: Concurrent FRP for Functional GUIs, 30 March 2012. <a href="https://www.seas.harvard.edu/sites/default/files/files/archived/Czaplicki.pdf">https://www.seas.harvard.edu/sites/default/files/files/archived/Czaplicki.pdf</a> accessed 01/09/17.</p>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a href="./">See all musings</a></li>
+      <li><a href="https://lachlankermode.com">About the author</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

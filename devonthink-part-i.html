@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Lachlan Kermode" />
+  <meta name="dcterms.date" content="2020-02-28" />
+  <title>Associative Archiving with DEVONThink (Part I)</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+    body {
+      padding-bottom: 0;
+    }
+
+    /* Header styles */
+    .site-header {
+      padding: 1.1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .site-title a:hover {
+      color: #0066cc;
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      width: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .footer-links a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    /* Filter button styles */
+    /* Post list styles */
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .post-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      transition: all 0.3s;
+    }
+
+    .post-item.hidden {
+      display: none;
+    }
+
+    .post-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s;
+    }
+
+    .post-link:hover {
+      background-color: #f0f0f0;
+      border-color: #ddd;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .tag-DiH {
+      background-color: #ffeecc;
+      color: #996600;
+    }
+
+    .tag-SiP {
+      background-color: #e6f3ff;
+      color: #0066cc;
+    }
+
+    .tag-MiT {
+      background-color: #eeffee;
+      color: #006600;
+    }
+  </style>
+  <!-- Style for index filter -->
+  <style>
+  /* Filter button styles */
+  .filter-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    border-width: 4px;
+  }
+
+  .filter-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .filter-btn.active {
+    border-color: #0055aa;
+  }
+
+  .post-item {
+    transition: opacity 0.3s;
+  }
+
+  .post-item.hidden {
+    display: none;
+  }
+
+  .tag-label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tag-DiH {
+    background-color: #ffeecc;
+    color: #996600;
+  }
+
+  .tag-SiP {
+    background-color: #e6f3ff;
+    color: #0066cc;
+  }
+
+  .tag-MiT {
+    background-color: #eeffee;
+    color: #006600;
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Lachlan's Musings</a></h1>
+</header>
+
+<header id="title-block-header">
+<h1 class="title">Associative Archiving with DEVONThink (Part I)</h1>
+<p class="author">Lachlan Kermode</p>
+<p class="date">28 February 2020</p>
+</header>
+<div class="main-content">
+<!-- Filter buttons will be inserted here for index.html -->
+<p>I've been using <a
+href="https://www.devontechnologies.com/apps/devonthink">DEVONthink</a>
+(DT) idly for almost two years now. For those who aren't familiar with
+the application, you can basically think of it as an extra layer on top
+of the Mac operating system for working with documents (PDF, images,
+RTF, etc) more effectively. It has inbuilt PDF viewing and annotation,
+facilities for syncing documents between computers and tablets (iOS
+only), powerful search capacities, lateral tagging to associate
+documents with each other, and– most importantly– a scripting API to
+create custom workflows.</p>
+<p>I've recently been ironing my reading, writing, and archiving
+workflow. It's designed primarily with seminars, essays, and book-length
+projects in the humanities in mind– but I've tried to make it general
+and flexible enough to work with other contexts, such as scientific
+reading, as well.</p>
+<p>This is a two-part post. Here in part I, I'll present a specification
+of how I want to read, write, and archive in abstract terms. In <a
+href="./devonthink-part-ii.html">Part II</a>, I'll detail the way that
+I've configured and customized DT to implement that spec in practice. I
+hope this can be helpful/instructive for some folks out there who
+similarly work with networks of citations in reading and writing
+projects, or who keep a personal archive of PDFs.</p>
+<p>A note for readers looking to use the configurations and scripts in
+Part II: DT is not free, and it's Mac-only. (I'm looking into
+virtualising it so that I can run it in Linux, but that project is yet
+to begin.) There is a generous 150-hour free trial, but after that
+you'll need to make one-off payment of $99 USD for the standard version
+on desktop. I'm more than willing to pay for good software like DT, and
+you should be too. Developing and maintaining software takes time and
+effort. I'm very grateful to the folks at DEVONthink keeping up with the
+community, and keeping the software feature-rich and flexible.</p>
+<h1 id="projects">Projects</h1>
+<p>My archival philosophy is built on the principle of projects. At any
+given time, I have a number of projects underway. A project might be an
+idea for an essay, an essay I'm actively writing, a coding project, a
+reading group, a talk I'm preparing- essentially any undertaking that
+collects together relevant links, quotes, notes, texts, and other
+files.</p>
+<p>These projects much more actively organise my archive than perhaps
+more familiar taxonomic concepts such as author or date. When I'm
+reading and writing, I store relevant information in my archive
+according to where it's going in my work– in projects– rather than where
+it's coming from. Say I'm reading a book, and a particular paragraph
+sticks out at me as a relevant reference for an essay I'm writing: I
+want to save that quote (and perhaps some relevant additional thoughts
+regarding why the quote is relevant) in the essay as a project. Provided
+I can get back to the correct page in the source document from what I
+save, I don't need to file the entire book in the project; just the
+relevant quotes and my additional annotations.</p>
+<p>When I go to work on a project, I can bring up its file of
+quotations, annotations, and my own personal notes. Quotations are
+hyperlinked to their source text, so that I can go to its origin to cite
+or further explore, but my main project workspace is a
+readily-accessible collection of relevant quotes and notes.</p>
+<p>A single note/quote could be relevant to arbitrarily many projects.
+Notes can exist in a project without a source document, thoughts that
+occur to me in the course of conversations and everyday life. The source
+documents might be either a PDF or a webpages. (Hardcopy books can't be
+hyperlinked, so quotes for these are just traditionally referenced by
+page number).</p>
+<h1 id="project-workspaces">Project workspaces</h1>
+<p>When I open up project workspace, I want to be able to easily and
+immediately view all of the relevant quotes and notes. I want to be able
+to dynamically search through the workspace in a number of ways: for
+particular text, filtering to only notes from a particular book, only
+notes from a particular author, only notes written after a certain date,
+etc. In other words, the project workspace search is where I need the
+more traditional taxonomic notions to organise my files. I don't want to
+have to click through nested file structures to get to relevant notes,
+but instead be able to flexibly filter and compose notes.</p>
+<p>The notes in projects should contain everything I need to use and
+expand the thought in a project. The project workspace is where I sift
+through these thoughts, putting them to use in the project, whether that
+be towards code, writing, conversation, or whatever else.</p>
+<h1 id="an-associative-archive">An associative archive</h1>
+<p>Projects are the main way to interface the archive for writing.
+However, I also want to be able to search through the archive as a
+whole, without limiting search results to the confines of a project.
+This search should, like the search in project workspaces, be similarly
+flexible and support search by author, by date added, etc.</p>
+<p>Crucially, I also want to be able to add durable filters to the
+archive's search space. For example, I might want to be able to see all
+notes and documents from a particular seminar, all those published by
+University of California Press, or all those that come recommended by a
+particular person. A document or note can have an arbitrary number of
+these tags, so that it can be infinitely associated with other items in
+relevant groupings.</p>
+<p>This notion of flexible and associative tagging essentially replaces
+the need for folders in the archive. Folders seem to tend towards nested
+hierarchical structures of organisation. I try to keep <em>as few
+hierarchical layers as possible</em> in my tagging system. This keeps me
+diligent regarding the tags I add to my archive, encouraging fewer of
+them and ensuring that the ones I do add are expressive and
+memorable.</p>
+<h1 id="the-inbox">The inbox</h1>
+<p>The only extra capacity this system needs is a clean, clear workflow
+for adding new documents to the archive, reading them, and then marking
+them as 'done'. I work through documents like I work through email. They
+enter into an inbox, and I read them there, creating new quotes and
+notes in different projects as I read. When I'm done, I flick them into
+the archive. Documents either come into my inbox fresh from somewhere
+else (the web or a hard drive). Or, if I'm returning to a document to
+read a different chapter, or to read one again, it might come back into
+my inbox from the archive. In other words, my inbox consists of all the
+documents I'm actively reading. If I'm adding a bunch of documents to my
+archive from elsewhere and <em>not</em> immediately planning to read
+them, they only hang out in my inbox for long enough to be tagged with
+any relevant filters, and are then filed away.</p>
+<p>The idea that a document can be either a PDF or a webpage is crucial
+to how this inbox works for me. For a long time I kept webpages to read
+in browser bookmarks, and PDFs elsewhere, which inevitably ended up in
+never actually reading bookmarked folders. Having a unified inbox for
+all my documents means that I <em>have to</em> work systematically
+through them to keep a clean inbox, just like an email inbox.</p>
+<p>Another important aspect my inbox is how it works with documents I
+read elsewhere. I read almost all my PDFs, EPUBs, and MOBIs on my <a
+href="https://remarkable.com/">Remarkable</a>, where I underline things
+and write in the margins. When I've finished with a document on my
+Remarkable, I bring it into my archive inbox, and browse quickly back
+through the marginalia. This practice of 'second-reading' my own notes
+on a text helps to solidify what I took from it, and gives me the
+opportunity to spin off relevant quotations and marginalia as notes to
+projects. I have a system for reading with my computer open as well,
+annotating and typing notes as I go through it, but I largely prefer
+reading elsewhere (outside, in the sun!) and then second-reading in my
+archive's inbox, before filing it away. Similarly, if I take notes in
+notebooks on my remarkable, I second-read them in my archive before
+filing.</p>
+<hr />
+<p>In <a href="./devonthink-part-ii.html">Part II</a>, I'll explain how I
+have implemented the archive explained here in practice with
+DEVONthink.</p>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a href="./">See all musings</a></li>
+      <li><a href="https://lachlankermode.com">About the author</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
