@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Alma Steingart, Axiomatics: Mathematical Thought and High Modernism (Introduction and Chapter 1)</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+    body {
+      padding-bottom: 0;
+    }
+
+    /* Header styles */
+    .site-header {
+      padding: 1.1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .site-title a:hover {
+      color: #0066cc;
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      width: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .site-footer a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .site-footer a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    /* Filter button styles */
+    /* Post list styles */
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .post-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      transition: all 0.3s;
+    }
+
+    .post-item.hidden {
+      display: none;
+    }
+
+    .post-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s;
+    }
+
+    .post-link:hover {
+      background-color: #f0f0f0;
+      border-color: #ddd;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+  </style>
+  <!-- Style for index filter -->
+  <style>
+  /* Filter button styles */
+  .filter-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    border-width: 4px;
+  }
+
+  .filter-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .filter-btn.active {
+    border-color: #0055aa;
+  }
+
+  .post-item {
+    transition: opacity 0.3s;
+  }
+
+  .post-item.hidden {
+    display: none;
+  }
+
+  .tag-label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tag-BgS{
+    background-color: #fda657;
+    color: #3e2815;
+  }
+
+
+  .tag-DiH {
+    background-color: #ffeecc;
+    color: #996600;
+  }
+
+  .tag-SiP {
+    background-color: #e6f3ff;
+    color: #0066cc;
+  }
+
+  .tag-MiT {
+    background-color: #eeffee;
+    color: #006600;
+  }
+</style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Lachlan's Musings</a></h1>
+</header>
+
+<header id="title-block-header">
+<h1 class="title">Alma Steingart, <em>Axiomatics: Mathematical Thought
+and High Modernism</em> (Introduction and Chapter 1)</h1>
+</header>
+<div class="main-content">
+<!-- Filter buttons will be inserted here for index.html -->
+<p>I started reading Alma Steingart's 2023 <a
+href="https://press.uchicago.edu/ucp/books/book/chicago/A/bo186192600.html">Axiomatics:
+Mathematical THought and High Modernism</a> in preparation for a reading
+group on Math(s), Philosophy, and History that I have been running for
+almost a year now. (We meet approximately bi-weekly, and wander from
+text to text based on the group's discussion and shared interest.)
+Steingart's narrative is deeply relevant to the <a
+href="./24-01-26.html">third stream</a> of my disseration, the question
+of mathematics in the 20th century, as it argues that there is an
+intellectual history of (the rise of) axiomatics in mathematics in the
+20th century that corresponds to modernist cultures of art, linguistics,
+sociology, and other disciplines that became infatuated with
+mathematical rigor in the ascent of "the postwar abstractionist theory
+of knowledge" <span class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+23)</span>. Concretely, Steingart promises (in the introduction) to
+provide an account of how topology and category theory can be understood
+as mathematical cultures that represent what she calls "high modernist
+mathematics" <span class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+20)</span>, how the utility of mathematics in various disciplines took
+on a more 'abstract' character after the war in projects such as game
+theory, and how the abstract character of axiomatic mathematics bears a
+relation to the "aesthetic autonomy" <span class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+22)</span> of artistic formalism and stucturalist anthropology, among
+other disciplines that were coming to be characterized by a flirtation
+with mathematization, during the Cold War era.</p>
+<p>The book's introduction frames this effort in intellectual history
+through a smattering of terms that constellate the 'bigger picture'
+which theoretically coheres each individual chapter's analysis of more
+specific historical actors and moments. It took me a second reading to
+begin to feel like they were adequately disambiguated, but I now feel
+that they give a helpful coherence to Steingart's project. The important
+terms clarified in the book's introduction, which I will develop in
+pairs in this b/log, are as follows:</p>
+<ul>
+<li>Abstraction</li>
+<li>Modernism</li>
+<li>High Modernism</li>
+<li>Axiomatics</li>
+<li>Mathematics</li>
+<li>Mathematization</li>
+</ul>
+<h1 id="abstraction-and-modernism">Abstraction and Modernism</h1>
+<p>Abstraction is the principal term that grounds Steingart's inquiry,
+and thus in the introduction she accordingly gives us two, mutually
+informing accounts of it: "one following abstraction's history as a mode
+of thought and the other as a marker of modernism" <span
+class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+6)</span>.</p>
+<p><img src="./img/history-of-abstraction.png" width="570" /></p>
+<p>The history of abstraction as a mode of thought (pp.6-10) is
+summarised above. Historically speaking (for Steingart), abstraction
+originates in a quandary regarding language's apprehension of the
+physical world. How do apparently universalizing words such as 'color'
+emerge from the world's particularity? Thought, it seems, must have to
+take something away from the world, to <em>abstract</em> something from
+it, in order to produce such concepts.</p>
+<p>The pivotal figure in this sketch of a condensed history is George
+Berkeley. Berkeley is "a staunch idealist" <span class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+7)</span>; yet he is <em>also</em> the first in Steingart's condensed
+history to strongly rebuke abstraction. For Berkeley, "reality consists
+exclusively of minds and their ideas" <span class="citation"
+data-cites="downingGeorgeBerkeley2021">(Downing 2021)</span>; yet
+Steingart also that Berkeley is notable in the history of abstraction
+precisely because he refuses to allow a conceptual space of ideas that
+is not firmly rooted in the phenomenological world of ideas <span
+class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+7)</span>.</p>
+<p>With Berkeley, the nature of the difference between idealism and
+materialism is revealed clearly as a contradiction, Steingart seems to
+suggest. She glosses over the philosophical specificity of Berkeley's
+claim by lumping him in with the empiricists Locke and Hume: "What
+Locke, Berkeley, and Hume made clear is that the problem of abstraction
+as an operative mode of thought touches directly on the foundations of
+geometry, the signification function of language, and the relation
+between perception and reason" <span class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+8)</span>. Fair enough here, perhaps, as Steingart has flagged up front
+that her concern here is not with the nuances of philosophical positions
+on the matter of abstraction so much as it is with painting a historical
+canvas to provide context for what she means by the term 'abstraction'
+in the rest of the book. The lineage presented (notwithstanding its
+suspicously British contrivance) <em>does</em> make clear what is at
+stake in abstraction: namely, the relationship between mind and matter,
+subject and object, idealism and materialism. Though this is a strange
+progression from Aristotle to Marx in some respects, it does set the
+stage for the way in which abstract mathematics dances around the
+politicality of its own position, an argument that Steingart will make
+with respect to her actors in the 20th century.</p>
+<p>The 'other side' of abstraction as a term in the book, we are told,
+is its apparent entanglement with <strong>modernism</strong> (p.10).
+There doesn't seem to be any notable distinction between modernity and
+modernism for Steingart, and this slippage allows Steingart to settle on
+Fredic Jameson's account in his 2013 book <a
+href="https://www.versobooks.com/products/1818-a-singular-modernity"><em>A
+Singular Modernity</em></a> as the backstop for the claim that modernism
+and abstraction are two sides of the same coin. I haven't yet read this
+book of Jameson's, and so I can't be sure of the following points. But I
+would hazard a guess that <em>modernity</em> for Jameson is structurally
+coupled with the problematic of the mangling of subject and object that
+Marx argues is a symptom ('fetish') of capital's installment as a social
+relation, and thus bemoans a philosophical history reaching back at
+least to Descartes if not further; whereas <em>modernism</em> refers
+instead to an aesthetic category that is historically specific to the
+20th century (whence Jameson's infamous 'postmodernism'). Modernism is
+not unrelated to modernity, which is why Steingart's account that "the
+association of abstraction and modernism is <em>not</em> a continuation
+of the long philosophical and political tradition I just outlined, but
+instead represents a clean break from it" <span class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+10)</span> rings a bit hollow for me.</p>
+<p>Steingart wants to segment (or perhaps we should say 'abstract')
+20th-century abstraction from its pre-20th-century forebearers it by
+recognizing the former as a "severing of abstraction from the
+phenomenological world" , a turn away from the "etymological root" of
+abstraction in its reference to something <em>of</em> the world <span
+class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+11)</span>. But isn't something of this operation already at work in the
+various idealisms that contest the empiricism of Hume, Locke, and
+Boethius in the 18th and 19th centuries? We could offer the names
+Descartes, Kant, and Hegel, for example, as a counter-history of
+Steingart's abstraction, a lineage which also culminates in an important
+sense in the first master of suspicion, Marx. All three of these
+thinkers were (it doesn't seem controversial to claim) concerned with
+the status of thought on its own terms, thought 'for itself' that was
+purefied of the confusion of phenomenological reference. This lineage at
+the least proves that the "crisis of referentiality" <span
+class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+12)</span> of the 20th century is not the <em>first</em> crisis
+abstraction suffered in philosophy. The curious triad of "linguistics
+and scientific philosophy" <span class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+12)</span> that Steingart gives to evidence abstraction's reversal of
+meaning in the 20th century– Ferdinand de Saussure, Albert Einstein, and
+Alfred North Whitehead– are brought into the historical-philosophical
+fray as if there is no precedent for the problem of the object, the
+subject, and the sphere of signification that necessarily traverses the
+two in language. It might be that 'modernism' names a distinct
+inflection of the constitutive problematic of modernity in the 20th
+century, but it is not clear to me that this inflection's distinction
+rests on its reversal of abstraction's etymological root in the
+phenomenological world.</p>
+<h1 id="high-modernism-and-axiomatics">High Modernism and
+Axiomatics</h1>
+<p>High modernism for Steingart is above all associated with David
+Hilbert and the crisis in foundations of mathematics. In other words,
+high modernism emerges as a dialect of modernism through the
+proliferation of the axiomatic method (associated with Hilbert) in
+mathematics and other disciplines. The <a
+href="https://en.wikipedia.org/wiki/Nicolas_Bourbaki">Bourbaki group</a>
+is given as "the most extreme example of mathematical high modernism"
+<span class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+17)</span>, as they emblematise a particular configuration of the
+relationship between mathematical theory and empirical reality. High
+modernist mathematics sees theory as a practice/process as an autonomous
+aesthetic domain. The high modernist attitude is fundamentally idealist
+in the sense that the domain of thought and theory is not borne of
+patterns or perceptions in the phenomenological world, but but
+autonomously, on its own terms. Mathematical theory for the high
+modernist is conceived <em>beyond</em> or <em>besides</em> the world,
+but is then tested by its applications <em>in</em> the world. This
+phenomenology of theory in mathematical high modernism is what gives the
+history of axiomatics' proliferation its seemingly contradictory
+characters, "denoting the rationalization of social life on the one hand
+and the promotion of an autonomous aesthetic sphere on the other" <span
+class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+18)</span>. For Steingart, game theory, communications theory,
+operations research, and computing (by which I assume she means the
+burgeoning discipline of Computer Science) all suffer this kind of
+speculative pragmatics that is both idealistic and utilitarian <span
+class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+19)</span>, and can all thus be united in axiomatics as a common
+rationaleand prehistory of the lot of them.</p>
+<p>Grouping these histories under the rubric of high modernism is
+evocative also, as Steingart notes, due to James Scott's use of the term
+as "a particularly sweeping vision of how the benefits of technical and
+scientific progress might be applied" <span class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+17)</span>. High modernism names a technocratic worldview that parades
+as thoroughly materialist, but which in fact is built on an unconscious
+idealist kernel that hazards scientific theory as autonomous (and thus
+unimpeachable) rather than grounded in the world and our flawed
+phenomenology of it. Perhaps it is this quality, i.e. the repression of
+an idealist basis for the claim of scientific validity, that better
+characterizes high modernism's break from the modernisms (and
+modernities) before it. Berkeley, Hume, and Burke would then be
+correctly identified as the prime philosophical actors in mathematical
+high modernism's prehistory, but for reasons to do with the way that
+they each repress in their own way <em>the necessary politics of
+abstraction</em>, enshrining some part of it as independent of the world
+and thus paving the way for its unimpeachability. (Kant would surely
+also feature prominently in this historical drama.)</p>
+<p>Though there has been a hazy indistinction between abstraction,
+modernism, and high modernism in Steingart's account in this
+introduction so far, with axiomatics we get a clear intellectual
+historical object (if such a thing can be thought to exist). Axiomatics
+are the methods associated with the spectral objectivity of
+<em>numbers</em>.</p>
+<blockquote>
+<p>What are numbers? Within the new regime of objectivity, neither the
+empiricist nor the idealist answer was acceptable. Numbers were not
+arrived at by counting, nor were they synthetic a priori. <span
+class="citation"
+data-cites="steingartAxiomaticsMathematicalThought2023">(Steingart 2023,
+13)</span></p>
+</blockquote>
+<p>Cantor goes curiously unmentioned, but we get the other usual
+suspects in Dedekind, Peano, Frege, and Hilbert. Steingart's argument is
+that the proliferation of axiomatics within mathematics and into other
+disciplines should be considered a high modernism in the history of
+abstraction.</p>
+<h1 id="mathematics-and-mathematization">Mathematics and
+Mathematization</h1>
+<p>The final two terms I wanted to disambiguate are these: mathematics
+and mathematization. While mathematics seems to usually refer to the
+actual disciplinary practice of professional mathematicians (and thus
+'mathematical high modernism' is an appropriate description of
+axiomatics' preponderance at universities in postwar America),
+<em>mathematization</em> seems to refer instead to the dissemination of
+paradigms in mathematics to other disciplines, such as sociology,
+anthropology, and linguistics, as well as how mathematical technique was
+consciously applied in these other disciplines. To the extent that
+Steingart's book is a story about mathematization, then, it is in the
+company of recent books such as Bernard Dionysus Geoghegan's <a
+href="https://www.dukeupress.edu/code"><em>Code: From Information Theory
+to French Theory</em></a> in that it accounts for how mathematics became
+the Hermes of a disciplinary pantheon conceptually divided into the
+humanities and the sciences. (Along with Computer Science, mathematics
+is– I think– one of the few undergraduate degrees in America that is
+offered both as a Bachelor of Arts and as a Bachelor of Science,
+depending on the granting institution.)</p>
+<p>Many now are taking issue with mathematization as a sort of root
+cause of much that is disagreeable politically about the contemporary
+world. It seems important to me that we give nuance to the claim, made
+by many these days, that it is mathematization (or Computer Science) as
+such that is the problem, if only because throwing out maths and
+computing tout court is not an option on the table. I intend to proceed
+with reading the rest of this book because it offers some such nuance in
+locating axiomatics as a specific culture in mathematics and tracing its
+social and (perhaps) political effects.</p>
+<h1 class="unnumbered" id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-downingGeorgeBerkeley2021" class="csl-entry"
+role="listitem">
+Downing, Lisa. 2021. <span>“George <span>Berkeley</span>.”</span> In
+<em>The <span>Stanford Encyclopedia</span> of
+<span>Philosophy</span></em>, edited by Edward N. Zalta, Fall 2021.
+Metaphysics Research Lab, Stanford University.
+</div>
+<div id="ref-steingartAxiomaticsMathematicalThought2023"
+class="csl-entry" role="listitem">
+Steingart, Alma. 2023. <span>“Axiomatics: Mathematical Thought and High
+Modernism.”</span> In <em>Axiomatics</em>. University of Chicago Press.
+</div>
+</div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>Found a typo? Have thoughts? <a href="mailto:lachie@ohrg.html">Email me!</a></p>
+    <ul class="footer-links">
+      <li><a href="./">See all musings</a></li>
+      <li><a href="https://lachlankermode.com">About the author</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
