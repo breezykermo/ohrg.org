@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Mladen Dolar, Rumors</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+    body {
+      padding-bottom: 0;
+    }
+
+    /* Header styles */
+    .site-header {
+      padding: 1.1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .site-title a:hover {
+      color: #0066cc;
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      width: 100%;
+      background-color: #f8f8f8;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .site-footer a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    .site-footer a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Table styles */
+    table {
+      margin: 2rem auto; /* Centers the table horizontally */
+      border-collapse: separate;
+      border-spacing: 5px; /* Adds space between cells */
+      width: 100%; /* Makes the table take up 80% of its container */
+    }
+
+    td {
+      padding: 12px 15px; /* Adds internal padding within cells */
+      vertical-align: middle; /* Vertically centers content in cells */
+    }
+
+    td:first-child {
+      font-weight: bold; /* Makes the code column bold */
+      text-align: right; /* Right-aligns the code column */
+    }
+
+    td:last-child {
+      text-align: left; /* Left-aligns the description column */
+    }
+
+    /* Optional: Add some styling to make it look nicer */
+    table {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    /* Filter button styles */
+    /* Post list styles */
+    .post-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .post-item {
+      margin-bottom: 1rem;
+      padding: 0;
+      transition: all 0.3s;
+    }
+
+    .post-item.hidden {
+      display: none;
+    }
+
+    .post-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      background-color: #f8f8f8;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.2s;
+    }
+
+    .post-link:hover {
+      background-color: #f0f0f0;
+      border-color: #ddd;
+    }
+
+    .post-title {
+      font-weight: 500;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+  </style>
+  <!-- Style for index filter -->
+  <style>
+  /* Filter button styles */
+  .filter-container {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    border-width: 4px;
+  }
+
+  .filter-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  .filter-btn.active {
+    border-color: #0055aa;
+  }
+
+  .post-item {
+    transition: opacity 0.3s;
+  }
+
+  .post-item.hidden {
+    display: none;
+  }
+
+  .tag-label {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .tag-BgS{
+    background-color: #fda657;
+    color: #3e2815;
+  }
+
+
+  .tag-DiH {
+    background-color: #ffeecc;
+    color: #996600;
+  }
+
+  .tag-SiP {
+    background-color: #e6f3ff;
+    color: #0066cc;
+  }
+
+  .tag-MiT {
+    background-color: #eeffee;
+    color: #006600;
+  }
+</style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <h1 class="site-title"><a href="/">Lachlan's Musings</a></h1>
+</header>
+
+<header id="title-block-header">
+<h1 class="title">Mladen Dolar, <em>Rumors</em></h1>
+</header>
+<div class="main-content">
+<!-- Filter buttons will be inserted here for index.html -->
+<p>First on the syllabus in Rohit Goel's current <a
+href="https://www.bicar.org/rumors-capitalism-conspiracytheories-register">BICAR</a>
+course is Mladen Dolar's 2024 book <a
+href="https://www.politybooks.com/bookdetail?book_slug=rumors--9781509561698">Rumors</a>.
+This short book is an extended and adapted version of Dolar's
+contribution to the 2022 edited volume <a
+href="https://www.jstor.org/stable/10.3366/j.ctv2b8rwxd">Objective
+Fictions: Philosophy, Psychoanalysis, Marxism</a>, and in its first
+sentence it lays out the topic at hand:</p>
+<blockquote>
+<p>To take rumors as a serious object of theoretical scrutiny and
+philosophical reflection seems like a contradiction in terms…. [C]an
+rumors acquire the dignity of a concept?… If one deals with such an
+unworthy and undignified subject, isn't this a sure way to ruin one's
+philosophical reputation? <span class="citation"
+data-cites="dolarRumors2024">(Dolar 2024, 1)</span></p>
+</blockquote>
+<p>Dolar has become something of a specialist essayist (in what he
+writes in English, at least). He published the delectable <a
+href="https://aksioma.org/pdf/Mladen-Dolar_Whats-in-a-Name.pdf">What's
+in a Name?</a> in 2014 as an extended essay associated with an art
+exhibition at the Institute for Contemporary Art in Ljubljana, and there
+is more than a passing resemblance between this book and
+<em>Rumors</em>. Both begin by rhetorically turning Western philosophy
+on its head. The first sentence of <em>What's in a Name?</em> is: "It
+all began with Plato" <span class="citation"
+data-cites="dolarWhatsName2014">(Dolar 2014, 6)</span>, and
+<em>Rumors</em>, after a brief digression through the winning
+explanation of how quantum physicists understand the eerie materiality
+of Higgs boson ('the God particle'), takes us to "the Socratic
+foundations of philosophy" <span class="citation"
+data-cites="dolarRumors2024">(Dolar 2024, 5)</span> in the distinction
+between <em>doxa</em> (opinion) and <em>epistēmē</em> (knowledge).
+<em>Doxa</em> will come to be associated with rumors over the course of
+the book, although it requires important clarifications. Opinions have a
+subjective source, someone tracibly responsible for their elocution.
+Rumors, on the other hand, distinguish themselves in that they run on
+the wind, which is to say autonomously, words that appear through the
+grapevine <em>without</em> a source. Rumors are a peculiar kind of
+language that circulate socially without a clear cause. Perhaps this is
+why, in the part of Vergil's <em>Aeneid</em> that Dolar cites after his
+Socratic introduction, "they go around like a breeze of air, stemming as
+if from nowhere" <span class="citation"
+data-cites="dolarRumors2024">(Dolar 2024, 6)</span>. Rumors are a
+substance that appear materially as an effect in the world, but with an
+epistemologically (and perhaps ontologically) obscured origin.</p>
+<p>So <em>Rumors</em> starts with Socrates, but not directly with his
+more respectable philosophical ideas (which we might find in <em>The
+Republic</em>, for example), but with the trial that led to his death. A
+more serious philosopher might have dismissed this incident as mere
+historical 'context' that only bears indirectly on what Socrates has to
+tell us philosophically; but Dolar is no such supercilious simpleton.
+Following Freud, perhaps– as well as Marx, I can't help but add, another
+master of suspicion– Dolar's inquiry is motivated by the idea that often
+the most apparently unimportant aspects of a thing are essential to what
+is at stake in their essence. Philosophy cannot be divorced from its
+historical situation: 'always historicize', as Jameson famously
+quipped.</p>
+<p>Crucially, however, philosophy can also not be <em>reduced</em> to
+its context. Whereas the identity-political criticism of Socrates would
+dismiss him as a White Man philosopher, and resultantly disregard all
+his ideas as tainted and in need of discarding, Dolar's approach is not
+so stupid. The more interesting approach to Socrates in the twenty-first
+century, Dolar's approach suggests, is not to castigate the man himself,
+but to suggest new ways to read him. What if Socrates' trial shows us
+the 'first' triumph of doxa over episteme, the opening scene of a
+history of modernity that can be characterised in the trading of blows
+between these two sides of the same coin of speech/language, of the big
+Other (episteme) and its shadow/symptom (doxa)? The history of Western
+philosophy does begin with Socrates (we do ourselves worse by denying
+it), but its beginning there does not necessarily mean what it has been
+made to mean, that only White Men can therefore do philosophy. Dolar's
+reading suggests something similar to the decolonial reading, that
+Socrates inaugurated a particular tradition of knowledge that has
+egotistically blotted out other ways of thinking in the history of
+philosophy, but it responsiblizes Socrates in a very different way,
+refusing to 'cancel' him in favor of a psychoanalytic generosity that
+sees him both as a subject capable of his own decisions <em>and</em> as
+a victim of his times.</p>
+<p>Dolar will repeat this gesture with throughout the book with a canon
+of other philosophical and literary greats– Vergil (<em>The
+Aeneid</em>), Shakespeare (<em>Hamlet</em>, <em>Henry IV</em>, <em>The
+Comedy of Errors</em>), Mozart (<em>The Marriage of Figaro</em>),
+Rousseau (<em>Confessions</em>, <em>Rousseau Judge of Jean
+Jacques</em>), Kafka (/The Trial, <em>The Castle</em>), Cervantes
+(<em>Novelas Ejemplares</em>), Gogol (<em>Dead Souls</em>), Kierkegaard
+(the Corsair affair), Heidegger (<em>Sein und Zeit</em>), Balzac
+(<em>Illusions perdues</em>). The works of each of these figures
+inflects the inaugural gesture of Socrates' trial. And it is usually the
+lesser considered works, or the lesser considered aspects of well known
+works that reveal this inflection. Doxa stalks episteme as its shadow,
+conceptually inseparable from it. Knowledge does not work if unfounded
+rumor does not cohere a social setting to aspire to it.</p>
+<p>The great literary and philosophical work that I want to examine in
+more detail with respect to Dolar's account of rumors here, though, is
+(<a href="./24-01-26.html">surprise!</a>) Karl Marx's <em>Das
+Kapital</em>. Dolar mentions Marx in "a small digression" <span
+class="citation" data-cites="dolarRumors2024">(Dolar 2024, 16)</span> in
+the section 'Rumors and Capital', which appears between the classics
+(Socrates and Vergil) and Shakespeare. Rumor's tempest recalls Marx's
+account there, Dolar tells us:</p>
+<blockquote>
+<p>An analogy can be drawn with another mighty entity that expands and
+multiplies seemingly by mere circulation, namely capital. There, too, we
+encounter the expansion of something that starts modestly, then
+increases as if through mere circulation, and is amplified into an
+overwhelming force, gradually engulfing everything as it goes along in a
+potentially limitless process. <span class="citation"
+data-cites="dolarRumors2024">(Dolar 2024, 16–17)</span></p>
+</blockquote>
+<p>It may seem like a sophistic nitpick, but I think it is important to
+qualify that the homology here should really be between rumors and
+<em>value</em> in capitalism. Capital is the name Marx gives to value in
+motion, and so Dolar is certainly not wrong. But the analogy here risks
+suggesting that, just as rumors have haunted our pretensions to a
+clear-headed construction of sociality since at least Socrates, capital
+too is a sticky symptom that is co-constitutive with sociality rather
+than a particular form of social (non-)relation that could theoretically
+be done away with. Put differently, by drawing an analogy between rumors
+and capital, one risks projecting the apparent trans-historical role of
+rumor as an excess or surplus of language that nonetheless coheres the
+social fabric (a role for which Dolar makes a convincing case) onto
+capital, making it into an essentially trans-historical entity, too.</p>
+<p>If we instead refine the analogy that sees rumors ghastly increase
+via circulation– ghastly, because it appears to contravene the third law
+of thermodynamics, entropy, whereby a value <em>decreases</em> as it
+moves– as homologous with <em>value</em>, then capital's stickiness as a
+symptom in society doesn't appear as <em>inevitably</em>
+transhistorical. Capital's pernicious philosohpical alchemy is to render
+a historically specific set of social relations based on property rights
+and the wage relation as transhistorically inevitable, to transmute
+essentially changeable social customs into apparently natural laws that
+misrepresent things 'as they actually are'.</p>
+<p>The commodity is Marx's paradigmatic example of this alchemy. In his
+infamous example of the dancing table (in the marvelous new English
+translation of volume I):</p>
+<blockquote>
+<p>Of course, the table isn't any less made up of wood for having been
+worked on, and the wood remains an ordinary sensuous ­thing. But the
+moment the­table begins to act as a commodity, it metamorphoses into a
+sensuous supersensuous­thing. It doesn't simply stand before us with its
+feet on the ground; rather, in its relations with all other commodities,
+it turns upside down and spins bizarre notions out of its blocky head,
+a­performance far more fantastic than if it were to start dancing of its
+own accord. <span class="citation"
+data-cites="marxCapitalCritiquePolitical2024">(Marx 2024,
+47–48)</span></p>
+</blockquote>
+<p>Objects come to appear imbued with the qualities of subjects (living
+humans), and contrariwise human laborers appear as if they are just
+another input feeding the autonomous subject of capital rather than as
+social ends in their own right. Commodity fetishism naturalizes the
+historically specific movement of value in capitalism, and makes the
+entire set of affairs seem the natural state of things. While Adam Smith
+was convinced that man was naturally selfish and thus capitalism an
+inevitable social relation, Marx denaturalized both this assumption and
+the conceptual system built on that premise in capital in <em>Das
+Kapital</em>.</p>
+<p>I believe that the homology between rumor and value in capitalism
+runs deeper than Dolar makes out in the short section that he attends to
+it in <em>Rumors</em>. Though he makes out that he will return to the
+point of the connection, he does so too hastily, in my opinion, in the
+final section of the book 'The demise of the big Other'. In that final
+section, he takes up Zupančič's idea of 'conspiracy without a conspiracy
+theory' to loop back to capitalism as "just such a conspiracy without a
+conspiracy– a conspiracy that imposes the rule of One that subtends all
+conflicts and diversity, but is not orchestrated from the center by some
+mastermind?" <span class="citation" data-cites="dolarRumors2024">(Dolar
+2024, 111)</span>. (Boštjan Nedoh has evocatively called this idea in
+Marx's theory of capital as '<a
+href="https://www.youtube.com/watch?v=KxJootyFJfU">a theft without a
+thief</a>.') Indeed, arguably what makes capital so sticky as a social
+relation is its ever-inventive <em>disavowal</em> of any responsibility
+for the immiserations that occurand seem to deepen over time according
+to it. To transpose this into more Marxian language, what is
+philosophically remarkable about value in capital as an entity is that
+it structurally covers over its own cause in the sphere of production,
+namely the wage relation's appropriation of surplus value from the
+worker under the prentense of a 'free and fair' relation. What is
+remarkable about capital is its "stemming as if from nowhere" <span
+class="citation" data-cites="dolarRumors2024">(Dolar 2024, 6)</span>,
+because its fetishism expropriates agency from human subjects and plants
+the appearance of that power in commodity objects. The process of its
+circulation covers over its real cause of production (labour) in the
+wage relation.</p>
+<p>Here lies the real tenet of the homology between rumors and value in
+capitalism, I think. Both exist only and because of a lost cause, in a
+subject whose ownership of some thing has been disavowed, and so the
+phenomenon (rumors or value in capitalism) appears as a thing in itself.
+The subject-object relation is distorted, and the truth of the (human)
+subject as the object's unconscious cause goes missing.</p>
+<h1 class="unnumbered" id="bibliography">Bibliography</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-dolarWhatsName2014" class="csl-entry" role="listitem">
+Dolar, Mladen. 2014. <em>What’s in a <span>Name</span>?</em> Aksioma -
+Institute for Contemporary Art.
+</div>
+<div id="ref-dolarRumors2024" class="csl-entry" role="listitem">
+———. 2024. <em>Rumors</em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-marxCapitalCritiquePolitical2024" class="csl-entry"
+role="listitem">
+Marx, Karl. 2024. <em>Capital: <span>Critique</span> of <span>Political
+Economy</span></em>. Edited by Paul North. Translated by Paul Reitter.
+Princeton: Princeton University Press.
+</div>
+</div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>Found a typo? Have thoughts? <a href="mailto:lachie@ohrg.html">Email me!</a></p>
+    <ul class="footer-links">
+      <li><a href="./">See all musings</a></li>
+      <li><a href="https://lachlankermode.com">About the author</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
