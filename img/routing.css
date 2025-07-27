@@ -1,0 +1,140 @@
+.panel.clickable:hover {
+  cursor: crosshair;
+  background-color: var(--bg-color);
+  color: var(--dark-grey-color);
+  border: 2px solid var(--grey-color);
+  /* NOTE: hardcoded against mb-10 */
+  margin-bottom: 8px;
+}
+
+.blog-content {
+  display: none;
+  position: absolute;
+  margin-left: calc(var(--column-width) + var(--horizontal-spacing));
+  width: var(--blog-width);
+  padding: 0 10px;
+  padding-bottom: 150px;
+
+}
+
+.blog-radio {
+  display: none;
+}
+
+:checked + label, :checked + .clickable:hover {
+  background-color: var(--dark-grey-color);
+  color: white;
+}
+:checked + label > .blog-meta {
+  color: var(--grey-color);
+}
+
+:checked + label + .blog-content {
+  display: block;
+}
+
+/** crucial responsive styles **/
+
+.mobile-header-blocker { display: none; }
+
+#header {
+  position: fixed;
+}
+
+#col-1 {
+  position: fixed;
+  top: 90px;
+}
+
+#col-2 {
+  position: absolute;
+  top: 90px;
+  left: calc(var(--column-width) + var(--horizontal-spacing));
+}
+
+#content {
+  flex-direction: row;
+}
+#header {
+  position: fixed;
+  width: var(--column-width);
+}
+
+#col-1 {
+  position: fixed;
+  top: 100px;
+  width: var(--column-width);
+}
+
+#col-2 {
+  position: absolute;
+  top: 100px;
+  left: calc(var(--column-width) + var(--horizontal-spacing));
+  width: var(--column-width);
+}
+
+@media (max-width: 1750px) {
+  body,  {
+    font-size: var(--mobile-font-size);
+    line-height: var(--mobile-line-height);
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-size: var(--mobile-header-size);
+    line-height: var(--mobile-header-height);
+  }
+  #content {
+    flex-direction: column;
+  }
+  #header {
+    position: static;
+    width: var(--column-width);
+  }
+  #col-1 { position: static; }
+  #col-2 { position: static; }
+  .panel {
+    max-width: var(--column-width);
+  }
+  .blog-content {
+    /* margin-left: 15px; */
+  }
+}
+
+@media (max-width: 1080px) {
+  #mobile-header-blocker {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    min-height: 25px;
+    max-height: 25px;
+  }
+  #header {
+    padding: 0;
+    width: 95%;
+    position: fixed;
+  }
+  .column {
+    margin: 0;
+    width: 95%;
+  }
+  .panel {
+    width: 100%;
+    max-width: 100%;
+  }
+  #col-1, #col-2 {
+    position: static;
+    width: 95%;
+  }
+  #col-2 {
+    margin-top: 80px;
+  }
+  .blog-content {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+  }
+  iframe {
+    max-width: 95%;
+  }
+}
