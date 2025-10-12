@@ -1,0 +1,96 @@
+#+title: Karl Marx: /Capital, Volume 1/ (chapter 21) 
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+Up first today, some notes from chapter 21 of Marx's /Capital/, volume I, his chapter on /Simple Reproduction/.
+I returned to this text (in its [[https://press.princeton.edu/books/hardcover/9780691190075/capital][new translation]]) at a writing retreat in Connecticut over the weekend.
+After sharing a work-in-progress regarding the outline of a theory of a subject in Marx, it was sagely pointed out to me that, in order to really convince a reader that such an outline exists, I should really show its substance in Marx's own writing.
+Up until this point, my argument has been constructed around instructive 'secondary sources' such as Moishe Postone's [[https://en.wikipedia.org/wiki/Time%2C_Labor_and_Social_Domination][Time, Labor and Social Domination]] and Alfred Sohn-Rethel's [[https://brill.com/display/title/26580?language=en][Intellectual and Manual Labour: A Critique of Epistemology]], both of which are book-length interpretation of /Capital/ by lifelong scholars of Marx.
+These two texts will remain key interlocutors in my argument's construction, but I cannot only channel Marx's Geist solely through second-hand accounts of him.
+
+My hesitancy to interpret Marx's text directly comes out of an abiding bias absorbed from the academic atmosphere which suggests that it is 'old news' to retrace interpretative grooves that have already been clearly marked out. 
+I have come to disagree quite strongly with this opinion, as it misses the real value of textual interpretation, which is not primarily to produce new knowledge from undiscovered sources, but to work through language and thought in and against the temper of a new time.
+But the 'innovation exhortation' nonetheless haunts me, aspiring as I am in part to American academic success, as one is expected in this climate to produce something new and newly useful. 
+It is much easier to argue for the newness in an interpretation of an object not yet interpreted than it is to justify yet another interpretation of well-trodden territory like Marx's /Capital/.
+In the latter case, one also has to be sure that one is not offering as 'new' an interpretation that has in fact already been offered in the literature.
+In Marx's case, there are some two hundred years of interpretation in almost every language imaginable. 
+How can one be sure that yet another interpretation is 'new'?
+
+One can't, in short.
+It is impossible to read all the relevant literature.
+It is impossible even to read most or a significant portion of it in the case of Marx-related studies.
+This is one of the ways in which the vocabulary of scientific discovery falls short in textual interpretation. 
+The /value/ of interpretation is not always surfacing something hitherto unknown to an imaginary readership that has already read everything hitherto published.
+The fantasy of such an academic production is not only an impossible task, but it also has a fantasmatic audience.
+No-one is perfectly literate in this exhaustively imagined way!
+A better objective, I am coming to realize, is to synthesize something for a significant portion of readers that is not yet readily visible.
+Thus I am turning my attention to re-reading Marx's /Capital/, as it seems to me that there is much that has been 'lost' to the zeitgeist regarding this text's critical value, even as it is nominally the most common coin in contemporary critical-theoretical projects. 
+
+* 21: Simple Reproduction
+(In the older translations, this is chapter 23.)
+
+David Harvey notes that this chapter zooms out from has preceded it in volume I in terms of analytic perspective: 
+
+#+begin_quote
+The analysis so far has been concerned solely with the production of surplus-value as a one-shot event. But things look rather different when examined as a continuous process ongoing over time. [cite:@harveyCompanionMarxsCapital2018]
+#+end_quote
+
+At this stage in /Capital/, a reader has been made familiar with key concepts such as commodity $C$, money $M$, value, labour-time and so on, and the movement of value has been atomistically conceptualised in slices such as $M-C$ (a purchase), $C-M$ (a sale), $M-C-M$ (the capitalist equation) and $C-M-C$ (the consumerist equation). 
+These are all expressions of moments in the entangled processes of the production and circulation of value as analytically captured by Marx. 
+These forms of appearance are critical terms; but they are also "phenomena that conceal the inner working of [capital accumulation's] mechanism" [cite:@marxCapitalCritiquePolitical2024 p.520].
+
+Along with the conditions of production (and circulation) come conditions of /re/-production.
+Reproduction is the sphere of activities that are not consciously counted in capital's calculus and as such cannot appear to matter in the context of its logic. 
+Marx's argument in /Capital/ is that capital is a synthetic totality, by which I mean to say that though it is self-consciously totalizing-- that is, it appears to itself as fully accountable-- in reality it represses a range of moments that are actually the unconscious foundation of its character. 
+
+The big elephant in the room here is /labour/.
+Capital considers labor as a relatively unremarkable input that contributes to its valorization process in production and circulation. 
+The capitalist starts with some money; he uses it to purchase variable capital (labor-time) and fixed capital (machinery) to kick off the production of some commodities; and when he sells those commodites he skims the surplus value off the top that has naturally been generated by his bringing those pieces of capital together to work in cooperation.
+Marx's project thus far has been to logically reconstruct and conceptualize the elements of this production process so as to show that there is something problematic about this 'natural' interpretation of the process of accumulation, and that something is the way in which labour gets measured as a contribution to the surplus value returned.
+
+Thus Marx locates the /logical/ beginning of capital's valorization:
+
+#+begin_quote
+The purchase of labor-power for a certain amount of time initiates the production process. The initial moment recurs when the time is up, and a production period of a certain length has come to an end, whether a week, a month, or longer. But the worker isn't paid until after his labor-power has produced its effect, realizing in commodities both its own value and surplus-value.... The labor that the worker performs next week or next month will thus be paid for with the labor he performed the previous week or the previous month. [cite:@marxCapitalCritiquePolitical2024 p.522]
+#+end_quote
+
+The worker necessarily advances his labor-time as a commodity to the capitalist due to the temporal structure of the *wage*.
+This advancement is the logical beginning of the production process, Marx claims, as it is the moment in which capital's particular structure of valorization becomes possible.
+It is the parceling out of discrete periods in continuous time effected by the structure of a wage that makes valorization possible, as this structure allows some portion of labor-time to subconsciously slip between the contract's positions.
+The worker appears to be paid fairly for his time at some set rate an hour; yet in the very motion of this apparently free and fair conscience, some labor-time nevertheless slips away from him to the capitalist, unpaid. 
+Thus the unconscious advance of the worker's labor-time to the capitalist that is effected by the structure of the wage is the gap in which surplus value is made to appear.
+
+This apparently fair but structurally imbalanced relationship between the worker and the capitalist is the fundamental false consciousness of capital's logic. 
+It is what produces the gap into which capitalist ideology can pour its misconception of equality into the consciousness of both worker and capitalist, even as the former's condition becomes more and more immiserating, and the latter's more and more lavish.
+This structural imbalance allows capital to take its place in consciousness and society as 'alien power' that nonetheless also feels natural and fair.
+Take the following (very difficult) passage:
+
+#+begin_quote
+It is the worker himself, then, who constantly produces objective wealth as capital, an alien power that exploits and rules over him, while the capitalist just as constantly produces labor-power as a subjective, abstract source of wealth that has been separated from its own means of objectification and realization and exists only in the worker's body-- in short, the capitalist just as constantly keeps producing the worker as a wage laborer. This constant reproduction or perpetuation of the worker is the /sine qua non/ of capitalist production. [cite:@marxCapitalCritiquePolitical2024 p.525]
+#+end_quote
+
+Despite appearances, it is the workers themselves who are capital's "most essential means of production" [cite:@marxCapitalCritiquePolitical2024 p.527].
+The capitalist class cannot produce surplus value through an apparently fair commodity production and circulation process without their moblization of workers through the structure of a wage.
+Wages are the 'invisible chains' that reinscribe class distinction in capitalist society, replacing the conspicuous chains that patrolled that border in pre-capitalist society:
+
+#+begin_quote
+The Roman slave was fettered with chains. Invisible ties bind the wage laborer to his owner: he merely seems to be independent. The constant turnover among the worker's individual wage masters and the /fictio juris/ of his contract keep this semblance in place. [cite:@marxCapitalCritiquePolitical2024 p.528]
+#+end_quote
+
+The wage contract is a /fictio juris/, a false premise taken as true by capital logic to reach its desired outcome: the accumulation of surplus value.
+Capital has reinterpreted the master-slave dialectic and transsubstantiated it terms, leading to a situation in which both master (now capitalist) and slave (now worker) have developed a self-consciousness of freedoom, yet both remain unconsciously in bondage to the desires of an alien power beyond their control. 
+The capitalist is driven to accumulate, as he occupies the position of $M-C-M′$ in the movement of value, driven to use his money to produce more than he originally put in, the elusive moving target $′$ that can never be satisfactorily achieved.
+Even when he has accumulated more money than he knows what to do with, more than he needs to produce a fine quality of life, he is driven towards more money nonetheless.
+The worker on the other hand is driven differently, but towards a similarly unachievable infinity in the position of $C-M-C′$, driven to commoditize herself as labor-power in order to acquire more and more commodities, even at the expense of her (quality of) life. 
+
+Thus is humanity made a machinery in service of capital's reproduction rather than its own, caught in:
+
+#+begin_quote
+a self-perpetuating trap, continuously thrusting the one person back into the commodity market as the seller of his labor-power while continuously transforming his product into the other person's means of purchasing.... [I]t also produces and reproduces the capital relation, with the capitalist on one side and the wage laborer on the other. [cite:@marxCapitalCritiquePolitical2024 p.532]
+#+end_quote
+
+The seemingly benign concept of a commodity (unfolded in the opening chapter /Capital/) has somehow grown into a monstrous misapprehension of subjectivity, entangled in an external, objective process of accumulation for its own sake.
+Hegel's subject [Subjekt] has become a substance [Substanz], but not in a way where it can find its way back again to the first term. 
+Subjectivity is instead ensnared as a substance that kicks off and sustains the inorganic motion of the accumulation of value for its own sake, reducing humanity to a shadow of itself in the unthinking conceptualization of labor as nothing more than a replenishable repository of labor-power.
+Thus is labor the /sine qua non/ of capital.

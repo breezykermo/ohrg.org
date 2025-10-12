@@ -1,0 +1,63 @@
+#+title: Streams of thought in my dissertation 
+#+options: author:nil date:nil timestamp:nil
+
+The posts on this website have one or more of the following tags:
+
+| ~WiG~  | writing in general                                   |
+| ~BgS~  | before graduate school                               |
+| ~DiH~  | the question of dialectics in history                |
+| ~SiP~  | the question of science in psychoanalysis            |
+| ~MiT~  | the question of mathematics in the twentieth century |
+
+
+The first of these is the most generic.
+'Writing in general' is how I refer to musings that don't expect any particular interest or specialization of the reader.
+They are designed to be broadly readable and digestible to anyone.
+
+The remaining tags or 'streams' require a bit more explanation.
+As a third-year graduate student in MCM at Brown (see [[file:24-01-25.org][here]] for more context), I have composed and am reading three separate lists of books and articles.
+Each of these lists represents a field of thought in which I want to participate, giving them the name 'fields lists'.
+In many graduate degrees, fields lists-- and the fields examination that one sits as their culmination-- are determined by faculty or the department, as the passing of the exam is supposed to represent a shift in one's status from being a PhD /student/ to being a PhD /candidate/.
+
+This terminology is somewhat particular, I believe, to the U.S. 5-8 year PhD model.
+Students entering the U.S. PhD are not generally required to have a Masters degree, as a transitional Masters is achieved in the first 2-3 years of a PhD, during which period the student takes classes and assists in teaching.
+Around the three-year mark, students properly elect their PhD's focus, select advisors, and move away from taking classes in an exploratory mode toward researching and writing parts of the dissertation proper.
+Adam Tooze, in an episode somewhere in his [[https://podcasts.apple.com/us/podcast/ones-and-tooze/id1584397047][Ones and Tooze]] podcast, describes the difference between the U.S. and the U.K. upper ed model as similar to the distinction between getting street food at a bazaar and fine dining with a multi-course meal.
+In the U.S., PhD students are expected to select from a smorgasbord of academic possibilities-- represented by faculty across different departments-- in their first few years; whereas in the U.K., students' work is examined by faculty-qua-food-critics.
+It is certainly interesting that in one half of this analogy, students are the gastronomers; whereas in the other, they are comestibles themselves.
+
+The graduate program in [[https://mcm.brown.edu/][MCM]] is built in the image of students as gastronomers par excellence.
+Not only are we entitled to select our own advisers, we are also given the option to conjure our own fields lists.
+These two freedoms go hand-in-hand, in a sense, as a major constraint on how one can compose a list is whether or not it will be possible to find a faculty member who will advise on it.
+The fields examination in MCM is a three-hour affair, interview-like, during which one's advisers 'assess' a student's literacy in the list's contents.
+The form and intensity of this assessment depends largely on the temperament of one's advisers.
+
+My primary adviser is [[https://en.wikipedia.org/wiki/Joan_Copjec][Joan Copjec]], with whom I have a list titled: *The Question of Science in Psychoanalysis*.
+Though I have only become seriously interested in psychoanalysis recently-- in the last academic year, through the influence of friends and in taking a class with Joan-- it is quickly coming to be something of a backbone in my dissertation's inquiry.
+Whereas it is easy to misrecognize psychoanalysis as a lascivious enterprise bent on locating illicit sexual thoughts as the underbelly of all conscious life, it is in actual fact a rich philosophical tradition that critically inflects a range of staid attempts to reckon with the complexities of human life without accounting for desire in any way.
+Philosophy from a psychoanalytic standpoint works to think through the world equipped with notions such as the unconscious, drive, desire, and so on; all of which gesture towards the opacity of certain elements in the human subject and its civilizations.
+More on these particulars later, no doubt.
+
+My first list's project is to study the question of /science/ in psychoanalysis: two terms that have a troubled and intimate relation to each other.
+Freud infamously thought himself a man of science, and painted psychoanalysis as a scientific enterprise.[fn:1]
+If this characterisation is curious to the 21st century imagination, it is because "science" has been imagined as an undertaking in cold, hard, objective fact.
+The psychoanalytic bestiary of dreams, repression, and sexual fantasy is forcibly held at a distance from the safe havens of rationality, logic, and science: because to admit a permeable lining between the two would be to threaten the security of one's conclusions.
+
+My first list is interested in this lining exactly.
+Jacques Lacan-- a philosophical reader of Freud to whom we will certainly return-- reportedly designated the psychoanalytic enterprise a calling card at the doorstep of Science, capital S.
+The premise of psychoanalysis as a philosophical project-- that rationality's ghosts cannot simply be banished, but haunt the whole kingdom of thought and action-- is a critique of the commonplace scientistic doctrine that everything, in principle, can (eventually) be known.
+
+My second list is with [[https://en.wikipedia.org/wiki/Peter_Szendy][Peter Szendy]], and is titled: *The Question of Dialectics in History*.
+The scope of this list is, in some ways, much easier to explain than the first: by way of it, I want to cultivate an understanding of Marx's adamantine three-volume book, /Capital/.
+My focus in this gargantuan task is on the status in that work of what will come to be theorized (later in the 20th century with Freud, Lacan, etc) as the psychoanalytic subject.
+In terms more germane to Marxian literature, I am asking about the status of subjective /freedom/ in Marx's thought in general, and in the philosophical project of capital in particular.
+(There is a dimension of overlap between this list and my first on psychoanalysis which addresses work written at the interface of Marx and Lacan; these two names both acting as stand-ins for the philosophical projects of the critique of political economy and psychoanalysis respectively.)
+
+My third and final list is with [[https://en.wikipedia.org/wiki/Suresh_Venkatasubramanian][Suresh Venkatasubramanian]], and is titled: *The Question of Mathematics in the 20th Century*.
+It consists chiefly of names such as Alan Turing, Gödel, Von Neumann, and other early 20th century mathematicians who built the conceptual basis for the emergence of the discipline of computer science.
+This list will be, I think, something of the substance of the main course in my actual dissertation: the expected confection that comes out of all this degustation.
+The idea is to write some thoughts on the question: what is the relation between computing and capital, in the 20th century and now?
+Has it changed since the emergence of the computer's concept, or is it structurally the same?
+What bearings can such an undertaking provide (if any) for the critical apperception of the place of the computer in society today?
+
+[fn:1] For an introduction to this idea as well as a gateway drug into Freud and psychoanalysis in general, I can recommend the [[https://ordinaryunhappiness.buzzsprout.com/2131830/13941737-unlocked-14-standard-edition-volume-i-part-1-freud-goes-to-paris][first episode]] of the Ordinary Unhappiness podcast series, /The Standard Edition/.

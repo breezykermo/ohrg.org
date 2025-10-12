@@ -1,0 +1,122 @@
+#+title: Erich Hörl: /Sacred Channels: The Archaic Illusion of Communication/ (chapters 1 and 2)
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+Last week I read the first two chapters of a book recommended to me quite some time ago by a friend: [[https://www.aup.nl/en/book/9789089647702/sacred-channels][Sacred Channels: The Archaic Illusion of Communication]] by Erich Hörl.
+The book was published in English in 2018, but was defended as a dissertation in 2003, and published in German in 2005.
+Friedrich Kittler was the dissertation's second reader, and we learn from the introduction that the manuscript was also read by Bernhard Siegert and André Gorz, among others.
+Some pretty heavy media-theoretical hitters in the German-speaking context!
+
+I am opening this book at last to begin working my way through the history and philosophy of mathematics that is relevant to my dissertation.
+The lineaments of this relevance are, broadly speaking, those that trace the emergence of set theory around the turn of the 20th century, and its culmination in the crisis of foundations orchestrated by the young Kurt Gödel when he published /Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme/ - 'On Formally Undecidable Propositions of Principia Mathematica and Related Systems'. 
+This curious and relatively obscure turn of events in the history of mathematics has been heralded by some, the author of the text under consideration in this b/log included, as the climactic moments in the most fundamental epistemological transition in philosophy and thought at large of the last few centuries; the coming of modernity.
+
+* Thinking and so being
+What does set theory and formalist mathematics have to do with philosophical modernity?
+Hörl's claim is that, from as early as the 1830s, a "purely symbolic thinking clearly began to take shape in the sciences" [cite:@horlSacredChannelsArchaic2018 p.33]
+Symbolic thinking is marked in distinction to its precursor, intuitive thinking, which is construed as the reigning and preceding paradigm in mathematical thought writ large.
+
+For Hörl, the "great transformation from the intuitive to the symbolic" [cite:@horlSacredChannelsArchaic2018 p.47] is a shift in the relationship between Thinking and Being.
+I capitalise these two terms here to indicate that they designate presumed universal notions, rather than simply historically contingent activities of thinking and being.
+
+Thinking (with a capital T) is the realm of appearances, the full breadth of what is sensible to the subject.
+The subject, here, is a /human/ one in the sense that human is the word given to all those entities capable of social life by dint of their capability for language.
+Language, here, too, is not 'English' or 'Spanish' exclusively, but a more holistic category that gets at the curious phenomenon we often now call communication.
+Language is not language in the strict linguistic sense of having a grammar, nouns, and verbs, but is rather something more curious and not so easily locatable as a set of articulate rules.
+Language is the name for the many syntaxes of sociality, the protocol(s) through which subjects cooperate, live together, and are insufficient to be themselves alone.
+Thinking is the domain of what is cognisable and apparent in and as language, the full sensibility of the world as it can be Thought.
+
+Being, on the other hand, is what the world actually is, what actually exists.
+It is the tree that falls in the forest without anyone around to hear or think it.
+It is more durable and persistent than what can be Thought, to some minds, as what /exists/ in the world is not necessarily coincident with what /appears/ to those of us subjects that are thinking within it.
+
+If the distinction between Thinking and Being seems finicky, you are not alone in this complaint.
+Whether or how Thinking and Being overlap is a core question in philosophy.
+*Ontology* is the investigations of what exists, to delimiting the domain of Being.
+*Epistemology* is the complementary investigation of what can appear transparently to subjects in the world, of the borders of the domain of Thinking.
+The articulation of the latter usually (always?) imples the former.
+Epistemology can really only be defined by nominating whether or not there is anything that exceeds it.
+The exceptions in Thinking, things which exist but which cannot be Thought, are the stuff of ontology.
+
+* Intuition is the key to everything 
+For Hörl, the ascendance of symbolic reasoning in mathematics in the early 19th century is a feature of a shift in the tectonics of Thinking and Being.
+Hörl is a media theorist and not an historian, and he does not clearly delimit the spatial parameters of what he sees as the age of symbolic reason.
+(Is it only or primarily in Europe?
+Is it as intense in France as it is in Germany? 
+Does it suffuse the intellectual scene in Kenya or Kyoto in an equivalent or noticeable way?)
+But the general idea is that, before this age, the cutting edge of ontological proposition was secured through an appeal to *intuition*.
+
+Intuition is a term laden with Kantian suggestion, as it [[https://philosophy.stackexchange.com/questions/41579/what-is-intuition-for-kant][played a complicated role]] in Kant's philosophical system.
+The sum of it as relevant to Hörl's argument is as follows.
+Kant was adamant that there were some aspects of Thinking that we could take to be universal, that is, that we could take to exist not just in particular instantiations, but as general truths for all subjects.
+The echelon of Thinking that Kant reckons universal is specifically that of Reason, and it is the task of philosophy to shore up the boundaries of Reason so that its factions do not contradict themselves; "to expose the illusions of a reason that forgets its limits, and by sufficiently clarifying our concepts to recall it from its presumptuous speculative pursuits to /modest but thorough self-knowledge/" [cite:@ewaldKantHilbertVolume1999 p.147].
+Whatever the specific cartography of this universal Reason's shores, Kant was sure that Thinking could eventually map them.
+There are some kinds of Thinking, in other words, of which we can be sure.
+The surety of Reason's forms appear to us through /intuition/, a capability (of sorts) that allows subjects to make out the shape of structures that undergird the many specific sensualities that appear in the world.
+Intuition, in other words, is what ensures that the hypothetical play of structures and patterns in logic (Thinking) have something to do with what is actually out there in the world (Being).
+For Kant there is a necessary overlap between Thinking and Being, albeit probably a 'modest' one, about which 'thorough' thinking is fundamentally able to reason.
+
+As Hörl is working in a media-theoretical paradigm that follows Kittler, he periodises and defines this (Kantian) era in the relationship between Thinking and Being as an "optical-medial paradigm of consciousness" [cite:@horlSacredChannelsArchaic2018 p.51].
+Structures and associations appear in the mind of subject as apparitions of sensual particularities in the world /through the lens of intuition/, much like the shadows playing on the wall of Plato's cave.
+Intuition is what secures that there is /some/ reality that can be disambiguated from fantasy in the observance of such shadows.
+Good, philosophical thinking in Kant's cave is the diligent picking-out of objective patterns, forming a structure in the mind that extracts only what is objectively there in the world, and as such will not be contradicting by any particular play of shadows. 
+
+* Leibniz leading the blind
+The first chapter of Hörl's book wrestles with how one should think about the crisis of intuition and its giving way to a notion of *the symbolic* that was not secured by the same kind of intuition, or at least not in the same way.
+He evocatively refers to this new paradigm as *blind thinking*.
+The media-theoretical avoidance of any requirement that time be stratified as linear, and thus a period given a specific date to inaugurate it, is clear from the chapter's title; 'Blind thinking /around/ 1900' (my emphasis).
+Symbolic thinking is blind because Leibniz labeled it as such (/cogitatio caece/) in his aspiration to designate structures of association that exist in the world without any contingency in Thought:
+
+#+begin_quote
+Leibniz had been working on an autonomous symbolic freed from the fetters of the representation of objects and had philosophically conceptualized the formal use of symbols in algorithmic mathematics in terms of a purely symbolic knowledge.... As the "pioneer of the /idea/ of calculus"-- that is of a purely formal manipulation of signs free of all interpretation-- he kept to the *blindness* of using symbols despite all the evidence of immediate, instantaneous viewing....
+Because it proceeded nonintuitively and was not founded on the evidence of an insight, Leibniz called symbolic knowledge "blind" (/caeca/). [cite:@horlSacredChannelsArchaic2018 pp.58-60]
+#+end_quote
+
+Leibniz's project of calculus is nominated as a decisive break from Kant's '20/20' vision of philosophical reason.
+In the symbolic paradigm of Thinking and Being, there was no essential security that structures of Thought had any bearing on entities in the world.
+One can search for consistency in symbols in thought and in theory (this enterprise has come to be known as pure mathematics), but there was no guarantee that such Thinking had anything to do with Being.
+Thinking after Leibniz, Hörl contends, is fundamentally detached from Being, as there is no longer much Kantian faith in an intuition that binds them together. 
+
+It is interesting to me that Leibniz's calculus becomes an "autonomous symbolic", as I have written elsewhere about the status of capital as an autonomous subject in Marx.
+How is it that the symbolic is 'autonomous'?
+The domain of the symbolic is no longer bound to the particularities and peculiarities of subjectivity; it is no longer a domain that exists only 'interiorly' as shadows in the mind.
+The symbolic now exists for itself, autonomously.
+We as subjects are simply capable of observing it.
+No longer shackled as shadows in the cavernous minds of stuck subjects, the symbolic now shares the status of real objects out there in the world.
+It has been freed, made autonomous, just as Socrates had always hoped might be possible for subjects were we all to become philosophers (such that we might no longer stare only at shadows on the wall).
+
+* Kittler in the kitchen
+In reading these first few chapters, it seems that Hörl is making use of the Lacanian terms symbolic, imaginary, and the real in a Kittlerian manner.
+What does it mean to use these terms in a Kittlerian manner, exactly?
+I admit that I need to return to Kittler's work in order to properly reason through this question, in particular his 1986 book [[https://www.sup.org/books/media-studies/gramophone-film-typewriter][Gramophone, Film, Typewriter]] (translated to English in 1999), as I last looked at his work as an undergraduate (with very different scholarly eyes). 
+This book is a definitional text in German-American media theory, as it makes out three epistemological paradigms in the 20th century-- that of the gramophone, of film, and of the typewriter-- arguing that each medium represents the conditions of Thinking in its respective historical specificity.
+Kittler does this using the Lacanian triumvirate, as is summarized by this excerpt from [[https://labyrinthine-works.fandom.com/wiki/Gramophone,_Film,_Typewriter][this (curious) wiki]]:
+
+#+begin_quote
+The gramophone appeals to the real, functions as an analog representation of the voice, and maintains the voice of the dead (the scream of the dying over radio).
+Film functions as the imaginary, capturing not light waves but the effect of light waves, and reproducing our illusory doppleganger before our eyes at a speed too fast to capture difference.
+The typewriter corresponds to the symbolic, a symbolic order now stripped of its inherent relationship to male thought as thousands of women enter into the typing fields.
+#+end_quote
+
+So:
+
+| Gramophone | the Real      |
+| Film       | the Imaginary |
+| Typewriter | the Symbolic  |
+
+I don't know of work that directly criticizes Kittler for this schematic, though I imagine that there must be some, as (by my very nascent understanding) it seems strange to figure each of Lacan's terms as more active in a particular historical period, at the very least.
+There is something suspiciously Foucauldian about the attempt, which is not surprising, given that I believe that Kittler explicitly invokes Foucault (and Derrida) in /Gramophone/ as intellectual inspiration.
+It figures the terms as a set of equivalent intensities in relation to each other, rather than as aspects of the same topological structure. 
+To be sure, I am no expert in either Lacan or Foucault, and so perhaps there is a way hold both conceptions effectively in mind at the same time.
+This problem inspires me to read Kittler's /Gramophone/ in the coming days, a trial that I may report on here in one form or another.
+
+The reason I will return to Kittler is that I find Hörl's mobilisation of the Lacanian triumvirate compelling; but I am as yet uncertain as to whether it is helpful to frame the history of Thought in such belletristic terms. 
+For Hörl, the Symbolic (Lacanian or otherwise) is evidently associated with the formal-mathematical symbolic of Boole, of imaginary numbers (both discussed in chapter 2), and of the symbolic 'turn' in the history of mathematics.
+The Imaginary, in contrast, is affiliated with the intuitionist mapping of mathematical structure to the 'real world', as Hörl argues was the case with geometry before its non-Euclidean awakenings (the invasion of the sanctity of Kantian intuition as mathematics' epistemological foundation by the formal modernity of Leibnizian and Boolean symbolic operationalism).
+The Symbolic, on this view, is constituted by the paradigm of /non-contradiction/, whereas the Imaginary is is an apparent fortress of philosophical reality constructed on the sense that there is some fundamental channel between what one thinks (or can imagine) and what is actually out there in the world, a channel called intuition.
+
+The ascendancy of the symbolic from 1830 through 1850, and whose monarchy of names such as Russell and Hilbert was overthrown by the popular demagogue of reason that goes by Gödel, seems to be Hörl's Kittlerian periodizing of the slow takeover of modernity.
+Perhaps Hörl is simply tracing the Kittlerian thesis in /Gramophone/ by way of different historical roots? 
+
+* Bibliography

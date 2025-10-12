@@ -1,0 +1,70 @@
+#+title: Rebecca Carson: /Immanent Exernalities/ (chapter 2)
+#+options: toc:nil author:nil date:nil timestamp:nil
+#+bibliography: /home/lox/Dropbox (Brown)/lyt/references/master.bib
+
+Into the deep end: today I prepared a chapter of Rebecca Carson's /[[https://brill.com/display/title/63249?language=en][Immanent Externalities: The Reproduction of Life in Capital]]/.
+This book emerged through her dissertation work with Etienne Balibar, and it is a work of incredible precision apprehending and extending the conceptual system in Marx's /Capital/.
+
+One way to understand the book's project is to see it as a response to *post-Marxism*, a school of thought that posits Marx's critique of political economy in /Capital/ as in need of some kind of fundamental update so as to be relevant to 20th and 21st century social life.
+Post-Marxism holds that some event (or set of events) has taken place since Marx wrote /Capital/ that jeopardise one or more of the core principles in his system.
+Financialist post-Marxists, for instance, see the [[https://en.wikipedia.org/wiki/Gold_standard][demise of Bretton Woods]] as a historical moment that effectively uprooted capitalism in some way; and there are doubtless 'crypto post-Marxists' who see/saw the invention of Bitcoin as a similarly disruptive moment.
+Technological post-Marxists argue that capitalism has transformed into something else (something worse, usually) through a technological 'revolution' of some kind.
+(This position is nowhere better summed up in the title of Mckenzie Wark's 2019 book /[[https://www.versobooks.com/en-gb/products/887-capital-is-dead][Capital is Dead: Is This Something Worse?]]/.
+This is a book I have not yet read: but [[https://homintern.soy/issues/3-22-20/capdead.html][these]] [[https://cosmonaut.blog/2020/10/12/worse-than-dead-a-critical-response-to-mckenzie-wark/][two]] [scathing] reviews in partnership with the very expressive title make it hard to imagine that Wark's position is anything other than the picture of technological post-Marxism.)
+
+The post-Marxist position in technology studies is, I would argue, much more mainstream than value-theoretical approaches.
+This is perhaps an ontological hazard of the disciplinary orientation of 'technology studies' as such, in that 'technology' is assumed to represent a fundamentally distinct consistency in the world (that can be uniquely studied).
+The assumption that technology 'today' consists of something fundamentally 'modern', i.e. distinct and evolved with respect to its pre-modern counterpart, is commonplace; perhaps because of the widespread belief the electronic computer effected a critical shift in the logic of societal composition at some point in the mid-20th century.
+The phrase 'information revolution' is not only corporate pamphleteering for senseless restructuring and redistribution of wealth: it also denotes the tacit assumption at work in much 'technology studies' scholarship that the stuff of computers is /not/ the stuff of other things we call technology (such as hand tools, steam-powered machines, etc).
+Computational sociality is something for which Marx could not have accounted, the common, post-Marxist wisdom asserts: for he was not writing /Capital/ at a keyboard; was not writing Engels email; was not editing his writing with generative language models; and so on.
+
+Carson's book is much more addressed to the financialist post-Marxists, however, than their technological /mon frères/.
+Her overall thesis is that *fictitious capital* (a term she takes from the French post-Marxist critical economist [[https://www.versobooks.com/en-gb/products/320-fictitious-capital][Cédric Durand]] to refer to the appearance of surplus value that emerges in financialised flows of money traded for other money) is /immanent/ to the production component-- that is, his value-theoretical argument-- in Marx's /Capital/.
+More precisely and poetically, for Carson /fictitious capital fills in the gap of dead times in the production process/.
+Unlike the post-Marxist position, which sees in financialised capital a premise for sunsetting Marx's value-theoretical approach, Carson's re-reading and re-theorisation of Marx seeks to systematically link the proliferation of financialised flows to the movement of value that 'originates' in the production process, i.e. in the production of commodities by way of the wage relation between capitalist and worker.
+
+Though I have read sections of the book before (chapter 2, "Money Form", in particular, which I used for a term paper in early 2023 to recognise [[http://matteopasquinelli.com/][Matteo Pasquinelli]] as technological post-Marxist by way of Carson's critique of the Italian Operaismo approach to the gold standard), today's focus was chapter 3, "Fetish Character".
+Like the rest of the book, this chapter is dense, precise, and difficult.
+(That this book was essentially Carson's dissertation is humbling and intimidating.)
+The first section, 2.1, argues that the movement of value in Marx should be understood with reference to its Hegelian foundations, and that "interest-bearing capital" (money breeding money, financialised flows) constitutes a particular value form in capital that is intimately related to the other value forms, namely wage (surplus value from the worker-capitalist relation) and rent (surplus value from land ownership).
+The second section, 2.2, goes on to clarify (and critique) Marx's use of the terminology 'person', and to recognise a fundamental relationship between capital's *impersonal* forms of domination (such as the commodity) and its *personal* forms (such as the contract).
+Essential to Carson's argument is that while impersonal forms are historically specific to capital(ism), its /personal forms of domination are not necessarily/, and as such can occur in other modes of production such as feudalism.
+Seeing personal forms of domination as immanent to their impersonal mirrors is a cornerstone of Carson's argumentation throughout the book, and represents her chief rejoinder to the post-Marxist complaint that 'capital is dead'.
+
+In re-reading this chapter, my project became to draw out the development of three related yet distinct characterisations of capital, all of which figure in [[file:24-01-26.org][my attempt to chart the computer-capital relation]].
+
+1) Capital as *abstract* subject
+2) Capital as *autonomous* subject
+3) Capital as *automatic* subject
+
+These characterisations represent waypoints in Carson's development of her (Hegelian) understanding of the movement of value, as well as her insistence on reading out of Marx a *monetary theory of value*.[fn:1]
+Capital operates as an abstract subject because it is independent ('abstract') from the will of those engaged in exchange.
+It is not a concrete, sensuous object, nor is it an evanescent, fictive ideology in the minds of exchangers.[fn:2]
+The status of capital as an abstract subject can be understood with respect to the essential Marxian theory of *abstract labour*.
+Abstract labour is a notion that represents the measurement of some kind of concrete, particular labour by way of socially necessary labor time.[fn:3]
+It is because the commodity is valued by way of abstract labour that is a sensuous-nonsensuous thing; a 'notion' that "exists neither at the level of being, nor at the level of immediate objectivity" [cite:@carsonImmanentExternalitiesReproduction2023 p.78].
+Carson argues that value moves abstractly, i.e. in this reflected/refracted realm of neither objectivity nor subjectivity.
+The Marxian economist Alfred Sohn-Rethel famously referred to this kind of notion as a *real abstraction*-- and I recommend [cite:@toscanoOpenSecretReal2008] for a good introduction to the philosophical stakes of this term.
+
+It is value's abstraction in this sense that makes capital also an /autonomous/ subject.
+As Carson puts it: "Value is a social relation that is 'autonomous and dominant'"[cite:@carsonImmanentExternalitiesReproduction2023 p.79].
+(Abstract) value moves by itself.
+Not for the sake of the human subject involved in its exchanges, but for its own sake as subject.
+When capital is dominant, "accumulation and the reproduction of value are the driving force of the process"[cite:@carsonImmanentExternalitiesReproduction2023 p.80].
+Human life is nothing but an object instrumentalised to service the life (reproduction) of capital's forms.
+The movement of its things (commodities) takes place autonomously, on its own, without the (conscious) control of individuals (humans).
+Capital as autonomous subject, in other words, services its own needs-- the accumulation and reproduction of value-- not the needs of the humans that happen to be its constituents.[fn:4]
+
+Capital is an automatic subject in a slightly different sense still.
+Carson has an [[https://www.animateassembly.org/capital/][entry in the Animate Assembly project]] which goes into the meaning of this term specifically: but the basic idea is hopefully already clear from the previous characterisations.
+Capital automates out the place of the (human) subject, replacing it with the inhuman drive (greed) for surplus value.
+Moreover, its autonomous movement takes place 'automatically'; that is, /without the trace of its genesis in the measurement of abstract human labour in the sphere of production/, exclusively at the apparent level of circulation.
+It is here that capital's status as automatic subject sheds light on Carson's sophistication of the post-Marxist account: capital /wants/ to appear as no-longer-just capital, as financial flows untethered from its productive underbelly, as this mystification is at the heart of its autonomy and abstraction.
+
+[fn:1] I will not review these details here, but point the interested reader to the book itself [cite:@carsonImmanentExternalitiesReproduction2023].
+[fn:2] Two book-length projects attempting to expound the details of this kind of dialectical status are [cite:@zizekSublimeObjectIdeology2009] and [cite:@johnstonObjectiveFictionsPhilosophy2022].
+[fn:3] This sentence is a review of Marx's theory of abstract labour in the opening chapters of /Capital/, volume I. For an incisive and essential introduction to Marx's value-theory here and in the rest of /Capital/, see [cite:@heinrichIntroductionThreeVolumes2012].
+[fn:4] An interesting project that I have not yet read in detail on this note is [cite:@johnstonInfiniteGreedMoney2023].
+
+* Bibliography
+#+print_bibliography:

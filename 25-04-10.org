@@ -1,0 +1,34 @@
+#+title: Is psychoanalysis a Science? 
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+Psychoanalysis was once described as a ‘calling card’ that was to be left at the door of Science.
+The idea here, I think, was that psychoanalysis should not become (as Freud envisioned it in his first explorations of it) a ‘science’ in the sense of having an answer for everything.
+If psychoanalysis were to become a theory that accommodated every possible thing, every possible action, to foreclose all possibility of surprise within its framework, then it would be no better than a worldview (or /Weltanschauung/, in German).
+Incidentally, Freud dismissed Marxism as too much of just such a worldview, and therefore according to Freud Marx’s account of the world is not something to which psychoanalysis should aspire.
+
+Instead, psychoanalysis– as a truer kind of science than the Science that Freud criticized–the institutionalized Science of physics, chemistry, applied mathematics, and perhaps biology– should be a technique that Science turns to in an idle moment, when one of its formulae fails to produce an adequate account of some happening in the lab; when the scientist is racking her brains, late at work one night, trying to reduce some recalcitrant experiment to an eloquent result.
+Psychoanalysis, the calling card analogy suggests, is the method that one might turn to in this confounded moment when the structures of organized knowledge seem exhausted, misguided, or just plain wrong.
+When something (in society) no longer works, and one needs to find the will to try to make something work again, even as it seems that the world has firm ideas otherwise.
+
+The psychoanalytic clinic (the calling card left at each of our aporetic doors) is an institution with a serious kind of humility.
+In its best form, it doesn’t offer answers, only spaces for its subjects to ask more fundamental questions.
+As Mladen Dolar puts it, the analyst in the clinic
+
+#+begin_quote
+utters at the most an "Oh!" here and there… he makes himself an automaton in order to give rise to the dimension of the Other, the real interlocutor of the patient's "monologue," and also in order to produce that strange kind of love, perhaps love in its strictest and purest sense, which is transference love. [cite:@dolarShallBeYou1991 p.9]
+#+end_quote
+
+The proper analyst doesn’t suppose to cure the subject of her ills and maladies, her maladaptations to a broken society, but rather first and foremost seeks to open a space where the subject can start again, where association will no longer be strictly limited by habit, pathology, or unwanted automatisms.
+Michael Pollan has described the experience of ingesting psychedelic substances as a fresh snowfall on the mountain of one’s mind, where the grooves that have been worn to the earth can be rediscovered or altered– and perhaps this is a kind of description of the successful analytic session, too.
+Afterwards, the subject can choose the way she thinks, again.
+When a certain logic of understanding the world has revealed itself as uncertain, incomplete, or unreliable, the clinic should be a calling card.
+Thought can start again, the suggestion seems to promise, even if we are scientifically sure that it never really can. 
+
+The question for analytic bureaucracy is this: if uncertainty is a given, is there anywhere the analysts should stake a claim to certainty?
+The psychoanalytic philosophical tradition can be read as a kind of reckoning with this epistemological impasse.
+How does one build an institution when the surety of its foundations are in question?
+If this question forms the ground of psychoanalysis as a philosophy and as an aspirationally ‘true’ science (instead of yet another /Weltangschauung/), then perhaps it is to the clinic that we should turn for an institution that will practice restraint when it comes to the inevitable desire to totalize, to be something for everyone, rather than simply everything for someone.
+
+* Bibliography

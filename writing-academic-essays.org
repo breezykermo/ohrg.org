@@ -1,0 +1,50 @@
+#+title: Writing Academic Essays
+As an undergraduate student in the US, I feel like I never properly learned how to structure an academic essay.
+This was no doubt partially due to my being a bad student who never asked the right questions; but I do think that there is something in the structure of an interdisciplinary liberal arts education in the U.S. in the 21st century that regretfully avoids giving students strong guidelines on how to write a coherently argumentative essay.
+The following are a set of principles that influence how I have come to write essays-- which is to say that they might be totally inadequate for many forms of writing, and don't necessarily stand up as guidelines for getting writing accepted anywhere for publication.
+They are rather my own reflections on what I have come to see as 'good' academic work, i.e. work that I find valuable and meaningful in its own right, regardless of where/how it is published.
+
+* Have a thesis statement
+This is an almost brazenly obvious point, but it continues to surprise me how much writing I read where I cannot seem to make a clear argument out.
+A thesis statement is a sentence that can be formatted as an 'I argue that...' phrase.
+There are good arguments (defensible, well-evidenced, offers some bearing on something important) and bad arguments (unfalsifiable, shoddily evidenced or under-substantiated, apparently correct but unimportant).
+
+* Each section and paragraph of the essay should service your argument
+If the relationship between a paragraph or section of your essay to your thesis statement is not clear, then you should provide orienting notes so that the reader can follow along.
+For example, 'In order to show that [argument], it will be instructive first to look at [content in this section] to establish [the basis for a dimension of the argument that I will go on to outline]'.
+Tidbits or references that are not directly in service of an essay's argument should either go to a footnote ('Though it does not bear directly on my argument here, ...'), or should not be included in the essay.
+
+* Start with a clear presentation of one concept or object
+A thesis statement is often composed of terms or objects that the essay will mobilize in a particular way.
+It is important to show your reader how you understand these terms, a demonstration that can but doesn't necessarily need to reference theorists or texts that use the term in similar ways to how you understand them. 
+For example, if your argument is that 'cycling shoes are a commodity that epitomize late capitalism', it is normal and perhaps advisable to structure your essay according to a progressive unpacking of the terms in your argument: 'I first define cycling shoes as a variant of shoe that first appeared in the 60s... I then indicate that a commodity is an exchangeable object by way of Marx's theory of the commodity in /Capital/... and finally I argue that late capitalism started in the 70s and persists until today'.
+A writing advisor once told me that all good essays in both undergrad and grad school are simply extended detailings of singularly enigmatic terms ('late capitalism'), and I am not sure that they are wrong.
+
+* Don't try to predict the future
+I don't know if it is the increasing instrumentalization of the humanities by 'the sciences' in service of solving their ethical conundrums or something else in the academic air, but predictive arguments about the future seem on the rise.
+Arguments of the structure 'I argue that [X] will happen because [Y]' are generally on shaky ground (I would argue).
+Even if you are convinced that you know how something will play out, it is almost always better to temper the tone of your argument to something a bit more moderate, i.e. 'I argue that [X historical or philosophical concept] reveals something important about the [current situation of Y]'.
+Admittedly, this tempered format is less falsifiable, as it doesn't presume to know what /will/ happen next in some area of social life.
+But if you want to write an essay that will withstand the test of time, you should be /very/ careful about what straightforward predictions you make.
+
+* Provide the reader with insight they would not obviously get by reading your essay's sources
+This is the difference between an essay that simply represents other arguments and one that makes its own.
+Representing and interpreting other arguments is an important part of academic writing, and you should not shy away from doing the work of explaining how you understand another text or writer in your essays.
+Often this is the most important work in an essay, i.e. showing the reader how you understand other texts.
+But your argument should not be a simple addition of the texts together (argument X + argument Y = my argument). 
+You should rather provide the reader with something that they could not obviously get simply by reading your sources; i.e. to show that a dimension of argument X can be better understood by taking into consideration the claims in argument Y.
+
+* Don't assume that the reader is familiar with the texts/sources you are discussing
+Good writing does not assume that a reader has read the texts and sources under examination carefully.
+Rather, it shows the reader the important aspects of these texts through careful interpretation in service of an argument.
+If my argument is that Freud's method of interpreting dreams allows us to read tweets as emanations of the unconscious (an argument of which I would be highly suspicious), you should not assume that your reader has read Freud or has any clear notion of what he means by the unconscious.
+You should rather present a reading of what you understand Freud to mean when he talks about the unconscious in service of showing its relevance to tweets.
+
+
+* A greater number of citations doesn't always amount to stronger evidence
+Citations are an important part of academic writing, as they show that your argument is situated within a body of work and that you are not writing 'off the cuff' with no idea of what has previously been said about your object or subject.
+But citations should also be employed judiciously.
+As a general rule of thumb, if you do not go on to offer a direct interpretation of a sentence in terms of its structure or word choice, then it is almost always better to paraphrase the original point (while still providing the appropriate page reference from which you drew it).
+Paraphrasing is a form of interpretation; it shows how you understand a text or object, and what you see as important about it for the sake of your argument.
+You should _not_ drop in extra citations for the sake of it, or simply to show that you know about the existence of a text or book (except occasionally in a footnote, if you want to flag that some text exists but is not being addressed or bears some tangential relevance to your argument).
+

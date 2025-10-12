@@ -1,0 +1,89 @@
+#+title: Svitlana Matviyenko and Sarah Pourciau
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+Today's log discusses two projects, Svitlana Matviyenko's and Sarah Pourciau's, as a follow on from [[file:24-04-24.org][the last log]].
+
+* Svitlana Matviyenko
+I came to Matviyenko's work through [[https://www.iwm.at/event/garrison-colony-and-soviet-atomgrad][an event here at the IWM]], which took place this past Friday.
+She is currently an [[https://www.sfu.ca/communication/people/faculty/svitlana-matviyenko.html][associate professor at Simon Fraser University]] (SFU) in the School of Communication, and she was previously (I seem to remember, although I cannot now find the Internet proof of this) an assistant professor in NYU's department of [[https://steinhardt.nyu.edu/departments/media-culture-and-communication][Media, Culture and Communication]].
+Both of these departments/institutes are at the forefront of a particular kind of media theoretical critique in the American academy; though like many American things it has something of a European and global reach.
+[[https://www.sfu.ca/communication/people/faculty/wendy-chun.html][Wendy Chun]], who used to be a professor in [[file:24-01-25.org][my department]], received a big grant to kick-start SFU's [[https://digitaldemocracies.org/][Digital Democracy Institute]] circa 2020, and ever since has surely played some kind of instrumenetal role in bringing together an impressive range of up-and-coming names in critical accounts of computing ([[https://www.sfu.ca/communication/people/faculty/stephanie-dick.html][Steph Dick]], for example-- [[https://www.sfu.ca/humanities-institute/about/profiles/a-toscano.html][Alberto Toscano]] is also currently visiting faculty there).
+
+Matviyenko did her dissertation with [[https://en.wikipedia.org/wiki/Nick_Dyer-Witheford][Nick Dyer-Witheford]], a scholar who is best known for his first book, published in 1999, /Cyber Marx: Cycles and Circuits of Struggle in High-technology Capitalism/ [cite:@dyer-withefordCyberMarxCyclesCircuits1999].
+Matviyenko's dissertation is titled /Lacan's Cybernetics/ [cite:@matviyenkoLacansCybernetics2015], and attempts to track the relationship between Lacan's presentation of psychoanalysis across his seminars (which took place annually between 1953 and 1981) and cybernetics, an intellectual movement/field of thought whose first wave is typically traced to circa 1948, the year in which Norbert Wiener published /Cybernetics: or Control and Communication in the Animal and the Machine/ [cite:@wienerCyberneticsControlCommunication2019], and which is generally understood to have had a second (1960s), third (1990s), and sometimes even a fourth wave (2010s?) in the ensuing years.
+
+There is no doubt that Lacan knew about cybernetics: he first treats the subject explicitly in his second seminar (1954-55).
+Though this seminar has come to be known as his cybernetic seminar, Matviyenko makes a convincing case that one there is development of the ideas in seminar II, in at least seminars III, XI, and XX.
+Matviyenko's contextualization of Lacan's position on cybernetics is extremely useful, even if the specificity of an argument beyond contextualization is at times hard to make out.
+Her dissertation's general task is to "contextualize Lacan's work in the variety of debates on cybernetics" [cite:@matviyenkoLacansCybernetics2015 p.27], and to situate "the cybernetic episteme" as an influential discourse in and on Lacan's thought.
+This argument consists of what I find a confusing kind of historicism, i.e. through a set of claims that pose cybernetics as a Foucauldian episteme which "serves as the framing for knowledge upon which psychoanalysis operates" [cite:@matviyenkoLacansCybernetics2015 p.43].
+
+I find this confusing as a methodological stipulation in relation to Lacan's seminars because the figure of the Foucauldian episteme seems to me very much in tension with a 'Lacanian' notion of 'discourse', of tracing cause and effect in the language of Lacan's seminars.
+For example, Matviyenko's summary of her method in chapter 1 is as follows:
+#+begin_quote
+To summarize: the cybernetic episteme organizes the subject of science's relation to knowledge as the mechanism of blackboxing maintained by the institutional power formed within certain conditions of mediality. [cite:@matviyenkoLacansCybernetics2015 p.43]
+#+end_quote
+
+To start, there are a number of terms in this summary that need elucidation.
+This sentence comes after a section that present the basic context of terms such as communication, control, and homeostasis in their cybernetic formulations, and in the section preceding this summary the Lacanian notion of the "agency of the letter" [cite:@matviyenkoLacansCybernetics2015 p.41] has been mapped.
+I understand Matviyenko's claim to be meaning to say something to the effect of: cybernetics' presentation of the world as nothing but traceable cause and effect, i.e. its behaviorist and scientistic basis, is an intellectual basis upon which Lacan's idea of the agency of the letter, as well as his related presentation of the notions of 'repetition automatism' and 'the subject of science', can be developed.
+Yet Matviyenko confuses this point in the quotation above by introducing an idea of 'blackboxing' (a term not properly developed at this stage, nor later in the dissertation) and by suggesting a hazy relation to 'institutional power'.
+
+In other words, Matviyenko's attempt to chart the relationship between cybernetics and psychoanalysis by way of Foucauldian 'archaeology' results in a mystification of the specificity of her historical claim, preferring instead to lean on Latourian/Foucauldian language of mediality and power in a way that I find obscuring rather than enlightening.
+Throughout the dissertation, she wants to suggest that there is something Lacan's thought shares with/inherits from cybernetics-- an unproblematic claim in its generality, given the aforementioned direct treatment Lacan gives to cybernetics-- but I have a hard time making out what exactly the substance and consequence of this relationship is in Matviyenko's view.
+Though ample context is provided about Lacan's views on automatism and cybernetic notions of the subject, the strongest kind of claim Matviyenko herself makes is so generally media-theoretical that it seems barely to be a claim at all: i.e. "psychoanalysis reflects contemporary conditions of mediality" [cite:@matviyenkoLacansCybernetics2015 p.54], or "[Lacan's] thought seems to be caught in the changing condition of mediality" [cite:@matviyenkoLacansCybernetics2015 p.55].
+
+Whatever one can critique in the historicist flattening of argumentation, though, it is undeniably still very rich on context.
+The dissertation's second chapter, "The Subject of Science", is particularly useful for me in this regard, as it lays out the connections from Norbert Wiener's thought to Leibniz and Pascal, as well as Dutch mathematician and astronomer Christiaan Huygens (working and writing in the 1650s), and putting these references in relation to Lacan's conception of modern science (via Alexandre Koyre) and automatism (via Descartes).
+Matviyenko convincingly posits both cybernetics and psychoanalysis as taking up the challenge of "the model of the body as a system-coupled-with-the-environment that transcends Cartesian mind-body dualism" [cite:@matviyenkoLacansCybernetics2015 p.78]: that is, the problem of the subject in science, of the material/ideal dialectic, of thought's relationship to the world at large (read: ontology, epistemology, phenomenology).
+It seems clear to me that psychoanalysis should be seen as a /critique/ of cybernetics (rather than, as Matviyenko seems to see it, as a complementary or comparable system of thought, similar in the sense of similarly deficient and perspectival)
+
+Chapter three, "Freud's circuitry", is similarly rich in its presentation of determinism and thermodynamics as influences on Freud's thought.
+Lacan's notion of *structure* is then traced as the sublimation (to use Freudian vocabulary, rather than Matviyenko's) of Freud's reckoning, and the apparent allusions to Claude Shannon's concept of error in Lacanian repetition automatism.
+The relevance of these 19th century discoveries on psychoanalysis is clear and undeniable, and again my main quibble of the dissertation's method would be in that Matviyenko doesn't do much argumentatively with this context other than provide it.
+Though perhaps I should not be so quick to judge such an argumentative lack, as the text is certainly immensely valuable as a reference for further study (which is perhaps all one should ask of a dissertation).
+
+A slightly more substantive claim is reached by the end of the text; namely that "both psychoanalysis and cybernetics belong to the epoch of /graphocentrism/, which began in the nineteenth century and extends to the present moment" [cite:@matviyenkoLacansCybernetics2015 p.193].
+In making this claim, Matviyenko gestures to the ongoing relevance of cybernetics and psychoanalysis to contemporary ideologies and epistemologies of science and the subject, and I certainly agree on this point.
+Chapters 5 and 6 offer an intriguing tour of more recent theorizations (Kittler, Latour, Foucault, Didi-Huberman, Florian Cramer, Alex Galloway) in an attempt to link graphocentrism with what is seen as its current instantiation as *interpassivity*.
+There are many names and theorists in these two chapters (as there are in the earlier ones too, I suppose), and I again find myself somewhat confused by the blur of terms: a "dialectic relation between the modalities of extension and prosthesis" [cite:@matviyenkoLacansCybernetics2015 p.172], "parasitic passivity" (with reference to Michel Serres), and the ultimate argumentation that today's interpassive subject has "lost meanings and practices of solitude, of sensations of mild joy" [cite:@matviyenkoLacansCybernetics2015 p.190].
+
+I don't necessarily dispute these claims, but I am suspicious of the idea that our 'digital condition' is something distinctly different from some previous historical/social condition, when attention was more integral, and desire not quite so distorted.
+Or at least, I am yet to be properly convinced by an argument in this vein.
+Perhaps it is just my dormant computer utopianism, instilled in me by a formal education in computer science, which will not allow me to believe that computers render us necessarily more distracted, alienated, or less capable of freedom than what came before.
+But I still can't quite stomach this media-theoretical kind of thinking that slaps new terms on new conditions and figures it critical.
+Something I need to work through, I think.
+
+I had wanted to also briefly touch on Matviyenko's most recent book, co-authored with Nick Dyer-Witheford [cite:@dyer-withefordCyberwarRevolutionDigital2019]; but it will suffice to say at this point that I was similarly underwhelmed by the theoretical effects of this 'psychoanalytic' and Marxist conception of cyberwar.
+I am not sure that I feel the stakes of the theorization-- not in material-political terms, as it is obviously evident that the term 'cyberwar' denotes something perverted and violent going on at global scale-- but in the sense that I am not sure what more I understood about it through the reading of this book.
+Again: perhaps this is a function of a shallow kind of reading on my part, and it might benefit me to work through it again at a later stage.
+* Sarah Pourciau
+I have not considered Pourciau's project as extensively as Matviyenko's, as I have only read one recent essay of hers in Critical Inquiry titled "On the Digital Ocean" [cite:@pourciauDigitalOcean2022].
+This essay, in contrast to Matviyenko's writing, I found something of a revelation.
+It sees something problematic in the discourse on 'digitality' in the comparison of data to the ocean, and marks this problem as one that stretches far beyond the historically 'computational' per se into the reaches of philosophy that feminizes and passivizes matter, posing the mind as a master of the seas:
+#+begin_quote
+From the book of Genesis through the twentieth century, the oceans of the past figure the feminine matrices of divine and human creation, the wombs and tombs of the earth, the fertile yet deadly milieu of the sirens and the mermaids. They are figures of endless flux and fecund formlessness, and thus of infinitude, in the oldest sense of /what cannot be fenced in or finished/. [cite:@pourciauDigitalOcean2022 p.234]
+#+end_quote
+
+The problem of the digital ocean, in other words, for Pourciau is an age-old problem of conceptualizing infinity.
+A certain computerized conception of the world wants to render it totally calculable, atomizably "composed of distinct digits (0s and 1s), which is to say that it is remainderlessly divisible into discreet bits, which is to say that it is per se accessible to the logic of conceptual definition and analysis" [cite:@pourciauDigitalOcean2022 p.235].
+One ideology of digitalization, in other words, is that it flattens ontology into epistemology.
+Everything is knowable "as a digital sea of quantum bits" [cite:@pourciauDigitalOcean2022 p.235], and thus there is no part of the world that is not conceptually, hypothetically, available to know. [fn:1]
+
+Pourciau goes on to give, in the course of some thirty pages, an enormously erudite review of set theory's impact on the philosophical conception of infinitude, covering Cantor in the first section and Turing/Gödel in the second.
+The major consequence of this review is to call into question the ontologizing of a 20th-century mathematical conception of infinity:
+As the essay concludes:
+#+begin_quote
+Turing's implicit thesis is that the countable set of computables is big enough--as big as an ocean, even, albeit not an /apeiron/--and the question we need to ask and answer in response is: Big enough for what? We will have a better chance of making headway on this problem, I think, if we stop calling on the remainder of Woman to do the work for us. [cite:@pourciauDigitalOcean2022 p.261]
+#+end_quote
+
+There is an explicit thread in this essay from these mathematical notions of infinity to Lacanian and post-Lacanian thought ("the remainder of the Woman"), and thus I believe Pourciau's project will be extremely relevant to mine.
+
+* Bibliography
+#+print_bibliography:
+
+* Footnotes
+
+[fn:1] I recently completed the 2020 miniseries "Devs" [cite:@garlandDevs2020] which dramatizes this point by way of a hypothetical quantum computer that can accurately simulate any point in space or time in both the past and the future. The series comes to a close on the point of free will's sanctity, whereby we cannot (the series seems to suggest) solely believe ourselves to be deterministic productions. I would not recommend the series, however: it makes for wince-worthy viewing.

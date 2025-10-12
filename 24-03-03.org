@@ -1,0 +1,99 @@
+#+title: Slavoj Žižek: /The Sublime Object of Ideology/ (chapter 1, part 2) 
+#+options: author:nil date:nil timestamp:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+* Introduction
+Today I worked properly through the first chapter of Zizek's /Sublime Object of Ideology/ (towards an essay I am currently writing, outlined at the top of [[file:24-02-28.org][this log]]).
+I've reported before on the introduction ([[file:24-02-05.org][this log]]), and the opening of the first chapter ([[file:24-02-07.org][this log]]) - in the latter of which I outline Zizek's homology between both the (Marxian) critique of political economy and the (Freudian-Lacanian) project of philosophical psychoanalysis, and also the more particular similarity between the commodity and the dream which serves as a starting point for stitching those two projects together.
+Here I want to work more closely through the rest of the chapter, in which Zizek elaborates from the commodity-dream correspondence to argue for a *value-desire correspondence*
+These two 'systems' of Marx and Freud respectively are *movements* that articulate for Zizek an excess or *surplus* at work; a surplus that illustrates why Lacan conjures the idea of 'surplus-enjoyment' as an evocation of the Marxian 'surplus-value'.
+This pedagogical move of explicating Lacan via Marx (as well as some other thinkers, such as Hegel, Sloterdijk, Kafka, Althusser) takes place repeatedly throughout this chapter to introduce the reader to a collection of psychoanalytic concepts - symptom, hysteria, fantasy, transference - that will ultimately service Zizek's grander argument about *ideology* in the book as a whole.
+Recall that the pedagogy of Lacan's system and sense is one of the threefold aims of the book that Zizek details in its introduction.
+In addition to re-actualizing Hegel and contributing a critical theory of ideology, it aims:
+#+begin_quote
+to serve as an introduction to some of the fundamental concepts of Lacanian psychoanalysis: against the distorted picture of Lacan as belonging to the field of 'post-structuralism', the book articulates his radical break with 'post-structuralism'; against the distorted picture of Lacan's obscurantism, it locates him in the lineage of rationalism. [cite:@zizekSublimeObjectIdeology2009 p.xxx]
+#+end_quote
+For my part, the homology between psychoanalytic desire and Marxian value is useful, because it lays the foundation of how to think about the capture and closure of desire in capitalism; the condition of unfreedom that its logic of production and circulation engenders; and the structural illusion that this capture generates in the apprehension of computing's artifacts.
+
+* Sohn-Rethel as a reader of Marx
+Zizek's first move is to read Marx through [[https://en.wikipedia.org/wiki/Alfred_Sohn-Rethel][Alfred Sohn-Rethel]] in a subsection titled "The unconscious of the commodity form", as Sohn-Rethel is seen as the best theorist of the surplus at stake in the Marxian commodity-form; and thus the best reader of Marx to link his work to Lacan.
+Sohn-Rethel's theory of *real abstraction* operates as a critique of the Kantian transcendental subject, in that it undermines the plausibility of an a priori frame of knowledge, an objective gaze through the fantasy of which so-called *scientific knowledge* (knowledge that straight-forwardly 'exists' without accounting for its subject-position) comes into being.
+Sohn-Rethel's thesis is that /money is the formal 'cause' of transcendental consciousness/.
+This thesis is a "disquieting fact" [cite:@zizekSublimeObjectIdeology2009 p.11], because it proposes that the foundation of our clear-headed (transcendental) consciousness is the something essentially external; namely the strange social operativity of *money*.
+The idea that our /internal/ state of mind is contingent upon something partially /external/, i.e. socially mediated, is what justifies the name 'real abstraction'.
+/Abstraction/ - internal thought, which appears to us as transcendent, in the sense that it seems to have no cause but itself - is in fact contingent upon something /real/ - an external consistency not ultimately subject to our will as such.
+This real consistency, in capitalism, is money: or rather, the exchange relation for which money serves as the embodiment.
+
+Sohn-Rethel's reading of Marx expedites the point that Zizek wants to make regarding the connection between Marx and Lacan, as it sets up the theorisation of *value* in Marx as akin to Lacanian *desire* in the critical sense that both operate through an absence / immanent exception in their own logic.
+The name given to such a structure, which operates through the logic of its own immanent exception, is (and this language is used directly by both Marx and Lacan) *surplus*.
+
+* Marxian surplus
+To properly consider the homology that Zizek is proposing, one needs to cultivate both an understanding of the status of surplus in the Marxian philosophy of value on the one hand, and the basis of the relationship between the unconscious and desire in Lacan on the other.
+Let's return to Marx and Sohn-Rethel - and try to provide a bit more pedagogical context than Zizek does - to work towards the first of these understandings.
+In volume one of /Capital/, Marx infamously does not introduce the notion of money until he has first fleshed out a firm concept of the commodity, its value (in both use-value and exchange-value), and the presentation of a relationship between a commodity's value and labour (in both its concrete and abstract modalities).
+Why?
+Because money is a commodity whose value resides only in the exchangeability of commodities as such.
+Without first understanding that a commodity represents a thing, service, or affair that is subject to exchange - and that the value of a commodity as universally exchangeable is measured in the quantity of abstract labour that resides in it - we would have no bearings through which to understand the meaning of money in a capitalist system of exchange.
+Money /materialises/ this exchange relation in its status as that exceptional commodity whose use-value is as the measure of exchange-value in itself, i.e. as the signature of the exchangeability of all other commodities as such.
+
+Value in Marx is a structure that substantiates the social bond.
+It is, in other words, the logic that undergirds how humans relate to each other, the very substance of society.
+Marx's claim in /Capital/ is that society is increasingly configured around a particular /movement/ of value, a movement which he calls capital.
+In the capitalist interpretation of value, things / services / affairs are commodified - that is, their value is temporarily reduced to just one aspect of itself, exchange-value, in order to circulate on the market as a commodity.
+The use-value still exists in objects of our consideration; but in its form as a commodity, the gravity of a thing's use-value is wholly overshadowed by the glamour of its exchange-value.
+Recognising money as the embodiment of exchange-value, we can summarise this point in a much more apparently simple way: 'in capitalism, everything wants to have a price'.
+
+The word 'wants' here is of critical importance.
+It is not the case, as is often assumed, that we can simplify this summary to state instead: "in capitalism, everything has a price".
+For it is not true that /everything/ has a price in capitalism, nor that price (exchange-value) is always and everywhere the sole measure of value in the structure of society.
+This word 'wants' inserts a distance between the /appearance/ of value as exchange-value in the commodity, and the /reality/ of value that saturates the thing, service, or affair.
+In capitalism, value has an inclination towards being expressed as exchange-value, even though it is in reality a 'quality' more capacious that is not solely reducible to its measurement in money.
+
+Capital as a structure is distinctly characterised by this inclination to reductively render value one-dimensionally in and as just one of its proportions, exchange-value.
+This reduction should be considered both its means and its ends.
+Insofar as it takes place, capital has achieved its cardinal 'desire': it has gotten what it 'wants'.
+Capital strives towards this self-satisfaction, and the more dominant the structure of capital is in society, the more urgent, necessary, and natural this drive appears - even though it is, in reality, a historically contingent kind of social relation.
+
+Capital's drive to render value as exchange-value is the mechanism one must keep in mind to properly understand the Marxian critique of *surplus-value*
+Marx wanted to understand: what about capitalism drives us to continually ramp up the production of commodities and to invest in those particular kinds of technological innovation that bolster this phenomenon?
+How, in the production and circulation of commodities, is an additional amount of exchange-value conjured (as if from nowhere), and how does it come to line the pocket of a particular role in this process - a role Marx will come to call that of the capitalist?
+Where, in the apparently free exchange of commodities between producer and consumer, does this sleight of hand take place, a sleight that keeps 'the economy' on its ever-upward trajectory?
+
+Surplus-value is the Marxian name for the telos of capital, the object which it lacks, and therefore towards which it must therefore strive in search of satisfaction, the absent cause that it uses to drive its subjects to perpetually produce.
+
+As the end-it-itself of capitalist accumulation, surplus-value acquires a quasi-mystical status.
+The set of reductions or mischaracterisations that suffuse capital as a mode of production are all oriented towards it - value is but exchange-value, labour is but labour-power, things are but commodities - /so that/ there may be surplus-value.
+Each of these reductions is the mystification of a subjective /measurement/ so as to appear as an objective /principle/; a fundamental obscuring in the production of surplus-value that Marx calls *fetishism*.
+Surplus-value in Marx, then, is a kind of transcendent quality, something that appears as if from nowhere through the mechanics of fetishistic reduction that take place in the capitalist mode of production.
+
+# Fetishistic disavowal aids and abets the perception that capitalist society is but a natural state of affairs.
+# It is the flattening of a distinction between the subjective and the objective in the fetishistic gaze of scientific neutrality that enacts the sleight of hand through which surplus-value sneaks in, as if from nowhere.
+# Just as capital collapses a collection of subjectively mediated social notions to objectively apparent natural attributes, the supposition of a (Kantian) transcendental subject capable of "pure quantitative determination" [cite:@zizekSublimeObjectIdeology2009 p.10], or scientific objectivity, obscures the /real cause/ of surplus-value - which is in fact this very misrecognition of the subject as an entity capable of grasping objects in their 'scientific' exactitude.
+
+* Lacanian surplus
+The quasi-mystical status of surplus-value as the absent yet driving force of capitalist production and accumulation in Marx's analysis is, Zizek suggests, the logic through which the qualifier 'surplus' comes to figure in Lacan's theorisation of *surplus-enjoyment*.
+Surplus-value's absence conjures the drive for ever-more of it (effected through the production and circulation of the commodity).
+Value in its capitalist configuration cannot exist without surplus-value as its absent cause and its telos.
+Desire, Lacan argues, shares the same structure:
+#+begin_quote
+If we subtract the surplus we lose enjoyment itself, just as capitalism, which can survive only by incessantly revolutionizing its own material conditions, ceases to exist if it 'stays the same' [cite:@zizekSublimeObjectIdeology2009 p.54].
+#+end_quote
+
+The /embodiment/ of the missing cause and end of desire's system, its surplus-enjoyment, is what Lacan calls the *objet petit a* - the object-cause of desire.
+Surplus-value in capital is a 'thing' that can never quite be possessed, and this ever-absence is what drives the movement of value in the production and circulation of commodities.
+When the immanent limit of value's system is positivised as something to be sought after - when surplus-value is materialised in its 'reality' as more-and-more money - capitalism acquires its drive to permanent development.
+A similar drive, what we might also call a *bad infinity*, results when we misapprehend desire as something that can be achieved, or finally satisfied.
+It is rather something negative, something missing, that drives both desire and value to reproduce themselves.
+
+This negative (absent) cause, the common missing that paradoxically inaugurates the very systems that lack in it, is why Lacan credits Marx for inventing the *symptom*, in Zizek's reading.
+The symptom is the name for an effect in which one can interpret something missing, a paradoxical crack in the systematicity (of value or desire) that reveals the system's fetishistic drive towards something outside of itself, its mis-rendering of the subject-object dialectic as something simpler and less entangled than it really is.
+
+Thus it is Sohn-Rethel's reading of Marxian value as a logic of the subject-object dialectic's fetishistic disavowal that makes clearer the connection between psychoanalysis and capitalism.
+Lacan's evocation of Marx in surplus-enjoyment recognizes that the satisfaction of sexual desire might, like capitalist accumulation, be compromised in the sense that, though it seems to seek an end outside of itself, its teleology is really servicing nothing more than its own reproduction.
+
+For Zizek, this correspondence serves to illuminate Lacan's project as political, for Marx's philosophy has long been the best and most uncontroversial example of a truly political philosophy.[fn:1]
+Yet it also illuminates something important about Marx's project; namely that while it does an excellent job diagnosing the logic of capital, it does not offer the reader a strategy through which to work from within it to overcome it.
+Zizek's wager is that psychoanalysis offers us a better version of this roadmap.
+
+[fn:1] For more thinking on Marx's philosophy as political in relation to Hegel, see [[file:24-02-28.org][24-02-28]].

@@ -1,0 +1,51 @@
+#+title: Jacques Le Goff: /Your Money or Your Life/ 
+#+options: toc:nil author:nil date:nil timestamp:nil
+#+bibliography: /home/lox/Dropbox (Brown)/lyt/references/master.bib
+
+Today's project was completing Jacques Le Goff's 1990 /[[https://press.princeton.edu/books/paperback/9780942299151/your-money-or-your-life][Your Money or Your Life: Economy and Religion in the Middle Ages]]/.
+This book offers a prehistory of capitalism in the medieval figure of the *usurer*.
+The usurer is a person who lends money at interest in order to collect that interest at some point in the future and make a profit.
+From the 10th through 13th century, the usurer was "a necessary but detested man, powerful but also vulnerable"[cite:@legoffYourMoneyYour1988 p.10].
+
+Le Goff sees the prefiguration of capitalism in the (Christian) moralisation of the usurer as a sinner.
+He also sees "the beginnings of psychological modernity"[cite:@legoffYourMoneyYour1988 p.12] in the manner in which usurers, amongst other sinners, were able to perform confession and/or contrition for their sins, often at their deathbed, to escape damnation in Hell or Purgatory.
+The plausibility of the usurer's escape from damnation despite the Church's condemnation of usury in general as one of the worst kinds of sins is what gives this book its title:
+#+begin_quote
+To save himself, must [the usurer] forsake his pouch? Or will he find -- or will someone find for him -- a way to hang onto both his money and his life, his eternal life? This is the usurer's great struggle, a struggle between wealth and Heaven, between Money and Hell. [cite:@legoffYourMoneyYour1988 p.15]
+#+end_quote
+
+This book is on my list because it paints an important picture of the usurer in medieval (pre-capitalist, feudal) imagination.
+It avoids economic analysis for the most part, besides remarking in the first chapter that the ecclesiastical status of money is the source of the usurer's fundamental characterisation as a sinner [cite:@legoffYourMoneyYour1988 pp.18-20], preferring to attempt to understand the Church's condemnation of usury on its own terms.
+The figure of the usurer is closely linked the the figure of the Jew during the Middle Ages, Le Goff argues, as while the bible more or less unequivocally condemns usury among one's own 'countrymen', lending money to foreigners is permitted as a sort of necessary evil for the functioning of society.
+Thus the Jew, in its consideration the exhaust of Christian society -- not part of its 'whole' but rather its ghostly excess (it is compared with the figure of the mistress, illicitly sought after yet consciously repressed) -- is the only societal role for which usury is 'permitted'.
+This point is important, I think, for understanding Marx's argument in his early essay "On The Jewish Question" [cite:@marxJewishQuestion2014].[fn:1]
+
+The status of usury in medieval thought contributes to a prehistory of capitalism in that, in (the transition to) capital, usury is elevated from sinful to almost saintly.
+Capital's objective is to accumulate value and reproduce itself, and usury (interest-bearing capital) is one way in which it does this.[fn:2]
+In the Middle Ages, however: "Usury is the unlawful surplus, the illegitimate excess.... [U]sury is more than a crime, it is a sin.... first and foremost a theft" [cite:@legoffYourMoneyYour1988 pp.26-27].
+
+The mechanics of usury's condemnation are effectively inverted by capital's emergence as autonomous subject.
+Whereas in feudalism, "it is against nature for money to be loaned to give birth to more money" [cite:@legoffYourMoneyYour1988 p.29], in capitalism the movement of financialised value is fundamentally /naturalised/.
+The Church condemns usury because it unceasingly works, offending God by being endless and automatic.
+Capital, on the other hand, adores it for this very same reason; it displaces the human as subject (and renders God effectively dead, a la Nietzsche).
+
+In further resonance with the role it will play in capitalism, usury is accursed under feudalism because /it is a theft of time/.
+(Chapter 3 is titled "The Thief of Time".)
+Usury does not produce surplus (interest) through any kind of production, i.e. through vegetables sprouting in the land or value added in combining materials.
+Rather, the cause of its surplus is only the (synthetic) production of time: "the time that elapses between the moment [the usurer] lends the money and the moment he is repaid" [cite:@legoffYourMoneyYour1988 p.39].
+What is the problem here, for the Christian imagination?
+Le Goff reports:
+#+begin_quote
+Time, of course, belongs solely to God. As a thief of time, the usurer steals God's patrimony. [cite:@legoffYourMoneyYour1988 p.39]
+#+end_quote
+
+It would be interesting to think further regarding which qualities of the usurer have carried from the Middle Ages to modernity (its ruling silently from the shadows [cite:@legoffYourMoneyYour1988 p.51], for example); and which have been re-moralised as 'saintly', or otherwise un-sinful.
+Has the shame associated with the money-lender become an artificial pride?
+The secular nature of capitalism certainly no longer has the guts to denounce working all day and night, instead striving to reproduce this zombie-like existence in its human vassals.
+More on this secular automatism in future logs.
+
+[fn:1] Treating Marx's consideration of 'the Jew' in this essay with reference to this figure of the Jew, as opposed to claiming that Marx speaks of it in an identitarian and chauvinist manner, is a viewpoint that Michael Heinrich develops in his recently translated biography of Marx [cite:@heinrichKarlMarxBirth2019].
+[fn:2] For more thinking on this point, see [[file:24-01-26.org][yesterday's log entry]] on Rebecca Carson's book, /Immanent Externalities/ [cite:@carsonImmanentExternalitiesReproduction2023].
+
+* Bibliography
+#+print_bibliography:

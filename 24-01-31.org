@@ -1,0 +1,55 @@
+#+title: Matteo Pasquinelli: /Eye of the Master/ 
+#+options: author:nil date:nil timestamp:nil
+#+bibliography: /home/lox/Dropbox (Brown)/lyt/references/master.bib
+
+Today: finally, I completed Matteo Pasquinelli's new book published in 2023, /[[https://www.versobooks.com/en-gb/products/735-the-eye-of-the-master][The Eye of the Master: A Social History of Artificial Intelligence]]/.
+I've been partway through this book for a month or more, as I could never quite bring myself to finish it off.
+I have fair investment in Pasquinelli, as I wrote a term paper last year addressing the majority of the essays he published before this book (which I have mentioned in a previous log).
+This book reworks some of his arguments from those essays, and attempts to bring them together in the agenda of a 'social history of artificial intelligence'.
+
+Pasquinelli is at once a curious and symptomatic scholar.
+He is part of the new wave of critical A.I. studies, and certainly traffics in distilling citations from there and the history of science into a kind of Foucauldian theoreticism that champions itself as an 'alternative history'.
+The basis for which we need an alternative here is, one assumes, the whiggish narrative of proliferating industry, total automation, and inevitable progress that is often associated with A.I. in popular media.
+In addition to this Foucauldian inflection in his partial background as a historian of science, he is distinctly influenced by an [[https://en.wikipedia.org/wiki/Workerism][operaismo]], [[file:24-01-27.org][post-Marxist]] theoretical tradition when it comes to his understanding of technology.
+This tradition is sure that the take on technology in Marx's /Grundrisse/ -- a set of notebooks written before /Capital/ and not circulated in any language other than German until the 1960s -- is more promising as a theory of praxis and political struggle than what Marx lays out in the later and better-known work.
+
+/The Eye of the Master/ (Pasquinelli's first book-length project) reads as half a post-Marxist proposal (Part I), and half a contribution of fragmented episodes in the history of science-qua-A.I. (Part II).
+There are a wealth of cameo references to contemporary scholarship, footnotes to further reading, and generous citation of other arguments throughout the book: so much so that, at times, I struggled to make the particularity of Pasquinelli's argument in among it all.[fn:1]
+Pasquinelli is talented as a historian in the sense that he has found a collection of historical scenarios that, while not obviously interconnected at face value, coalesce together as a cabinet of curiosity-piquing moments that all certainly have some bearing on what we refer to today when we say "A.I."
+It would also be hard to deny that he is well-read/well-networked.
+The citation-rich text seems almost as though it was written through a series of pseudo-academic call-and-response all-too-familiar to anyone who has been to a lecture in the theory-leaning humanities -- Call: "Your talk made me think about author X or book Y, what do you think?" -- Response: "Let me read that and get back to you."
+
+The over-arching premise of the book is undeniably correct: the development of A.I. is a 'social' enterprise pace the techno-determinist ("A.I. was invented, and then the world changed") and techno-fatalist ("A.I. was always going to be invented") positions.
+In Pasquinelli's words: "this book aims at rediscovering the social centrality of the social intelligence that informs and empowers A.I." [cite:@pasquinelliEyeMaster2023 p.12]
+The attempted drilling down on this "social intelligence" as such through a post-Marxist understanding of labour and a Foucauldian understanding of history, however, is what misses the mark for me.
+
+Take Pasquinelli's explication of his method as *historical epistemology*:
+#+begin_quote
+Where social constructivism generically emphasises the influence of external factors on science and technology, historical epistemology is concerned with the dialectical unfolding of social praxis, instruments of labour, and scientific abstractions within a global economic dynamics.
+This book attempts to study AI and /algorithmic thinking/ in a similar way that historical and political epistemology has studied, in the modern age, the rise of mechanical thinking and scientific abstractions in relation to socio-economic developments. [cite:@pasquinelliEyeMaster2023 p.13]
+#+end_quote
+
+Here (and throughout the book), Pasquinelli draws out a distinction between /algorithmic/ operations on the one hand, and /mechanical/ machines on the other.
+This distinction is further developed in Part II, which narrates the invention of Rosenblatt's perception and the growing practice of computationally understanding images as statistical distributions as a fundamental shift away from Turing's "linear" conception of the computer as a discretely modifiable strip of tape, towards a "spatial" (i.e. multi-dimensional) understanding of data.
+While Pasquinelli is critical of the cybernetic vantage point in its collapse of any conceptual border between the human and the computer (indeed, this collapse can be considered the heart of the cybernetic project as such), his outlook is fundamentally historicist: he cannot but see the birth of information and the computer as a fundamental development in the structure of capital that requires new eyes, new theories.
+
+The ethics of this cybernetic historicism is deeply ensnared in Pasquinelli's post-Marxist proclivities.
+Part I of the book amounts to a revisionist understanding of Marxian labour under the aegis of a cybernetic philosophy of the human/machine relation.
+Pasquinelli's quibble is over the primacy of *labour* in Marx's thought, a term which he seems to think is too rooted in its 'manual' materialisations, and thus to which he offers *knowledge* as an alternative.
+This positing of knowledge as the primate concept in a system of political economy is, in my view, a succumbing to the cybernetic (and capitalist) insistence that surplus value is not solely generated from the figure of the human, but rather can be transferred to and/or additionally cultivated in the machine (or computer).[fn:2]
+
+To do away with the idea that surplus value comes solely and specifically from the mystification of the worth of human labour by way of its quantification in/as abstract human labour (that fundamental concept in Marx) is to do away with Marx's understanding of how the human (condition) is alienated despite being formally 'free' in capital.
+Pasquinelli seems to miss what is at stake, in other words, in Marx's critique of the labour theory of value: namely the capacity to distinguish human life from the life of capital, and the ability as a result to consciously value the former in social arrangements of production and circulation.
+By flattening labour into knowledge, we deliver our thought directly to the fetishism of subject/object misapprehension that capital /wants/.
+A social relation between people is confused and projected into the objective quality of a thing -- in Pasquinelli's case, the computer -- and we remain unable to think the possibility of (human) freedom, as the subject/object dialectic has been collapsed.
+
+If A.I. has "always operated on the side of capital together with a hidden agenda to foster human stupidity" [cite:@pasquinelliEyeMaster2023 p.111] as Pasquinelli suggests, we do ourselves a disservice to disregard Marx's precise philosophical formulation of the structure at work in it by presuming that A.I. is necessarily a phenomenon historically distinct.
+My fundamental question is: is there really anything about A.I. that distinguishes it from other forms of computing, and is there anything about the computer that distinguishes it from what Marx refers to as the machine?
+Pasquinelli's book coins a collection of attractive-sounding theoretical terms, but (given the non-starter of substituting labour for knowledge) neglects to tell us much about how we can actually better think about AI, labour, and the relationship between computational automation and the social.
+It is, however, a great tour of recent scholarship in the space and moments in the history of technology (Von Neumann's critique of cybernetics, Hayek's relationship to connectionism, Babbage's involvement in Marx's thinking) that deserve closer attention.
+
+[fn:1] Pasquinelli also sometimes cites contesting arguments in his footnotes ("For an opposing view, see..."). I do appreciate that the footnotes are actually footnotes, and not endnotes.
+[fn:2] Pasquinelli has expressed this view regarding the reconfiguration of surplus value more directly in positing the idea of [[http://matteopasquinelli.com/code-surplus-value/][code surplus value]] elsewhere.
+
+* Bibliography
+#+print_bibliography:

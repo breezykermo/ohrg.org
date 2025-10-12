@@ -1,0 +1,477 @@
+#+title: Grad Log
+#+options: author:nil date:nil timestamp:nil toc:nil title:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+#+HTML_HEAD: <style>.title { display: none; }</style>
+The musings below have a few streams.
+Use the buttons below to filter for those that interest you.
+For more on what each of these streams represent, see [[file:24-01-26.org][Streams of thought in my dissertation]].
+For more about me, see [[https://lachlankermode.com][my personal website]].
+
+If you want to be notified when new posts appear, subscribe to the [[./feed.xml][RSS feed]].
+
+#+BEGIN_EXPORT html
+<div class="filter-container">
+  <button class="filter-btn" style="display:none;" data-filter="all" data-tooltip="All Categories">All</button>
+  <button class="filter-btn" data-filter="WiG" data-tooltip="Writing in general">WiG</button>
+  <button class="filter-btn tag-BgS" data-filter="BgS" data-tooltip="Before grad school">BgS</button>
+  <button class="filter-btn tag-DiH" data-filter="DiH" data-tooltip="Dialectics in history">DiH</button>
+  <button class="filter-btn tag-SiP" data-filter="SiP" data-tooltip="Science in psychoanalysis">SiP</button>
+  <button class="filter-btn tag-MiT" data-filter="MiT" data-tooltip="Mathematics in the twentieth century">MiT</button>
+</div>
+
+<style>
+  /* Tooltip styling */
+  .filter-btn {
+    position: relative;
+  }
+
+  .tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 100;
+    margin-top: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+  }
+
+  .filter-btn:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all filter buttons
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  // Get all post items
+  const postItems = document.querySelectorAll('.post-item');
+  // Get the "All" filter button
+  const allFilterButton = document.querySelector('[data-filter="all"]');
+
+  // Create tooltips for each button
+  filterButtons.forEach(button => {
+    const tooltipText = button.getAttribute('data-tooltip');
+    const tooltip = document.createElement('div');
+    tooltip.className = 'tooltip';
+    tooltip.textContent = tooltipText;
+    button.appendChild(tooltip);
+  });
+
+  // Get all available filter values (excluding "all")
+  const allFilters = Array.from(filterButtons)
+    .map(btn => btn.getAttribute('data-filter'))
+    .filter(filter => filter !== 'all');
+
+  // Set active filters (start with all active)
+  let activeFilters = ['all'];
+
+  // Add click event to each filter button
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+
+      // Toggle active state for this button
+      this.classList.toggle('active');
+
+      // Update active filters
+      if (filter === 'all') {
+        // If "All" is clicked, toggle all other filters off
+        if (this.classList.contains('active')) {
+          filterButtons.forEach(btn => {
+            if (btn.getAttribute('data-filter') !== 'all') {
+              btn.classList.remove('active');
+            }
+          });
+          activeFilters = ['all'];
+        } else {
+          // If "All" is deactivated, activate all other filters
+          filterButtons.forEach(btn => {
+            if (btn.getAttribute('data-filter') !== 'all') {
+              btn.classList.add('active');
+            }
+          });
+          activeFilters = [...allFilters];
+        }
+      } else {
+        // If a specific filter is clicked
+        if (this.classList.contains('active')) {
+          // Add this filter to active filters
+          activeFilters.push(filter);
+          // Remove "All" from active filters
+          activeFilters = activeFilters.filter(f => f !== 'all');
+          allFilterButton.classList.remove('active');
+        } else {
+          // Remove this filter from active filters
+          activeFilters = activeFilters.filter(f => f !== filter);
+
+          // If no filters are active or all specific filters are active, activate "All"
+          if (activeFilters.length === 0 || 
+              (activeFilters.length === allFilters.length && 
+               allFilters.every(f => activeFilters.includes(f)))) {
+            activeFilters = ['all'];
+            allFilterButton.classList.add('active');
+            filterButtons.forEach(btn => {
+              if (btn.getAttribute('data-filter') !== 'all') {
+                btn.classList.remove('active');
+              }
+            });
+          }
+        }
+      }
+
+      // Apply filtering
+      filterPosts();
+    });
+  });
+
+  // Function to filter posts based on active filters
+  function filterPosts() {
+    postItems.forEach(item => {
+      if (activeFilters.includes('all')) {
+        item.classList.remove('hidden');
+      } else {
+        const tags = item.getAttribute('data-tags').split(' ');
+        const hasMatchingTag = tags.some(tag => activeFilters.includes(tag));
+
+        if (hasMatchingTag) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      }
+    });
+  }
+});
+</script>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<ul class="post-list">
+  <li class="post-item" data-tags="DiH">
+    <a href="./25-06-15.org" class="post-link">
+      <span class="post-title">Mladen Dolar: <em>Rumors</em></span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+
+
+  <li class="post-item" data-tags="MiT">
+    <a href="./25-06-14.org" class="post-link">
+      <span class="post-title">Alma Steingart: <em>Axiomatics: Mathematical Thought and High Modernism</em> (introduction)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-MiT">MiT</span>
+      </span>
+    </a>
+  </li>
+
+  <li class="post-item" data-tags="DiH">
+    <a href="./25-05-16.org" class="post-link">
+      <span class="post-title">Karl Marx: <em>Capital, Volume 1</em> (chapter 22)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP WiG">
+    <a href="./25-04-10.org" class="post-link">
+      <span class="post-title">Is psychoanalysis a Science?</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="./25-03-07.org" class="post-link">
+      <span class="post-title">Karl Marx: <em>Capital, Volume 1</em> (chapter 21)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="MiT">
+    <a href="./25-02-10.org" class="post-link">
+      <span class="post-title">Erich Hörl: <em>Sacred Channels: The Archaic Illusion of Communication</em> (chapters 1 and 2)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-MiT">MiT</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="./25-02-05.org" class="post-link">
+      <span class="post-title">Terry Eagleton: <em>Why Marx Was Right</em></span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="WiG">
+    <a href="./using-nixos.org" class="post-link">
+      <span class="post-title">Using NixOS</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="">
+    <a href="24-12-27.org" class="post-link">
+      <span class="post-title">Fall semester 2024 update</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="WiG">
+    <a href="writing-academic-essays.org" class="post-link">
+      <span class="post-title">Writing academic essays</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="WiG">
+    <a href="cycling-typing.org" class="post-link">
+      <span class="post-title">Cycling typing</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="WiG">
+    <a href="using-two-remarkables.org" class="post-link">
+      <span class="post-title">Using two reMarkables</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP MiT">
+    <a href="24-05-02.org" class="post-link">
+      <span class="post-title">Svitlana Matviyenko and Sarah Pourciau</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+        <span class="tag-label tag-MiT">MiT</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP DiH">
+    <a href="24-04-24.org" class="post-link">
+      <span class="post-title">Amanda Holmes and Adrian Johnston</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="24-04-09.org" class="post-link">
+      <span class="post-title">Jane Gallop: <em>Reading Lacan</em></span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="24-03-03.org" class="post-link">
+      <span class="post-title">Slavoj Žižek: <em>The Sublime Object of Ideology</em> (chapter 1, part 2)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="24-02-29.org" class="post-link">
+      <span class="post-title">Mladen Dolar: "What's in a Name?"</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="24-02-28.org" class="post-link">
+      <span class="post-title">Jensen Suther: "Novel, Organism, Form: Bio-Aesthetics in Hegel and Thomas Mann"</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="24-02-07.org" class="post-link">
+      <span class="post-title">Slavoj Žižek: <em>The Sublime Object of Ideology</em> (chapter 1, part 1)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="WiG">
+    <a href="writing-setup.org" class="post-link">
+      <span class="post-title">Writing setup</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="SiP">
+    <a href="24-02-05.org" class="post-link">
+      <span class="post-title">Slavoj Žižek: <em>The Sublime Object of Ideology</em> (introduction)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-SiP">SiP</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="24-01-31.org" class="post-link">
+      <span class="post-title">Matteo Pasquinelli: <em>Eye of the Master</em></span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="WiG">
+    <a href="24-01-29.org" class="post-link">
+      <span class="post-title">Why we should give feedback to students</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="24-01-28.org" class="post-link">
+      <span class="post-title">Jacques Le Goff: <em>Your Money or Your Life</em></span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="DiH">
+    <a href="24-01-27.org" class="post-link">
+      <span class="post-title">Rebecca Carson: <em>Immanent Exernalities</em> (chapter 2)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-DiH">DiH</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="WiG">
+    <a href="24-01-26.org" class="post-link">
+      <span class="post-title">Streams of thought in my dissertation</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="WiG">
+    <a href="24-01-25.org" class="post-link">
+      <span class="post-title">What <em>is</em> 'modern culture and media'?</span>
+      <span class="post-tags">
+        <span class="tag-label tag-WiG">WiG</span>
+      </span>
+    </a>
+  </li>
+
+  <!-- Old posts from lachlankermode.com -->
+  <li class="post-item" data-tags="BgS">
+    <a href="./deconstructing-urbit.org" class="post-link">
+      <span class="post-title">Deconstructing Urbit: the politics of software as infrastructure</span>
+      <span class="post-tags">
+        <span class="tag-label tag-BgS">BgS</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="BgS">
+    <a href="./on-stranger-things.org" class="post-link">
+      <span class="post-title">On <em>Stranger Things</em></span>
+      <span class="post-tags">
+        <span class="tag-label tag-BgS">BgS</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="BgS">
+    <a href="./documentary-is-not-a-name.org" class="post-link">
+      <span class="post-title">Documentary is/not a name</span>
+      <span class="post-tags">
+        <span class="tag-label tag-BgS">BgS</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="BgS">
+    <a href="./devonthink-part-iii.org" class="post-link">
+      <span class="post-title">How I use(d) DevonTHINK (part 3)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-BgS">BgS</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="BgS">
+    <a href="./devonthink-part-ii.org" class="post-link">
+      <span class="post-title">How I use(d) DevonTHINK (part 2)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-BgS">BgS</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="BgS">
+    <a href="./devonthink-part-i.org" class="post-link">
+      <span class="post-title">How I use(d) DevonTHINK (part 1)</span>
+      <span class="post-tags">
+        <span class="tag-label tag-BgS">BgS</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="BgS">
+    <a href="./on-gods-and-campervans.org" class="post-link">
+      <span class="post-title">On gods and campervans</span>
+      <span class="post-tags">
+        <span class="tag-label tag-BgS">BgS</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="BgS">
+    <a href="./sweet-tooth-for-baristas.org" class="post-link">
+      <span class="post-title">Sweet tooth for baristas</span>
+      <span class="post-tags">
+        <span class="tag-label tag-BgS">BgS</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="BgS">
+    <a href="./a-comparison-of-elm-and-react.org" class="post-link">
+      <span class="post-title">A comparison of Elm and React</span>
+      <span class="post-tags">
+        <span class="tag-label tag-BgS">BgS</span>
+      </span>
+    </a>
+  </li>
+  <li class="post-item" data-tags="BgS">
+    <a href="./the-towpath-to-react-and-redux.org" class="post-link">
+      <span class="post-title">The towpath to React and Redux</span>
+      <span class="post-tags">
+        <span class="tag-label tag-BgS">BgS</span>
+      </span>
+    </a>
+  </li>
+</ul>
+#+END_EXPORT

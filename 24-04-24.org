@@ -1,0 +1,72 @@
+#+title: Amanda Holmes and Adrian Johnston
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+I have been at the institute (the [[https://www.iwm.at/][IWM]]) for nearly a month now, the first month of three.
+It is the first time that I have had something close to my own office (I share a room with one other fellow), and the first time that I have had the space and time of mind to attend specifically to the task of my dissertation proper.
+As a PhD student in Providence, there is a bustle of daily university life - lectures, seminars, meetings - that makes it more difficult to properly think.
+Perhaps this is because it is the aim of a PhD to find a unique space of thought, and such a pocket (carved out against the majority of opinion, if it is to have any academic value) is necessarily solitary.
+The PhD project is to design such a space, to educate oneself in how it reflects and refracts existing projects (of existing academics), and to come to some confident enough conclusion in it that one appears salable on the job market.
+
+In the past few weeks I have tracked four contemporary projects that relate to the space I am trying to carve for myself at the [[file:24-01-26.org][intersection of mathematics, Marx, and Lacan]].
+I'll introduce two of them here (Amanda Holmes' and Adrian Johnston's), and defer two of them (Svitlana Matviyenko's and Sarah Pourcieau's) to a later log.
+
+* [[https://www.dieangewandte.at/jart/prj3/angewandte-2016/main.jart?rel=en&reserve-mode=active&content-id=1458930944469&Pe-Id=8332][Amanda Holmes]]
+Completing her PhD in [[https://www1.villanova.edu/university/liberal-arts-sciences/programs/philosophy.html][philosophy at Villanova]] in 2020, Holmes was advised by [[https://philpeople.org/profiles/walter-brogan][Walter Brogan]], [[https://en.wikipedia.org/wiki/Gabriel_Rockhill][Gabriel Rockhill]], and [[https://en.wikipedia.org/wiki/Alenka_Zupan%C4%8Di%C4%8D][Alenka Zupančič]].
+Her dissertation was titled /Erotology: The Logos of Eros in Lacan's Return to Freud/, and its structure is refreshingly un-American in its singular focus on tracking what Holmes calls 'erotology' in Lacan's thought.
+Erotology is "the logos of eros, the study of desire, the disciplined examination of those gaps in the universe around which desire gathers.... the discipline of identifying and elaborating the philosophical implications of
+psychoanalysis" [cite:@holmesErotologyLogosEros2020 p.7].
+Erotology is the fourth term that psychoanalysis, as an inflection point in and critique of the Western (European) philosophical tradition, introduces to the reigning triumvirate of ontology (the science of being), epistemology (the science of thinking), and phenomenology (the science of feeling).
+Lacan's return to Freud, a project that takes psychoanalysis seriously as a philosophical invention and intervention, is erotological because it is "a discourse that takes desire as its central focus" [cite:@holmesErotologyLogosEros2020 p.8].
+
+Holmes' dissertation does what good dissertations should do, I think: it synthesizes the state of a discursive space, offering the seeds of a 'new' argument only by first demonstrating erudition and pedagogical generosity as a writer.
+There is an overwhelming sense (in America) that one's dissertation is supposed to operate as a 'scientific' breakthrough, exposing some connection heretofore unseen and unconceptualized.
+This contributes to the reigning paradigm of paranoiac collaboration and publication, whereby there is an idea that one's academic space or niche can be stolen, as if intellectual specialization were a patented technology that needs regulatory mechanisms to protect its strategic advantage.
+This framing is not to downplay the very real and common occurrence of more senior scholars taking advantage of younger ones as a fungible labor force, manipulating the cult of authorial singularity in the humanities through their positions of relative power so as to significantly disadvantage and dispossess more junior persons of their due credit and/or acclaim.
+But it is to suggest that we should consider the limitations of the conceptual treatment of academic ideas as intellectual property, i.e. as salable commodities that should circulate in such a way that the benefit gained thereof warrants a financial or reputational 'interest' that accrues to their authors.
+Some will say that the commodified condition of the market of ideas is just the way it is, the realpolitik of (American) academia within which one must operate to have any relevance, and/or to feed oneself and one's "family".
+Perhaps this is the case.
+But shouldn't we still do our best to imagine it otherwise, and implement this imagination as much as we can, as much as we are allowed to?
+
+It is rich, perhaps the same some will say, to suggest that the dedicated study of an infamously cryptic and white French man's seminars from the 60s and 70s represents a progressive (i.e. less commodified) kind of scholarship.
+And it is probably true that Lacanians have failed to convincingly articulate why such a thing could really (as I am coming to believe it to be) the case.
+But I really do digress, here, as the point that I set out to make is that Holmes' dissertation on Lacan is a valuable addition to the available other introductions to the Lacanian ethos of desire (i.e. [[https://en.wikipedia.org/wiki/The_Sublime_Object_of_Ideology][Zizek]]'s, [[https://www.sas.upenn.edu/~cavitch/pdf-library/Gallop_Reading_Lacan.pdf][Gallop]]'s, to name a few that I have discussed on this site), and perhaps one that is the most up-to-date regarding more recent Lacan scholarship, such as Zupančič's /[[https://mitpress.mit.edu/9780262534130/what-is-sex/][What Is Sex?]]/.
+
+* [[https://en.wikipedia.org/wiki/Adrian_Johnston_(philosopher)][Adrian Johnston]]
+I intend to discuss Johnston's most recent book /[[https://cup.columbia.edu/book/infinite-greed/9780231214735][Infinite Greed]]/ at more length in future logs on this site, as it is one of the most erudite studies of the relationship between Lacan's and Marx's thought available.
+In recent weeks I have read a [[https://ir.canterbury.ac.nz/items/35ce4f03-fba6-465d-8862-b44a2d9bc5d7][2017 essay]] that prefigures the argument in that book, and I am now working through a manuscript of the book itself.
+
+The core argument (of both the essay and the book, as I understand them) is that Marx's critique of political economy in /Capital/ prefigures some of the core psychoanalytic insights, the discourse of which Johnston suggestively refers to as *libidinal economy*.
+There are "temporal dialectical dynamics between past and present (as well as future)" [cite:@johnstonClosedNeedInfinite2017 p.277] that Marx's and the psychoanalytic accounts share, and in articulating this common understanding one can marry metapsychology (psychoanalysis) and historical materialism (Marx).
+The terminological lodestone of this effort is /Trieb/ [drive], a word used by Freud, Lacan, and Marx alike.
+
+Drive in the Lacano-Freudian sense of the term can be understood through Freud's enigmatic and polarizing suggestion that the human is characterized by her/his *death drive*.
+The final chapter of Alenka Zupančič's book /What Is Sex?/ [cite:@zupancicWhatSex2017] is a sublime rumination on and interpretation of the death drive as it should be understood: as the name for the object-less affect that emerges from the unknowable contradiction in consciousness called 'sex'.
+At once aimed at reproduction, as a crude Darwinian imaginary would have it, and paradoxically also at a self-annihilating end in 'death', the death drive is what differentiates a speaking being from an animal in Lacanian thought.
+Speaking being is characterized by a contradiction in its telos (purpose), whereby there is an element of indetermination in its (life) trajectory that gives rise to a special kind of under-determined drive called *desire*.
+Desire has no overdetermined object: it is a subject that strives not for something in particular, but for something 'abstract'.
+Thus Lacan refers to the object of desire as the *objet petit a*; for it is not an object in particular, but an absent and negative object that must be 'filled in' in order for the striving to make sense in a causal register.
+We do not desire because desire can be achieved, fully satisfied and sated.
+We rather continue to desire exactly because the object of desire (/objet petit a/) cannot ever properly concretize as something positive (a person, an amount of money); and so once we achieve what we thought we wanted, what it is we want has moved on.
+
+Johnston's project is to put this Lacanian register of desire, understood as /the/ contradiction in the multitude of drives a subject suffers, in touch with the way that Marx talks about /Trieb/ in his theory and system of capital.
+He sees drive as a commonality between these registers, in that in both "drives are mediated productions instead of immediate givens"- and in that 'drive' is the constitutive terms for the subject in society as such: "The (drive-)object fabricates the subject (of drive)" [cite:@johnstonClosedNeedInfinite2017 p.280].
+
+For subjects dominated by capital's abstract forms, the range of possible materializations of desire's covering over are reduced to two specific kinds of drive: *capitalist drive* ( ~M-C-M'~ ) and *consumerist drive* ( ~C-M-C'~ ).
+The capitalist is one who feeds money ( ~M~ ) into the economy with the hope and intention of generating a greater quantity of money ( ~M'~ ).
+The consumerist, on the other hand, is one who continues to take their commodities to market ( ~C~ ) in order to procure more and more different kinds of commodity ( ~C'~ ) in a fashion that is 'plastically' related to their direct, reproductive need for them.
+
+Johnston is careful to distinguish between these two subject positions Marx's theory of capital's contortion of desire, and he is also careful the specific structure of the relationship that he sees as giving rise to a compatibility between metapsychology and historical materialism:
+
+#+begin_quote
+plastic drive structure, as theorized within a metapsychological /qua/ philosophical/psychoanalytic anthropology, is a necessary condition for capitalism's peculiar libidinal economics as per historical materialism. It becomes a sufficient condition [for one to call it 'capitalism'] when capitalist production, spurred by the pursuit of surplus value, begins exploiting this plasticity for its gains. [cite:@johnstonClosedNeedInfinite2017 p.283]
+#+end_quote
+
+Psychoanalysis, in other words, theorizes a "plastic drive structure" in the speaking being (human) /in general/, i.e. independent of capitalism as a specific configuration of the condition of value's production in society.
+Historical materialism, complementarily but with a different scope, theorizes the contortion of desire - as reduced to only two dialects of drive - by way of an historically specific mode of production (movement of value) called capital.
+Johnston's analysis exegetically focuses on the German word for drive that both Marx and Freud use, /Trieb/, as Marx names the affect resulting from capital's structure /eine besondre Form des Triebs/ [a particular form of the drive].
+Capital's particular drive, Johnston suggests in his book, can be understood as *infinite greed*: as the drive is always towards the possession of some surplus amount, whether it is more money or something more in a different kind of commodity ( ~M'~ or ~C'~ ).
+
+* Bibliography
+#+print_bibliography:

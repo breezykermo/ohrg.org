@@ -1,0 +1,15 @@
+#+title: On Karpathy's Deep Dive into LLMs 
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+Andrej Karpathy, one of the original PhD greats in the AI revolution, came to fame through being the primary author of the Deep Learning course at Stanford in the mid-2010s.
+He was a founding member of OpenAI, then went to Tesla as director of AI for five years, then rejoined OpenAI briefly before leaving again in February 2024.
+He has now started his own AI education company called EurekaLabs, and a week ago he posted a [[https://youtu.be/7xTGNNLPyMI?si=MSTwCBfhq0aUMFuR][three and a half hour video]] titled 'Deep Dive into LLMs like ChatGPT'. 
+
+However you feel about LLMs, this video is worth your time.
+Karpathy gives a comprehensive introduction to how LLMs work assuming no prior technical knowledge.
+He outlines the tasks for which they're most useful, what sort of tasks they're not so good at, what the basic differences between types of model are, and a range of fascinating tips about how he works with LLMs on a daily basis.
+(A very useful one for me is the suggestion to add "Use code." when asking models to reason quantitatively/mathematically, as then you are partially offloading the calculative aspect of the task to a code interpreter, which is /much/ more reliable than the obscure machinations of next-token prediction via a natural language's vocabulary.)
+
+

@@ -1,0 +1,90 @@
+#+title: Using NixOS
+#+date: 27th January 2025
+
+- [[https://github.com/breezykermo/nixos][My NixOS configuration]] 
+
+For about a year now, the operating system that I use on my daily driver has been [[https://www.reddit.com/r/linux4noobs/comments/1cktkfc/can_someone_explain_nixos_to_me/][NixOS]].
+I moved to the distribution from Arch Linux, as I was sold on the idea of having all my dependencies declaratively specified, and thus no longer having to mess with stateful package management (~apt-get update~, ~pacman -Syu~, etc).
+I was one or two years into grad school, and off the back of working professionally with [[https://www.terraform.io/][Terraform]] as declarative infrastructure for cloud systems.
+How great would it be to have something similar to provision all the software on a desktop machine, I reasoned.
+The rumours that that Nix and NixOS were useful in theory but prohibitively arcane in practice didn't dissuade me.
+If anything, I thought, I would be able to learn more about Linux through incorporating the ecosystem in my day-to-day life as a grad student[fn:1].
+
+These visions of perfect declarative management haven't completely come to fruition, but they also haven't been /completely/ blown out of the water.
+It has taken me a year or so of idly hacking away at my configuration when I have wanted to install something new to finally begin to feel as though I have a handle on the language and the ecosystem.
+I am still not totally sure what the best resources for learning more are.
+Mileage varies in the official documentation, and there seem to be both a wide range of use cases of Nix, and a wide range of pareenthetical softwares.
+
+This range of parenthetical software made NixOS especially difficult for me to adopt, as I was consistently unsure as to whether the complexity that I was trying to scale was inherent to Nix, or whether it was embedded in additional tooling that I had unknowingly chose to adopt. 
+Let me count (a few of) the ways that I feel my NixOS journey was made difficult.
+
+* [[https://nixos.org/manual/nixos/stable/#sec-installation][NixOS]]
+The first fundamental confusion for me was the boundary between Nix, the language and package management ecosystem, and NixOS, the Linux distribution that is configured by way of Nix.
+It was the idea of NixOS that drew me to the ecosystem-- as I wanted declarative management for my operating system software specifically-- but I realise now that I probably would have been better to have started off by understanding pure Nix well and good, and onlymoving to NixOS once I felt competent there. 
+This is because NixOS works by way of Nix (of course), but there are also peculiarities of NixOS that one should not confuse with the peculiarities of Nix.
+What arguments are passed down to which files in a modularized NixOS configuration become a lot easier to understand if one has a clear mental model of how NixOS builds upon Nix.
+
+/Note to past self/: build a good mental model of pure Nix before hacking together your first NixOS configuration.
+
+* [[https://nix-community.github.io/home-manager/index.xhtml#ch-introduction][Home Manager]]
+As I built my NixOS configuration by referencing an active installation of Arch Linux, I made the relatively unconscious decision early on that I should install softwares at a user level, rather than at system level.
+Relatively unconscious, because I am not sure why exactly I made this decision, and had I thought it through a little more carefully, I would have realised that this decision also brought an unnecessary amount of complexity into the picture.
+
+Home manager is a community package[fn:2] for NixOS that makes it possible to install software in a configuration on a per-user basis.
+It also exposes a different and higher level of abstraction through which to install software than the 'standard' approach when working in the Nix ecosystem, which is to reference packages in a repository with Nix-built artifacts, the primary one being [[https://search.nixos.org/packages][Nixpkgs]].
+As an example, with Home manager one can install the [[https://fishshell.com/][fish shell]] as follows:
+
+#+begin_src nix
+programs.fish = {
+  enable = true;
+  interactiveShellInit = ''
+    set fish_greeting # disable greeting
+  '';
+  plugins = [
+    { name = "bass"; src = pkgs.fishPlugins.bass.src; }
+  ];
+};
+#+end_src
+
+In addition to the ~enable~ option, programs installed thus also provide a custom set of attributes that are configured via Home Manager through which one can customize the installation.
+
+One could also, however, install the fish shell directly from Nixpkgs (in a ~configuration.nix~ file) as follows:
+#+begin_src nix
+environment.systemPackages = [
+  fish
+];
+#+end_src
+
+The benefit of Home manager's approach here is the configuration optionality.
+In addition to the basic availability of ~fish~ on my system (the result of both approaches), I can also declare a string that will become its basic [[https://fishshell.com/docs/current/language.html#configuration-files][configuration file]] (~interactiveShellInit~) and a list of [[https://arnesonium.com/2022/09/some-great-fish-shell-plugins/][plugins]] that will be installed alongside the shell itself.
+
+On one level, this is great: all my configuration is in one place.
+Home manager has an [[https://home-manager-options.extranix.com/?query=fish&release=release-24.05][option search]] where one can check whether a package exists, and what options it provides.
+In theory, if the documentation of options isn't clear, one can go to the [[https://github.com/nix-community/home-manager/blob/release-24.05/modules/programs/fish.nix][module declaration]] to try to reverse engineer which option will result in the desired outcome. 
+In practice, though, I've found it cumbersome to do this effectively, especially if I'm new to the software in question and don't have an intimate understanding of its configuration options.
+
+The main issue is that raw NixOS doesn't provide an obvious way to manage dotfiles.
+Home manager fills that void by providing a level of abstraction on top of Nixpkgs that incorporates a sense of the current user (and hence paths to the user's configuration files); but this additional level of abstraction is constructed in such a way that it is not always clear how to map 'configuring new software X based on its documentation' to 'configuring new software X declaratively in Home manager'.
+(This is not even to mention the more complicated case in which new software X is not supported by Home manager, in which case one would have to add the new module to Home manager upstream, or work out a workaround.)
+
+In summary, though Home manager is still useful for me due to its dotfile management utilities, it confused me early on, as I didn't always have a clear notion of whether I was installing modules via Nixpkgs or via Home Manager, and whether a configuration option was provided by Home Manager or by NixOS.
+
+_Note to past self_: When installing new software, work first with a basic installation from Nixpkgs before trying to find an appropriate module in Home manager.
+
+* [[https://nixos.wiki/wiki/flakes][Nix Flakes]]
+Flakes are kind of like a new version for Nix, much like Python 3 is when compared to Python 2. 
+The overall use case is the same, but the tooling is (arguably) better with Flakes, and there are some features (such as pinned versions in a ~flake.lock~) that you fundamentally don't have in vanilla Nix without flakes.
+I personally adopted flakes when I first started using NixOS for no particularly good reason; just because they seemed like the 'modern' way to work with Nix, a recipe for getting in over one's head with the Nix ecosystem, as has come to be the central theme of this post.
+As with Home manager, I don't regret the decision to use Flakes exactly, as I do think that they were and are useful for my use case.
+Like Home manager, however, choosing to adopt them steepened the learning curve in a way that probably could have been avoided had I had a better sense of /why/ they were useful for me.
+
+I think of flakes as essentially a different and more integrated way to write Nix configurations. 
+They're not actually fundamentally necessary for my NixOS configuration, as its not primarily a 'library' that is intended to be used by others: it's really just a standalone software that serves a purpose for me. 
+Where flakes come in handy for me is when I am writing Nix files in association with particular coding projects, where I want a development environment, a build process, and some set of artifacts that are produced from the project.
+For more on how NixOS with Flakes works in this context, I refer the reader to the excellent section of the open source book /NixOS in Production/, ``[[https://github.com/Gabriella439/nixos-in-production/blob/main/manuscript/BigPicture.md][The big picture]]".
+
+_Note to past self_: don't use flakes with your NixOS configuration; learn about them afterwards and apply it to dev environments. 
+
+
+[fn:1] A glorious time in one's life where it is reasonable to adopt software simply for the sake of it. I did something similar with the keyboard layout [[https://colemak.com/][colemak]], which is now essentially the only layout in which I can type.
+[fn:2] I use the work 'package' here in a very general and non-technical way. The Home manager documentation says that it is a ``Nix-powered tool". It is not a module, as [[https://nixos.wiki/wiki/NixOS_modules][modules refer to something specific in NixOS]]; and it is also not technically a package, as [[https://search.nixos.org/packages][packages are the software bundles]] on [[https://nixos.wiki/wiki/Nixpkgs][Nixpkgs]].

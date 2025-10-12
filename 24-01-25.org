@@ -1,0 +1,50 @@
+#+title: What /is/ 'modern culture and media'? 
+#+options: author:nil date:nil timestamp:nil
+
+As the new year has now turned around, I am (once again) promising myself that I will write something more regularly.
+I am entering the latter half of my third year as a PhD student at Brown University in the department of Modern Culture and Media-- a department that, unless you happen to be invested in the landscape of a particular kind of institutionalized humanities in the U.S., requires some context.
+
+The department is generally described, and generally describes itself, as a "media studies" program.
+The discipline of media studies approaches the question of so-called 'media' from a wide berth of lenses.
+Rather than working in a specifically productivist manner towards improving existing media or imagining new forms of media, media studies is a disciplinarily polygot designation in which scholars research and theorize the effects of media in society.
+
+Some media studies programs branch off or out from English departments, in that they treat more modern forms of media critically in much the same way a literary theorist or commentator might treat a text.
+Though departments and scholars will stretch themselves to stress that they work on 'many' or even 'all' forms of media, the moniker 'media studies' is usually a not-so-veiled reference to film.
+Film studies emerged in the late 20th century, as the medium was popularised and academicized: but as the recognition that it is possible to read more than just film as 'texts', many programs sought to rebrand from 'film studies' to 'media studies'.
+
+Though 'media' originally referred specifically to technological, man-made media (as this was the arguably narrow-sighted focus of the first 'media studies' scholars, i.e. [[https://en.wikipedia.org/wiki/Marshall_McLuhan][McLuhan]] and [[https://en.wikipedia.org/wiki/Friedrich_Kittler][Kittler]]), in recent years the berth of media's lane has become broader.
+At least since John Durham Peters' 2015 book /[[https://press.uchicago.edu/ucp/books/book/chicago/M/bo20069392.html][The Marvelous Clouds]]/, it has come to be acknowledged that we can sensibly talk about almost anything, material or immaterial, as media: the clouds: the Earth, the Internet, animals, architecture, and so on.
+This opening from media-as-technology to media-as-everything is not dissimilar to the shift from departments of film studies to departments of media studies: while the former designated a relatively limited field of study, the latter presumes to sidestep those strictures and open out into a more collaborative, more inclusive sense of itself.
+
+This rebranding has opened up a pandora's box of opportunity in media studies departments.
+Freed from the constraints of any particular methodological or disciplinary backbone, 'media' is now an invertebrate term stretched every which way.
+Do you write books that interpret TV shows through a Marxist lens?
+That's media studies.
+Do you study the political effects of radio broadcasts between U-boats in World War II?
+That's media studies.
+Are you working on the multispecies relation between dolphins and kelp?
+That's media studies.
+
+Though these 'opening outs' almost certainly originate in a motion on the part of many scholars towards a more inclusive academy, they fall somewhat sweetly into the pockets of an administrative desire to collateralize humanities departments under one big roof.
+The "humanities" are increasingly imagined as one, big department, rather than a collection of atomised disciplinary inquiries.
+In other words, the utopian rhetoric of the 'collaborative humanities' often effects the defunding and deterioration of humanistic pursuit under the guise of modernizing (and even sometimes 'decolonizing') the academy.[fn:1]
+Departments were once conceived as shelters from the storms of executive profiteering, from the need to find immediate 'cash value' (i.e. quantifiable according to the wayward metrics of the neoclassical economic imagination) in certain forms of literary, philosophical, or scientific study.
+
+In 1991, a graduate of the Semiotics program at Brown made a significant gift to that program.
+The Semiotics program was an undergraduate specialization formed in the English department in 1974 in response to student interest.[fn:2]
+As such, Semiotics combined with the program of Modern Literature and Society to became the department of Modern Culture and Media, then and now committed specifically to "projects designed to promote and contribute to scholarship and production dealing with theories, practices and histories of modes of representation as they engage mass mediated culture."[fn:3]
+
+So Modern Culture and Media-- or MCM, as it is colloquially known-- is something of a typical media studies department in that it originated in the theory of language and literature in an English department; but now encompasses a range of scholarly pursuits related to media of many forms.
+
+I heard about the department as an undergraduate through the work of one its previous faculty members, [[https://en.wikipedia.org/wiki/Wendy_Hui_Kyong_Chun][Wendy Chun]], who was a Professor in MCM until 2020.
+Chun works with the training of a literary theorist (her Ph.D. from the Princeton English department) to theorise and critique _digital_ media.
+I studied Computer Science in my undergrad (alongside a smattering of seminars in German, where the media philosophy was being taught at my institution), and had come to really enjoy coding and learning about software as an intellectual pursuit.
+Because Chun was at Brown, MCM had a reputation for literary and philosophical studies about computing in general and software in particular.
+(Though Chun is no longer at Brown, many current graduate students and faculty still work in the orbit of computing as media in some form.)
+
+I started a PhD program in MCM at Brown in September 2021, and am currently working towards my field examinations; which I will sit in September 2024.
+Next up: a primer on my fields and current course of study.
+
+[fn:1] In parts of both the U.S. and Europe, at least.
+[fn:2] https://www.brown.edu/Administration/News_Bureau/Databases/Encyclopedia/search.php?serial=C0230
+[fn:3] https://mcm.brown.edu/about

@@ -1,0 +1,65 @@
+#+title: Karl Marx: /Capital, Volume 1/ (chapter 22) 
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+Chapter 22 of /Capital/ Volume I-- following the chapter structure in the [[https://press.princeton.edu/books/hardcover/9780691190075/capital][2024 English translation]] - builds on [[./25-03-07.org][the previous chapter on simple reproduction]], which had laid out the impossible position of "economic bondage" [cite:@marxCapitalCritiquePolitical2024 p.532] of the wage laborer in relation to capital.
+Chapter 22 shifts from outling the standpoint of the wage laborer to a closer look at the standpoint of the capitalist, detailing how capital works through the reinvestment of *surplus value*. 
+
+When the surplus value produced through the structure of the wage relation is reinvested, it amounts to a process of *accumulation*: "accumulation is the capitalist process of reproduction on an ever-expanding scale" [cite:@marxCapitalCritiquePolitical2024 p.534].
+Accumulation is a phenomenon that is produced under the aegis of a free and fair exchange, but which in fact rests in the *exploitation* of laborers.
+Though it is the laborer who produces surplus value, it is the capitalist to whom it is owed.  
+This is why Marx calls the capitalist a false "legal representative" [cite:@marxCapitalCritiquePolitical2024 p.535] of workers, as it is through an apparently legitimate process (we might think here of 'democracy') that a figure who represents interests antithetical to the workers' own comes to reside in a seat of power.
+Unpaid labor, conjured through the reduction of labor to labor-time in the form of a wage ("the invisible magic of the production process" [cite:@marxCapitalCritiquePolitical2024 p.535]), is the common coin of this phony demagoguery.
+
+Accumulation is the name for the reproduction of capital for its own sake.
+The capitalist is not, according to Marx, a machiavellian villain who selfishly /expropriates/ value from the laborers he employs.
+(This is one of the core distinctions between /expropriation/ and /exploitation/ for Marx: the latter does not imply strictly overt or conscious violence on the part of the dominating party.)
+The capitalist is rather a role that is subject to the abstract domination of capital's value forms, just like the wage laborer, though that subjection has a different orientation.
+The wage laborer, as we saw in chapter 21, is compelled to want more commodities, even at the expense of her own reproduction, an orientation that can be denoted ~C-M-C'~.
+The capitalist, on the other hand, is compelled to want more money, even at the expense of his own reproduction, an orientation that amously can be denoted ~M-C-M'~.
+It is these two roles working in tandem that produces accumulation, the movement of value specific to capital, an infinite cycle of ~M-C-M'-C'-M'~.
+(The formal genesis of this cycle, i.e. whether it is ~M~ or ~C~ that kicks accumulation off, is the subject of the final chapter in Volume I, /The So-Called Original Accumulation/.) 
+
+The search for surplus (~'~) for its own sake is the driving motor of capital's process, the characterizing feature of its implant in human subjectivity, whether its installation produces a capitalist or consumerist 'affect':
+
+#+begin_quote
+Whether the new capital takes the form of money or the things that make up the means of production and subsistence, its *substance* is the product of a process that extracts someone else's unpaid labor. Capital has produced capital. [cite:@marxCapitalCritiquePolitical2024 p.536]
+#+end_quote
+
+Marx's use of the word 'substance' here and elsewhere can be understood to mean something similar to what I propose as a 'characterizing feature' above.
+It does not refer to a concrete and material thing that can be touched, smelled, or felt that underlies those airy, ideological phenomena that are palpably more conceptual.
+To render 'substance' in this way is to read Marx against his own method, to assert that there is a 'base' that can be consciously unearthed as a 'thing' that determines the 'superstructure'.
+Substance rather refers to neither thing nor thought, but the dialectical space where they meet-- what Heidegger will later call /das Ding/.
+The substance of value in capital, then, needs to be explained by way of the process of its (conceptual /and/ material) movement, from commodity to money to surplus, such that we can see how (a certain conception of) labor is the 'ground' of the abstract domination at work in capital.
+
+The network of notions of commodity, labor, value, and so on is what reveals the notion of *bourgeois ownership* as one that is turned inside-out.
+It parades as a transparent principle of 'each to his own', but in fact (in 'substance') rests on the underhanded dispossession of workers of their labor.
+The law of ownership is, in other words, a law that harbors a contradiction within itself.
+Though an "exchange of equivalents" is "the original operation", the outcome is constitutively unequal [cite:@marxCapitalCritiquePolitical2024 p.537]:
+
+#+begin_quote
+Owning yesterday's unpaid labor now appears as the sole precondition for appropriating today's unpaid living labor on an ever-larger scale. [cite:@marxCapitalCritiquePolitical2024 p.536]
+#+end_quote
+
+A key point in the first section of this chapter is that the capitalist is not, by definition, a miser.
+Accumulation can only take place if "yesterday's unpaid labor" is put back into circulation, rather than hoarded by miserly factory owners.
+This is not to say that those playing the part of the capitalist in accumulation's equation do not spend some of the surplus on themselves, buying commodities that they do not need in pursuit of an ever-elusive total satisfaction. 
+But this drive is not what characterizes him as a capitalist:
+
+#+begin_quote
+insofar as the capitalist is personified capital, his driving motivation is to have more and more exchange-value, not to acquire use-value and experience pleasure. A fanatic when it comes to the valorization of value, he ruthlessly forces human beings to produce for production's sake.... Thus, insofar as the capitalist's behavior is merely a function of the /capital that has taken on consciousness and a will in him/, he sees his own private consumption as an act of theft committed against the accumulation of his capital. [cite:@marxCapitalCritiquePolitical2024 p.542]
+#+end_quote
+
+The affect driving the capitalist is a renunciation of private consumption, an obscure and alien selflessness in service of /capital's/ reproduction, not his own.[fn:1]
+(One cannot help but think here of the numerous reports of investment bankers commiting suicide upon hearing about the financial crash in 2008.
+Agents of capital to the end, life is no longer worth living where accumulation has stalled.)
+Thus is capital a parasite on modern subjectivity, which since at least the Enlightenment has prided itself on the ability to reason first and foremost /for/ oneself.
+In capital, this vision of clear-headed reason is compromised.
+Reason itself is unsound, for conscious abstraction in its own right seems to suffer domination at the hands of the movement of value.
+
+* Bibliography
+
+[fn:1] Adrian Johnston makes this point persuasively in the preface to his 2024 book /Infinite Greed: The Inhuman Selfishness of Capital/ [cite:@johnstonInfiniteGreedInhuman2024].
+
+

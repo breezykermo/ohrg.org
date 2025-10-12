@@ -1,0 +1,74 @@
+#+title: Fall semester 2024 update 
+#+options: author:nil date:nil timestamp:nil
+
+The pause in proceedings here has been principally due to a (final) semester of coursework and teaching at Brown University; the other side of a PhD in the U.S.
+I have now advanced to candidacy, which means that I have completed all requirements for my PhD except the submission of the dissertation itself.
+(This is also known as being [[https://en.wikipedia.org/wiki/All_but_dissertation][ABD]], ``all but dissertation".)
+
+I was in Providence for this stint (September through December 2024), and though the period has certainly been generative in terms of meeting milestones and generating sparks for further research, I didn't manage to make any time to write here throughout.
+So I return with a brief recap of the contours of my past few months.
+
+* Teaching CCeAI 
+One of the features of the [[file:./24-01-25.org][PhD program in Modern Culture and Media at Brown]] is that students are expected to teach an undergraduate seminar of their own design around their fourth year. 
+It is recommended that this seminar trace a student's intellectual fields, as it is ideally taught just after completing the [[./24-01-26.org][fields examination]].
+(In my case, I sat the fields exam halfway through the same semester in which I was teaching my own course, due mainly to logistical issues with convening my advisors.)
+
+I titled my course '[[https://cceai.ohrg.org/][Capitalism and Computers in the Era of AI]]', acronymically 'CCeAI'.
+As expected, about half of my students were majors in Computer Science, interested to relieve their technical coursework with some critical reflection on the economy and politics of computing more generally. 
+The [[https://cceai.ohrg.org/syllabus.pdf][syllabus]] lays out the course's focus:
+
+#+begin_quote
+What is the relation between capital and the computer? To answer this question, this course attends to the particulars of the computer as a mathematical proposition, to its claim to legitimacy as a logic of superior military and political organization, and to its elaboration as something of a natural philosophy in scientific practice. In doing so, we will formulate a conceptual basis to critically assess the glittery promises of current discourse invoking Artificial Intelligence (A.I), which sees near-total automation as inevitable and the threat of sentient Artificial General Intelligence (A.G.I) as nigh. We will establish a critique of the computer as a structure (i.e. as a philosophical arrangement with a specific and persistent imagination) to think critically about popular ideologies associated with A.I., often put forward by those with capital stake in its commercial success.
+#+end_quote
+
+All in all, I was pleased with the way that the course turned out.
+Due to unexpected interruptions in the academic calendar coupled with a sense that we needed to spend more time with the material in the early weeks to properly get a grasp on it, we skipped the week titled 'Ideology' (Zizek), as well as the final week titled 'Psychoanalysis?'.
+I am still myself working out the appropriate way to cross-pollinate Marxian theory and Lacanian psychoanalysis, I realised as we approached each of these weeks, and so it felt an unreasonably far throw in the course's overall argument to sidestep into Zizek's theory of ideology (which I wrote some about [[./24-02-05.org][here]] and [[./24-02-07.org][here]]) directly after a tough week attempting to chart Marx's theory of commodity fetishism via Michael Heinrich's (excellent but dense) introduction to it; and while I would estimate the final week's reading as at a slightly more appropriate level for the course, there was a holiday that I had not accounted for throughout the semester (election day).
+
+The texts in this syllabus represent a trajectory of my own thinking regarding the intimate philosophical relation between capital and the computer.
+The course locates the *computer* through three supposed inventors of it in the first three weeks: Charles Babbage (1830-70s), Alan Turing (1930-50s), and Norbert Wiener (1920s-60s).
+Each of these three men is esteemed as a populariser of the computer's concept, and we can glean important characteristics of the imaginaries that proliferate from their writing and writing about them.
+
+The course's core argument is that there /is/ a fundamental relationship between the computer and capital, and so in the weeks following an elaboration of the computer, we looked to firm up a sense of capital's contours and characteristics, particularly the aspects of its theory that have been explicitly employed in critical discussion about cybernetics and the computer.
+Each of the weeks whose titles end with a question mark are designed to provide texts through which students can observe and practise critical thinking with respect to the computer, capital, and cybernetics, consisting of contemporary attempts to theorise a relationship between these terms, rather than of introductions to a concept as the earlier weeks' texts do.
+The course culminates in a ten page paper on a topic of students' chooosing.
+
+Through teaching the course I have certainly learned that there is a real difference between the way that one reads as an undergraduate, and how one reads as a graduate student.
+I think I knew this already, but in some sense I have resisted the idea, as I sought to flout the hierarchical distinction as an undergrad, and of course don't believe in any fundamental demarcation.
+(There are certainly particular undergrads who are smarter / better readers than certain grad students.)
+But in general, undergrads in US institutions are beset with circumstances that make it difficult to imagine that there is value in reading texts closely, repetitiously.
+This is not something to hold against undergrads, I don't think, but rather against the regimes of value that flood in and out of (neo)liberal arts institutions.
+Five courses a semester is both far too much and far too little.
+One doesn't have to work particularly hard to keep head above water, especially at Brown where [[https://www.brown.edu/academics/undergraduate/open-curriculum][grades don't hold much weight]]; but there is also too much noise in the days and weeks if one were to want to seriously study something particular in the oceany midst of weekly obligations.
+
+* [[https://cs.brown.edu/courses/csci2680/fall2024/][The Internet]] and [[https://brown-csci2690.github.io/classwebsite-fall24/][Datacenter Operating Systems]]
+I decided to take two graduate seminars in computer science to wrap up my masters degree in the department, and I learned a lot about research in the discipline through the experience.
+The experience of reading four papers a week from operating systems and Internet research was instructive in the sense that I realised how different the work of keeping up with computer science is from keeping up with continental theory.
+The journals are different, of course.
+But so is the kind of effort that reading each paper involves, and the time one must set aside in the day to engage with it.
+I like the difference in the experience between the two disciplines in which I have decided to make an effort to become literate; though it is certainly true that I feel more equipped at this stage to parse papers in continental theory than I do those in computer science.
+
+The work involved in each (systems) paper in computer science is also enormous.
+It takes at least a year to prototype a system, to run experiments, etc, and it is often a multi-person effort.
+The scale of the research is still relatively small and individualistic compared to other scientific disciplines, but it is a notably different (and more social) experience of research than reading and writing philosophical papers.
+
+The main thread that emerged from these two courses for me was a burgeoning familiarity with vector databases, which I had decided to try to get a handle on early in the semester so as to be able to code something substantially systems-oriented for my final projects in the courses.
+The system I have now started working on is currently called [[https://github.com/breezykermo/oak][OAK]], and while I am not yet sure that it offers something distinctively innovative or original in vector databases research, it is at least a very good way for me to practically get a handle on the current state of vector indexes, and to think about what kinds of opportunities there might be for turning research into practice in this domain (i.e. coding up research papers as new components of OAK).
+
+* German Idealism and Canguilhem
+The other two courses that I either took or audited this semester were respectively about Kant with political theorist [[https://www.alexgourevitch.org/][Alex Gourevitch]], and about [[https://en.wikipedia.org/wiki/Georges_Canguilhem][Georges Canguilhem]] with my advisor and chair, Joan Copjec.
+The first of these will likely see some thematically related posts in the coming weeks, as I am now starting work on a paper about Kant and Marx to submit as the final paper for that course, so I won't discuss it at length here.
+The second course with Joan, which I audited, was revelatory even though I was not able to complete much of the reading for it in advance.
+The basic premise was that Canguilhem's ideas bear some relation to Lacan's, and so we sat each week listening to Joan hypothesize connections between the two thinkers.
+
+While it perhaps doesn't come directly on the back of this seminar, and is rather an idea that I have been stewing for some time, I intend to read Joan's work more closely in the new year, and to record the way in which I understand it via video, rather than here in writing.
+I am not exactly sure how this will work at this stage, so I will not speculate further.
+But I have resolutely decided that I ought to get deeply familiar with her body of work, for though it is far-reaching, it is relatively short in terms of actual page counts.
+(A credit to the incredible effort that Joan puts into each paper, not dissimilar to the year-long efforts of systems papers I note above.)
+
+
+
+
+
+
+

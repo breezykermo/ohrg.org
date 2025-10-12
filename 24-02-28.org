@@ -1,0 +1,121 @@
+#+title: Jensen Suther: "Novel, Organism, Form: Bio-Aesthetics in Hegel and Thomas Mann"
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+There has been an unintentional pause in this "daily" log of almost a month.
+I caught a head-cold around mid-month, and then traveled from New Zealand to Italy (via Berlin).
+The bodily strain has basically persisted through until now - which, in partnership with a general lapse in having the diligence to set aside time every day, has seen no logs in the meantime.
+
+I have made some parenthetical progress during this period.
+During the trans-continental journey, I properly started writing a paper that will occupy me for the better part of the next few weeks.
+The structure I have planned for it will first work through the three notions of value as subject in Marx, with reference to Rebecca Carson's book ([[file:24-01-27.org][24-01-27]]), Zizek's /Sublime Object of Ideology/ ([[file:24-02-05.org][24-02-05]], [[file:24-02-07.org][24-02-07]]), and Moishe Postone's 1994 book /[[https://www.cambridge.org/core/books/time-labor-and-social-domination/B2429FE0E1B401CC2F775DC2683C2025][Time, Labor, and Social Domination]]/.
+The main proposition of this essay will be to network these conceptions (which substantiate a conception of the machine as a philosophical structure in Marx) with Alan Turing's 'universal machine' - which I will attempt to wrap together using Mladen Dolar's understanding of the automaton in his 1991 essay, "[[https://www.sas.upenn.edu/~cavitch/pdf-library/Dolar_ShallBeWithYou.pdf][I Shall Be with You on Your Wedding-Night]]".
+I will work through more of Zizek's book as well as Postone's, here, in the coming days towards this.
+
+More directly, I worked through two essays parenthetically related to my lists during the journey.
+The first, and the subject of this log, was Jensen Suther's "[[https://online.ucpress.edu/representations/article-abstract/164/1/80/197732/Novel-Organism-FormBio-Aesthetics-in-Hegel-and?redirectedFrom=fulltext][Novel, Organism, Form: Bio-Aesthetics in Hegel and Thomas Mann]]".
+Suther is a contemporary young scholar: currently (or recently) a post-doc at Harvard, with a PhD from Yale advised by [[https://en.wikipedia.org/wiki/Martin_H%C3%A4gglund][Martin Hagglund]], with an actively academic [[https://twitter.com/jensensuther][Twitter presence]].
+I worked through the essay in preparation for a seminar with Suther that a reading group in which I participate (on Marx and alienation); a seminar which I unfortunately missed due to a time-zone miscalculation.
+(It took place in the middle of the night in Italy on my first night here.)
+Despite this travel mishap, however, I found the essay very compelling and informative in the course of my project.
+If I understand correctly, the essay is a preprint (in the way some essays are) of Suther's forthcoming book about what he calls Hegel's "bio-aesthetics".
+
+In theorising Hegel as a bio-aesthetician, Suther is taking issue with the widespread misconception that German Idealism in general and Hegel in particular is guilty of "perpetrating an essentialist conception of organic form - one that is ultimately thought to underwrite a racist ecology" [cite:@sutherNovelOrganismForm2023 p.81].
+The stakes here are higher than just redeeming one supposedly conservative philosopher (Hegel) from cancellation in today's task of formulating progressive politics and philosophy: for Hegel represents the root of a range of radical thinkers since, being the inventor of dialectical thinking.[fn:1]
+To redeem Hegel is to recover dialectics as a way to think the world politically and progressively, against the ignominy they have suffered at the hands of post-modernism and historicism.[fn:2]
+
+More critically for my interests, Suther reads Hegel and Marx as productively thought together in pursuit of such a redemption.
+This is a strategy that (it seems from my very cursory understanding of the space) a new wave of Hegelian scholarship is adopting to 'politicise' Hegel from his colloquial reputation as a [[https://hegel.net/en/stewart1996.htm][Prussian apologist]].
+Marx, both the dialectical and un-dialectical camps agree, offers us an acceptably progressive political theory in his critique of capitalism.
+And so the stakes of Hegel's progressivism can to some extent be understood in light of the question: what /exactly/ is the relationship between Hegel's and Marx's philosophy (given that the former undeniably had some impact on the latter)?
+
+Marx's project is infamously often depicted as a simple, historicist overturning of Hegel's idealism: Marx's materialism turned it on his head.
+A user who goes by ~old-wise-wizard~ concisely summarises this view in [[https://www.reddit.com/r/askphilosophy/comments/g2ki67/what_is_meant_by_the_statement_that_marx_stood/][this Reddit thread]]:
+
+#+begin_quote
+Hegel: ideas shape circumstances.
+
+Marx: economic circumstances shape our ideas.
+#+end_quote
+
+Whereas Hegel argued that thought is the master of matter, Marx argued that matter is the master of thought - or so goes this reductively simple understanding.
+If this characterisation isn't complicated, Hegel easily comes to appear as the archetypal White Man's philosopher, whose idealism ultimately amounts to advocacy of a "pull yourself up by your bootstraps" chauvinism: that is, an uncritical supporter of capitalism who ought to then be associated with the likes of [[https://en.wikipedia.org/wiki/Adam_Smith][Adam Smith]], [[https://en.wikipedia.org/wiki/David_Ricardo][David Ricardo]], and the other "British political economists" whose viewpoint Marx's /Capital/ decisively critiqued.
+Of course, Hegel is not this philosopher - not if you read his texts rather than dismissive tweets that reference him, and not in the estimation of his supposed censurer, Karl Marx.
+Just as there is an exciting wave of Hegel scholarship - like Suther's - that investigates how misguided this head-turning view of Hegel-qua-Marx is by reading Hegel through Marx, there is a complementary effort in Marx scholarship that reads Marx through Hegel.
+The revival of Hegel's relevance in Marx scholarship is closely allied with a set of contemporary Marxian schools of thought (which interest me), such as the [[https://en.wikipedia.org/wiki/Neue_Marx-Lekt%C3%BCre][New Reading of Marx]] (associated principally to Michael Heinrich, a "[[https://thenextrecession.wordpress.com/2023/12/23/marxs-value-theory-and-the-value-form-interpretation/][David Harvey of Europe]]") and value-theoretical readings such as Moishe Postone's and Rebecca Carson's.
+
+Thus is the substance of my interest in Suther's work, despite not myself being particularly fluent in Hegel's philosophy, nor modernist (or any other kind of) literary criticism.
+It is also one way of understanding what is at stake in a Hegelian bio-aesthetics "grounded in the logical form of the organism" [cite:@sutherNovelOrganismForm2023 p.81].
+To position Hegel's aesthetics as reliant on a thorough theory of life and nature (the organism) is to render it capable of reckoning with matter more 'material', rather than relegating it to the annals of theories that are too esoteric and idealistic to have any political bearing on the world at hand.
+
+As certain thinkers of Hegel - namely the Ljubljana school and its psychoanalytic associates - have argued for some time now, such a case for Hegel's 'materialism' is both a political redemption of (German) Idealism, as well as the grounds for critique of the mushrooming growth of cruder and cruder materialisms.
+These multifarious materialisms want to un-think thought as a quality distinct from matter, banishing it from its selfish and self-aggrandising speculation in the figure of the "human", and stuffing it instead inside rocks, flowers, and poisons.[fn:3]
+To insist that Hegel's philosophy - and indeed, his idealism - matters is recognise that we cannot simply think ourselves out of the picture in our experience of the world.
+As Lacan puts it (in his characteristically opaque and 'punny' way): "the picture is in my eye, but /I/ am also in the picture" (see [[https://nosubject.com/Parallax][here]]).
+In other words, we cannot simply think the subject (of the sentence, of consciousness) out of existence.
+We must instead thematise it as carefully as possible, recognising where it is essentially impotent in the face of a state of affairs, and where it maybe just may have an actual freedom to choose, rather than to be externally determined.
+
+Suther's essay articulates a theory of Hegelian bio-aesthetics with an intention "to grasp the stakes of [Thomas] Mann's... modernist revival of the /Bildungsroman/" in his monumental novel /[[https://en.wikipedia.org/wiki/The_Magic_Mountain][The Magic Mountain]]/, a work begun in 1912 and completed in 1924 [cite:@sutherNovelOrganismForm2023 p.81].
+The /[[https://en.wikipedia.org/wiki/Bildungsroman][Bildungsroman]]/ is a literary genre deeply associated with German Idealism, as works of /Bildungsroman/ were directly considered by philosophers in that movement, and also because the genre is a touchstone in the (European) literary landscape of the long 19th century.
+Though I am not personally particularly well equipped to reckon with what waves Suther is attempting to make in literary theory with this position, the essay does strike me as an impressive and ambitious intervention in the understanding of /Bildungsroman/.
+Mann's novel lacks, of course, no depth of criticism; nor does the /Bildungsroman/ genre; nor does Hegel.
+Thus if Suther's critique does hold together, it is a careful and scholarly work of thought.[fn:4]
+
+While I cannot afford to get into greater detail about Suther's account now, here is the essay's abstract so that I might make some concluding remarks about where I might take gentle issue with one dimension of the argument:
+
+#+begin_quote
+This essay intervenes in the contemporary debate surrounding the /Bildungsroman/ and its roots in German Idealism through a new reading of the idea of "life" in two major modern texts: G. W. F. Hegel's Lectures on Fine Art and the famous "Research" chapter of Thomas Mann's /The Magic Mountain/. I establish three key points:
+1) Hegel pioneers a bio-aesthetics that grasps the work of art as a distinctly social and historical, reflective manifestation of organic life;
+2) Mann's novel achieves a kind of self-conscious knowledge of the /Bildungsroman/ in particular as such a manifestation; and
+3) Karl Marx's analysis of the alienation of humanity from its "species-being" under capitalism accounts for the opposition between nature and culture, animality and rationality, that drives Mann's modernist experiment with genre: his innovation of what I call "the novel of deformation." [cite:@sutherNovelOrganismForm2023 p.80]
+#+end_quote
+
+While I agree that capitalism exercises a "deformative" effect on the human relation to what (young) Marx calls its "species-being", towards the end of the essay Suther seems to suggest in the essay that a return to Hegel's bio-aesthetics (a thinking 'before' Marx) offers us a way to think life as flourishing in contradistinction to capitalism's capture and obstruction of it.
+He does this in a final section titled "Beyond the /Bildung/ principle" [cite:@sutherNovelOrganismForm2023 p.96], a play on /Beyond the Pleasure Principle/ (1920, notably), the text in which Freud most famously theorised the death drive.
+In marking Mann's novel as a representation of "the novel of deformation", i.e. as an alienation under capitalism of a supposed pre-capitalist flourishing, Suther seems to take Freud's death drive as a symptom of our (unavoidable) alienation under capitalism:
+
+#+begin_quote
+Freud, in reference to Schopenhauer, formulates the idea of the "death drive" (/Todestrieb/) as the innate tendency of life toward an original state of quiescence.... [The possibility of a formative drive] is diverted by a process of /deformation/, codified in the idea of a /Todestrieb/. [cite:@sutherNovelOrganismForm2023 p.102]
+#+end_quote
+
+Taking Freud's theory of the death drive as his recognition of our deformative will-to-power under the condition of capitalist alienation, Suther then suggests that:
+
+#+begin_quote
+Hegel provides a radically different, Aristotelian account of the structure of satisfaction and desire.... Desire, then, is not a stain to be eliminated but the organism's valenced way of responding to the elements of its environment as either means or obstacles to its possible /flourishing/. *Hegel thus gives us a powerful alternative to Schopenhauer and Freud and to Mann's narrator* [cite:@sutherNovelOrganismForm2023 pp.102-103].
+#+end_quote
+
+This seems to me a misreading of Freud's death drive as a strictly deformative condition of being (under capitalism), rather than as a recognition of the /necessary contradiction that undergirds the possibility of freedom in modernity/.[fn:5]
+The alienation of our species-being is the condition of our domination under capitalism, yes: but it is paradoxically also the prerequisite of our distinctly modern freedom, i.e. a state of being in relation to ourselves in which we can avoid the totalizing effect of that very same domination.
+Psychoanalysis is the name of the philosophical project to /work through/ this necessary state of alienation (or deformation, in Suther's schema) towards an elusive ideal of freedom, of 'free association' and un-capitalised desire.
+
+The necessity of working through alienation rather than returning to a state before it (or accelerating or otherwise imploding it to get to a post-capitalist state after it) is a point on which Freud and Marx agree, despite the misapprehensions of their projects otherwise.
+Far from being a further entrapment in alienation by way of a defeatist pessimism, psychoanalysis is paradoxically a project to achieve /disalienation/ without succumbing to the persuasive persistence of desire's and actions wily capture by capital's abstract domination.
+To laud Hegel as an alternative to the "pessimism" that Suther wants to associate with Freud, then, risks the same misunderstanding of Marx that Moishe Postone critiqued as "traditional Marxism" in his 1994 book, /Time, Labor, and Social Domination/ [cite:@postoneTimeLaborSocial1996].[fn:6]
+Marx's project in /Capital/ is not the critique of capitalism from the standpoint of labor (a position that hypostasises labor as a concept that is /transhistorical/); but rather the critique of labor in capitalism (which sees the particular figuration of labor in the movement of value - and, it is worth noting, in relation to the reproduction of human life - as a form that is historically specific to capitalism) [cite:@postoneTimeLaborSocial1996 Chapter 1].
+Thus, given that our situation of thought is necessarily conditioned by capital as a precondition, we cannot easily think a purely formative flourishing (a /Bildungsroman/) that is devoid from its deformative negative.
+We cannot return to a straightforward socialist optimism, even if it is carefully and thoughtfully Hegelian in its composition, to solve capitalism's intrinsic pessimism.
+
+Though Suther's position on this is mostly secondary to his argument in this essay (most of which, as noted above, I find strikingly incisive), he re-articulates his skepticism of the psychoanalytic project in [[https://www.youtube.com/watch?v=7PvszsHWbYU][an interview about his work]] from about a year ago.
+Lacanianism, Suther argues, by which he means the strand of leftist psychoanalytic philosophy associated with Zizek (and the Ljubljana school by extension), inevitably ends up with a kind of "unhappy consciousness," a term that Suther draws from a progression in Hegel's /Phenomenology of Spirit/.
+This is a symptom, Suther continues, of Lacan's reading of Hegel being mostly by way of [[https://en.wikipedia.org/wiki/Alexandre_Koj%C3%A8ve][Alexandre Kojève]]: and just as the two Hegelian Roberts ([[https://en.wikipedia.org/wiki/Robert_B._Pippin][Robert Pippin]] and [[https://en.wikipedia.org/wiki/Robert_Brandom][Robert Brandom]]) depart from Kojève, so too does Suther.
+
+As I have stated above, I think I would tend to disagree on this point.
+The psychoanalytic project is only stuck with an unhappy consciousness to the extent that it acknowledges the existence of a structural alienation in capitalism that we can only think /through/, and not before or after.
+I don't have the Hegelian or Lacanian chops (at present) to take this issue back through Lacan, Kojève, Brandom, and Pippin.
+Though I think that Suther's misreading of the Freudian death drive in the essay treated here is an indicative start; and perhaps this is a project that I will pursue at some point in the future.
+
+* Bibliography
+#+print_bibliography:
+
+[fn:1] For a compelling account of what distinguishes Hegelian dialectics from its precedent forms of thought (i.e. philosophy in classical and medieval times), see [cite:@coleBirthTheory2014].
+
+[fn:2] Here is not the right place to pedagogically unpack how dialectical thought differs from its scandalizing successors. For a basic introduction to the fault lines and the necessity of dialectical return, see [cite:@johnstonIntroductionNominalismRealismDivide2022]. For a deep study, see [cite:@copjecReadMyDesire2015].
+
+[fn:3] There are a number of recent critiques of the overly materialist viewpoint worth reading. One is a recent essay by Mladen Dolar [cite:@dolarWhatsMatterMatter2020], and another is the introduction and first chapter in Frank Ruda's book on Alain Badiou [cite:@rudaBadiouIdealismIdealism2015].
+
+[fn:4] It is increasingly 'trendy' in academic circles to address /new/ work: new novels, new films, new artists. While I agree with many shades of the suggestion that we as scholars ought to broaden the horizon of work that we read theoretically, I disagree with a militantly progressivist emphasis that prevents us from returning to the 'classics' for fear that they have either been discussed and theorised 'enough' (as if theory were an exercise one could finish or conclude) or, worse, that the study of classics is in itself a kind of conservative, politically regressive undertaking. Indeed, it seems to me that it might be more politically efficacious for academics to re-theorise (even radicalise) the classics, rather than effectively 'cancelling' the study of them altogether. It is also worth noting, I think, that it can require a different kind of care and capacity to say something worthwhile ('new') about a work that has already been so deeply discussed, sometimes across centuries.
+
+[fn:5] The most comprehensive articulation of this reading of Freud's death drive is in the final chapter of Alenka Zupancic's essential and impressively short book, /What Is Sex?/ [cite:@zupancicWhatSex2017].
+
+[fn:6] A book that Suther notably footnotes as the basis for his reading of Marx's theory of value and free labor [cite:@sutherNovelOrganismForm2023 p.85, footnote 22].

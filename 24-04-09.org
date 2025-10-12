@@ -1,0 +1,41 @@
+#+title: Jane Gallop: /Reading Lacan/
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+Finally returning to the task at hand, I yesterday continued Jane Gallop's companion to Lacan's /Ecrits/, expressively titled /[[https://www.sas.upenn.edu/~cavitch/pdf-library/Gallop_Reading_Lacan.pdf][Reading Lacan]]/.
+This book addresses the problem of reading Lacan; for it is in fact a problem, given how convoluted and arcane his writing can be.
+Lacan's gnosticism is not an accident of his inability as a teacher, writer, or thinker, but rather a part of the subject of what he has to teach.
+Gallop's book addresses the immanent obscurity in Lacan's work /Ecrits/, and (more gently than tackling the text head on, I think) guides the reader to the frames of mind in which Lacan's writing can come to mean something, something important.
+Important, at least, if you take interest in the limitations of language and thought, or the philosophy of the work of writing and thinking as such.
+
+Gallop's style seems to continuously defer the explicit pedagogical task of explaining what Lacan means, for hers is a guide not of content but of form.
+If the reader is impatient while reading the first few chapters, it is because, while Gallops prefatory material seems to avoid the task and/or subject at hand, she comes to it not with the aggression of a tackler but with the tact of a learner less belligerent.
+The first few chapters cultivate a sense of what Lacan 'means' through showing how what meaning his writing inspires in Gallop as his reader.
+Lacan himself (the name representing the authorial unity behind his works) is subjected to the analytical lens furnished by the mirror stage, rather than painting a picture of a baby in the abstract who stands up and retroactively establishes that it was a corporeal mess before that moment.
+Lacan's reception in America is the partial object of Gallop's reading of the /Seminar on the 'Purloined Letter'/, the proof that the evident cause of why (we ought to read Lacan in America) is hiding in plain sight.
+
+Having not yet braved the 'raw' Lacan myself, it is curious to read texts like Gallop's.
+As she notes herself, if we want to suffer a 'Lacanian' reading, then we would be wrong to enforce a necessary chronology when it comes to what to read:
+#+begin_quote
+This book will have been written for people who have read Lacan's texts, and can most fully be understood as a response to Lacan. At the same time, the "present" book is meant to be an enticement and an orientation for a future reading of Lacan. If I were asked to suggest to my reader which should be read first, I would want to reply: both. [cite:@gallopReadingLacan2018 p.92]
+#+end_quote
+
+The easiest way to understand the suggestion that Gallop's book should be read /both/ before and after Lacan's /Ecrits/, to which it is both an introduction and a response, is perhaps simply that Gallop wants to suggest that we should read her book multiple times.
+Thus it becomes both a before and an afterwards, as in the triad of Gallop-Lacan-Gallop her name occupies both positions at the same time.
+We could also understand the suggestion as meaning that we ought to read Lacan rather than Gallop twice, so as to produce a similarly structured but distinct triad, Lacan-Gallop-Lacan.
+Gallop's position in both triads satisfies the condition of being both a response and an enticement.
+
+Of course, the two perspectives can be synthesized in a single picture in which the relationship between Gallop and Lacan bends around, rather than running linearly from left-to-right, so that we are left with a loop that holds both texts in equal tension with each other:
+#+begin_src
+┌- Gallop -┐
+|          |
+└- Lacan --┘
+#+end_src
+
+One can sample this loop to produce either of the aforementioned patterns, Gallop-Lacan-Gallop or Lacan-Gallop-Lacan.
+Simply begin at the preferred of the two names, and follow the loop two steps in either direction.
+
+Though this reframing is more robust in one sense, it also reintroduces the original problem: where does one begin?
+Gallop's answer ("both") should also be read, I think, as "either, provided you go to the other and then loop back".
+At least, this is how I seem to be going about approaching the impossible task of grasping a sense of "Lacan".

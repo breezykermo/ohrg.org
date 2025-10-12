@@ -1,0 +1,21 @@
+#+title: 24 03 10
+
+A few days in pause again, due to a few factors.
+Probably the most significant of these is that I spent a few days reconfiguring my keybaord layout, working progressively through the =Tarmak= layout in order to incrementally adopt the layout I am now using to type, =Colemak=.
+The reason for this change is partially whimsical: tinkering with configurations on my electronics will forever plague my 'productivity' as an academic, or as a software developer for that matter.
+But the idea is that colemak is supposed to be more ergonomic for typing in English, as it shifts letters that appear with greater frequency to the keys underneath one's fingers default positions as a touch typist.
+A reason of lesser importance is that I am currently in Ljubljana to acquire an Austrian visa, and so the travel and sight-seeing have kept me from braving this new keybaord configuration for the necessary period.
+
+A text whose introduction I have managed to work through in recent days is Frank Ruda's recently released (in English), /Indifference and Repetition/.
+As a treatise that attempts to clear a space for freedom - i.e. the possibility and plausibility of an action that actually makes a difference, a thought that is not simply the mechanical product of external constraints/causes nor something whose intent is co-opted by some external system such as capitalism - in philosophy, Ruda's book is an important reference point for =my project to properly understand the implications of Marx's critique of capital=.
+As one of the prominent contemporary Hegelians most sympathetic to psychoanalysis and the Ljubljana Schools project of reviving it in contemporary criticism, Ruda's work (this most recent one along with several of his other works) finds itself on my /Science in Psychoanalysis/ list.
+(Though it arguably would sit better thematically on my /Dialectics in History/ list, thematic aptitude is not the only criteria that determines what goes where in these lists strange piecing together.)
+
+As Ruda lays out in the introduction, /Indifference and Repetition/ is the first of a planned trilogy that will culminate in an argument for the necessity of *courage* in a rationalist conception of subjective freedom.
+Ruda's reaffirmation of *philosophical rationalism* is, perhaps, the book's crowning insistence.
+We cannot do away with the foundational assumption that we (speaking subjects, "humans") are collectively (universally) able to /think through/ the world.
+Not all perspectives are equally valid, in this frame of mind: some thinking is /more rational/ than other kinds.
+Moreover, we cannot undermine ourselves with the mad suggestion that rational thinking is inherently 'bad' (colonial, exclusionary), or fundamentally flawed in such a way that we cannot start sure-footed anywhere in thought (leading us to postmodern skepticism and/or fatalist existentialism).
+
+It is in search of such rationalist reaffirmation that Ruda starts the book (and introduction) by outlining the contours of Martin Heidegger's mid-century philosophical pessimism.
+The infamous Heideggerian conclusion that philosophy has no legs at all, and can only therefore become (or be replaced by) poetry, must be revealed as inadequate: for philosophy is the name for thought with a commitment to (collective, universal) reason.

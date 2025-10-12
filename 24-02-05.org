@@ -1,0 +1,76 @@
+#+title: Slavoj Žižek: /The Sublime Object of Ideology/ (introduction) 
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: /home/lox/Dropbox (Brown)/lyt/references/master.bib
+
+It's been a few days since I logged; so a couple of thoughts are due today.
+The first is regarding Zizek's 1989 book [[https://en.wikipedia.org/wiki/The_Sublime_Object_of_Ideology][The Sublime Object of Ideology]], which is one of the "first" in my list on science and psychoanalysis.
+This book is absolutely essential for a number of reasons.
+Among the most important is that it represents some of the foundational work in relating Lacan's thought to Hegel, Marx, and Kant.
+The radical line of argumentation that Lacan's thought represents for Zizek (against postmodernism, historicism, Habermas' "post-structuralism") is integral to a thoughtful understanding of science.
+
+By "thoughtful" here, I mean to take issue with two colloquial and common understandings of science: the first too idealist, and the second too materialist.
+
+The too-idealist understanding of science posits it as a system of thought that ultimately represents a /true/ approximation of the world.
+Some version of this view is, I would think, the operational view of many scientists and 'scientifically minded' associates.
+Science is a system of laws, in other words, that resides in thought (epistemology) in such a way that it can fundamentally map onto that which resides in the world (ontology).
+Epistemology, in this view, is nothing but a lossless compression of ontology.
+While (some of) science's methods might be flawed or approximate, the collective constellation of mind (ideology) that results from them is plausibly flawless.
+Because thought's representation of the world has no ontological instability, scientific laws come to be considered essentially /objective/: they exist independently ('materially') from minds that apprehend them.
+
+The too-materialist view is preponderant in the history of science, humanities, and other disciplines that exclude themselves from scientific requirement (and cachet).
+It similarly sees the methods of science as approximations of what's at work in the world; but in contradistinction to the too-idealists, it does not recognise epistemology as plausibly lossless to ontological reality.
+In this view, thought is necessarily an approximation of the world's chaos.
+It is not the /transcription/ of objective laws, but the /translation/ of them.
+Indeed, whether such laws exist at all objectively is not up for debate, as thought and language themselves are not thought to be capable of accurately representing them in any case.
+The too-materialists tend to emphasize the necessary contingency of all knowledge, and react forcefully to all kinds of generalization of thought beyond its situation in a (suitably small) worldly context.
+Thought here is impotent to apprehend the world.
+(In extreme cases, the too-materialist malady leads to frightfully confusing arguments that we must let world do more to apprehend itself.)
+
+Zizek takes up the task of "rehabilitating psychoanalysis in its philosophical core" [cite:@zizekSublimeObjectIdeology2009 p.viii] to avoid the indefatigable spells of both the too-idealist and the too-materialist.
+To do so, he argues that we must re-read Hegel through Lacan, to develop a properly *dialectical* approach to epistemology and ontology.
+Hegelian, Marxian, and Lacanian dialectics-- all of which Zizek sees as sharing a certain quality of thinking-- represent such an attempt to break of the spell of an un-dialectical subject-object relation in philosophy.[fn:1]
+In the book's preface, he develops (in what is now recognised as typically Zizekian fashion) a scatological understanding of Hegelian /Aufhebung/ with respect to the Lacanian notion of non-All.
+To jump to the case of connecting Lacan's and Hegel's thought (and to tastefully avoid all the other 'shit' in this rather complex beginning):
+
+#+begin_quote
+the externality of Nature with regard to the Idea is not that of the Idea's constitutive exception: it is not that Nature is set free as the exception that guarantees the Wholeness of the Idea's self-mediation.
+It is not the case that, once this mediation is complete (that is, after the Idea's dialectical progress can no longer be propelled by the Idea's own incompleteness - its failure to correspond to its own notion), the completed Idea needs an external Other (Nature) to sustain the complete and closed circle of its self-mediation.
+Nature is, rather, the mark of the non-All of the Idea's totality. [cite:@zizekSublimeObjectIdeology2009 p.xxi]
+#+end_quote
+
+Incompleteness is the essential element of Hegel's/Zizek's thought that mediates between the too-idealist and too-materialist extremes of scientific conception.
+If one takes 'Nature' in this quotation to represent the the too-materialist, and 'Idea' the too-idealist, the relevancy of Hegel's thought to the 'problem' of (thoughtful) science becomes clear.
+Dialectic is the name given to the quality of method that retains the insights of /both/ materialism and idealism, without subsuming one in favour of the other.[fn:2]
+More difficultly, the relationship between Idea and Nature is understood as a *mutual incompleteness*: "Nature is, rather, the mark of the non-All of the Idea's totality."
+Epistemology is not sufficient in itself, for there immanently resides an "constitutive exception" in it; i.e. a moment that cannot be (rationally) grasped in its own 'native' terms.
+This exception /is/ what we call ontology, and the fact of this exception is what makes Idea's totality "non-All".
+
+Identically, (and this I find harder still to properly grasp), /the Idea is only and always the constitutive exception of Nature/.
+Thought appears as a "non-natural" thing in this formulation, as the inverse of Nature in one sense; but crucially it is Nature's /necessary/ non-natural inverse.
+One cannot avoid this non-naturalness of thought by returning it to the land, by giving Nature a greater space in thought, because the two are dialectically entangled and co-constitutive.
+
+Zizek posits psychoanalysis as the philosophical tradition that works against both materialist and idealist essentialism to establish a dialectical logic of the Idea and Nature.
+The Freudian notion of the *death drive* (infamously posited, then redeveloped and revised several times throughout Freud's career) is an example of psychoanalysis' dialectical approach, in that it frames the human as "an animal extorted by an insatiable parasite (reason, /logos/, language)" [cite:@zizekSublimeObjectIdeology2009 p.xxvii]; an insolvable paradox of nature and nurture.
+
+Zizek's brilliance in this book is to extend the re-reading of Hegel through Lacan to the problem of *democracy*.
+This is evidenced in its title: /The Sublime Object of Ideology/.
+Ideology, a term readily associated with Althusser and Habermas, is colloquially understood as a false consciousness that, once identified and recognized, ought to disappear as if mist cleared on a windy day.
+Viewed dialectically, however, ideology is the (necessary) product of the incompleteness that bridges subjectivity and objectivity, the "Sublime" (a term with Kantian undertones) to the "Object" (a word which in its placement here echoes the Lacanian "objet petit a" or object cause of desire).
+This position is a redemption of Hegel, a philosopher who is often dismissed too chauvinistically idealist, and his philosophy of the Subject/Substance relation:
+
+#+begin_quote
+far from being a story of its progressive overcoming, dialectics is for Hegel a systematic notation of the failure of all such attempts - 'absolute knowledge' denotes a subjective position which finally accepts 'contradiction' as an internal condition of every identity.
+In other words, Hegelian 'reconciliation' is not a 'panlogicist' sublation of all reality in the Concept but a final consent to the fact that the Concept itself is 'not-all' (to use this Lacanian term). [cite:@zizekSublimeObjectIdeology2009 p.xxix]
+#+end_quote
+
+It is striking how relevant this argument remains today in an academic landscape seemingly rife with the "'post-modernist' traps" [cite:@zizekSublimeObjectIdeology2009 p.xxxi] that Hegel/Lacan/Zizek strive to avoid.
+Moreover, it was slightly surprising to me how much of Marx there is in this book: as it is through Marx that Zizek develops a robust connection between Kant-Hegel (on one side of "history") and Freud-Lacan (on the "other").
+(I will develop a better sense of this statement in a forthcoming post regarding the first chapter of /Sublime Object/, "How Did Marx Invent the Symptom?")
+Though Zizek doesn't directly deal with Science, the arguments in this masterful work of philosophy are essential for bridging from my list on dialectics in history (Marx) to this list on science in psychoanalysis (Lacan).[fn:3]
+
+[fn:1] Hegel properly articulates this problem for Zizek: "when we observe a thing, we see /too much/ in it, we fall under the spell of the wealth of empirical detail which prevents us from clearly perceiving the notional determination which forms the core of the thing." [cite:@zizekSublimeObjectIdeology2009 p.xi] Zizek will go on to develop this with respect to both Lacan's notion of the /objet a/ and Freud's /das Ding/, among other key concepts in Western philosophy.
+[fn:2] A great articulation of a similar point can be found in the introduction to Frank Ruda's synthesis of Badiou's thought, /For Badiou: Idealism without Idealism/ [cite:@rudaBadiouIdealismIdealism2015].
+[fn:3] For more about these lists, see [[file:24-01-26.org][24-01-26]].
+
+* Bibliography
+#+print_bibliography:

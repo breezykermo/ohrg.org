@@ -1,0 +1,66 @@
+#+title: Mladen Dolar: "What's in a Name?" 
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+Today I'll report on Mladen Dolar's 2014 essay "[[https://www.aksioma.org/pdf/Mladen-Dolar_Whats-in-a-Name.pdf][What's in a Name?]]" [cite:@dolarWhatsName2014].
+I read this essay recently in preparation for a session in a series on the subject of naming.
+Earlier in this series, we read the chapter "Che Vuoi?" from Zizek's /Sublime Object of Ideology/ [cite:@zizekCheVuoi2009]; Dolar's essay responds to and develops Zizek's chapter (which I will look to address in a future log), 25 years later.
+
+After the misquoted opening frontispiece of Shakespeare's Juliet, professing from her hypothetical balcony, to one "Janša" rather than the expected "Romeo", the essay opens with a commonplace idea in philosophy: "It all began with Plato" [cite:@dolarWhatsName2014 p.6].
+Yet Dolar's Plato is not read principally through his /[[https://plato.stanford.edu/entries/plato-ethics-politics/][Republic]]/, but rather a relatively obscure dialogue called the /[[https://plato.stanford.edu/entries/plato-cratylus/][Cratylus]]/.
+As the SEP entry on the latter notes, this lesser known dialogue is vexing in part because "[i]t is not clear how its main topic - the correctness of names - is connected with Plato's other philosophical concerns" [cite:@meissnerPlatosCratylus2023].
+
+So for Dolar Plato is the beginning (perhaps predictably) of the philosophical question of names - but Dolar's Plato is heterodox, as principally the enigmatic author of the /Cratylus/, rather than the orthodox investigator of ethics and politics as author of the /Republic/.
+Moreover, in Plato there is "[t]he specter of Juliet on the balcony" [cite:@dolarWhatsName2014 p.7]; a stroke painted with a broad brush in that a the shadow of a connection across several thousands of years, between Plato and Shakespeare, is tauntingly proposed through the mutual concern for the status of a name ("rose") in relation to the thing, a rose in the flesh.
+
+As it turns out, Dolar's theory of names will propose that there is a necessary shadow of a thing introduced by a name, "an x, which is an ineffable being without properties, a nothing which nevertheless appears as something" [cite:@dolarWhatsName2014 pp.31-32].
+Such a necessary shadow complicates a theory often misassociated with the orthodox Plato, namely the allegory of the cave.
+(This is in fact a theory espoused by Socrates in the /Republic/; Plato is simply playing the stenographer.)
+In this allegory, Socrates presents the role of the philosopher as one who perceives the higher reality of the objects that motivate the shadows on the wall, shadows that prisoners in the cave do not even necessarily know are shadows.
+As per [[https://en.wikipedia.org/wiki/Allegory_of_the_cave][Wikipedia]]: "The shadows represent the fragment of reality that we can normally perceive through our senses, while the objects under the sun represent the true forms of objects that we can only perceive through reason."
+For the Socrates in this conception, reason is capable of attaining to the forms of things, essentially subtracting the mirage of shadows (our senses) from their indexical source to ultimately apprehend the 'real' reality behind them.
+
+Dolar's approaches the issue with this conception of the philosopher without addressing it directly, through the problem of the origin of names that is thematised in Plato's /Cratylus/.
+If there are to be names that we consider 'more true' than others:
+
+#+begin_quote
+there must be an essence which the names must spell out.... Names are like tools that we need to get to this essence, and there can be tools that are more or less appropriate, and hence have a varying degree of truth or falsity. But these tools are not quite freely ours to choose, or to select better ones from, for the names are always given by some Other, the rule-setter, the law-giver, the name-maker. [cite:@dolarWhatsName2014 p.8]
+#+end_quote
+
+This problem, of course, could be analogised to the shadows in Socrates' cave.
+Which shadows (appearances, names) are more proximate to the essence than others?
+How do we, as prisoners of language and our senses, adjudicate the truth and falsity of each?
+
+If there is to be an essence, argues Dolar, there must be some substance 'beyond' language, an actual 'value' that lies beneath the referential index of the shadow-games of names.
+In this setup, as Dolar notes in the quote above, one has to chase this value, through index after index, back to some original law-giver, an original Other.
+The reference to an "Other" here is, of course, an invocation of that term in Lacanian thought, whereby it represents the necessary exception to thought that points to something existing outside it, within it - what Lacan also refers to as its *extimate* quality.
+(For an introduction of sorts to the idea of thought's necessary incompleteness in the Lacanian tradition, see [[file:24-02-05.org][24-02-05]] on Zizek.)
+This originary law-giver also evokes Freud's myth of the *primal father* in /Totem and Taboo/ [cite:@freudTotemTaboo2001] - a myth that Lacan reinterprets as a structural detail in the logical composition of language as such.
+See [[https://www.nosubject.com/Father][this entry]] on nosubject.com for an entrypoint into the Father and related Lacanese.
+
+Though I cannot dive deep into the details of this myth and Lacan's presentation of it here, suffice it to say that Dolar's account here of the problem in names evokes a constellation of Lacanian ideas about the structure of language and its relation to the subject as a position within it.
+(There is, of course, also the section later in Dolar's essay regarding Freud's naming strategy as a father, further evidence of the crypto-Lacanian sense at work here.)
+Joan Copjec has detailed the way that this problem relates to the Lacanian theory of the subject magnificently in the chapter titled "Cutting Up" in her 1994 book, /Read My Desire: Lacan Against the Historicists/ [cite:@copjecCutting2015].
+Copjec shows how Lacan and psychoanalysis offer an answer to a paradox not unrelated to Dolar's problem of a name's first nomination: namely Zeno's paradox of Achilles and the Tortoise.
+(Zeno's paradox is a problem preserved, much like Socrates' problem of the cave, through a prominent Greek philosopher - thought in this case that philosopher is Aristotle rather than Plato.)
+From the [[https://en.wikipedia.org/wiki/Atlas_(mythology)][Atlas]]sian [[https://en.wikipedia.org/wiki/Zeno%27s_paradoxes][Wikipedia]]:
+
+#+begin_quote
+In the paradox of Achilles and the tortoise, Achilles is in a footrace with the tortoise. Achilles allows the tortoise a head start of 100 meters, for example. Suppose that each racer starts running at some constant speed, one faster than the other. After some finite time, Achilles will have run 100 meters, bringing him to the tortoise's starting point. During this time, the tortoise has run a much shorter distance, say 2 meters. It will then take Achilles some further time to run that distance, by which time the tortoise will have advanced farther; and then more time still to reach this third point, while the tortoise moves ahead. Thus, whenever Achilles arrives somewhere the tortoise has been, he still has some distance to go before he can even reach the tortoise.
+#+end_quote
+
+The answer that Copjec finds in Lacan to this paradox is ultimately the same answer that Dolar proposes in the infinite regression of name-givers: the perspective on the problem, the "I" in the picture, must produce an ~x~, ineffable and irredicible to any summarisation of properties, a negativity which carves and cuts up the problem's sensibility as straightforward; a contradiction that marks thought's and language's /necessary incompleteness/.
+As Copjec argues, it is this "cutting off of the subject from a part of itself... [that] accounts for the cutting up of the subject's movements" in Zeno's paradox [cite:@copjecCutting2015 p.??].
+There is always a *doubt* that is produced by language, for it can never be completely sure of itself, and it is the absence of this surety (not a positive something) that *desire* perpetually seeks.
+Dolar's term for this absence that produces desire is *ghost*, or specter:
+
+#+begin_quote
+It is thus with every name. No name without a specter. Naming is evoking a phantom, conjuring a ghost.
+#+end_quote
+
+The specter of this essay, as I noted at the top, is Juliet on the balcony, reflecting on her predicament as a Capulet fallen in love with a Montague.
+What better name for desire than this scene, the substance of a rose's value in question?
+
+* Bibliography
+#+print_bibliography:

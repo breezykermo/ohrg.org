@@ -1,0 +1,84 @@
+#+title: Mladen Dolar, /Rumors/ 
+#+options: author:nil date:nil timestamp:nil toc:nil
+#+bibliography: ../../references/master.bib
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+First on the syllabus in Rohit Goel's current [[https://www.bicar.org/rumors-capitalism-conspiracytheories-register][BICAR]] course is Mladen Dolar's 2024 book [[https://www.politybooks.com/bookdetail?book_slug=rumors--9781509561698][Rumors]].
+This short book is an extended and adapted version of Dolar's contribution to the 2022 edited volume [[https://www.jstor.org/stable/10.3366/j.ctv2b8rwxd][Objective Fictions: Philosophy, Psychoanalysis, Marxism]], and in its first sentence it lays out the topic at hand:
+
+#+begin_quote
+To take rumors as a serious object of theoretical scrutiny and philosophical reflection seems like a contradiction in terms.... [C]an rumors acquire the dignity of a concept?... If one deals with such an unworthy and undignified subject, isn't this a sure way to ruin one's philosophical reputation? [cite:@dolarRumors2024 p.1]
+#+end_quote
+
+Dolar has become something of a specialist essayist (in what he writes in English, at least).
+He published the delectable [[https://aksioma.org/pdf/Mladen-Dolar_Whats-in-a-Name.pdf][What's in a Name?]] (which I wrote about [[./24-02-29.org][here]]) in 2014 as an extended essay associated with an art exhibition at the Institute for Contemporary Art in Ljubljana, and there is more than a passing resemblance between this book and /Rumors/.
+Both begin by rhetorically turning Western philosophy on its head.
+The first sentence of /What's in a Name?/ is: "It all began with Plato" [cite:@dolarWhatsName2014 p.6], and /Rumors/, after a brief digression through the winning explanation of how quantum physicists understand the eerie materiality of Higgs boson ('the God particle'), takes us to "the Socratic foundations of philosophy" [cite:@dolarRumors2024 p.5] in the distinction between /doxa/ (opinion) and /epistēmē/ (knowledge).
+/Doxa/ will come to be associated with rumors over the course of the book, although it requires important clarifications.
+Opinions have a subjective source, someone tracibly responsible for their elocution.
+Rumors, on the other hand, distinguish themselves in that they run on the wind, which is to say autonomously, words that appear through the grapevine /without/ a source. 
+Rumors are a peculiar kind of language that circulate socially without a clear cause.
+Perhaps this is why, in the part of Vergil's /Aeneid/ that Dolar cites after his Socratic introduction, "they go around like a breeze of air, stemming as if from nowhere" [cite:@dolarRumors2024 p.6].
+Rumors are a substance that appear materially as an effect in the world, but with an epistemologically (and perhaps ontologically) obscured origin.
+
+So /Rumors/ starts with Socrates, but not directly with his more respectable philosophical ideas (which we might find in /The Republic/, for example), but with the trial that led to his death.
+A more serious philosopher might have dismissed this incident as mere historical 'context' that only bears indirectly on what Socrates has to tell us philosophically; but Dolar is no such supercilious simpleton. 
+Following Freud, perhaps-- as well as Marx, I can't help but add, another master of suspicion-- Dolar's inquiry is motivated by the idea that often the most apparently unimportant aspects of a thing are essential to what is at stake in its essence. 
+Philosophy, Dolar's gesture seems to suggest, cannot be divorced from its historical situation.
+As Fredric Jameson famously quipped, it behooves philosophy to 'always historicize'.
+
+Crucially, however, philosophy can also not be /reduced/ to a plain and simple historicization of its actors.
+Whereas the identity-political criticism of Socrates might dismiss him as a White Man philosopher, resultantly disregarding all his ideas as tainted and thus in need of discarding, Dolar's historicizing approach is not quite so crass.
+The more interesting reading of Socrates in the twenty-first century, Dolar suggests, but to suggest new ways to read what he stands for rather than castigating the man himself.
+(The real political impact of cancelling dead men, white or otherwise, needs some serious thinking through.)
+What if Socrates' trial shows us (students of the history of philosophy and the philosophy of history) the 'first' true triumph of doxa over episteme, the opening scene of a history of modernity that can be characterised by the trading of blows between these two sides of the same coin, of speech/language, of the big Other (episteme) and its shadow/symptom (doxa)?
+The history of Western philosophy /does/ begin with Socrates (we do ourselves worse by denying it), but its beginning there does not necessarily mean that from that day on, only White Men can do philosophy.
+Dolar's reading suggests something similar to the 'decolonial' reading, i.e. that Socrates inaugurated a particular tradition of knowledge that has egotistically taken centre stage in the history of philosophy.
+But it responsiblizes Socrates in a very different way, refusing to dismissively cancel him on account of an inexact identity in favor of a more psychoanalytically generous approach which sees him both as a subject capable of his own decisions /and/ as a victim of the times in which he found himself.
+
+Dolar will repeat this gesture with throughout the book with a canon of other philosophical and literary greats-- Vergil (/The Aeneid/), Shakespeare (/Hamlet/, /Henry IV/, /The Comedy of Errors/), Mozart (/The Marriage of Figaro/), Rousseau (/Confessions/, /Rousseau Judge of Jean Jacques/), Kafka (/The Trial, /The Castle/), Cervantes (/Novelas Ejemplares/), Gogol (/Dead Souls/), Kierkegaard (the Corsair affair), Heidegger (/Sein und Zeit/), Balzac (/Illusions perdues/).
+The works of each of these figures inflects the inaugural gesture of Socrates' trial.
+And it is usually the lesser considered works, or the lesser considered aspects of well known works that reveal this inflection.
+Doxa stalks episteme as its shadow, conceptually inseparable from it. 
+Knowledge does not work if unfounded rumor does not cohere a social setting to aspire to it.
+
+The one great literary and philosophical work that Dolar's book briefly touches on that I want to examine in more detail here, however, is ([[./24-01-26.org][surprise!]]) Karl Marx's /Das Kapital/.
+Dolar mentions Marx in "a small digression" [cite:@dolarRumors2024 p.16] in the section 'Rumors and Capital', which appears between the classics (Socrates and Vergil) and Shakespeare. 
+Rumor's tempest recalls Marx's account there, Dolar tells us:
+
+#+begin_quote
+An analogy can be drawn with another mighty entity that expands and multiplies seemingly by mere circulation, namely capital. There, too, we encounter the expansion of something that starts modestly, then increases as if through mere circulation, and is amplified into an overwhelming force, gradually engulfing everything as it goes along in a potentially limitless process. [cite:@dolarRumors2024 pp.16-17]
+#+end_quote
+
+It may seem like a sophistic nitpick, but I think it is important to qualify that the homology here should really be between rumors and /value/ in capitalism.
+Of course, capital is the name Marx gives to value in motion, and so Dolar is not exactly wrong to say that we should see a relation between rumors and capital. 
+But the analogy here risks suggesting that, just as rumors have haunted our pretensions to a clear-headed construction of sociality since at least Socrates, capital too is a sticky symptom that is co-constitutive with sociality rather than a particular form of social (non-)relation that could theoretically be done away with.
+Put differently, by drawing an analogy between rumors and capital, one risks projecting the apparent trans-historical role of rumor as an excess or surplus of language that nonetheless coheres the social fabric (a role for which Dolar makes a convincing case) onto capital, making it into an essentially trans-historical entity, too.
+
+If we instead refine the analogy that sees rumors ghastly increase via circulation-- ghastly, because it appears to contravene the third law of thermodynamics, entropy, whereby a value /decreases/ as it moves-- as homologous with /value/, then capital's stickiness as a symptom in society doesn't appear as /inevitably/ transhistorical. 
+Capital's pernicious philosophical alchemy is to render a historically specific set of social relations based on property rights and the wage relation as transhistorically inevitable, to transmute essentially changeable social customs into apparently natural laws that misrepresent things 'as they actually are'.
+
+The commodity is Marx's paradigmatic example of this alchemy.
+In his infamous example of the dancing table (in the marvelous new English translation of volume I):
+
+#+begin_quote
+Of course, the table isn't any less made up of wood for having been worked on, and the wood remains an ordinary sensuous ­thing. But the moment the­table begins to act as a commodity, it metamorphoses into a sensuous supersensuous­thing. It doesn't simply stand before us with its feet on the ground; rather, in its relations with all other commodities, it turns upside down and spins bizarre notions out of its blocky head, a­performance far more fantastic than if it were to start dancing of its own accord. [cite:@marxCapitalCritiquePolitical2024 pp.47-48]
+#+end_quote
+
+Objects come to appear imbued with the qualities of subjects (living humans), and contrariwise human laborers appear as if they are just another input feeding the autonomous subject of capital rather than as social ends in their own right. 
+Commodity fetishism naturalizes the historically specific movement of value in capitalism, and makes the entire set of affairs seem the natural state of things.
+While Adam Smith was convinced that man was naturally selfish and thus capitalism an inevitable social relation, Marx denaturalized both this assumption and the conceptual system built on that premise in capital in /Das Kapital/.
+
+Though he makes out that he will return to the connection between rumor and capital, Dolar does so only briefly in the final section of the book, 'The demise of the big Other'.
+There he takes up Zupančič's idea of 'conspiracy without a conspiracy theory' to bring capitalism back into the narrative as "just such a conspiracy without a conspiracy-- a conspiracy that imposes the rule of One that subtends all conflicts and diversity, but is not orchestrated from the center by some mastermind?" [cite:@dolarRumors2024 p.111].
+(Boštjan Nedoh has evocatively called this idea in Marx's theory of capital as '[[https://www.youtube.com/watch?v=KxJootyFJfU][a theft without a thief]].')
+Indeed, arguably what makes capital so sticky as a social relation is its ever-inventive /disavowal/ of any responsibility for the immiserations that occur and seem to deepen over time according to it. 
+To transpose this into more Marxian language, what is philosophically remarkable about value in capital as an entity is that it structurally covers over its own cause in the sphere of production, namely the wage relation's appropriation of surplus value from the worker under the prentense of a 'free and fair' relation.  
+Like rumors, capital's existence in the world seems to just appear on its own steam, so to speak, "stemming as if from nowhere" [cite:@dolarRumors2024 p.6], as the fetishism at work in its machinations expropriates agency from human subjects and plants the appearance of that power in commodity objects. 
+The process of its circulation covers over its real cause of production (labour) in the wage relation.
+
+Here lies the real tenet of the homology between rumors and value in capitalism, I think.
+Both exist only and because of a lost cause, in a subject whose ownership of some thing has been disavowed, and so the phenomenon (rumors or value in capitalism) appears as a thing in itself.
+The subject-object relation is distorted, and the truth of the (human) subject as the object's unconscious cause goes missing.
+
+* Bibliography
